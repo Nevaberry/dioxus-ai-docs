@@ -1,0 +1,19 @@
+# AI local settings
+.claude/
+
+# Temporary working directory
+temp/
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db

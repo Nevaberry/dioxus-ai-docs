@@ -1,0 +1,18 @@
+{
+  "name": "nevaberry",
+  "owner": {
+    "name": "Nevaberry"
+  },
+  "plugins": [
+    {
+      "name": "rust",
+      "source": "./skills/rust",
+      "description": "Rust knowledge patch - updates Claude's knowledge about latest Rust features"
+    },
+    {
+      "name": "dioxus",
+      "source": "./skills/dioxus",
+      "description": "Dioxus knowledge patch - updates Claude's knowledge about latest Dioxus features"
+    }
+  ]
+}
