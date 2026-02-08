@@ -1,5 +1,5 @@
 {
-  "name": "Dioxus-knowledge-patch",
+  "name": "dioxus-knowledge-patch",
   "version": "0.7.3",
   "description": "Dioxus knowledge patch - updates Claude's knowledge about Dioxus 0.7.3 features including subsecond hot-patching, WASM splitting, Manganis assets, and Stores"
 }

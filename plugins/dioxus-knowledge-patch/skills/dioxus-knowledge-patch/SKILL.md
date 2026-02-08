@@ -1,5 +1,5 @@
 ---
-name: Dioxus-knowledge-patch
+name: dioxus-knowledge-patch
 description: This skill should be used when writing Dioxus code, building Rust web/desktop/mobile apps with Dioxus, using RSX macro, signals, server functions, or any Dioxus features from 0.5+ (2024-2026).
 license: MIT
 metadata:

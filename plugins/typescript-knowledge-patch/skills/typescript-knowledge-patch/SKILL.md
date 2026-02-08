@@ -1,5 +1,5 @@
 ---
-name: TypeScript-knowledge-patch
+name: typescript-knowledge-patch
 description: This skill should be used when writing TypeScript code, using "import defer", "--module node20", "tsc --init", working with ArrayBuffer types, or any TypeScript features from version 5.9 onwards.
 license: MIT
 metadata:

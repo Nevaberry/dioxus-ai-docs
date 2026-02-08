@@ -1,0 +1,5 @@
+{
+  "name": "nextjs-knowledge-patch",
+  "version": "16.1.0",
+  "description": "Next.js knowledge patch - updates Claude's knowledge about Next.js 15.3-16.x features including proxy.ts, \"use cache\", Cache Components, navigation hooks, typed routes, and breaking changes."
+}

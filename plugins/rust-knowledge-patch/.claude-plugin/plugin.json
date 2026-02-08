@@ -1,5 +1,5 @@
 {
-  "name": "Rust-knowledge-patch",
+  "name": "rust-knowledge-patch",
   "version": "1.93.0",
   "description": "Rust knowledge patch - updates Claude's knowledge about Rust 1.85-1.93 features including Edition 2024, async closures, and new collection methods"
 }

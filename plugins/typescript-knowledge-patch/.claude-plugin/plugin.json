@@ -1,5 +1,5 @@
 {
-  "name": "TypeScript-knowledge-patch",
+  "name": "typescript-knowledge-patch",
   "version": "5.9.0",
   "description": "TypeScript knowledge patch - updates Claude's knowledge about TypeScript 5.9+ features including import defer, --module node20."
 }
