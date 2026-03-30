@@ -10,61 +10,223 @@
     {
       "name": "knowledge-patch",
       "source": "./plugins/knowledge-patch",
-      "description": "Knowledge patch meta-plugin - auto-detects project technologies, installs matching knowledge patches, and enforces patch content over outdated training data. Run /knowledge-patch-setup to scan your project.",
-      "category": "development"
-    },
-    {
-      "name": "typescript-knowledge-patch",
-      "source": "./plugins/typescript-knowledge-patch",
-      "description": "TypeScript knowledge patch - updates Claude's knowledge about TypeScript 5.9+ features including import defer, --module node20, and TS7 transition",
-      "category": "development"
-    },
-    {
-      "name": "nextjs-knowledge-patch",
-      "source": "./plugins/nextjs-knowledge-patch",
-      "description": "Next.js knowledge patch - updates Claude's knowledge about Next.js 15.3-16.x features including proxy.ts, \"use cache\", Cache Components, navigation hooks, typed routes, and breaking changes",
-      "category": "development"
-    },
-    {
-      "name": "bun-knowledge-patch",
-      "source": "./plugins/bun-knowledge-patch",
-      "description": "Bun knowledge patch - updates Claude's knowledge about Bun 1.3.8 features including Bun-specific APIs, bun:* modules, Bun.serve(), bundler features, or any Bun features from 1.2+ (2025-2026)",
-      "category": "development"
-    },
-    {
-      "name": "rust-knowledge-patch",
-      "source": "./plugins/rust-knowledge-patch",
-      "description": "Rust knowledge patch - updates Claude's knowledge about Rust 1.85-1.93 features including Edition 2024, async closures, and new collection methods",
-      "category": "development"
-    },
-    {
-      "name": "dioxus-knowledge-patch",
-      "source": "./plugins/dioxus-knowledge-patch",
-      "description": "Dioxus knowledge patch - updates Claude's knowledge about Dioxus 0.7.3 features including subsecond hot-patching, WASM splitting, Manganis assets, and Stores",
-      "category": "development"
-    },
-    {
-      "name": "postgis-knowledge-patch",
-      "source": "./plugins/postgis-knowledge-patch",
-      "description": "PostGIS knowledge patch - updates Claude's knowledge about PostGIS 3.5-3.6.1 features including spatial functions, geography types, raster operations, and topology",
-      "category": "development"
-    },
-    {
-      "name": "postgresql-knowledge-patch",
-      "source": "./plugins/postgresql-knowledge-patch",
-      "description": "PostgreSQL knowledge patch - updates Claude's knowledge about PostgreSQL 17-18.1 features including MERGE, JSON functions, virtual generated columns, and temporal constraints",
-      "category": "development"
-    },
-    {
-      "name": "python-knowledge-patch",
-      "source": "./plugins/python-knowledge-patch",
-      "description": "Python knowledge patch - updates Claude's knowledge about Python 3.13-3.14 features including t-strings, deferred annotation evaluation, free-threaded Python, subinterpreters, and zstd compression",
+      "description": "Knowledge patch meta-plugin - activates at conversation start, detects project technologies, and loads matching knowledge patches to bring Claude up to date on post-training-cutoff API changes",
       "category": "development"
     },
     {
       "name": "claude-memory-symlink",
       "source": "./plugins/claude-memory-symlink",
       "description": "Creates a symlink so .claude/memory/ in your project points to Claude Code's system memory directory — browse and edit memory files from your project tree. Run /claude-memory-symlink to set up.",
+      "category": "development"
+    },
+    {
+      "name": "almalinux-knowledge-patch",
+      "source": "./plugins/almalinux-knowledge-patch",
+      "description": "AlmaLinux knowledge patch - updates Claude's knowledge about AlmaLinux 10.1 features including Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default",
+      "category": "development"
+    },
+    {
+      "name": "arch-knowledge-patch",
+      "source": "./plugins/arch-knowledge-patch",
+      "description": "Arch Linux knowledge patch - updates Claude's knowledge about Arch Linux 2025.12 features including pacman 7.0 alpm user, Valkey replacing Redis, Plasma 6.4 Wayland-only, NVIDIA 590 open modules",
+      "category": "development"
+    },
+    {
+      "name": "astro-knowledge-patch",
+      "source": "./plugins/astro-knowledge-patch",
+      "description": "Astro knowledge patch - updates Claude's knowledge about Astro 6.0 features including Fonts API, live collections, CSP, route caching, ClientRouter, Zod 4/Vite 7/Shiki 4",
+      "category": "development"
+    },
+    {
+      "name": "axum-knowledge-patch",
+      "source": "./plugins/axum-knowledge-patch",
+      "description": "Axum knowledge patch - updates Claude's knowledge about Axum 0.8.5 features including {param} path syntax, no async_trait, OptionalFromRequestParts, Utf8Bytes WS, HTTP/2 WebSockets, NoContent",
+      "category": "development"
+    },
+    {
+      "name": "bun-knowledge-patch",
+      "source": "./plugins/bun-knowledge-patch",
+      "description": "Bun knowledge patch - updates Claude's knowledge about Bun 1.3.10 features including S3 client, built-in SQL/Redis, route-based HTTP server, CSS bundler, V8 compatibility",
+      "category": "development"
+    },
+    {
+      "name": "centos-stream-knowledge-patch",
+      "source": "./plugins/centos-stream-knowledge-patch",
+      "description": "CentOS Stream knowledge patch - updates Claude's knowledge about CentOS Stream 10 features including x86_64_v3 minimum, Wayland-only, Valkey replaces Redis, modularity removed, desktop apps to Flatpak",
+      "category": "development"
+    },
+    {
+      "name": "debian-knowledge-patch",
+      "source": "./plugins/debian-knowledge-patch",
+      "description": "Debian knowledge patch - updates Claude's knowledge about Debian 13 features including systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3",
+      "category": "development"
+    },
+    {
+      "name": "deno-knowledge-patch",
+      "source": "./plugins/deno-knowledge-patch",
+      "description": "Deno knowledge patch - updates Claude's knowledge about Deno 2.7.0 features including Deno.spawn(), permission sets, deno audit, lint plugin API, QUIC, OpenTelemetry",
+      "category": "development"
+    },
+    {
+      "name": "dioxus-knowledge-patch",
+      "source": "./plugins/dioxus-knowledge-patch",
+      "description": "Dioxus knowledge patch - updates Claude's knowledge about Dioxus 0.7.3 features including Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result",
+      "category": "development"
+    },
+    {
+      "name": "docker-knowledge-patch",
+      "source": "./plugins/docker-knowledge-patch",
+      "description": "Docker knowledge patch - updates Claude's knowledge about Docker BuildKit 0.31.0 features including Rego source policies, bake --var flag, semvercmp function, env lookup disable",
+      "category": "development"
+    },
+    {
+      "name": "drizzle-knowledge-patch",
+      "source": "./plugins/drizzle-knowledge-patch",
+      "description": "Drizzle ORM knowledge patch - updates Claude's knowledge about Drizzle 1.0.0-beta.19 features including consolidated validator imports, Effect Schema support, node-sqlite driver, .comment() query tagging",
+      "category": "development"
+    },
+    {
+      "name": "go-knowledge-patch",
+      "source": "./plugins/go-knowledge-patch",
+      "description": "Go knowledge patch - updates Claude's knowledge about Go 1.26.0 features including new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer",
+      "category": "development"
+    },
+    {
+      "name": "leptos-knowledge-patch",
+      "source": "./plugins/leptos-knowledge-patch",
+      "description": "Leptos knowledge patch - updates Claude's knowledge about Leptos 0.8.17 features including ShowLet component, Show signal support, Bitcode server function encoding",
+      "category": "development"
+    },
+    {
+      "name": "nextjs-knowledge-patch",
+      "source": "./plugins/nextjs-knowledge-patch",
+      "description": "Next.js knowledge patch - updates Claude's knowledge about Next.js 16.1 features including proxy.ts, \"use cache\", Cache Components, navigation hooks, typed routes, auto PageProps, React 19.2",
+      "category": "development"
+    },
+    {
+      "name": "nodejs-knowledge-patch",
+      "source": "./plugins/nodejs-knowledge-patch",
+      "description": "Node.js knowledge patch - updates Claude's knowledge about Node.js 25.5.0 features including native fetch, test runner, permission model, WebSocket client, require(ESM), URLPattern",
+      "category": "development"
+    },
+    {
+      "name": "podman-knowledge-patch",
+      "source": "./plugins/podman-knowledge-patch",
+      "description": "Podman knowledge patch - updates Claude's knowledge about Podman 5.8.0 features including Quadlet CLI management, OCI artifacts, multi-file install, BoltDB-to-SQLite migration, TLS remote",
+      "category": "development"
+    },
+    {
+      "name": "postgis-knowledge-patch",
+      "source": "./plugins/postgis-knowledge-patch",
+      "description": "PostGIS knowledge patch - updates Claude's knowledge about PostGIS 3.6.1 features including SFCGAL CG_* rename, ST_CoverageClean, ST_AsRasterAgg, topology bigint IDs, viewport simplification",
+      "category": "development"
+    },
+    {
+      "name": "postgresql-knowledge-patch",
+      "source": "./plugins/postgresql-knowledge-patch",
+      "description": "PostgreSQL knowledge patch - updates Claude's knowledge about PostgreSQL 18.1 features including JSON_TABLE, SQL/JSON functions, MERGE RETURNING, virtual generated columns, UUIDv7, temporal PRIMARY KEY",
+      "category": "development"
+    },
+    {
+      "name": "prisma-knowledge-patch",
+      "source": "./plugins/prisma-knowledge-patch",
+      "description": "Prisma knowledge patch - updates Claude's knowledge about Prisma 7.3 features including v7 ESM rewrite, prisma-client generator, driver adapters, prisma.config.ts, TypedSQL, SQL comments",
+      "category": "development"
+    },
+    {
+      "name": "python-knowledge-patch",
+      "source": "./plugins/python-knowledge-patch",
+      "description": "Python knowledge patch - updates Claude's knowledge about Python 3.14 features including t-strings, deferred annotations, free-threaded CPython, subinterpreters, zstd compression, dead battery removals",
+      "category": "development"
+    },
+    {
+      "name": "react-knowledge-patch",
+      "source": "./plugins/react-knowledge-patch",
+      "description": "React knowledge patch - updates Claude's knowledge about React 19.2.0 features including Activity component, cacheSignal, Partial Pre-rendering, prerender/resume APIs, eslint-plugin-react-hooks v6",
+      "category": "development"
+    },
+    {
+      "name": "rhel-knowledge-patch",
+      "source": "./plugins/rhel-knowledge-patch",
+      "description": "RHEL knowledge patch - updates Claude's knowledge about RHEL 10.1 features including Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies",
+      "category": "development"
+    },
+    {
+      "name": "rocky-knowledge-patch",
+      "source": "./plugins/rocky-knowledge-patch",
+      "description": "Rocky Linux knowledge patch - updates Claude's knowledge about Rocky Linux 10.0 features including DNF 5, modularity removed, Valkey replaces Redis, rpmsort, rh_waived kernel arg",
+      "category": "development"
+    },
+    {
+      "name": "rust-knowledge-patch",
+      "source": "./plugins/rust-knowledge-patch",
+      "description": "Rust knowledge patch - updates Claude's knowledge about Rust 1.94.0 features including Rust 2024 Edition, async closures, trait upcasting, new std APIs, cargo resolver v3",
+      "category": "development"
+    },
+    {
+      "name": "sqlite-knowledge-patch",
+      "source": "./plugins/sqlite-knowledge-patch",
+      "description": "SQLite knowledge patch - updates Claude's knowledge about SQLite 3.51 features including json_pretty, unistr, jsonb_each/jsonb_tree, percentile aggregates, multi-arg iif, numeric underscores",
+      "category": "development"
+    },
+    {
+      "name": "sqlx-knowledge-patch",
+      "source": "./plugins/sqlx-knowledge-patch",
+      "description": "SQLx knowledge patch - updates Claude's knowledge about SQLx 0.9.0-alpha.1 features including SqlSafeStr, owned Arguments, sqlx.toml config, begin_with transactions, SQLite hooks, PgBindIter",
+      "category": "development"
+    },
+    {
+      "name": "suse-knowledge-patch",
+      "source": "./plugins/suse-knowledge-patch",
+      "description": "SUSE knowledge patch - updates Claude's knowledge about SLES 16+, openSUSE Leap 15.6+, and Tumbleweed features including Agama installer, SELinux, NetworkManager migration, /usr-merge, Cockpit",
+      "category": "development"
+    },
+    {
+      "name": "svelte-knowledge-patch",
+      "source": "./plugins/svelte-knowledge-patch",
+      "description": "Svelte knowledge patch - updates Claude's knowledge about Svelte 5.0.0 features including runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events",
+      "category": "development"
+    },
+    {
+      "name": "tailwind-knowledge-patch",
+      "source": "./plugins/tailwind-knowledge-patch",
+      "description": "Tailwind CSS knowledge patch - updates Claude's knowledge about Tailwind CSS 4.1 features including text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants",
+      "category": "development"
+    },
+    {
+      "name": "typescript-knowledge-patch",
+      "source": "./plugins/typescript-knowledge-patch",
+      "description": "TypeScript knowledge patch - updates Claude's knowledge about TypeScript 5.9 features including import defer, --module node20, ArrayBuffer breaking change, TypeScript 7 native Go port (tsgo)",
+      "category": "development"
+    },
+    {
+      "name": "ubuntu-knowledge-patch",
+      "source": "./plugins/ubuntu-knowledge-patch",
+      "description": "Ubuntu knowledge patch - updates Claude's knowledge about Ubuntu 25.10 features including sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME",
+      "category": "development"
+    },
+    {
+      "name": "vercel-ai-sdk-knowledge-patch",
+      "source": "./plugins/vercel-ai-sdk-knowledge-patch",
+      "description": "Vercel AI SDK knowledge patch - updates Claude's knowledge about Vercel AI SDK 4.1.0 features including PDF files, computer use tools, continuation, image generation, stream smoothing, createDataStreamResponse",
+      "category": "development"
+    },
+    {
+      "name": "vite-knowledge-patch",
+      "source": "./plugins/vite-knowledge-patch",
+      "description": "Vite knowledge patch - updates Claude's knowledge about Vite 8.0 features including Rolldown bundler, tsconfigPaths, React plugin v6 with Oxc, Environment API, SSR improvements",
+      "category": "development"
+    },
+    {
+      "name": "zig-knowledge-patch",
+      "source": "./plugins/zig-knowledge-patch",
+      "description": "Zig knowledge patch - updates Claude's knowledge about Zig 0.14.0 features including labeled switch, decl literals, @branchHint, DebugAllocator, unmanaged containers, root_module build API",
+      "category": "development"
+    },
+    {
+      "name": "zitadel-knowledge-patch",
+      "source": "./plugins/zitadel-knowledge-patch",
+      "description": "Zitadel knowledge patch - updates Claude's knowledge about Zitadel v4.13 features including V2 ConnectRPC APIs, Actions V2 webhooks, Session API custom login, Login V2 Next.js, token exchange GA",
       "category": "development"
     }
   ]
