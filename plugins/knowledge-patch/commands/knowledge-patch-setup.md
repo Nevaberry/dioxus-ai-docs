@@ -119,28 +119,43 @@ Tell the user no technologies were auto-detected and ask if they want to manuall
 
 Use AskUserQuestion to let the user confirm which patches to install. Pre-select all recommended (published) patches.
 
-Then ask which settings scope to use:
-- **Project** (`.claude/settings.json`) — shared with collaborators via git
-- **Local** (`.claude/settings.local.json`) — personal, not committed to git
+Then ask which settings scope to use. **Default to Project scope** (`.claude/settings.json`) — this shares patches with collaborators via git so the whole team benefits. Mention that the user can choose Local scope (`.claude/settings.local.json`) instead if they prefer a personal setup.
 
-Recommend **Project** scope so the whole team benefits.
+Present it as: "I'll install these to `.claude/settings.json` (project scope, shared via git). Want me to use local scope instead?"
 
 ## Step 4: Install Patches
 
-For each selected patch, update the chosen settings file. Read the file first (or start with `{}` if it doesn't exist), add each patch under `enabledPlugins`, and write the file back.
+For each selected patch, update the chosen settings file. Read the file first (or start with `{}` if it doesn't exist).
 
-The target format:
+**CRITICAL: Only add entries — never remove or overwrite existing ones.** The `enabledPlugins` object may already contain other plugins (e.g., `frontend-skill`, `nevaberry-memory`) that are NOT knowledge patches. You must preserve every existing key in the file and in `enabledPlugins`. Only add new `*-knowledge-patch@nevaberry-plugins` entries alongside whatever is already there.
+
+For example, if the file already contains:
 
 ```json
 {
+  "permissions": { "allow": ["Read"] },
   "enabledPlugins": {
+    "frontend-skill@some-publisher": true,
+    "nevaberry-memory@nevaberry-plugins": true
+  }
+}
+```
+
+After installing bun and typescript patches, the result must be additive:
+
+```json
+{
+  "permissions": { "allow": ["Read"] },
+  "enabledPlugins": {
+    "frontend-skill@some-publisher": true,
+    "nevaberry-memory@nevaberry-plugins": true,
     "bun-knowledge-patch@nevaberry-plugins": true,
     "typescript-knowledge-patch@nevaberry-plugins": true
   }
 }
 ```
 
-Make sure the `.claude/` directory exists (create if needed). Preserve all existing settings — only add/merge the new `enabledPlugins` entries.
+Make sure the `.claude/` directory exists (create if needed).
 
 ## Step 5: Show Summary
 
