@@ -1,10 +1,10 @@
 ---
 name: dioxus-knowledge-patch
-description: Dioxus changes since training cutoff (latest: 0.7.3) — Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result. Load before working with Dioxus.
+description: Dioxus changes since training cutoff (latest: 0.7.4) — Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result. Load before working with Dioxus.
 license: MIT
 metadata:
   author: Nevaberry
-  version: "0.7.3"
+  version: "0.7.4"
 ---
 
 # Dioxus 0.5+ Knowledge Patch
@@ -224,8 +224,23 @@ rsx! {
 }
 ```
 
+### Native FFI Bridge (0.7.4+)
+
+Write mobile plugins in Kotlin/Java/Swift with `dioxus_platform_bridge`. CLI auto-bundles via linker metadata:
+
+```rust
+#[cfg(all(feature = "metadata", target_os = "android"))]
+dioxus_platform_bridge::android_plugin!(
+    plugin = "geolocation",
+    aar = { env = "DIOXUS_ANDROID_ARTIFACT" },
+    deps = ["implementation(\"com.google.android.gms:play-services-location:21.3.0\")"]
+);
+```
+
 ### Hot-Reload Boundaries
 
 **Instant reload:** Literal values, text, formatted segments, attribute order, template structure
 
 **Requires rebuild:** Rust logic, component structure, control flow conditions, struct field changes
+
+**Workspace hot-patching (0.7.4+):** Subsecond now patches across workspace library crates, not just the tip crate.

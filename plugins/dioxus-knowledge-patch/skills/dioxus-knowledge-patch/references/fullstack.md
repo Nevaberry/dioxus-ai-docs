@@ -48,6 +48,23 @@ fn Chat() -> Element {
 }
 ```
 
+### WebSocket Stream/Sink Split (0.7.4+)
+
+`TypedWebsocket` implements `Stream + Sink`, enabling concurrent read/write via `.split()`:
+
+```rust
+#[get("/api/ws")]
+async fn handle_ws(opts: WebSocketOptions) -> Result<Websocket<Msg, Msg>> {
+    Ok(opts.on_upgrade(|mut socket| async move {
+        let (mut sender, mut receiver) = socket.split();
+        tokio::spawn(async move {
+            while let Some(Ok(msg)) = receiver.next().await { /* read */ }
+        });
+        sender.send(Msg::Hello).await;
+    }))
+}
+```
+
 ### Other Fullstack Types
 
 - `ServerEvents<T>` - Server-sent events

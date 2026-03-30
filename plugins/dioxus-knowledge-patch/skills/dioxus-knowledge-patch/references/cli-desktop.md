@@ -23,6 +23,26 @@ dx serve --platform android  # Android emulator
 dx bundle --platform android # Build .apk
 ```
 
+## Native FFI Bridge (0.7.4+)
+
+Write native mobile plugins in Kotlin/Java/Swift. The CLI auto-bundles artifacts via linker-based metadata collection (same approach as Manganis assets).
+
+**Android** (Kotlin/Java) — declare in plugin crate's `lib.rs`:
+```rust
+#[cfg(all(feature = "metadata", target_os = "android"))]
+dioxus_platform_bridge::android_plugin!(
+    plugin = "geolocation",
+    aar = { env = "DIOXUS_ANDROID_ARTIFACT" },
+    deps = ["implementation(\"com.google.android.gms:play-services-location:21.3.0\")"]
+);
+```
+
+Plugin's `build.rs` runs Gradle to produce `.aar`, emits `cargo:rustc-env=DIOXUS_ANDROID_ARTIFACT=<path>`. The CLI copies the `.aar` into `app/libs/` and adds Gradle dependency lines automatically.
+
+**iOS** (Swift Package) — plugin's `build.rs` runs `xcrun swift build` to produce a static library, then emits `cargo:rustc-link-lib=static=<PluginName>`. The CLI handles SDK detection and framework linking.
+
+**Mobile build customization** — `Dioxus.toml` supports full `Info.plist` and `AndroidManifest.xml` customization. Permissions are auto-collected via linker symbols. Schema: `packages/cli/schema.json`.
+
 ## Platform-Specific Args
 
 Use `@client` and `@server` to pass different features/args to each build:
@@ -93,8 +113,9 @@ loop {
 
 **Limitations** (requires full rebuild):
 - Struct/enum field changes (size/alignment changes crash)
-- Workspace library crates (only tip crate patches)
 - iOS device builds (code signing prevents patching)
+
+**Note:** As of 0.7.4, workspace hot-patching works across library crates (no longer limited to tip crate). Dynamic TLS fixups also handle thread-local inlining across crate boundaries.
 
 ### RSX Hot-Reload Boundaries
 

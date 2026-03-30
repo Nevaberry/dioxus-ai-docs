@@ -48,6 +48,22 @@ let name = user.map(|u| &u.name);  // MappedSignal<String>
 rsx! { "{name}" }  // only re-renders if name changes
 ```
 
+### WritableResultExt (0.7.4+)
+
+Mutable access to `Writable<Result<T, E>>` without intermediate bindings:
+
+```rust
+let data: Signal<Result<User, Error>> = use_signal(|| Ok(default_user()));
+
+// Get mutable ref to whichever variant the Result holds
+let result = data.as_mut(); // Result<WritableRef<User>, WritableRef<Error>>
+
+// Unwrap directly (panics on Err)
+let user = data.unwrap_mut(); // WritableRef<User>
+```
+
+Mirrors `ReadableResultExt` on the read side and follows the same pattern as `WritableOptionExt`.
+
 ## Stores (0.7+)
 
 New primitive for complex/nested data. Derive `Store` to get fine-grained reactivity:
