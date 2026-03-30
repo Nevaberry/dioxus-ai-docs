@@ -8,18 +8,6 @@
   },
   "plugins": [
     {
-      "name": "knowledge-patch",
-      "source": "./plugins/knowledge-patch",
-      "description": "Knowledge patch meta-plugin - activates at conversation start, detects project technologies, and loads matching knowledge patches to bring Claude up to date on post-training-cutoff API changes",
-      "category": "development"
-    },
-    {
-      "name": "claude-memory-symlink",
-      "source": "./plugins/claude-memory-symlink",
-      "description": "Creates a symlink so .claude/memory/ in your project points to Claude Code's system memory directory — browse and edit memory files from your project tree. Run /claude-memory-symlink to set up.",
-      "category": "development"
-    },
-    {
       "name": "almalinux-knowledge-patch",
       "source": "./plugins/almalinux-knowledge-patch",
       "description": "AlmaLinux knowledge patch - updates Claude's knowledge about AlmaLinux 10.1 features including Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default",
@@ -38,9 +26,21 @@
       "category": "development"
     },
     {
+      "name": "authjs-knowledge-patch",
+      "source": "./plugins/authjs-knowledge-patch",
+      "description": "Auth.js v5 changes since training cutoff — Next.js 16 proxy.ts migration, idToken behavioral change, WebAuthn/Passkeys provider setup. Load before working with Auth.js v5.",
+      "category": "development"
+    },
+    {
       "name": "axum-knowledge-patch",
       "source": "./plugins/axum-knowledge-patch",
       "description": "Axum knowledge patch - updates Claude's knowledge about Axum 0.8.5 features including {param} path syntax, no async_trait, OptionalFromRequestParts, Utf8Bytes WS, HTTP/2 WebSockets, NoContent",
+      "category": "development"
+    },
+    {
+      "name": "better-auth-knowledge-patch",
+      "source": "./plugins/better-auth-knowledge-patch",
+      "description": "Better Auth changes since training cutoff (latest: 1.5) — OAuth 2.1 provider, Agent Auth protocol, cookie cache strategies, organization hooks, MCP integration, Stripe billing, i18n, SSO/SAML SLO, Electron/Expo/Convex support. Load before working with Better Auth.",
       "category": "development"
     },
     {
@@ -53,6 +53,18 @@
       "name": "centos-stream-knowledge-patch",
       "source": "./plugins/centos-stream-knowledge-patch",
       "description": "CentOS Stream knowledge patch - updates Claude's knowledge about CentOS Stream 10 features including x86_64_v3 minimum, Wayland-only, Valkey replaces Redis, modularity removed, desktop apps to Flatpak",
+      "category": "development"
+    },
+    {
+      "name": "claude-memory-symlink",
+      "source": "./plugins/claude-memory-symlink",
+      "description": "Creates a symlink so .claude/memory/ in your project points to Claude Code's system memory directory — browse and edit memory files from your project tree. Run /claude-memory-symlink to set up.",
+      "category": "development"
+    },
+    {
+      "name": "clerk-knowledge-patch",
+      "source": "./plugins/clerk-knowledge-patch",
+      "description": "Clerk changes since training cutoff (latest: 1.0.0) — Core 3 SDK, <Show> component, Clerk Elements, billing APIs, machine auth, Go/Python SDKs. Load before working with Clerk.",
       "category": "development"
     },
     {
@@ -89,6 +101,12 @@
       "name": "go-knowledge-patch",
       "source": "./plugins/go-knowledge-patch",
       "description": "Go knowledge patch - updates Claude's knowledge about Go 1.26.0 features including new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer",
+      "category": "development"
+    },
+    {
+      "name": "knowledge-patch",
+      "source": "./plugins/knowledge-patch",
+      "description": "Knowledge patch meta-plugin - activates at conversation start, detects project technologies, and loads matching knowledge patches to bring Claude up to date on post-training-cutoff API changes",
       "category": "development"
     },
     {
@@ -176,6 +194,12 @@
       "category": "development"
     },
     {
+      "name": "supabase-knowledge-patch",
+      "source": "./plugins/supabase-knowledge-patch",
+      "description": "Supabase changes since training cutoff — OAuth 2.1 server, Web3 auth, Edge Function background tasks/S3 mounts, Realtime authorization, vector/analytics buckets, pgmq queues, MCP server, new API key model. Load before working with Supabase.",
+      "category": "development"
+    },
+    {
       "name": "suse-knowledge-patch",
       "source": "./plugins/suse-knowledge-patch",
       "description": "SUSE knowledge patch - updates Claude's knowledge about SLES 16+, openSUSE Leap 15.6+, and Tumbleweed features including Agama installer, SELinux, NetworkManager migration, /usr-merge, Cockpit",
@@ -215,6 +239,12 @@
       "name": "vite-knowledge-patch",
       "source": "./plugins/vite-knowledge-patch",
       "description": "Vite knowledge patch - updates Claude's knowledge about Vite 8.0 features including Rolldown bundler, tsconfigPaths, React plugin v6 with Oxc, Environment API, SSR improvements",
+      "category": "development"
+    },
+    {
+      "name": "workos-knowledge-patch",
+      "source": "./plugins/workos-knowledge-patch",
+      "description": "WorkOS changes since training cutoff (latest: Node SDK v8.10, AuthKit Next.js v3) -- AuthKit proxy/middleware, PKCE, createWorkOS factory, client components, React SPA auth. Load before working with WorkOS.",
       "category": "development"
     },
     {
