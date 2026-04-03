@@ -32,6 +32,12 @@
       "category": "development"
     },
     {
+      "name": "aws-sdk-knowledge-patch",
+      "source": "./plugins/aws-sdk-knowledge-patch",
+      "description": "AWS SDK changes since training cutoff — S3 default checksums, S3 Vectors, Lambda Durable Functions, Bedrock AgentCore, CDK Mixins, SigV4a, SDK lifecycle. Load before working with AWS SDKs.",
+      "category": "development"
+    },
+    {
       "name": "axum-knowledge-patch",
       "source": "./plugins/axum-knowledge-patch",
       "description": "Axum knowledge patch - updates Claude's knowledge about Axum 0.8.5 features including {param} path syntax, no async_trait, OptionalFromRequestParts, Utf8Bytes WS, HTTP/2 WebSockets, NoContent",
@@ -92,6 +98,12 @@
       "category": "development"
     },
     {
+      "name": "django-knowledge-patch",
+      "source": "./plugins/django-knowledge-patch",
+      "description": "Django changes since training cutoff (latest: 6.0) — composite primary keys, CSP middleware, template partials, background tasks, async paginator. Load before working with Django.",
+      "category": "development"
+    },
+    {
       "name": "docker-knowledge-patch",
       "source": "./plugins/docker-knowledge-patch",
       "description": "Docker knowledge patch - updates Claude's knowledge about Docker BuildKit 0.31.0 features including Rego source policies, bake --var flag, semvercmp function, env lookup disable",
@@ -104,9 +116,27 @@
       "category": "development"
     },
     {
+      "name": "fastapi-knowledge-patch",
+      "source": "./plugins/fastapi-knowledge-patch",
+      "description": "FastAPI changes since training cutoff (0.112-0.135.3) -- native SSE, yield streaming, strict_content_type, dependency scopes, Pydantic v1 dropped, Starlette 1.0, Pydantic 2.12 MISSING sentinel/exclude_if, security 401 fix. Load before working with FastAPI.",
+      "category": "development"
+    },
+    {
       "name": "fedora-knowledge-patch",
       "source": "./plugins/fedora-knowledge-patch",
       "description": "Fedora Linux changes since training cutoff (latest: 44) — DNF5 replaces DNF4, /usr/sbin merged, ifcfg removed, Redis→Valkey, SHA-1 distrusted, cert.pem dropped, RPM 6.0, Podman 6, CMake 4.0, lastlog2, nftables default. Load before writing Fedora scripts, Dockerfiles, or system automation.",
+      "category": "development"
+    },
+    {
+      "name": "flutter-knowledge-patch",
+      "source": "./plugins/flutter-knowledge-patch",
+      "description": "Flutter 3.29-3.41 + Dart 3.7-3.11 changes since training cutoff — dot shorthands, squircles, null-aware elements, predictive back, platform assets. Load before working with Flutter/Dart.",
+      "category": "development"
+    },
+    {
+      "name": "gcp-knowledge-patch",
+      "source": "./plugins/gcp-knowledge-patch",
+      "description": "GCP changes since training cutoff — Gen AI SDK replaces Vertex AI SDK, Gemini 2.5/3.x models, Cloud Run worker pools, Artifact Registry migration, ADK. Load before working with GCP.",
       "category": "development"
     },
     {
@@ -119,6 +149,18 @@
       "name": "knowledge-patch",
       "source": "./plugins/knowledge-patch",
       "description": "Knowledge patch meta-plugin - activates at conversation start, detects project technologies, and loads matching knowledge patches to bring Claude up to date on post-training-cutoff API changes",
+      "category": "development"
+    },
+    {
+      "name": "kotlin-knowledge-patch",
+      "source": "./plugins/kotlin-knowledge-patch",
+      "description": "Kotlin ecosystem changes since training cutoff (latest: 2.3.0) — guard conditions, explicit backing fields, multi-dollar interpolation, Compose compiler plugin, Ktor 3.0, Coroutines 1.10, Serialization 1.10, Compose Multiplatform 1.10. Load before working with Kotlin.",
+      "category": "development"
+    },
+    {
+      "name": "langchain-knowledge-patch",
+      "source": "./plugins/langchain-knowledge-patch",
+      "description": "LangChain 1.0 / LangGraph 1.0 changes — create_agent replaces create_react_agent, middleware system, ToolRuntime, content_blocks, structured output strategies, simplified namespace, Deep Agents SDK, breaking changes (Python 3.10+, .text property). Load before working with LangChain.",
       "category": "development"
     },
     {
@@ -182,6 +224,18 @@
       "category": "development"
     },
     {
+      "name": "pytorch-knowledge-patch",
+      "source": "./plugins/pytorch-knowledge-patch",
+      "description": "PyTorch 2.6–2.11 changes — weights_only=True default, FSDP2 fully_shard, torch.compile improvements (mega cache, hierarchical compilation, control flow ops), varlen_attn, FlexAttention FA4, Dim.AUTO export, TorchScript deprecated. Load before writing PyTorch code.",
+      "category": "development"
+    },
+    {
+      "name": "rails-knowledge-patch",
+      "source": "./plugins/rails-knowledge-patch",
+      "description": "Rails 8.0–8.1 changes — Solid Queue/Cache/Cable (no Redis), Kamal 2 deployment, Propshaft, authentication generator, Turbo 8 morphing, params.expect, job continuations, structured events. Load before working with Rails.",
+      "category": "development"
+    },
+    {
       "name": "react-knowledge-patch",
       "source": "./plugins/react-knowledge-patch",
       "description": "React knowledge patch - updates Claude's knowledge about React 19.2.0 features including Activity component, cacheSignal, Partial Pre-rendering, prerender/resume APIs, eslint-plugin-react-hooks v6",
@@ -209,6 +263,12 @@
       "name": "serde-knowledge-patch",
       "source": "./plugins/serde-knowledge-patch",
       "description": "Serde/serde_json changes since training cutoff (latest: serde 1.0.228 / serde_json 1.0.149) — Map sorting, Map as Deserializer, RawValue constants, Map FromStr. Load before working with serde or serde_json.",
+      "category": "development"
+    },
+    {
+      "name": "spring-boot-knowledge-patch",
+      "source": "./plugins/spring-boot-knowledge-patch",
+      "description": "Spring Boot changes since training cutoff (latest: 4.0) — modular starters, Jackson 3, Spring Framework 7, Security 7, Spring AI 1.0, HTTP service clients. Load before working with Spring Boot.",
       "category": "development"
     },
     {
@@ -248,9 +308,21 @@
       "category": "development"
     },
     {
+      "name": "swift-knowledge-patch",
+      "source": "./plugins/swift-knowledge-patch",
+      "description": "Swift changes since training cutoff (5.10\\u20136.3) \\u2014 approachable concurrency, InlineArray, @c interop, module selectors, Swift Testing updates. Load before working with Swift.",
+      "category": "development"
+    },
+    {
       "name": "tailwind-knowledge-patch",
       "source": "./plugins/tailwind-knowledge-patch",
       "description": "Tailwind CSS knowledge patch - updates Claude's knowledge about Tailwind CSS 4.1 features including text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants",
+      "category": "development"
+    },
+    {
+      "name": "terraform-knowledge-patch",
+      "source": "./plugins/terraform-knowledge-patch",
+      "description": "Terraform/OpenTofu changes since training cutoff (latest: TF 1.15 / OT 1.12) — ephemeral values, write-only arguments, cross-object validation, Stacks, resource identity, OpenTofu divergences. Load before working with Terraform or OpenTofu.",
       "category": "development"
     },
     {
