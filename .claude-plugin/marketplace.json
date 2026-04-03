@@ -50,6 +50,12 @@
       "category": "development"
     },
     {
+      "name": "caddy-knowledge-patch",
+      "source": "./plugins/caddy-knowledge-patch",
+      "description": "Caddy changes since training cutoff (latest: 2.11.2) — ECH, wildcard certs by default, file placeholders, log sampling, request_body set, SIGUSR1 reload, post-quantum TLS. Load before working with Caddy.",
+      "category": "development"
+    },
+    {
       "name": "centos-stream-knowledge-patch",
       "source": "./plugins/centos-stream-knowledge-patch",
       "description": "CentOS Stream knowledge patch - updates Claude's knowledge about CentOS Stream 10 features including x86_64_v3 minimum, Wayland-only, Valkey replaces Redis, modularity removed, desktop apps to Flatpak",
@@ -98,6 +104,12 @@
       "category": "development"
     },
     {
+      "name": "fedora-knowledge-patch",
+      "source": "./plugins/fedora-knowledge-patch",
+      "description": "Fedora Linux changes since training cutoff (latest: 44) — DNF5 replaces DNF4, /usr/sbin merged, ifcfg removed, Redis→Valkey, SHA-1 distrusted, cert.pem dropped, RPM 6.0, Podman 6, CMake 4.0, lastlog2, nftables default. Load before writing Fedora scripts, Dockerfiles, or system automation.",
+      "category": "development"
+    },
+    {
       "name": "go-knowledge-patch",
       "source": "./plugins/go-knowledge-patch",
       "description": "Go knowledge patch - updates Claude's knowledge about Go 1.26.0 features including new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer",
@@ -122,9 +134,21 @@
       "category": "development"
     },
     {
+      "name": "nginx-knowledge-patch",
+      "source": "./plugins/nginx-knowledge-patch",
+      "description": "Nginx changes since training cutoff (latest: 1.29.7) — upstream keepalive defaults, sticky directive, DNS resolve, HTTP/2 proxying, TLS defaults. Load before working with Nginx.",
+      "category": "development"
+    },
+    {
       "name": "nodejs-knowledge-patch",
       "source": "./plugins/nodejs-knowledge-patch",
       "description": "Node.js knowledge patch - updates Claude's knowledge about Node.js 25.5.0 features including native fetch, test runner, permission model, WebSocket client, require(ESM), URLPattern",
+      "category": "development"
+    },
+    {
+      "name": "pgvector-knowledge-patch",
+      "source": "./plugins/pgvector-knowledge-patch",
+      "description": "pgvector changes since training cutoff (latest: 0.8.2) — halfvec, sparsevec, bit indexing, binary quantization, iterative index scans, subvector extraction, L1 distance. Load before working with pgvector.",
       "category": "development"
     },
     {
@@ -182,6 +206,12 @@
       "category": "development"
     },
     {
+      "name": "serde-knowledge-patch",
+      "source": "./plugins/serde-knowledge-patch",
+      "description": "Serde/serde_json changes since training cutoff (latest: serde 1.0.228 / serde_json 1.0.149) — Map sorting, Map as Deserializer, RawValue constants, Map FromStr. Load before working with serde or serde_json.",
+      "category": "development"
+    },
+    {
       "name": "sqlite-knowledge-patch",
       "source": "./plugins/sqlite-knowledge-patch",
       "description": "SQLite knowledge patch - updates Claude's knowledge about SQLite 3.51 features including json_pretty, unistr, jsonb_each/jsonb_tree, percentile aggregates, multi-arg iif, numeric underscores",
@@ -191,6 +221,12 @@
       "name": "sqlx-knowledge-patch",
       "source": "./plugins/sqlx-knowledge-patch",
       "description": "SQLx knowledge patch - updates Claude's knowledge about SQLx 0.9.0-alpha.1 features including SqlSafeStr, owned Arguments, sqlx.toml config, begin_with transactions, SQLite hooks, PgBindIter",
+      "category": "development"
+    },
+    {
+      "name": "stripe-knowledge-patch",
+      "source": "./plugins/stripe-knowledge-patch",
+      "description": "Stripe changes since training cutoff (latest: 2026-03-25.dahlia) -- named API versions, stripe-node v21 Decimal type, stripe-python v15 dict removal, Billing Mode, Accounts v2, Event Destinations. Load before working with Stripe.",
       "category": "development"
     },
     {
@@ -215,6 +251,18 @@
       "name": "tailwind-knowledge-patch",
       "source": "./plugins/tailwind-knowledge-patch",
       "description": "Tailwind CSS knowledge patch - updates Claude's knowledge about Tailwind CSS 4.1 features including text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants",
+      "category": "development"
+    },
+    {
+      "name": "tokio-knowledge-patch",
+      "source": "./plugins/tokio-knowledge-patch",
+      "description": "Tokio changes since training cutoff (latest: 1.50.0 / tokio-util 0.7.18) — SetOnce, JoinMap, JoinQueue, cooperative scheduling, biased join. Load before working with Tokio.",
+      "category": "development"
+    },
+    {
+      "name": "traefik-knowledge-patch",
+      "source": "./plugins/traefik-knowledge-patch",
+      "description": "Traefik changes since training cutoff (latest: 3.6.9) — multi-layer routing, Redis rate limiter, p2c/leasttime LB strategies, fast proxy, ForwardAuth body forwarding, OTLP logs, post-quantum TLS, Knative provider. Load before working with Traefik.",
       "category": "development"
     },
     {
