@@ -1,85 +1,102 @@
-# Concurrency (Swift 5.10–6.2)
+# Concurrency Changes (Swift 6.1–6.2)
 
-## Approachable Concurrency
+## Overview
 
-`-default-isolation MainActor` makes all code MainActor-isolated by default per module. Nonisolated async functions now run on the caller's actor by default (SE-0461). Use `@concurrent` to explicitly opt into the concurrent thread pool.
+Swift 6.1–6.2 significantly refine the concurrency model introduced in Swift 6.0. The key theme is making `@MainActor` the natural default for app code, with explicit opt-outs for concurrent work.
 
-```swift
-// With -default-isolation MainActor, no annotations needed:
-struct ImageCache {
-    static var cache: [URL: Image] = [:]
+## Default MainActor Isolation (6.2)
 
-    static func load(from url: URL) async throws -> Image {
-        if let img = cache[url] { return img }
-        let img = try await fetchImage(at: url) // stays on MainActor
-        cache[url] = img
-        return img
-    }
-
-    @concurrent // explicitly run off MainActor
-    static func fetchImage(at url: URL) async throws -> Image {
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return decode(data)
-    }
-}
-```
-
-Enable per-feature in packages:
+New compiler flag `-default-isolation MainActor` makes all unannotated code `@MainActor` by default. This is the recommended approach for apps, scripts, and UI-heavy code:
 
 ```swift
-// swift-tools-version: 6.2
-.target(name: "MyTarget", swiftSettings: [
-    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
-    .enableUpcomingFeature("InferIsolatedConformances"),
+// Package.swift
+.target(name: "MyApp", swiftSettings: [
+  .defaultIsolation(MainActor.self),
 ])
 ```
 
-## Task.immediate
+- All unannotated declarations become `@MainActor`
+- Use `nonisolated` to opt specific declarations out
+- Use `@concurrent` to explicitly run on the concurrent thread pool
+- Ideal for app targets; library targets should generally not use this
 
-Starts executing synchronously on caller's executor until first suspension point.
+## @concurrent Attribute (6.2)
 
-```swift
-Task.immediate { print("runs before next line") }
-// In task groups:
-group.addImmediateTask { /* starts immediately */ }
-```
-
-## isolated deinit
-
-Runs deinit on the actor's executor, allowing safe access to actor-isolated state.
+Explicitly marks async functions to run on the concurrent thread pool (off-actor). This is the replacement for the old implicit behavior where nonisolated async functions would hop to the global executor:
 
 ```swift
-@MainActor class Session {
-    let user: User
-    isolated deinit { user.isLoggedIn = false }
+@concurrent
+static func fetchImage(at url: URL) async throws -> Image {
+  let (data, _) = try await URLSession.shared.data(from: url)
+  return await decode(data: data)
 }
 ```
 
-## weak let
+Use `@concurrent` when:
+- You have CPU-bound work that should not block the main actor
+- You explicitly want off-actor execution
+- You're writing library code that should not inherit the caller's isolation
 
-Immutable weak reference — enables Sendable conformance on types with weak refs.
+## nonisolated Async Runs on Caller's Actor (6.2)
+
+Under the `NonisolatedNonsendingByDefault` upcoming feature flag (default in 6.2), nonisolated async functions run on the caller's actor instead of switching to the global executor. This eliminates the confusing difference between sync and async nonisolated behavior.
+
+**Before (Swift 6.1 and earlier):**
+- `nonisolated func sync()` — runs wherever called
+- `nonisolated func async()` — hops to global executor
+
+**After (Swift 6.2):**
+- `nonisolated func sync()` — runs wherever called
+- `nonisolated func async()` — runs wherever called (same as sync)
+- `@concurrent func async()` — hops to global executor (explicit opt-in)
+
+## nonisolated on Types and Extensions (6.1)
+
+`nonisolated` can now be applied to types and extensions to prevent `@MainActor` inference. This is especially useful for protocol conformances that don't need main-actor isolation:
 
 ```swift
-final class Session: Sendable {
-    weak let user: User? // can't reassign, but can be deallocated
-    init(user: User?) { self.user = user }
+@MainActor struct S {
+  let id: Int
+}
+
+nonisolated extension S: Equatable {
+  static func ==(lhs: S, rhs: S) -> Bool { lhs.id == rhs.id }
 }
 ```
 
-## Global-Actor Isolated Conformances
+Without `nonisolated`, the extension would inherit `@MainActor` from the type, which could cause issues with protocol conformance requirements.
 
-Restrict protocol conformances to a specific actor context.
+## Task Group Type Inference (6.1)
+
+`withTaskGroup` and `withThrowingTaskGroup` no longer require the `of:` parameter — the child task result type is inferred from context:
 
 ```swift
-@MainActor class User: @MainActor Equatable {
-    static func ==(lhs: User, rhs: User) -> Bool { lhs.id == rhs.id }
+// Before (6.0)
+let results = await withTaskGroup(of: String.self) { group in
+  for id in ids {
+    group.addTask { await fetch(id) }
+  }
+  return await group.reduce(into: []) { $0.append($1) }
+}
+
+// After (6.1+)
+let results = await withTaskGroup { group in
+  for id in ids {
+    group.addTask { await fetch(id) }
+  }
+  return await group.reduce(into: []) { $0.append($1) }
 }
 ```
 
-## Task Naming
+## Observations Async Sequence (6.2)
+
+Stream transactional state changes from `@Observable` types:
 
 ```swift
-let t = Task(name: "FetchNews") { /* ... */ }
-print(Task.name ?? "unnamed")
-group.addTask(name: "Subtask \(i)") { /* ... */ }
+for await changes in Observations(of: model) {
+  // All synchronous mutations batched into one update
+  updateUI(with: changes)
+}
 ```
+
+This provides an async-sequence-based alternative to the closure-based `withObservationTracking`, making it natural to use in structured concurrency contexts.

@@ -1,102 +1,137 @@
-# New Syntax
+# New Syntax and Language Changes
 
-## Template strings / t-strings (3.14, PEP 750)
+## Template String Literals (PEP 750) — Python 3.14
 
-New string prefix `t` that produces a `Template` object instead of `str`. Like f-strings but with access to parts before rendering.
+T-strings use the `t''` prefix (like f-strings use `f''`) but return a `Template` object instead of a `str`. This gives you access to static parts and interpolations before they're combined, enabling safe string processing for HTML, SQL, shell commands, etc.
 
-### Syntax
+### Basic Usage
 
 ```python
+from string.templatelib import Template, Interpolation
+
 name = "world"
-template = t"Hello, {name}!"
-# type: string.templatelib.Template
+template = t"Hello {name}!"
+# type(template) → <class 'string.templatelib.Template'>
+
+# Iterate to get parts in order:
+list(template)
+# ['Hello ', Interpolation('world', 'name', None, ''), '!']
 ```
 
-Supports same expressions as f-strings: `t"{x + 1}"`, `t"{x!r:.2f}"`, `t"{'nested'}"`.
+### Interpolation Object
 
-### API
+Each `Interpolation` has attributes:
+- `value` — the evaluated expression result
+- `expression` — the source text (e.g., `'name'`)
+- `conversion` — `None`, `'r'`, `'s'`, or `'a'` (like f-string `!r`)
+- `format_spec` — format specification string (like f-string `:.2f`)
 
-```python
-from string.templatelib import Template, Interpolation
-
-template = t"Hello, {name}!"
-
-# Iterate to get parts in order
-for part in template:
-    if isinstance(part, str):
-        ...  # Static text
-    elif isinstance(part, Interpolation):
-        part.value       # Evaluated result (e.g. "world")
-        part.expr        # Source expression (e.g. "name")
-        part.conv        # Conversion: None, "r", "s", "a"
-        part.format_spec # Format spec (e.g. ".2f"), "" if none
-```
-
-### Writing processors
+### Processing Templates
 
 ```python
 from string.templatelib import Template, Interpolation
 
 
-def sql(template: Template) -> tuple[str, list]:
-    """Safe SQL query builder."""
-    parts, params = [], []
+def safe_sql(template: Template) -> tuple[str, list]:
+    """Convert t-string to parameterized SQL."""
+    query_parts = []
+    params = []
     for part in template:
         if isinstance(part, Interpolation):
-            parts.append("?")
+            query_parts.append("?")
             params.append(part.value)
         else:
-            parts.append(part)
-    return "".join(parts), params
+            query_parts.append(part)
+    return "".join(query_parts), params
 
 
 user_id = 42
-query, params = sql(t"SELECT * FROM users WHERE id = {user_id}")
+query, params = safe_sql(t"SELECT * FROM users WHERE id = {user_id}")
 # query = "SELECT * FROM users WHERE id = ?"
 # params = [42]
 ```
 
-## Deferred evaluation of annotations (3.14, PEP 649/749)
+### Key Differences from F-strings
 
-Annotations are no longer evaluated eagerly — they are stored as functions and evaluated on access.
+- `f"..."` → `str` (eagerly concatenated)
+- `t"..."` → `Template` (lazy, inspectable)
+- T-strings support the same syntax as f-strings (expressions, `!r`, `:.2f`, nested braces)
+- T-strings are in `string.templatelib`, not a builtin
 
-### Key changes
+## Deferred Evaluation of Annotations (PEP 649/749) — Python 3.14
 
-- Forward references no longer need quotes: `def f() -> MyClass` works even if `MyClass` defined later
-- `from __future__ import annotations` is deprecated (unchanged behavior in 3.14, removal after 2029)
-- New `annotationlib` module for introspection
+Annotations on functions, classes, and modules are no longer evaluated at definition time. They're stored as special annotate functions and evaluated on demand.
 
-### `annotationlib` API
+### What Changed
+
+```python
+# This now works without quotes — no NameError at definition time:
+def process(items: list[TreeNode]) -> TreeNode:
+    pass
+
+class TreeNode:
+    children: list[TreeNode]  # forward reference just works
+```
+
+### annotationlib Module
 
 ```python
 from annotationlib import get_annotations, Format
 
-# Three formats for reading annotations:
-get_annotations(
-    obj, format=Format.VALUE
-)  # Evaluate to runtime values (may raise NameError)
-get_annotations(
-    obj, format=Format.FORWARDREF
-)  # Replace unknowns with ForwardRef markers
-get_annotations(obj, format=Format.STRING)  # Return as strings
+def func(x: UndefinedType) -> int:
+    pass
+
+# VALUE — evaluates annotations (raises if undefined)
+get_annotations(func, format=Format.VALUE)
+# NameError: name 'UndefinedType' is not defined
+
+# FORWARDREF — replaces unknowns with ForwardRef markers
+get_annotations(func, format=Format.FORWARDREF)
+# {'x': ForwardRef('UndefinedType', ...), 'return': <class 'int'>}
+
+# STRING — returns annotation source text
+get_annotations(func, format=Format.STRING)
+# {'x': 'UndefinedType', 'return': 'int'}
 ```
 
-### Migration
+### Migration Notes
 
-Most code works unchanged. If you read `__annotations__` directly, consider using `annotationlib.get_annotations()` with `Format.FORWARDREF` for robustness (like `dataclasses` now does).
+- `typing.get_type_hints()` continues to work for most cases
+- `from __future__ import annotations` still works (converts to strings)
+- Code that reads `__annotations__` directly: accessing `cls.__annotations__` still works but now triggers evaluation
+- Libraries doing runtime annotation processing should use `annotationlib.get_annotations()` for more control
 
-## except without brackets (3.14, PEP 758)
+## Bracketless except (PEP 758) — Python 3.14
 
-Multiple exception types no longer need parentheses when `as` is not used:
+Multiple exception types no longer require parentheses when there's no `as` clause:
 
 ```python
-# 3.14+: no parens needed
+# New (3.14+):
+try:
+    connect()
 except TimeoutError, ConnectionRefusedError:
-    ...
+    handle_network_error()
 
-# Parens still required with `as`:
+# With as clause still requires parens:
 except (TimeoutError, ConnectionRefusedError) as e:
-    ...
+    handle(e)
+
+# Also works with except*:
+except* TimeoutError, ConnectionRefusedError:
+    handle_network_error()
 ```
 
-Note: This is NOT Python 2's `except Type, variable:` syntax — that assigned the exception to `variable`. In 3.14, the comma separates exception types.
+## finally Control Flow Warning (PEP 765) — Python 3.14
+
+`return`, `break`, or `continue` that would exit a `finally` block now emit `SyntaxWarning`:
+
+```python
+def bad():
+    try:
+        return 1
+    finally:
+        return 2  # SyntaxWarning: 'return' in 'finally' block
+
+# Suppress if needed:
+# python -Werror -Wignore::SyntaxWarning
+```

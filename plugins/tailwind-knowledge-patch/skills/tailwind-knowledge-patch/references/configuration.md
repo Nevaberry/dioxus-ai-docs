@@ -1,45 +1,94 @@
 # Configuration
 
-## `@source not` — Exclude Paths (4.1)
+## `@theme` Block
 
-Exclude specific paths from Tailwind's automatic class scanning. Useful for preventing legacy or third-party code from polluting the generated CSS:
-
-```css
-@source not "./src/components/legacy";
-@source not "./node_modules/some-lib";
-```
-
-## `@source inline()` — Safelist Replacement (4.1)
-
-`@source inline()` replaces the v3 `safelist` configuration. It force-generates specific utility classes using brace expansion syntax.
-
-### Brace Expansion Syntax
-
-Supports shell-like brace expansion for generating multiple class patterns:
+v4 replaces `tailwind.config.js` with `@theme {}` in CSS. Theme variables use namespaced CSS custom properties that map directly to utilities:
 
 ```css
-/* Generate bg-red-50, bg-red-100, ..., bg-red-900, bg-red-950 */
-/* Also generates hover: variants of each */
-@source inline("{hover:,}bg-red-{50,{100..900..100},950}");
+@import "tailwindcss";
+
+@theme {
+  --color-brand: oklch(0.72 0.11 221);
+  --font-display: "Satoshi", sans-serif;
+  --breakpoint-3xl: 120rem;
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
 ```
 
-### Preventing Class Generation
+### Namespace Reference
 
-Combine with `not` to prevent specific classes from being generated:
+| Namespace | Creates |
+|-----------|---------|
+| `--color-*` | Color utilities (`bg-red-500`, `text-sky-300`, etc.) |
+| `--font-*` | Font family (`font-sans`) |
+| `--text-*` | Font **size** (`text-xl`) — not text color |
+| `--font-weight-*` | Font weight (`font-bold`) |
+| `--tracking-*` | Letter spacing |
+| `--leading-*` | Line height |
+| `--breakpoint-*` | Responsive variants (`sm:`, `md:`) |
+| `--container-*` | Container query variants (`@sm:`) + max-width sizing |
+| `--spacing-*` | Spacing/sizing (`px-4`, `w-16`, `max-h-*`) |
+| `--radius-*` | Border radius (`rounded-sm`) |
+| `--shadow-*` / `--inset-shadow-*` | Box shadow / inset shadow |
+| `--ease-*` | Transition timing |
+| `--animate-*` | Animations |
+| `--blur-*` / `--drop-shadow-*` / `--perspective-*` / `--aspect-*` | Filters, perspective, aspect ratio |
+
+### Clearing Defaults
+
+Clear one namespace: `--color-*: initial`
+Clear all defaults: `--*: initial`
+
+## `@theme inline`
+
+Inlines variable values into utilities instead of referencing the theme variable. Required when referencing other CSS variables to avoid scoping issues:
 
 ```css
-@source not inline("container");
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+/* Generates: .font-sans { font-family: var(--font-inter); } */
+/* Without inline, would generate: .font-sans { font-family: var(--font-sans); } — circular */
 ```
 
-### Common Patterns
+## `@theme static`
+
+Generates all CSS variables even if unused. Normally Tailwind only emits variables that are actually referenced by utilities in your HTML:
 
 ```css
-/* Dynamic color classes from CMS/database */
-@source inline("bg-{red,blue,green}-{100,500,900}");
-
-/* All text sizes with responsive variants */
-@source inline("{sm:,md:,lg:,}text-{xs,sm,base,lg,xl,2xl}");
-
-/* Status badge colors */
-@source inline("bg-{green,yellow,red}-{100,500} text-{green,yellow,red}-{700,900}");
+@theme static {
+  --color-brand-light: oklch(0.85 0.08 221);
+  --color-brand-dark: oklch(0.55 0.14 221);
+}
 ```
+
+## Keyframes Inside `@theme`
+
+Define `@keyframes` within `@theme` alongside `--animate-*` variables to keep animations co-located:
+
+```css
+@theme {
+  --animate-fade-in: fade-in 0.3s ease-out;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+```
+
+## Build-Time Functions
+
+CSS functions that resolve at build time:
+
+```css
+.my-element {
+  color: --alpha(var(--color-lime-300) / 50%);    /* → color-mix() */
+  margin: --spacing(4);                            /* → calc(var(--spacing) * 4) */
+}
+```
+
+`--spacing()` also works in arbitrary values: `py-[calc(--spacing(4)-1px)]`

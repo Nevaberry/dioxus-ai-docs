@@ -1,112 +1,183 @@
 ---
 name: sqlite-knowledge-patch
-description: SQLite changes since training cutoff (latest: 3.51) — json_pretty, unistr, jsonb_each/jsonb_tree, percentile aggregates, multi-arg iif, numeric underscores, sqlite3_setlk_timeout. Load before working with SQLite.
+description: "SQLite changes since training cutoff (latest: 3.51.0) — JSON enhancements, new SQL functions, FTS5 locale support, date modifiers, JSONB table functions. Load before working with SQLite."
 license: MIT
 metadata:
   author: Nevaberry
-  version: "3.51"
+  version: "3.51.0"
 ---
 
-# SQLite 3.46+ Knowledge Patch
+# SQLite 3.46–3.51 Knowledge Patch
 
-Claude's baseline knowledge covers SQLite through 3.45. This skill provides changes from 3.46.0 (2024-05-23) onwards.
+Claude's baseline knowledge covers SQLite through ~3.45. This skill provides features from 3.46.0 (May 2024) onwards.
 
-## New SQL Functions
+## Quick Reference
 
-| Function | Version | Description |
-|----------|---------|-------------|
-| `json_pretty(X)` / `json_pretty(X,indent)` | 3.46.0 | Pretty-print JSON with optional indent string |
-| `unistr(X)` | 3.50.0 | Convert string with `\uXXXX` Unicode escapes to characters |
-| `unistr_quote(X)` | 3.50.0 | Quote string using Unicode escape syntax |
-| `jsonb_each(X)` | 3.51.0 | Like `json_each()` but returns JSONB for array/object values |
-| `jsonb_tree(X)` | 3.51.0 | Like `json_tree()` but returns JSONB for array/object values |
-| `median(X)` | 3.47.0 | Median aggregate (CLI extension) |
-| `percentile(X,P)` | 3.47.0 | Percentile aggregate (CLI extension) |
-| `percentile_cont(X,P)` | 3.47.0 | Continuous percentile (CLI extension) |
-| `percentile_disc(X,P)` | 3.47.0 | Discrete percentile (CLI extension) |
+### JSON Functions & Operators
 
-## iif() / if() Enhancements
+| Feature | Since | Description |
+|---------|-------|-------------|
+| `json_pretty(json)` | 3.46.0 | Format JSON with indentation |
+| `json_pretty(json, indent)` | 3.46.0 | Custom indent string (spaces, tab) |
+| Negative `->>`/`->` indices | 3.47.0 | `'[1,2,3]' ->> -1` → `3` |
+| `jsonb_each(json)` | 3.51.0 | Like `json_each()` but returns JSONB for nested values |
+| `jsonb_tree(json)` | 3.51.0 | Like `json_tree()` but returns JSONB for nested values |
 
-```sql
--- 3.48.0: if() is an alias for iif()
--- 3.48.0: 2-argument form returns NULL when false
-SELECT
-  if (x > 0, 'positive');
+See `references/json.md` for examples and usage details.
 
--- NULL when x <= 0
--- 3.49.0: accepts any number of args >= 2 (chained if/elseif)
-SELECT
-  iif (x > 0, 'positive', x < 0, 'negative', 'zero');
-```
+### SQL Functions & Syntax
 
-## Numeric Literal Underscores (3.46.0)
+| Feature | Since | Description |
+|---------|-------|-------------|
+| Underscore in numeric literals | 3.46.0 | `1_000_000`, `0xFF_FF` |
+| `iif()` two-argument form | 3.48.0 | `iif(cond, val)` — returns NULL when false |
+| `if()` alias for `iif()` | 3.48.0 | Drop-in replacement |
+| Variadic `iif()` | 3.49.0 | `iif(c1, v1, c2, v2, ..., default)` — compact CASE |
+| `unistr(str)` | 3.50.0 | Interpret `\uXXXX` escape sequences |
+| `unistr_quote(str)` | 3.50.0 | Reverse of `unistr()` — escape non-printable chars |
+| `format('%#Q', val)` | 3.50.0 | `%Q`/`%q` with `#` flag escapes control chars via unistr |
 
-```sql
-SELECT
-  1_000_000;
+See `references/sql-functions.md` for examples and usage details.
 
--- 1000000
-SELECT
-  3.141_592_653;
+### Date/Time Enhancements
 
--- 3.141592653
-SELECT
-  0xFF_FF;
-
--- 65535
-```
-
-## Date/Time Enhancements (3.46.0)
+| Feature | Since | Description |
+|---------|-------|-------------|
+| `ceiling` modifier | 3.46.0 | Ambiguous date → next valid date |
+| `floor` modifier | 3.46.0 | Ambiguous date → last day of target month |
 
 ```sql
--- New strftime format specifiers
-SELECT strftime('%G', 'now');  -- ISO 8601 week-numbering year
-SELECT strftime('%V', 'now');  -- ISO 8601 week number
+-- Jan 31 + 1 month: Feb has no 31st
+SELECT
+  date ('2024-01-31', '+1 month');
 
--- Ceiling/floor modifiers for ambiguous month shifts
-SELECT date('2024-01-31', '+1 month', 'ceiling');  -- 2024-03-01
-SELECT date('2024-01-31', '+1 month', 'floor');    -- 2024-02-29
+-- 2024-03-03 (default: overflow)
+SELECT
+  date ('2024-01-31', '+1 month', 'ceiling');
+
+-- 2024-03-01 (next valid date)
+SELECT
+  date ('2024-01-31', '+1 month', 'floor');
+
+-- 2024-02-29 (last day of target month)
 ```
 
-## New C APIs
+### FTS5 & Internals
 
-See [references/new-apis.md](references/new-apis.md) for details.
+| Feature | Since | Description |
+|---------|-------|-------------|
+| FTS5 `locale=1` | 3.47.0 | Locale-aware tokenization via `fts5_locale()` |
+| FTS5 `contentless_unindexed=1` | 3.47.0 | Store UNINDEXED column values in contentless tables |
+| STRICT computed column enforcement | 3.51.0 | Generated columns in STRICT tables now enforce type affinity |
+| `PRAGMA wal_checkpoint(NOOP)` | 3.51.0 | Query WAL checkpoint status without checkpointing |
 
-- `sqlite3_setlk_timeout()` (3.50.0) — separate timeout for blocking locks
-- `sqlite3_set_errmsg()` (3.51.0) — extensions can set error messages
-- `sqlite3_db_status64()` (3.51.0) — 64-bit version of `sqlite3_db_status()`
-- `sqlite3changeset_apply_v3()` (3.51.0) — session extension
+See `references/fts5-internals.md` for examples and usage details.
 
-## DBCONFIG Options
+## Essentials
 
-```c
-// 3.49.0 — all default to ON
-sqlite3_db_config(db, SQLITE_DBCONFIG_ENABLE_ATTACH_CREATE, 0, 0); // prevent ATTACH creating new DBs
-sqlite3_db_config(db, SQLITE_DBCONFIG_ENABLE_ATTACH_WRITE, 0, 0);  // make ATTACH read-only
-sqlite3_db_config(db, SQLITE_DBCONFIG_ENABLE_COMMENTS, 0, 0);      // disallow SQL comments
-```
+### Variadic `iif()` / `if()` — Compact CASE Replacement
 
-## JSON Operator Change (3.47.0)
+The most commonly useful addition. Works like a compact CASE expression:
 
 ```sql
--- Negative RHS on ->> accesses from the right of an array
-SELECT '[10,20,30]' ->> -1;  -- 30 (last element)
-SELECT '[10,20,30]' ->> -2;  -- 20 (second to last)
+-- Two-arg form (3.48.0): returns NULL when false
+SELECT iif(score > 90, 'excellent');
+
+-- if() is an alias (3.48.0)
+SELECT if(x > 0, 'positive', 'non-positive');
+
+-- Variadic form (3.49.0): cascading conditions like CASE
+-- iif(cond1, val1, cond2, val2, ..., default)
+SELECT iif(
+score > 90,
+'excellent',
+score > 70,
+'good',
+'needs work'
+);
 ```
 
-## FTS5 Enhancements
+### Underscore in Numeric Literals (3.46.0)
 
-- **3.47.0**: `fts5_tokenizer_v2` API and `locale=1` option for locale-aware tokenizers
-- **3.47.0**: `contentless_unindexed=1` for contentless tables with persistent UNINDEXED columns
-- **3.48.0**: `insttoken` config option and `fts5_insttoken()` function for prefix queries
-- **3.51.0**: STRICT typing enforced on computed columns
+```sql
+SELECT 1_000_000;        -- 1000000
+SELECT 3.141_592_653;    -- 3.141592653
+SELECT 0xFF_FF;           -- 65535
+```
 
-## Other Notable Changes
+### JSON Pretty-Print (3.46.0)
 
-- **3.47.0**: `group_concat()` returns empty string (not NULL) for single empty string input
-- **3.47.0**: `sqlite3_rsync` — experimental tool for replicating SQLite databases
-- **3.48.0**: Max function arguments increased from 127 to 1000
-- **3.48.0**: Build only requires C compiler + make (no TCL dependency)
-- **3.50.0**: `%Q`/`%q` printf with `#` flag converts control chars to `unistr()` escapes
-- **3.51.0**: `PRAGMA wal_checkpoint=NOOP` — check if checkpoint is needed without doing one
-- **3.51.0**: `carray` and `percentile` extensions in amalgamation (compile with `-DSQLITE_ENABLE_CARRAY` / `-DSQLITE_ENABLE_PERCENTILE`)
+```sql
+SELECT json_pretty('{"a":1,"b":[2,3]}');
+-- {
+--     "a": 1,
+--     "b": [
+--         2,
+--         3
+--     ]
+-- }
+-- Custom indent string (default: 4 spaces)
+SELECT json_pretty('{"a":1}', '  ');     -- 2-space indent
+SELECT json_pretty('{"a":1}', char(9));  -- tab indent
+```
+
+### Negative JSON Array Indexing (3.47.0)
+
+```sql
+SELECT '[10,20,30]' ->> -1;   -- 30 (last element)
+SELECT '[10,20,30]' ->> -2;   -- 20 (second to last)
+-- json_extract already had #-N syntax:
+SELECT '{"a":[1,2,3]}' -> '$.a[#-1]';  -- 3
+```
+
+### JSONB Table Functions (3.51.0)
+
+More efficient for JSON processing pipelines — nested arrays/objects stay in binary JSONB format:
+
+```sql
+SELECT key, value FROM jsonb_each('{"a":1,"b":[2,3]}');
+-- key: 'a', value: 1
+-- key: 'b', value: (JSONB blob of [2,3]) instead of text '[2,3]'
+
+SELECT * FROM jsonb_tree('{"a":{"b":1}}');
+-- Recursively walks JSON tree, nested objects/arrays as JSONB
+```
+
+### Unicode String Functions (3.50.0)
+
+```sql
+SELECT unistr('Hello\u0021');       -- 'Hello!'
+SELECT unistr('\u00e9');             -- 'é'
+SELECT unistr_quote('Hello!');      -- 'Hello\u0021'
+```
+
+The `format()` function's `%Q`/`%q` with `#` flag escapes control characters:
+
+```sql
+SELECT format('%#Q', char(9) || 'tab');  -- unistr('\0009tab') style output
+```
+
+### FTS5 Contentless with Stored Columns (3.47.0)
+
+```sql
+CREATE VIRTUAL TABLE t1 USING fts5(
+  body,
+  title UNINDEXED,
+  content='',
+  contentless_unindexed=1  -- title values are stored, not just indexed
+);
+```
+
+### WAL Checkpoint Status Without Checkpointing (3.51.0)
+
+```sql
+PRAGMA wal_checkpoint(NOOP);  -- returns (busy, log, checkpointed) without doing work
+```
+
+## Reference Files
+
+| File | Contents |
+|------|----------|
+| `json.md` | json_pretty, negative indexing, jsonb_each, jsonb_tree |
+| `sql-functions.md` | iif/if variadic, unistr, unistr_quote, format %#Q, underscores in literals |
+| `fts5-internals.md` | FTS5 locale, contentless_unindexed, STRICT columns, wal_checkpoint NOOP |

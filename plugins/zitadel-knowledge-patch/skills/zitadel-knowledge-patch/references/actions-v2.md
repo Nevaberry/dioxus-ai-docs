@@ -108,12 +108,19 @@ PUT /v2/actions/executions
 **PreSAMLResponse** return format uses `append_attribute` instead of `append_claims`:
 ```json
 {
-  "set_user_metadata": [{ "key": "k", "value": "base64value" }],
-  "append_attribute": [{
-    "name": "department",
-    "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
-    "value": "Engineering"
-  }]
+  "set_user_metadata": [
+    {
+      "key": "k",
+      "value": "base64value"
+    }
+  ],
+  "append_attribute": [
+    {
+      "name": "department",
+      "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
+      "value": "Engineering"
+    }
+  ]
 }
 ```
 

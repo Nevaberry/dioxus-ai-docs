@@ -10,25 +10,31 @@
     {
       "name": "almalinux-knowledge-patch",
       "source": "./plugins/almalinux-knowledge-patch",
-      "description": "AlmaLinux knowledge patch - updates Claude's knowledge about AlmaLinux 10.1 features including Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default",
+      "description": "AlmaLinux changes since training cutoff (latest: 10.1) — Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default. Load before working with AlmaLinux.",
+      "category": "development"
+    },
+    {
+      "name": "angular-knowledge-patch",
+      "source": "./plugins/angular-knowledge-patch",
+      "description": "Angular v19-v21 features: linkedSignal, resource/httpResource, signal forms, route-level SSR render modes, incremental hydration, zoneless change detection, Vitest migration, and Angular Aria components.",
       "category": "development"
     },
     {
       "name": "arch-knowledge-patch",
       "source": "./plugins/arch-knowledge-patch",
-      "description": "Arch Linux knowledge patch - updates Claude's knowledge about Arch Linux 2025.12 features including pacman 7.0 alpm user, Valkey replacing Redis, Plasma 6.4 Wayland-only, NVIDIA 590 open modules",
+      "description": "Arch Linux changes since training cutoff (latest: 2025.12) — pacman 7.0 alpm user, Valkey replacing Redis, Plasma 6.4 Wayland-only, NVIDIA 590 open modules, Dovecot 2.4, linux-firmware split. Load before working with Arch Linux.",
       "category": "development"
     },
     {
       "name": "astro-knowledge-patch",
       "source": "./plugins/astro-knowledge-patch",
-      "description": "Astro knowledge patch - updates Claude's knowledge about Astro 6.0 features including Fonts API, live collections, CSP, route caching, ClientRouter, Zod 4/Vite 7/Shiki 4",
+      "description": "Astro changes since training cutoff (latest: 6.0) — Sessions API, Fonts API, live collections, CSP, route caching, responsive images, SVG components, astro:config, Rust compiler, Cloudflare workerd dev. Load before working with Astro.",
       "category": "development"
     },
     {
       "name": "authjs-knowledge-patch",
       "source": "./plugins/authjs-knowledge-patch",
-      "description": "Auth.js v5 changes since training cutoff — Next.js 16 proxy.ts migration, idToken behavioral change, WebAuthn/Passkeys provider setup. Load before working with Auth.js v5.",
+      "description": ">",
       "category": "development"
     },
     {
@@ -40,7 +46,13 @@
     {
       "name": "axum-knowledge-patch",
       "source": "./plugins/axum-knowledge-patch",
-      "description": "Axum knowledge patch - updates Claude's knowledge about Axum 0.8.5 features including {param} path syntax, no async_trait, OptionalFromRequestParts, Utf8Bytes WS, HTTP/2 WebSockets, NoContent",
+      "description": "Axum changes since training cutoff (latest: 0.8.5) — {param} path syntax, no async_trait, OptionalFromRequestParts, Utf8Bytes WS, HTTP/2 WebSockets, NoContent. Load before working with Axum.",
+      "category": "development"
+    },
+    {
+      "name": "beckhoff-knowledge-patch",
+      "source": "./plugins/beckhoff-knowledge-patch",
+      "description": "TwinCAT changes since training cutoff (latest: 4026) — PLC++ next-gen compiler, VAR_GENERIC generics, __TRY/__CATCH, ADS .NET SDK v6, TcUnit, Linux/Docker. Load before working with TwinCAT.",
       "category": "development"
     },
     {
@@ -50,9 +62,15 @@
       "category": "development"
     },
     {
+      "name": "biome-knowledge-patch",
+      "source": "./plugins/biome-knowledge-patch",
+      "description": "Biome v2.0-2.4 changes since training cutoff — linter domains, includes replacing ignore/include, assists, GritQL plugins, type-aware linting, Vue/Svelte/Astro full support, embedded snippets. Load before writing Biome config or rules.",
+      "category": "development"
+    },
+    {
       "name": "bun-knowledge-patch",
       "source": "./plugins/bun-knowledge-patch",
-      "description": "Bun knowledge patch - updates Claude's knowledge about Bun 1.3.10 features including S3 client, built-in SQL/Redis, route-based HTTP server, CSS bundler, V8 compatibility",
+      "description": "Bun changes since training cutoff (latest: 1.3.10) \\u2014 S3 client, built-in SQL/Redis, route-based HTTP server, CSS bundler, V8 compatibility. Load before working with Bun.",
       "category": "development"
     },
     {
@@ -64,7 +82,7 @@
     {
       "name": "centos-stream-knowledge-patch",
       "source": "./plugins/centos-stream-knowledge-patch",
-      "description": "CentOS Stream knowledge patch - updates Claude's knowledge about CentOS Stream 10 features including x86_64_v3 minimum, Wayland-only, Valkey replaces Redis, modularity removed, desktop apps to Flatpak",
+      "description": "CentOS Stream changes since training cutoff (latest: 10) — x86_64_v3 minimum, Wayland-only (Xorg removed), Valkey replaces Redis, modularity removed, desktop apps to Flatpak. Load before working with CentOS Stream.",
       "category": "development"
     },
     {
@@ -82,19 +100,19 @@
     {
       "name": "debian-knowledge-patch",
       "source": "./plugins/debian-knowledge-patch",
-      "description": "Debian knowledge patch - updates Claude's knowledge about Debian 13 features including systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3",
+      "description": "Debian changes since training cutoff (latest: 13) — systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3. Load before working with Debian.",
       "category": "development"
     },
     {
       "name": "deno-knowledge-patch",
       "source": "./plugins/deno-knowledge-patch",
-      "description": "Deno knowledge patch - updates Claude's knowledge about Deno 2.7.0 features including Deno.spawn(), permission sets, deno audit, lint plugin API, QUIC, OpenTelemetry",
+      "description": ">",
       "category": "development"
     },
     {
       "name": "dioxus-knowledge-patch",
       "source": "./plugins/dioxus-knowledge-patch",
-      "description": "Dioxus knowledge patch - updates Claude's knowledge about Dioxus 0.7.3 features including Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result",
+      "description": "Dioxus changes since training cutoff (latest: 0.7.4) — Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result. Load before working with Dioxus.",
       "category": "development"
     },
     {
@@ -106,19 +124,25 @@
     {
       "name": "docker-knowledge-patch",
       "source": "./plugins/docker-knowledge-patch",
-      "description": "Docker knowledge patch - updates Claude's knowledge about Docker BuildKit 0.31.0 features including Rego source policies, bake --var flag, semvercmp function, env lookup disable",
+      "description": "Docker changes since training cutoff (latest: Engine 29.3, Compose 5.1, Buildx 0.32) — Engine 29 breaking defaults, networking overhaul, image mounts, Compose service providers, Buildx Rego policies, CDI GPUs. Load before working with Docker.",
       "category": "development"
     },
     {
       "name": "drizzle-knowledge-patch",
       "source": "./plugins/drizzle-knowledge-patch",
-      "description": "Drizzle ORM knowledge patch - updates Claude's knowledge about Drizzle 1.0.0-beta.19 features including consolidated validator imports, Effect Schema support, node-sqlite driver, .comment() query tagging",
+      "description": "Drizzle ORM v1.0 beta changes since training cutoff (latest: 1.0.0-beta.19) — new relational query builder v2 with defineRelations, object-based where/orderBy, node-sqlite driver, validator consolidation, Effect Postgres. Load before writing Drizzle ORM code.",
+      "category": "development"
+    },
+    {
+      "name": "elixir-knowledge-patch",
+      "source": "./plugins/elixir-knowledge-patch",
+      "description": "Elixir 1.19–1.20, Phoenix 1.8, LiveView 1.0–1.1: type system inference, map key typing, colocated hooks, portals, scopes, magic link auth, new APIs and breaking changes.",
       "category": "development"
     },
     {
       "name": "fastapi-knowledge-patch",
       "source": "./plugins/fastapi-knowledge-patch",
-      "description": "FastAPI changes since training cutoff (0.112-0.135.3) -- native SSE, yield streaming, strict_content_type, dependency scopes, Pydantic v1 dropped, Starlette 1.0, Pydantic 2.12 MISSING sentinel/exclude_if, security 401 fix. Load before working with FastAPI.",
+      "description": "FastAPI changes since training cutoff (latest: 0.135.3) — SSE with EventSourceResponse, JSON Lines streaming with yield, strict Content-Type, dependency scope, security 401. Load before working with FastAPI.",
       "category": "development"
     },
     {
@@ -130,7 +154,7 @@
     {
       "name": "flutter-knowledge-patch",
       "source": "./plugins/flutter-knowledge-patch",
-      "description": "Flutter 3.29-3.41 + Dart 3.7-3.11 changes since training cutoff — dot shorthands, squircles, null-aware elements, predictive back, platform assets. Load before working with Flutter/Dart.",
+      "description": "Flutter/Dart changes since training cutoff (latest: 3.41/Dart 3.11) — dot shorthands, null-aware elements, build hooks, squircle shapes, RadioGroup, UIScene lifecycle, platform-specific assets. Load before working with Flutter.",
       "category": "development"
     },
     {
@@ -140,9 +164,27 @@
       "category": "development"
     },
     {
+      "name": "gleam-knowledge-patch",
+      "source": "./plugins/gleam-knowledge-patch",
+      "description": "Gleam changes since training cutoff (latest: 1.15) — echo debugging, assert testing, bit array improvements, JavaScript FFI API, dev directory, record update enhancements. Load before working with Gleam.",
+      "category": "development"
+    },
+    {
       "name": "go-knowledge-patch",
       "source": "./plugins/go-knowledge-patch",
-      "description": "Go knowledge patch - updates Claude's knowledge about Go 1.26.0 features including new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer",
+      "description": "Go changes since training cutoff (latest: 1.26) — new() with values, self-referential generics, errors.AsType, reflect iterators, go fix modernizers. Load before working with Go.",
+      "category": "development"
+    },
+    {
+      "name": "hono-knowledge-patch",
+      "source": "./plugins/hono-knowledge-patch",
+      "description": ">",
+      "category": "development"
+    },
+    {
+      "name": "htmx-knowledge-patch",
+      "source": "./plugins/htmx-knowledge-patch",
+      "description": "htmx changes since training cutoff (latest: 4.0 pre-release) — explicit inheritance, hx-status, hx-partial, new swap styles, fetch-based rewrite, extension API v2. Load before working with htmx 2.0+ or 4.0.",
       "category": "development"
     },
     {
@@ -154,7 +196,13 @@
     {
       "name": "kotlin-knowledge-patch",
       "source": "./plugins/kotlin-knowledge-patch",
-      "description": "Kotlin ecosystem changes since training cutoff (latest: 2.3.0) — guard conditions, explicit backing fields, multi-dollar interpolation, Compose compiler plugin, Ktor 3.0, Coroutines 1.10, Serialization 1.10, Compose Multiplatform 1.10. Load before working with Kotlin.",
+      "description": "Kotlin 2.1.20–2.3.20 features — context parameters, name-based destructuring, explicit backing fields, stdlib atomics/UUID/Instant, Compose Multiplatform 1.7–1.10. Load before writing Kotlin 2.2+ code.",
+      "category": "development"
+    },
+    {
+      "name": "kubernetes-knowledge-patch",
+      "source": "./plugins/kubernetes-knowledge-patch",
+      "description": "Kubernetes features from v1.33-1.35 including In-Place Pod Resize GA, Dynamic Resource Allocation GA, MutatingAdmissionPolicy, Pod-Level Resources, Image Volumes, Gateway API v1.3-1.4, and key deprecations. Use when writing Kubernetes manifests, Helm charts, or controller code targeting recent cluster versions.",
       "category": "development"
     },
     {
@@ -166,13 +214,13 @@
     {
       "name": "leptos-knowledge-patch",
       "source": "./plugins/leptos-knowledge-patch",
-      "description": "Leptos knowledge patch - updates Claude's knowledge about Leptos 0.8.17 features including ShowLet component, Show signal support, Bitcode server function encoding",
+      "description": "Leptos 0.7-0.8 changes since training cutoff (latest: 0.8.17) — 0.7 rewrite (signals, views, routing), reactive stores, WASM code splitting, WebSocket server fns, lazy routes, custom shell. Load before writing Leptos code.",
       "category": "development"
     },
     {
       "name": "nextjs-knowledge-patch",
       "source": "./plugins/nextjs-knowledge-patch",
-      "description": "Next.js knowledge patch - updates Claude's knowledge about Next.js 16.1 features including proxy.ts, \"use cache\", Cache Components, navigation hooks, typed routes, auto PageProps, React 19.2",
+      "description": "Next.js changes since training cutoff (latest: 16.1) — proxy.ts, \\\"use cache\\\", Cache Components, navigation hooks, typed routes, auto PageProps, React 19.2. Load before working with Next.js.",
       "category": "development"
     },
     {
@@ -184,7 +232,13 @@
     {
       "name": "nodejs-knowledge-patch",
       "source": "./plugins/nodejs-knowledge-patch",
-      "description": "Node.js knowledge patch - updates Claude's knowledge about Node.js 25.5.0 features including native fetch, test runner, permission model, WebSocket client, require(ESM), URLPattern",
+      "description": "Node.js changes since training cutoff (23.0 through 25.5) -- require(esm), native TypeScript, built-in HTTP proxy, Permission model, Web Storage, URLPattern, Wasm modules, AsyncContextFrame. Load before writing Node.js code targeting v23+.",
+      "category": "development"
+    },
+    {
+      "name": "nuxt-knowledge-patch",
+      "source": "./plugins/nuxt-knowledge-patch",
+      "description": "Nuxt changes since training cutoff (latest: 3.12) — routeRules middleware, server/client-only pages, Nuxt 4 compatibility mode, auto-registered layers. Load before working with Nuxt 3.11+.",
       "category": "development"
     },
     {
@@ -194,33 +248,39 @@
       "category": "development"
     },
     {
+      "name": "playwright-knowledge-patch",
+      "source": "./plugins/playwright-knowledge-patch",
+      "description": "Playwright 1.50-1.59 changes since training cutoff — Screencast API, browser.bind(), test agents, ARIA snapshot improvements, async disposables, storage state enhancements. Load before working with Playwright.",
+      "category": "development"
+    },
+    {
       "name": "podman-knowledge-patch",
       "source": "./plugins/podman-knowledge-patch",
-      "description": "Podman knowledge patch - updates Claude's knowledge about Podman 5.8.0 features including Quadlet CLI management, OCI artifacts, multi-file install, BoltDB-to-SQLite migration, TLS remote",
+      "description": "Podman changes since training cutoff (latest: 5.8.0) — Quadlet CLI management, OCI artifacts, multi-file install, BoltDB→SQLite migration, TLS remote. Load before working with Podman.",
       "category": "development"
     },
     {
       "name": "postgis-knowledge-patch",
       "source": "./plugins/postgis-knowledge-patch",
-      "description": "PostGIS knowledge patch - updates Claude's knowledge about PostGIS 3.6.1 features including SFCGAL CG_* rename, ST_CoverageClean, ST_AsRasterAgg, topology bigint IDs, viewport simplification",
+      "description": "PostGIS changes since training cutoff (latest: 3.6.1) — breaking changes, new spatial/raster/SFCGAL functions, topology bigint migration. Load before working with PostGIS.",
       "category": "development"
     },
     {
       "name": "postgresql-knowledge-patch",
       "source": "./plugins/postgresql-knowledge-patch",
-      "description": "PostgreSQL knowledge patch - updates Claude's knowledge about PostgreSQL 18.1 features including JSON_TABLE, SQL/JSON functions, MERGE RETURNING, virtual generated columns, UUIDv7, temporal PRIMARY KEY",
+      "description": "PostgreSQL 17–18 features since training cutoff — JSON_TABLE, SQL/JSON functions, uuidv7, virtual generated columns, temporal constraints (WITHOUT OVERLAPS), OLD/NEW in RETURNING, NOT ENFORCED constraints, MERGE enhancements, array_sort/array_reverse, casefold. Load before working with PostgreSQL 17+.",
       "category": "development"
     },
     {
       "name": "prisma-knowledge-patch",
       "source": "./plugins/prisma-knowledge-patch",
-      "description": "Prisma knowledge patch - updates Claude's knowledge about Prisma 7.3 features including v7 ESM rewrite, prisma-client generator, driver adapters, prisma.config.ts, TypedSQL, SQL comments",
+      "description": ">",
       "category": "development"
     },
     {
       "name": "python-knowledge-patch",
       "source": "./plugins/python-knowledge-patch",
-      "description": "Python knowledge patch - updates Claude's knowledge about Python 3.14 features including t-strings, deferred annotations, free-threaded CPython, subinterpreters, zstd compression, dead battery removals",
+      "description": "Python 3.14 features since training cutoff: t-strings (PEP 750), deferred annotations (PEP 649), subinterpreters (PEP 734), compression.zstd (PEP 784), functools.Placeholder, uuid7, pathlib copy/move, breaking changes (asyncio, multiprocessing, removals). Load before writing Python 3.14 code.",
       "category": "development"
     },
     {
@@ -238,31 +298,43 @@
     {
       "name": "react-knowledge-patch",
       "source": "./plugins/react-knowledge-patch",
-      "description": "React knowledge patch - updates Claude's knowledge about React 19.2.0 features including Activity component, cacheSignal, Partial Pre-rendering, prerender/resume APIs, eslint-plugin-react-hooks v6",
+      "description": "React changes since training cutoff (latest: 19.2) — Activity component, cacheSignal, Partial Pre-rendering (PPR), eslint-plugin-react-hooks v6. Load before working with React 19.x features.",
+      "category": "development"
+    },
+    {
+      "name": "react-router-knowledge-patch",
+      "source": "./plugins/react-router-knowledge-patch",
+      "description": "React Router v7 changes since training cutoff — Framework mode (routes.ts, Vite plugin), type-safe route modules, middleware with context API, pre-rendering, SPA/SSR config. Load before working with React Router v7+.",
       "category": "development"
     },
     {
       "name": "rhel-knowledge-patch",
       "source": "./plugins/rhel-knowledge-patch",
-      "description": "RHEL knowledge patch - updates Claude's knowledge about RHEL 10.1 features including Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies",
+      "description": "RHEL changes since training cutoff (latest: 10.1) — Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies. Load before working with RHEL.",
       "category": "development"
     },
     {
       "name": "rocky-knowledge-patch",
       "source": "./plugins/rocky-knowledge-patch",
-      "description": "Rocky Linux knowledge patch - updates Claude's knowledge about Rocky Linux 10.0 features including DNF 5, modularity removed, Valkey replaces Redis, rpmsort, rh_waived kernel arg",
+      "description": "Rocky Linux changes since training cutoff (latest: 10.0) — DNF 5 (modularity removed), Valkey replaces Redis, rpmsort, rh_waived kernel arg. Load before working with Rocky Linux.",
       "category": "development"
     },
     {
       "name": "rust-knowledge-patch",
       "source": "./plugins/rust-knowledge-patch",
-      "description": "Rust knowledge patch - updates Claude's knowledge about Rust 1.94.0 features including Rust 2024 Edition, async closures, trait upcasting, new std APIs, cargo resolver v3",
+      "description": "Rust changes since training cutoff (latest: 1.94.0) — 2024 edition, trait upcasting, async closures, let chains, naked functions, new std APIs. Load before working with Rust.",
       "category": "development"
     },
     {
       "name": "serde-knowledge-patch",
       "source": "./plugins/serde-knowledge-patch",
       "description": "Serde/serde_json changes since training cutoff (latest: serde 1.0.228 / serde_json 1.0.149) — Map sorting, Map as Deserializer, RawValue constants, Map FromStr. Load before working with serde or serde_json.",
+      "category": "development"
+    },
+    {
+      "name": "solidjs-knowledge-patch",
+      "source": "./plugins/solidjs-knowledge-patch",
+      "description": "SolidJS changes since training cutoff (latest: 2.0 beta, SolidStart 1.1) -- Solid 2.0 rewrites reactivity with microtask batching, split effects, async-first computations, Loading/Errored boundaries, draft-first stores, actions with optimistic updates, and DOM model cleanup. Load before working with SolidJS.",
       "category": "development"
     },
     {
@@ -274,13 +346,13 @@
     {
       "name": "sqlite-knowledge-patch",
       "source": "./plugins/sqlite-knowledge-patch",
-      "description": "SQLite knowledge patch - updates Claude's knowledge about SQLite 3.51 features including json_pretty, unistr, jsonb_each/jsonb_tree, percentile aggregates, multi-arg iif, numeric underscores",
+      "description": "SQLite changes since training cutoff (latest: 3.51.0) — JSON enhancements, new SQL functions, FTS5 locale support, date modifiers, JSONB table functions. Load before working with SQLite.",
       "category": "development"
     },
     {
       "name": "sqlx-knowledge-patch",
       "source": "./plugins/sqlx-knowledge-patch",
-      "description": "SQLx knowledge patch - updates Claude's knowledge about SQLx 0.9.0-alpha.1 features including SqlSafeStr, owned Arguments, sqlx.toml config, begin_with transactions, SQLite hooks, PgBindIter",
+      "description": "SQLx changes since training cutoff (latest: 0.9.0-alpha.1) — SqlSafeStr, owned Arguments, sqlx.toml config, begin_with transactions, SQLite hooks, PgBindIter. Load before working with SQLx.",
       "category": "development"
     },
     {
@@ -292,37 +364,43 @@
     {
       "name": "supabase-knowledge-patch",
       "source": "./plugins/supabase-knowledge-patch",
-      "description": "Supabase changes since training cutoff — OAuth 2.1 server, Web3 auth, Edge Function background tasks/S3 mounts, Realtime authorization, vector/analytics buckets, pgmq queues, MCP server, new API key model. Load before working with Supabase.",
+      "description": "Supabase platform changes since training cutoff — new API keys (sb_publishable/sb_secret), OAuth 2.1 server, Web3 auth, Realtime authorization, Vector/Analytics buckets, Edge Function S3 mounts, Queues (pgmq), MCP server, Branching. Load before working with Supabase.",
       "category": "development"
     },
     {
       "name": "suse-knowledge-patch",
       "source": "./plugins/suse-knowledge-patch",
-      "description": "SUSE knowledge patch - updates Claude's knowledge about SLES 16+, openSUSE Leap 15.6+, and Tumbleweed features including Agama installer, SELinux, NetworkManager migration, /usr-merge, Cockpit",
+      "description": "This skill should be used when working with SUSE Linux (SLES 16+), openSUSE Leap 15.6+, or openSUSE Tumbleweed — including Agama installer, SELinux, NetworkManager migration from wicked, /usr-merge system defaults, Cockpit administration, or SUSE 16 component removals. Triggers on SUSE, SLES, openSUSE, Leap, Tumbleweed.",
       "category": "development"
     },
     {
       "name": "svelte-knowledge-patch",
       "source": "./plugins/svelte-knowledge-patch",
-      "description": "Svelte knowledge patch - updates Claude's knowledge about Svelte 5.0.0 features including runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events",
+      "description": "Svelte changes since training cutoff (latest: 5.0.0) — runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events, mount/hydrate API. Load before working with Svelte.",
       "category": "development"
     },
     {
       "name": "swift-knowledge-patch",
       "source": "./plugins/swift-knowledge-patch",
-      "description": "Swift changes since training cutoff (5.10\\u20136.3) \\u2014 approachable concurrency, InlineArray, @c interop, module selectors, Swift Testing updates. Load before working with Swift.",
+      "description": "Swift 6.1–6.3 knowledge: default MainActor isolation, @concurrent, InlineArray, Span, @c interop, module selectors, Swift Testing updates. Load before writing Swift 6.1+ code.",
       "category": "development"
     },
     {
       "name": "tailwind-knowledge-patch",
       "source": "./plugins/tailwind-knowledge-patch",
-      "description": "Tailwind CSS knowledge patch - updates Claude's knowledge about Tailwind CSS 4.1 features including text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants",
+      "description": "Tailwind CSS v4.x changes since training cutoff (latest: 4.1) — CSS-first @theme configuration, new directives (@utility, @custom-variant, @variant, @reference, @source), gradient/mask/text-shadow utilities, container queries built-in. Load before working with Tailwind CSS v4.",
+      "category": "development"
+    },
+    {
+      "name": "tauri-knowledge-patch",
+      "source": "./plugins/tauri-knowledge-patch",
+      "description": "Tauri 2.0-2.5 changes since training cutoff — capabilities replacing allowlist, IPC channels, plugin system v2, mobile support, config v2 structure. Load before working with Tauri.",
       "category": "development"
     },
     {
       "name": "terraform-knowledge-patch",
       "source": "./plugins/terraform-knowledge-patch",
-      "description": "Terraform/OpenTofu changes since training cutoff (latest: TF 1.15 / OT 1.12) — ephemeral values, write-only arguments, cross-object validation, Stacks, resource identity, OpenTofu divergences. Load before working with Terraform or OpenTofu.",
+      "description": "Terraform 1.10-1.15 and OpenTofu divergences including ephemeral resources, write-only attributes, S3 native state locking, import by identity, short-circuit operators, Stacks CLI, terraform query, actions blocks, deprecated attribute, convert() function, and OpenTofu-specific features (state encryption, provider for_each, lifecycle enabled). Use when writing Terraform/OpenTofu configurations targeting recent versions.",
       "category": "development"
     },
     {
@@ -338,27 +416,45 @@
       "category": "development"
     },
     {
+      "name": "trpc-knowledge-patch",
+      "source": "./plugins/trpc-knowledge-patch",
+      "description": ">",
+      "category": "development"
+    },
+    {
       "name": "typescript-knowledge-patch",
       "source": "./plugins/typescript-knowledge-patch",
-      "description": "TypeScript knowledge patch - updates Claude's knowledge about TypeScript 5.9 features including import defer, --module node20, ArrayBuffer breaking change, TypeScript 7 native Go port (tsgo)",
+      "description": "TypeScript changes since training cutoff (latest 5.9, plus TS 7.0/tsgo transition) — import defer, --module node20, ArrayBuffer breaking change, tsgo migration. Load before working with TypeScript 5.9+.",
       "category": "development"
     },
     {
       "name": "ubuntu-knowledge-patch",
       "source": "./plugins/ubuntu-knowledge-patch",
-      "description": "Ubuntu knowledge patch - updates Claude's knowledge about Ubuntu 25.10 features including sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME",
+      "description": "Ubuntu changes since training cutoff (latest: 25.10) — sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME. Load before working with Ubuntu.",
       "category": "development"
     },
     {
       "name": "vercel-ai-sdk-knowledge-patch",
       "source": "./plugins/vercel-ai-sdk-knowledge-patch",
-      "description": "Vercel AI SDK knowledge patch - updates Claude's knowledge about Vercel AI SDK 4.1.0 features including PDF files, computer use tools, continuation, image generation, stream smoothing, createDataStreamResponse",
+      "description": ">",
       "category": "development"
     },
     {
       "name": "vite-knowledge-patch",
       "source": "./plugins/vite-knowledge-patch",
-      "description": "Vite knowledge patch - updates Claude's knowledge about Vite 8.0 features including Rolldown bundler, tsconfigPaths, React plugin v6 with Oxc, Environment API, SSR improvements",
+      "description": "Vite changes since training cutoff (latest: 8.0) — Environment API, Rolldown bundler, resolve.conditions, tsconfigPaths, React plugin v6 with Oxc, browser target changes. Load before working with Vite 6+.",
+      "category": "development"
+    },
+    {
+      "name": "vitest-knowledge-patch",
+      "source": "./plugins/vitest-knowledge-patch",
+      "description": "Vitest changes since training cutoff (latest: 4.1) — projects config, test tags, stable browser mode, visual regression, test.extend builder, aroundEach hooks, expect.schemaMatching, agent reporter. Load before working with Vitest.",
+      "category": "development"
+    },
+    {
+      "name": "vuejs-knowledge-patch",
+      "source": "./plugins/vuejs-knowledge-patch",
+      "description": "Vue.js ecosystem changes since training cutoff — Vue 3.6 Vapor Mode, Pinia 3, Pinia Colada, Vue Router 5, Data Loaders. Load before working with Vue.js.",
       "category": "development"
     },
     {
@@ -370,13 +466,13 @@
     {
       "name": "zig-knowledge-patch",
       "source": "./plugins/zig-knowledge-patch",
-      "description": "Zig knowledge patch - updates Claude's knowledge about Zig 0.14.0 features including labeled switch, decl literals, @branchHint, DebugAllocator, unmanaged containers, root_module build API",
+      "description": "Zig changes since training cutoff (latest: 0.14.0) \\u2014 labeled switch, decl literals, @branchHint, DebugAllocator, unmanaged containers, root_module build API. Load before working with Zig.",
       "category": "development"
     },
     {
       "name": "zitadel-knowledge-patch",
       "source": "./plugins/zitadel-knowledge-patch",
-      "description": "Zitadel knowledge patch - updates Claude's knowledge about Zitadel v4.13 features including V2 ConnectRPC APIs, Actions V2 webhooks, Session API custom login, Login V2 Next.js, token exchange GA",
+      "description": "Zitadel IAM changes since training cutoff (latest: v4.13) — V2 ConnectRPC APIs, Actions V2 webhooks, Session API custom login, Login V2 Next.js, token exchange GA, new language SDKs. Load before working with Zitadel.",
       "category": "development"
     }
   ]

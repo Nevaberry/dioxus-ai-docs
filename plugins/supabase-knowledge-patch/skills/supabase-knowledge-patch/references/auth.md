@@ -1,10 +1,8 @@
 # Auth
 
-## OAuth 2.1 Server (Supabase as Identity Provider)
+## OAuth 2.1 Server — Supabase as Identity Provider
 
-Supabase can now act as a full OAuth 2.1 identity provider. Third-party apps can authenticate users against your Supabase project using standard OAuth flows.
-
-Enable in `supabase/config.toml`:
+Supabase Auth can now act as a full OAuth 2.1 and OpenID Connect identity provider, enabling "Sign in with [Your App]" flows. Enable in `config.toml`:
 
 ```toml
 [auth.oauth_server]
@@ -13,66 +11,42 @@ authorization_url_path = "/oauth/consent"
 allow_dynamic_registration = false
 ```
 
-Endpoints exposed:
-- Authorization: `/auth/v1/oauth/authorize`
-- Token: `/auth/v1/oauth/token`
-- JWKS: `/auth/v1/.well-known/jwks.json`
-- Discovery: `/.well-known/oauth-authorization-server/auth/v1`
-- OIDC: `/auth/v1/.well-known/openid-configuration`
+Exposed endpoints include `/auth/v1/oauth/authorize`, `/auth/v1/oauth/token`, `/auth/v1/.well-known/jwks.json`, and OIDC discovery at `/auth/v1/.well-known/openid-configuration`.
 
-New `supabase-js` methods for building consent UIs:
+New `supabase-js` OAuth methods for building consent UI:
 
 ```typescript
-// In your authorization page (e.g., /oauth/consent?authorization_id=...)
-const { data } = await supabase.auth.oauth.getAuthorizationDetails(authorizationId)
+// Get details about the authorization request
+const { data } =
+  await supabase.auth.oauth.getAuthorizationDetails(authorizationId);
 // data.client.name, data.redirect_uri, data.scope
 
-await supabase.auth.oauth.approveAuthorization(authorizationId)
-// or
-await supabase.auth.oauth.denyAuthorization(authorizationId)
+// Approve or deny
+const { data: approved } =
+  await supabase.auth.oauth.approveAuthorization(authorizationId);
+// approved.redirect_to — redirect user here
+
+const { data: denied } =
+  await supabase.auth.oauth.denyAuthorization(authorizationId);
 ```
 
-Register OAuth clients via dashboard or Management API. Supports `authorization_code` with PKCE and `refresh_token` grant types. Public clients use `token_endpoint_auth_method: none`; confidential clients use `client_secret_basic` (default) or `client_secret_post`.
-
-Requires asymmetric signing keys (RS256/ES256) for OIDC ID tokens — HS256 won't work.
-
-## OAuth Token Security & RLS
-
-OAuth access tokens include a `client_id` claim identifying which OAuth client obtained the token. Use this in RLS policies:
-
-```sql
--- Only allow direct user sessions (no OAuth clients)
-CREATE POLICY "No OAuth access to payments" ON payment_methods FOR ALL USING (
-  auth.uid () = user_id
-  AND (auth.jwt () ->> 'client_id') IS NULL
-);
-
--- Allow specific OAuth client
-CREATE POLICY "Mobile app reads profiles" ON profiles FOR
-SELECT
-  USING (
-    auth.uid () = user_id
-    AND (auth.jwt () ->> 'client_id') = 'mobile-app-client-id'
-  );
-```
-
-OAuth scopes (`openid`, `email`, `profile`, `phone`) control OIDC data only — they do NOT control database access. Use RLS for that.
+OAuth access tokens include a `client_id` claim identifying which OAuth client obtained the token. Supports `authorization_code` with PKCE and `refresh_token` grant types. OpenID Connect ID tokens require asymmetric JWT signing (RS256/ES256).
 
 ## Custom OAuth/OIDC Providers
 
-Add any standards-compliant OAuth2 or OIDC identity provider with `custom:` prefix identifiers (up to 3 per project):
+Add any standards-compliant identity provider with the `custom:` prefix (up to 3 per project):
 
 ```javascript
 // OAuth2 provider (manual endpoints)
 await supabase.auth.admin.customProviders.createProvider({
   provider_type: 'oauth2',
-  identifier: 'custom:my-provider',
-  name: 'My Provider',
-  client_id: 'your-client-id',
-  client_secret: 'your-client-secret',
-  authorization_url: 'https://provider.example.com/oauth/authorize',
-  token_url: 'https://provider.example.com/oauth/token',
-  userinfo_url: 'https://provider.example.com/oauth/userinfo',
+  identifier: 'custom:my-idp',
+  name: 'My IDP',
+  client_id: 'id',
+  client_secret: 'secret',
+  authorization_url: 'https://idp.example.com/oauth/authorize',
+  token_url: 'https://idp.example.com/oauth/token',
+  userinfo_url: 'https://idp.example.com/oauth/userinfo',
   scopes: ['profile', 'email'],
 });
 
@@ -81,27 +55,29 @@ await supabase.auth.admin.customProviders.createProvider({
   provider_type: 'oidc',
   identifier: 'custom:my-oidc',
   name: 'OIDC Provider',
-  client_id: 'your-client-id',
-  client_secret: 'your-client-secret',
+  client_id: 'id',
+  client_secret: 'secret',
   issuer: 'https://auth.example.com',
-  scopes: ['openid', 'profile', 'email'],
 });
+
+// Sign in
+await supabase.auth.signInWithOAuth({ provider: 'custom:my-idp' });
+
+// Manage: list, update, delete
+await supabase.auth.admin.customProviders.listProviders();
+await supabase.auth.admin.customProviders.updateProvider('custom:my-idp', {
+  enabled: false,
+});
+await supabase.auth.admin.customProviders.deleteProvider('custom:my-idp');
 ```
 
-Sign in users:
+Options: `acceptable_client_ids` for multi-platform OIDC, `email_optional: true`, `pkce_enabled`, `authorization_params`, `discovery_url`, `skip_nonce_check`.
 
-```javascript
-await supabase.auth.signInWithOAuth({ provider: 'custom:my-provider' })
-```
+## Web3 Authentication (Ethereum & Solana)
 
-PKCE enabled by default. CRUD via `supabase.auth.admin.customProviders.*` (list, update, delete).
-
-## Web3 Authentication
-
-Sign in with Ethereum or Solana wallets using EIP-4361 (Sign-In with Ethereum) standard.
+Sign in with Web3 wallets using EIP-4361 standard. Enable in `config.toml`:
 
 ```toml
-# supabase/config.toml
 [auth.web3.ethereum]
 enabled = true
 
@@ -110,84 +86,74 @@ enabled = true
 ```
 
 ```typescript
-// Ethereum — auto-detects window.ethereum
+// Ethereum — uses window.ethereum by default
 const { data, error } = await supabase.auth.signInWithWeb3({
   chain: 'ethereum',
   statement: 'I accept the Terms of Service at https://example.com/tos',
+  wallet: selectedWallet, // optional: EIP-6963 wallet selection
 })
 
-// Ethereum — specific wallet (EIP-6963 discovery)
-await supabase.auth.signInWithWeb3({
-  chain: 'ethereum',
-  statement: '...',
-  wallet: selectedWallet,
-})
-
-// Solana — auto-detects window.solana
-await supabase.auth.signInWithWeb3({
+// Solana — uses window.solana by default
+const { data, error } = await supabase.auth.signInWithWeb3({
   chain: 'solana',
   statement: 'I accept the Terms of Service at https://example.com/tos',
+  wallet: window.phantom, // optional: specific wallet
 })
 
-// Solana with Wallet Adapter
-const wallet = useWallet()
+// Custom message+signature (Ethereum only)
 await supabase.auth.signInWithWeb3({
-  chain: 'solana',
-  statement: '...',
-  wallet,
+  chain: 'ethereum',
+  message: '<EIP-4361 message>',
+  signature: '<hex signature>',
 })
 ```
 
-Web3 accounts have no email/phone. Use `updateUser()` or `linkIdentity()` to add them later.
+Rate limiting via `[auth.rate_limit] web3 = 30`. Solana Wallet Adapter (`useWallet()` hook) is also supported.
 
-## JWT Signing Keys (Asymmetric)
+## OAuth Token Security with RLS
 
-New signing keys system replaces the legacy shared JWT secret. Supports ES256 (P-256, recommended), RS256, and HS256.
-
-Key lifecycle states: **standby** -> **in use** (rotate) -> **previously used** -> **revoked** -> **deleted**. Each transition is reversible (except delete). Zero-downtime rotation — no users signed out.
-
-JWKS endpoint for public key discovery:
-
-```
-GET https://<project-ref>.supabase.co/auth/v1/.well-known/jwks.json
-```
-
-Generate and import signing keys:
-
-```bash
-supabase gen signing-key --algorithm ES256
-# Outputs JWK to import as standby key in dashboard
-
-supabase gen bearer-jwt --role authenticated --sub <user-uuid>
-# Mint custom JWTs with imported key
-```
-
-Revoking legacy JWT secret requires disabling `anon` and `service_role` keys first (they are JWTs signed by the legacy secret). Migrate to publishable/secret API keys instead.
-
-## Before User Created Hook
-
-New auth hook that runs before inserting a user into `auth.users`. Return an error to reject signup.
+OAuth JWTs include a `client_id` claim. Use it in RLS policies to control per-client data access:
 
 ```sql
-CREATE OR REPLACE FUNCTION public.before_user_created(event jsonb)
-RETURNS jsonb AS $$
-BEGIN
-  -- Block disposable email domains
-  IF (event->'user'->>'email') LIKE '%@disposable.com' THEN
-    RETURN jsonb_build_object(
-      'error', jsonb_build_object(
-        'http_code', 400,
-        'message', 'Disposable email addresses are not allowed.'
-      )
-    );
-  END IF;
-  RETURN '{}'::jsonb;
-END;
-$$ LANGUAGE plpgsql;
+-- Only direct user sessions (no OAuth clients)
+CREATE POLICY "No OAuth access to payments" ON payment_methods FOR ALL USING (
+  auth.uid () = user_id
+  AND (auth.jwt () ->> 'client_id') IS NULL
+);
+
+-- Specific client access
+CREATE POLICY "Mobile app reads profiles" ON profiles FOR
+SELECT
+  USING (
+    auth.uid () = user_id
+    AND (auth.jwt () ->> 'client_id') = 'mobile-app-client-id'
+  );
 ```
 
-Input payload includes `metadata` (IP address, request ID) and `user` (full user object). Return `{}` or `204` to allow, return `{ "error": { "http_code": 400, "message": "..." } }` to reject.
+Custom Access Token Hook receives `client_id` in the payload, enabling per-client claim customization (e.g., different `aud` values for different OAuth clients).
 
-## MCP Server Authentication
+## Auth Hooks via HTTP Endpoints (Edge Functions)
 
-Use Supabase Auth's OAuth 2.1 server to authenticate MCP (Model Context Protocol) AI agents. MCP clients discover OAuth config from `/.well-known/oauth-authorization-server/auth/v1`, optionally register via dynamic client registration, then authenticate users through your consent flow. Existing RLS policies apply to MCP client tokens automatically.
+Auth hooks can now be HTTP endpoints (not just Postgres functions). Configure in `config.toml`:
+
+```toml
+[auth.hook.send_sms]
+enabled = true
+uri = "http://host.docker.internal:54321/functions/v1/send_sms"
+secrets = "env(SEND_SMS_HOOK_SECRETS)"
+```
+
+HTTP hooks use Standard Webhooks spec with `webhook-id`, `webhook-timestamp`, `webhook-signature` headers. Secret format: `v1,whsec_<base64-secret>`. Verify with Standard Webhooks library:
+
+```typescript
+Deno.serve(async (req) => {
+  const payload = await req.text()
+  const hookSecret = Deno.env.get('SEND_SMS_HOOK_SECRETS').replace('v1,whsec_', '')
+  const headers = Object.fromEntries(req.headers)
+  const wh = new Webhook(hookSecret)
+  const data = wh.verify(payload, headers) // throws if invalid
+  // process verified payload...
+})
+```
+
+20KB payload limit. Use `--no-verify-jwt` when serving locally since hooks fire before JWT issuance.

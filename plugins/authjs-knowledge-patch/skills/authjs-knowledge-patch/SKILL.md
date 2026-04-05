@@ -1,42 +1,101 @@
 ---
 name: authjs-knowledge-patch
-description: Auth.js v5 changes since training cutoff — Next.js 16 proxy.ts migration, idToken behavioral change, WebAuthn/Passkeys provider setup. Load before working with Auth.js v5.
-version: "5.0.0-beta"
+description: >
+  Auth.js v5 (next-auth@5) configuration, migration from v4, middleware/proxy
+  patterns, edge runtime split, environment variables, WebAuthn/passkeys,
+  and credential error handling. Use when writing Auth.js or next-auth v5 code.
+version: "5.0.0"
 license: MIT
 metadata:
   author: Nevaberry
 ---
 
-# Auth.js Knowledge Patch
+# Auth.js v5 Knowledge Patch
 
-Claude Opus 4.6 knows Auth.js (NextAuth.js) through v4 and early v5 betas. This skill covers v5 changes that postdate training.
+Auth.js v5 is a major rewrite. The package is now framework-agnostic (`@auth/sveltekit`, `@auth/express`, `@auth/solid-start`) with `next-auth` as the Next.js wrapper. Requires Next.js 14+. OAuth 1.0 is deprecated.
 
-## Index
+## Reference Index
 
-| Topic | Reference | Key features |
-|---|---|---|
-| v5 migration | [references/v5-migration.md](references/v5-migration.md) | Next.js 16 `proxy.ts`, `idToken: false` behavioral change |
-| WebAuthn / Passkeys | [references/webauthn-passkeys.md](references/webauthn-passkeys.md) | Passkey provider, SimpleWebAuthn setup, Authenticator table, custom signin |
+- [Configuration](references/configuration.md) — Root config, edge split config, environment variables, adapter and type changes
+- [Authentication Patterns](references/authentication-patterns.md) — Proxy/middleware, route protection, server-side sign in/out, authorized callback
+- [Providers and Features](references/providers-and-features.md) — WebAuthn/passkeys setup, custom credential errors
 
----
+## v4 to v5 Migration Quick Reference
 
-## Quick Reference
+| v4 | v5 |
+|---|---|
+| `getServerSession(authOptions)` | `auth()` |
+| `getToken(req)` | `auth(req, res)` |
+| `withAuth(middleware)` | `auth` as proxy export |
+| `useSession()` (client) | `useSession()` (unchanged) |
+| `getServerSession(req, res, authOptions)` | `auth(req, res)` |
+| `getServerSession(ctx.req, ctx.res, authOptions)` | `auth(ctx)` |
+| `NextAuthOptions` | `NextAuthConfig` |
+| `@next-auth/prisma-adapter` | `@auth/prisma-adapter` |
+| `NEXTAUTH_SECRET` | `AUTH_SECRET` |
+| `NEXTAUTH_URL` | `AUTH_URL` (auto-detected) |
+| Cookie prefix: `next-auth` | Cookie prefix: `authjs` |
 
-### Next.js 16: proxy.ts replaces middleware.ts
+## Root Config Pattern
 
-Next.js 16 renames `middleware.ts` to `proxy.ts`. Auth.js setup changes accordingly:
+Configuration moves from the API route to a root `auth.ts` file. `NextAuth()` returns methods used everywhere:
 
-```ts filename="proxy.ts"
-// Simple
-export { auth as proxy } from "@/auth"
+```ts filename="auth.ts"
+import NextAuth from "next-auth"
+import GitHub from "next-auth/providers/github"
+
+export const { auth, handlers, signIn, signOut } = NextAuth({
+  providers: [GitHub],
+})
 ```
 
+```ts filename="app/api/auth/[...nextauth]/route.ts"
+import { handlers } from "@/auth"
+export const { GET, POST } = handlers
+```
+
+## Universal `auth()` Function
+
+Replaces `getServerSession`, `getToken`, and `withAuth` with a single function:
+
+```tsx filename="app/page.tsx"
+import { auth } from "@/auth"
+
+export default async function Page() {
+  const session = await auth()
+  return <p>Welcome {session?.user.name}!</p>
+}
+```
+
+## Environment Variables
+
+- `AUTH_SECRET` — the only required variable
+- `AUTH_URL` / `NEXTAUTH_URL` — auto-detected from request headers in most environments
+- `AUTH_{PROVIDER}_ID` / `AUTH_{PROVIDER}_SECRET` — auto-inferred provider credentials (e.g. `AUTH_GITHUB_ID`)
+- `AUTH_TRUST_HOST=true` — set when running behind a proxy (same as `trustHost: true`)
+
+## TypeScript
+
+- `NextAuthOptions` is now `NextAuthConfig`
+- Types like `Account`, `Session`, `User` export from `@auth/core/types` (re-exported from framework packages)
+- Adapter types from `next-auth/adapters`, `@auth/sveltekit/adapters`, etc.
+
+## Proxy / Middleware
+
+As of Next.js 16, `middleware.ts` is renamed to `proxy.ts` and the export is `proxy` instead of `middleware`.
+
 ```ts filename="proxy.ts"
+// Simple: export auth directly
+export { auth as proxy } from "@/auth"
+
 // Advanced: wrap with custom logic
 import { auth } from "@/auth"
 
 export const proxy = auth((req) => {
-  // req.auth contains the session
+  if (!req.auth && req.nextUrl.pathname !== "/login") {
+    const newUrl = new URL("/login", req.nextUrl.origin)
+    return Response.redirect(newUrl)
+  }
 })
 
 export const config = {
@@ -44,29 +103,90 @@ export const config = {
 }
 ```
 
-For Next.js < 16, keep using `middleware.ts` with `export { auth as middleware }`.
+Use the `authorized` callback to control access:
 
----
-
-### idToken: false behavioral change
-
-In v5, `idToken: false` on a provider no longer disables ID token processing entirely. It now signals Auth.js to **also** visit the `userinfo_endpoint` for final user data. Previously it opted out of `id_token` validity checking altogether.
-
----
-
-### WebAuthn / Passkeys (experimental)
-
-Requires `next-auth@5.0.0-beta.8+`, `@auth/prisma-adapter@1.3.0+`, Node 20+.
-
-**Peer dependencies:**
-
-```bash
-npm install @simplewebauthn/server@9.0.3 @simplewebauthn/browser@9.0.1
+```ts filename="auth.ts"
+export const { auth, handlers } = NextAuth({
+  callbacks: {
+    authorized: async ({ auth }) => {
+      return !!auth // logged-in users pass, others redirect to login
+    },
+  },
+})
 ```
 
-`@simplewebauthn/browser` is only needed for custom signin pages.
+## Edge Split Config
 
-**Auth config:**
+When using a database adapter not compatible with Edge, split config into two files:
+
+```ts filename="auth.config.ts"
+import GitHub from "next-auth/providers/github"
+import type { NextAuthConfig } from "next-auth"
+
+export default { providers: [GitHub] } satisfies NextAuthConfig
+```
+
+```ts filename="auth.ts"
+import NextAuth from "next-auth"
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import { PrismaClient } from "@prisma/client"
+import authConfig from "./auth.config"
+
+const prisma = new PrismaClient()
+
+export const { auth, handlers, signIn, signOut } = NextAuth({
+  adapter: PrismaAdapter(prisma),
+  session: { strategy: "jwt" },
+  ...authConfig,
+})
+```
+
+```ts filename="proxy.ts"
+import authConfig from "./auth.config"
+import NextAuth from "next-auth"
+
+export const { auth: proxy } = NextAuth(authConfig)
+```
+
+## Server-Side Sign In/Out
+
+```tsx filename="app/components/signin-button.tsx"
+import { signIn } from "@/auth"
+
+export function SignIn() {
+  return (
+    <form action={async () => {
+      "use server"
+      await signIn("github", { redirectTo: "/dashboard" })
+    }}>
+      <button type="submit">Sign in</button>
+    </form>
+  )
+}
+```
+
+## Protecting API Routes
+
+```ts filename="app/api/admin/route.ts"
+import { auth } from "@/auth"
+import { NextResponse } from "next/server"
+
+export const GET = auth(function GET(req) {
+  if (req.auth) return NextResponse.json(req.auth)
+  return NextResponse.json({ message: "Not authenticated" }, { status: 401 })
+})
+```
+
+## Adapter Scope Change
+
+```diff
+- npm install @next-auth/prisma-adapter
++ npm install @auth/prisma-adapter
+```
+
+## WebAuthn / Passkeys (Experimental)
+
+Requires a database adapter with an `Authenticator` table. Enable with `experimental: { enableWebAuthn: true }`.
 
 ```ts filename="auth.ts"
 import Passkey from "next-auth/providers/passkey"
@@ -79,36 +199,15 @@ export default {
 }
 ```
 
-**Custom signin page** — `signIn("passkey")` to login, `signIn("passkey", { action: "register" })` to register:
+Peer deps: `@simplewebauthn/browser@9.0.1` and `@simplewebauthn/server@9.0.3`.
 
-```tsx filename="app/login/page.tsx"
-"use client"
-import { signIn } from "next-auth/webauthn"
-import { useSession } from "next-auth/react"
+## Custom Credential Errors
 
-export default function Login() {
-  const { status } = useSession()
-  return (
-    <div>
-      {status === "authenticated" ? (
-        <button onClick={() => signIn("passkey", { action: "register" })}>
-          Register new Passkey
-        </button>
-      ) : status === "unauthenticated" ? (
-        <button onClick={() => signIn("passkey")}>Sign in with Passkey</button>
-      ) : null}
-    </div>
-  )
+```ts
+import { CredentialsSignin } from "next-auth"
+
+class InvalidLoginError extends CredentialsSignin {
+  code = "Invalid identifier or password"
 }
+// Throw in authorize() → user redirected to signin?error=CredentialsSignin&code=Invalid+identifier+or+password
 ```
-
-See [references/webauthn-passkeys.md](references/webauthn-passkeys.md) for the required `Authenticator` table schema.
-
----
-
-## Reference Files
-
-| File | Contents |
-|---|---|
-| [v5-migration.md](references/v5-migration.md) | Next.js 16 proxy.ts setup, idToken: false behavioral change |
-| [webauthn-passkeys.md](references/webauthn-passkeys.md) | Passkey provider setup, SimpleWebAuthn deps, Authenticator table DDL, custom signin page |

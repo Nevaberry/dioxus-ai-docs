@@ -2,17 +2,14 @@
 
 ## Realtime Authorization (Private Channels)
 
-Control Broadcast and Presence access with RLS policies on `realtime.messages`. Replaces the old public-by-default model.
-
-Two steps: (1) create RLS policies on `realtime.messages`, (2) use `private: true` in client config.
+Broadcast and Presence access is now controlled via RLS policies on the `realtime.messages` table. Channels must be created with `private: true`. Uses `realtime.topic()` helper in policies. Authorization is validated at connection/join time.
 
 ```sql
--- Allow authenticated users to receive broadcasts for rooms they belong to
-CREATE POLICY "members can receive broadcast" ON "realtime"."messages" FOR
+-- Allow authenticated users to receive broadcasts on specific topics
+CREATE POLICY "users can read room broadcasts" ON "realtime"."messages" FOR
 SELECT
   TO authenticated USING (
-    realtime.messages.extension = 'broadcast'
-    AND EXISTS (
+    EXISTS (
       SELECT
         1
       FROM
@@ -26,12 +23,11 @@ SELECT
     )
   );
 
--- Allow members to send broadcasts
-CREATE POLICY "members can send broadcast" ON "realtime"."messages" FOR INSERT TO authenticated
+-- Control who can send broadcasts (INSERT policy)
+CREATE POLICY "users can broadcast to their rooms" ON "realtime"."messages" FOR INSERT TO authenticated
 WITH
   CHECK (
-    realtime.messages.extension = 'broadcast'
-    AND EXISTS (
+    EXISTS (
       SELECT
         1
       FROM
@@ -46,99 +42,106 @@ WITH
   );
 ```
 
-Key details:
-- `realtime.topic()` — returns the channel topic being joined
-- `realtime.messages.extension` — `'broadcast'` or `'presence'`, use in policies to scope by feature
-- JWT claims accessible via `current_setting('request.jwt.claims')::json`
-- Permissions checked at join time (not per-message)
-- Disable "Allow public access" in Realtime Settings to enforce private channels
+The `extension` column on `realtime.messages` distinguishes message types: `'broadcast'` for Broadcast, `'presence'` for Presence. Client-side setup:
 
-Client usage:
-
-```js
-await supabase.realtime.setAuth() // Required for authorization
-const channel = supabase.channel('room:123', {
-  config: { private: true },
-})
+```javascript
+await supabase.realtime.setAuth(); // Required — sends current JWT to Realtime
+const channel = supabase
+  .channel('room:123', { config: { private: true } })
+  .on('broadcast', { event: 'message' }, (payload) => console.log(payload))
+  .subscribe();
 ```
+
+Disable "Allow public access" in Realtime Settings to enforce private channels project-wide.
 
 ## Broadcast from Database
 
-Trigger broadcast messages server-side using `realtime.send()` and `realtime.broadcast_changes()`. Messages go through the WAL via the `realtime.messages` table (partitioned daily, 3-day retention).
+Trigger Realtime broadcasts directly from Postgres using two built-in functions. This is now the **recommended approach** for subscribing to database changes (over Postgres Changes), as it scales better and supports authorization.
 
 ```sql
--- Send arbitrary JSON to a topic
+-- Simple message broadcast (flexible format)
 SELECT realtime.send(
-  '{"msg": "hello"}'::jsonb,  -- payload
-  'new-message',               -- event name
-  'room:123',                  -- topic
-  FALSE                        -- private (TRUE requires RLS)
+  '{"score": 42}'::jsonb,  -- payload
+  'score_update',           -- event name
+  'game:123',               -- topic
+  FALSE                     -- private (TRUE requires authorization)
 );
-```
 
-For broadcasting row changes, use a trigger with `realtime.broadcast_changes()`:
-
-```sql
-CREATE OR REPLACE FUNCTION public.notify_changes()
+-- Broadcast record changes (structured format for triggers)
+CREATE OR REPLACE FUNCTION public.orders_broadcast()
 RETURNS trigger
 SECURITY DEFINER SET search_path = ''
 AS $$
 BEGIN
   PERFORM realtime.broadcast_changes(
-    'topic:' || NEW.id::text,  -- topic
-    TG_OP,                     -- event
-    TG_OP,                     -- operation
-    TG_TABLE_NAME,             -- table
-    TG_TABLE_SCHEMA,           -- schema
-    NEW,                       -- new record
-    OLD                        -- old record
+    'orders:' || coalesce(NEW.id, OLD.id)::text,  -- topic
+    TG_OP,              -- event (INSERT/UPDATE/DELETE)
+    TG_OP,              -- operation
+    TG_TABLE_NAME,      -- table
+    TG_TABLE_SCHEMA,    -- schema
+    NEW,                -- new record
+    OLD                 -- old record
   );
   RETURN NULL;
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER broadcast_changes_trigger
-AFTER INSERT OR UPDATE OR DELETE ON public.my_table
-FOR EACH ROW EXECUTE FUNCTION public.notify_changes();
+CREATE TRIGGER orders_realtime
+AFTER INSERT OR UPDATE OR DELETE ON public.orders
+FOR EACH ROW EXECUTE FUNCTION orders_broadcast();
 ```
 
-Client listens on broadcast events (not postgres_changes):
+Messages are stored in the partitioned `realtime.messages` table (auto-cleaned after 3 days). Client listens via broadcast events on private channels:
 
-```js
-await supabase.realtime.setAuth()
-const channel = supabase
-  .channel('topic:42', { config: { private: true } })
+```javascript
+await supabase.realtime.setAuth();
+const changes = supabase
+  .channel('orders:456', { config: { private: true } })
   .on('broadcast', { event: 'INSERT' }, (payload) => console.log(payload))
   .on('broadcast', { event: 'UPDATE' }, (payload) => console.log(payload))
-  .subscribe()
+  .on('broadcast', { event: 'DELETE' }, (payload) => console.log(payload))
+  .subscribe();
 ```
 
-Advantage over Postgres Changes: uses broadcast infrastructure (faster, no per-client replication slot overhead), and works with Realtime Authorization.
+## Broadcast Replay
 
-## Broadcast Replay (Alpha)
+Private channels can replay previously sent database broadcasts on join. Only messages sent via Broadcast from Database are replayable.
 
-Replay historical broadcast messages on private channels. Only works with messages sent via Broadcast from Database.
-
-```js
-const channel = supabase.channel('room:main', {
+```javascript
+const channel = supabase.channel('chat:main', {
   config: {
     private: true,
     broadcast: {
       replay: {
-        since: 1697472000000, // Unix timestamp in milliseconds
-        limit: 10,            // Max 25 messages
+        since: Date.now() - 60_000, // epoch ms — last 60 seconds
+        limit: 25, // max messages (up to 25)
       },
     },
   },
-})
+});
 
-channel.on('broadcast', { event: 'position' }, (payload) => {
-  if (payload?.meta?.replayed) {
-    console.log('Historical message:', payload)
-  } else {
-    console.log('Live message:', payload)
-  }
-}).subscribe()
+channel
+  .on('broadcast', { event: 'message' }, (payload) => {
+    if (payload?.meta?.replayed) {
+      console.log('Historical:', payload);
+    } else {
+      console.log('Live:', payload);
+    }
+  })
+  .subscribe();
 ```
 
-Requires `supabase-js` v2.74.0+. Replayed messages include `meta.replayed: true` flag.
+Requires supabase-js >= 2.74.0. Replayed messages include `meta.replayed: true` and `meta.id`.
+
+## Realtime Limits
+
+| | Free | Pro | Pro (no cap) | Team | Enterprise |
+|---|---|---|---|---|---|
+| Concurrent connections | 200 | 500 | 10,000 | 10,000 | 10,000+ |
+| Messages/sec | 100 | 500 | 2,500 | 2,500 | 2,500+ |
+| Channel joins/sec | 100 | 500 | 2,500 | 2,500 | 2,500+ |
+| Channels/connection | 100 | 100 | 100 | 100 | 100+ |
+| Broadcast payload | 256 KB | 3 MB | 3 MB | 3 MB | 3+ MB |
+| Postgres change payload | 1 MB | 1 MB | 1 MB | 1 MB | 1+ MB |
+
+When Postgres change payload limit is exceeded, `new`/`old` payloads only include fields <= 64 bytes.

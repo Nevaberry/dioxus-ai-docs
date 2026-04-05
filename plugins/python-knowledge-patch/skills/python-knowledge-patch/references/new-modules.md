@@ -1,132 +1,123 @@
-# New Modules and APIs
+# New and Improved Standard Library Modules
 
-## `copy.replace()` and `__replace__()` protocol (3.13)
+## compression.zstd (PEP 784) — Python 3.14
 
-Generic way to create modified copies of objects:
-
-```python
-import copy
-from datetime import date
-
-d2 = copy.replace(date(2024, 1, 1), year=2025)  # date(2025, 1, 1)
-```
-
-Works with: namedtuples, dataclasses, datetime objects, `SimpleNamespace`. For custom classes, implement `__replace__(self, **changes)`.
-
-## `warnings.deprecated()` decorator (3.13, PEP 702)
-
-```python
-from warnings import deprecated
-
-@deprecated("Use new_function() instead")
-def old_function(): ...
-```
-
-Emits `DeprecationWarning` at runtime and signals deprecation to type checkers.
-
-## `locals()` semantics change (3.13, PEP 667)
-
-In optimized scopes (functions, generators, comprehensions), `locals()` now returns an **independent snapshot** each call. Breaking change for `exec()`/`eval()` in functions:
-
-```python
-# BROKEN on 3.13+: exec() runs against a snapshot, changes not visible
-def f():
-    exec("x = 1")
-    print(locals())  # "x" is NOT here
-
-
-# FIX: pass an explicit namespace
-def f():
-    ns = {}
-    exec("x = 1", ns)
-    print(ns["x"])  # Works
-```
-
-`frame.f_locals` now returns a **write-through proxy** in optimized scopes (useful for debuggers).
-
-## `compression` package (3.14, PEP 784)
-
-New top-level `compression` package with Zstandard support:
+New `compression` package with Zstandard support. Existing compression modules are also available under `compression.*` (old imports not deprecated).
 
 ```python
 from compression import zstd
 
-compressed = zstd.compress(data)
+# Compress/decompress bytes
+compressed = zstd.compress(b"data to compress")
 original = zstd.decompress(compressed)
+
+# Streaming
+with zstd.open("data.zst", "wb") as f:
+    f.write(b"streaming data")
+
+# New preferred imports (old names still work, not deprecated):
+from compression import lzma, bz2, gzip, zlib
+
+# tarfile/zipfile/shutil support zstd archives
+import tarfile
+
+with tarfile.open("archive.tar.zst", "w:zst") as tar:
+    tar.add("myfile.txt")
 ```
 
-The package also re-exports existing compression modules under new names:
+## functools.Placeholder — Python 3.14
 
-| New import | Old import |
-|-----------|-----------|
-| `compression.zstd` | — (new) |
-| `compression.lzma` | `lzma` |
-| `compression.bz2` | `bz2` |
-| `compression.gzip` | `gzip` |
-| `compression.zlib` | `zlib` |
-
-Old import names are NOT deprecated (no removal planned for at least 5 years).
-
-Zstd compression also supported in `tarfile`, `zipfile`, and `shutil`.
-
-## `annotationlib` module (3.14, PEP 749)
-
-For introspecting deferred annotations:
+Reserve positional argument positions in `partial()` and `partialmethod()`:
 
 ```python
-from annotationlib import get_annotations, Format
+from functools import partial, Placeholder as _
 
-get_annotations(obj, format=Format.VALUE)  # Evaluate annotations (may raise NameError)
-get_annotations(obj, format=Format.FORWARDREF)  # ForwardRef markers for unknowns
-get_annotations(obj, format=Format.STRING)  # Annotations as strings
+# Skip first arg, fix second to 2
+pow_of_2 = partial(pow, _, 2)
+pow_of_2(10)   # pow(10, 2) = 100
+
+# Multiple placeholders
+from operator import setitem
+set_to_none = partial(setitem, _, _, None)
+d = {"a": 1}
+set_to_none(d, "a")  # setitem(d, "a", None)
 ```
 
-Use `Format.FORWARDREF` for robust annotation reading (handles forward references gracefully).
-
-## `concurrent.interpreters` module (3.14, PEP 734)
-
-See [concurrency.md](concurrency.md) for full details.
-
-## `string.templatelib` module (3.14, PEP 750)
-
-See [new-syntax.md](new-syntax.md) for t-string details.
-
-## `functools.Placeholder` (3.14)
-
-Sentinel for reserving positional argument slots in `partial()`:
+## uuid Versions 6, 7, 8 (RFC 9562) — Python 3.14
 
 ```python
-from functools import partial, Placeholder
+import uuid
 
-# Fix 2nd arg to 2, leave 1st open
-f = partial(pow, Placeholder, 2)
-f(3)  # pow(3, 2) == 9
+# v6: reordered v1 for better database sorting
+u6 = uuid.uuid6()
 
-# Fix 2nd and 3rd args, leave 1st open
-f = partial(pow, Placeholder, 2, 10)
-f(3)  # pow(3, 2, 10) == 9
+# v7: Unix timestamp + random — recommended for new designs
+u7 = uuid.uuid7()  # sortable by creation time
+
+# v8: custom/implementation-defined
+u8 = uuid.uuid8()
+
+# Special values
+uuid.NIL  # 00000000-0000-0000-0000-000000000000
+uuid.MAX  # ffffffff-ffff-ffff-ffff-ffffffffffff
 ```
 
-## Remote debugging (3.14, PEP 768)
+## pathlib.Path Copy and Move — Python 3.14
 
-Attach debugger to running processes without stopping them:
+```python
+from pathlib import Path
+
+# Copy file or directory tree
+Path("src/project").copy("backup/project")
+Path("report.pdf").copy_into("archive/")  # → archive/report.pdf
+
+# Move file or directory tree
+Path("old_name").move("new_name")
+Path("file.txt").move_into("dest_dir/")  # → dest_dir/file.txt
+```
+
+## sys.remote_exec() / Remote Debugging (PEP 768) — Python 3.14
+
+Attach to running Python processes without restart:
 
 ```python
 import sys
-
-sys.remote_exec(pid, "/path/to/debug_script.py")  # Execute in target process
+# Execute script in another Python process
+sys.remote_exec(pid, "/path/to/debug_script.py")
 ```
 
-CLI: `python -m pdb -p 1234`. Disable with `PYTHON_DISABLE_REMOTE_DEBUG=1` or `-X disable-remote-debug`.
+```bash
+# Attach pdb to running process
+python -m pdb -p 1234
 
-## `io.Reader` / `io.Writer` (3.14)
+# Inspect asyncio tasks in running process
+python -m asyncio ps 1234
+python -m asyncio pstree 1234
+```
 
-Simpler protocol alternatives to `typing.IO` / `typing.TextIO`.
+Disable: `PYTHON_DISABLE_REMOTE_DEBUG=1` or `-X disable-remote-debug`
 
-## `uuid.uuid7()` (3.14)
+## io.Reader and io.Writer Protocols — Python 3.14
 
-Time-ordered UUID per RFC 9562. Also `uuid6()` and `uuid8()`.
+Simpler alternatives to `typing.IO`, `typing.TextIO`, `typing.BinaryIO`:
 
-## `heapq` max-heap functions (3.14)
+```python
+from io import Reader, Writer
 
-`heapify_max()`, `heappush_max()`, `heappop_max()`, `heapreplace_max()`, etc.
+def process(source: Reader) -> None:
+    data = source.read()
+
+def output(dest: Writer) -> None:
+    dest.write("result")
+```
+
+## Other Notable Module Additions — Python 3.14
+
+- `map(func, *iterables, strict=True)` — raises ValueError if iterables differ in length
+- `heapq`: `heapify_max()`, `heappush_max()`, `heappop_max()`, `heapreplace_max()`, `heappushpop_max()`
+- `datetime.date.strptime()` and `datetime.time.strptime()` class methods
+- `http.server.HTTPSServer` — `python -m http.server --tls-cert cert.pem`
+- `asyncio.capture_call_graph()` and `asyncio.print_call_graph()`
+- `python -m json` replaces `python -m json.tool` (soft deprecated)
+- `os.path.realpath(strict=os.path.ALLOW_MISSING)` — resolve symlinks, allow missing tail
+- `types.UnionType` is now alias for `typing.Union` — `Union[int, str]` and `int | str` produce same type
