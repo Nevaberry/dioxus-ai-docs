@@ -1,0 +1,11 @@
+{
+  "name": "sqlite-knowledge-patch",
+  "version": "3.51",
+  "description": "SQLite changes since training cutoff (latest: 3.51) — json_pretty, unistr, jsonb_each/jsonb_tree, percentile aggregates, multi-arg iif, numeric underscores, sqlite3_setlk_timeout. Load before working with SQLite.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

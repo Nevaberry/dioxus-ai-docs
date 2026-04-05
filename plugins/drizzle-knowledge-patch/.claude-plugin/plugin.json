@@ -1,0 +1,11 @@
+{
+  "name": "drizzle-knowledge-patch",
+  "version": "1.0.0-beta.19",
+  "description": "Drizzle ORM changes since training cutoff (latest: 1.0.0-beta.19) — consolidated validator imports, Effect Schema support, node-sqlite driver, .comment() query tagging. Load before working with Drizzle.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

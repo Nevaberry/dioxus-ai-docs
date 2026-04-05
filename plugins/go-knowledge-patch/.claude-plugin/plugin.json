@@ -1,0 +1,11 @@
+{
+  "name": "go-knowledge-patch",
+  "version": "1.26.0",
+  "description": "Go changes since training cutoff (latest: 1.26.0) — new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer. Load before working with Go.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

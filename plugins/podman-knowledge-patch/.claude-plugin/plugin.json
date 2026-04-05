@@ -1,0 +1,11 @@
+{
+  "name": "podman-knowledge-patch",
+  "version": "5.8.0",
+  "description": "Podman changes since training cutoff (latest: 5.8.0) — Quadlet CLI management, OCI artifacts, multi-file install, BoltDB→SQLite migration, TLS remote. Load before working with Podman.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

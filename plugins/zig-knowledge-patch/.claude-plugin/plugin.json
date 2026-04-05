@@ -1,0 +1,11 @@
+{
+  "name": "zig-knowledge-patch",
+  "version": "0.14.0",
+  "description": "Zig changes since training cutoff (latest: 0.14.0) \u2014 labeled switch, decl literals, @branchHint, DebugAllocator, unmanaged containers, root_module build API. Load before working with Zig.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

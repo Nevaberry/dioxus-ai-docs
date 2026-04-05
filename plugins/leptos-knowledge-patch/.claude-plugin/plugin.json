@@ -1,0 +1,11 @@
+{
+  "name": "leptos-knowledge-patch",
+  "version": "0.8.17",
+  "description": "Leptos changes since training cutoff (latest: 0.8.17) — ShowLet component, Show signal support, Bitcode server function encoding. Load before working with Leptos.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

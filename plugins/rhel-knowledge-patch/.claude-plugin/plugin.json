@@ -1,0 +1,11 @@
+{
+  "name": "rhel-knowledge-patch",
+  "version": "10.1",
+  "description": "RHEL changes since training cutoff (latest: 10.1) — Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies. Load before working with RHEL.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

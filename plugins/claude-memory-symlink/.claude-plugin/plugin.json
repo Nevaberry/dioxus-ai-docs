@@ -1,0 +1,12 @@
+{
+  "name": "claude-memory-symlink",
+  "version": "1.0.0",
+  "description": "Creates a symlink so .claude/memory/ in your project points to Claude Code's system memory directory — browse and edit memory files from your project tree",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT",
+  "keywords": ["memory", "symlink", "workflow", "obsidian", "ide"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ubuntu-knowledge-patch",
+  "version": "25.10",
+  "description": "Ubuntu changes since training cutoff (latest: 25.10) — sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME. Load before working with Ubuntu.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

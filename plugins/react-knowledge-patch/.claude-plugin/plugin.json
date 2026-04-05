@@ -1,0 +1,11 @@
+{
+  "name": "react-knowledge-patch",
+  "version": "19.2.0",
+  "description": "React changes since training cutoff (latest: 19.2.0) — Activity component, cacheSignal, Partial Pre-rendering, prerender/resume APIs, eslint-plugin-react-hooks v6. Load before working with React.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

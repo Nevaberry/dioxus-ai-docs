@@ -1,0 +1,11 @@
+{
+  "name": "vercel-ai-sdk-knowledge-patch",
+  "version": "4.1.0",
+  "description": "Vercel AI SDK changes since training cutoff (latest: 4.1.0) — PDF files, computer use tools, continuation, image generation, stream smoothing, createDataStreamResponse, tool call repair. Load before working with Vercel AI SDK.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

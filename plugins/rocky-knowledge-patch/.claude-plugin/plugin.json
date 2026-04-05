@@ -1,0 +1,11 @@
+{
+  "name": "rocky-knowledge-patch",
+  "version": "10.0",
+  "description": "Rocky Linux changes since training cutoff (latest: 10.0) — DNF 5 (modularity removed), Valkey replaces Redis, rpmsort, rh_waived kernel arg. Load before working with Rocky Linux.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

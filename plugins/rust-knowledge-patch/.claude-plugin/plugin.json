@@ -1,0 +1,11 @@
+{
+  "name": "rust-knowledge-patch",
+  "version": "1.94.0",
+  "description": "Rust changes since training cutoff (latest: 1.94.0) \u2014 Rust 2024 Edition, async closures, trait upcasting, new std APIs, cargo resolver v3. Load before working with Rust.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "svelte-knowledge-patch",
+  "version": "5.0.0",
+  "description": "Svelte changes since training cutoff (latest: 5.0.0) — runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events, mount/hydrate API. Load before working with Svelte.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

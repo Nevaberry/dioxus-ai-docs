@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-knowledge-patch",
+  "version": "25.5.0",
+  "description": "Node.js changes since training cutoff (latest: 25.5.0) — native fetch, test runner, permission model, WebSocket client, require(ESM), URLPattern. Load before working with Node.js.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

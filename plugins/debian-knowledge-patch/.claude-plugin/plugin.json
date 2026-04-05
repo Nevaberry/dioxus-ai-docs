@@ -1,0 +1,11 @@
+{
+  "name": "debian-knowledge-patch",
+  "version": "13",
+  "description": "Debian changes since training cutoff (latest: 13) — systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3. Load before working with Debian.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

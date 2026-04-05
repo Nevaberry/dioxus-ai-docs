@@ -1,0 +1,11 @@
+{
+  "name": "deno-knowledge-patch",
+  "version": "2.7.0",
+  "description": "Deno changes since training cutoff (latest: 2.7.0) \u2014 Deno.spawn(), permission sets, deno audit, lint plugin API, QUIC, OpenTelemetry. Load before working with Deno.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "docker-knowledge-patch",
+  "version": "0.31.0",
+  "description": "Docker changes since training cutoff (latest: 0.31.0) — Rego source policies, bake --var flag, semvercmp function, env lookup disable. Load before working with Docker.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

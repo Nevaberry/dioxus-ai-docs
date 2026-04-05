@@ -1,0 +1,21 @@
+# AI local settings
+.claude/
+
+# Temporary working directory
+temp/
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+
+/plugins/beckhoff-knowledge-patch/
+
+# OS files
+.DS_Store
+Thumbs.db

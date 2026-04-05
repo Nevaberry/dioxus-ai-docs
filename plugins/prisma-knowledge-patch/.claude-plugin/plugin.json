@@ -1,0 +1,11 @@
+{
+  "name": "prisma-knowledge-patch",
+  "version": "7.3",
+  "description": "Prisma changes since training cutoff (latest: 7.3) — v7 ESM rewrite, prisma-client generator, driver adapters, prisma.config.ts, TypedSQL, SQL comments. Load before working with Prisma.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

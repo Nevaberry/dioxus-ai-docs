@@ -1,0 +1,11 @@
+{
+  "name": "tailwind-knowledge-patch",
+  "version": "4.1",
+  "description": "Tailwind CSS changes since training cutoff (latest: 4.1) — text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants. Load before working with Tailwind CSS.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

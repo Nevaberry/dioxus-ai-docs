@@ -1,0 +1,11 @@
+{
+  "name": "vite-knowledge-patch",
+  "version": "8.0",
+  "description": "Vite changes since training cutoff (latest: 8.0) — Rolldown bundler, tsconfigPaths, React plugin v6 with Oxc, Environment API, SSR improvements. Load before working with Vite.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

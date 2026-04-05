@@ -1,0 +1,11 @@
+{
+  "name": "postgresql-knowledge-patch",
+  "version": "18.1",
+  "description": "PostgreSQL changes since training cutoff (latest: 18.1) — JSON_TABLE, SQL/JSON functions, MERGE RETURNING, virtual generated columns, UUIDv7, temporal PRIMARY KEY. Load before working with PostgreSQL.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}

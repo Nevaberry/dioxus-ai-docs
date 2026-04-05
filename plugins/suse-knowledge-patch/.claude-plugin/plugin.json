@@ -1,0 +1,11 @@
+{
+  "name": "suse-knowledge-patch",
+  "version": "16.0",
+  "description": "SUSE changes since training cutoff (SLES 16.0, openSUSE Leap 16.0) \u2014 Agama installer replaces YaST, SELinux enforcing, NetworkManager-only, /usr-merge defaults, Wayland-only. Load before working with SUSE or openSUSE.",
+  "author": {
+    "name": "Nevaberry"
+  },
+  "homepage": "https://nevaberry.com/ai-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT"
+}
