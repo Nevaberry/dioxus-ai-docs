@@ -1,36 +1,69 @@
-# Stacks
+# Terraform Stacks
 
-## Stacks CLI (1.13)
+GA in HCP Terraform, September 2025.
 
-`terraform stacks` command added. Stacks are an HCP Terraform feature for multi-environment deployments from a single config.
+## Overview
 
-Two file types:
-- `*.tfcomponent.hcl` — defines `component` blocks referencing modules
-- `*.tfdeploy.hcl` — defines `deployment` blocks (one per environment/region)
+Terraform Stacks provide a component-based architecture for deploying infrastructure across multiple environments. Instead of duplicating module calls or using workspaces, you define components once and deploy them with different inputs.
+
+## File Types
+
+Stacks introduce two new file types:
+
+### Component Config (`.tfcomponent.hcl`)
+
+Defines the infrastructure components and their dependencies:
 
 ```hcl
-# network.tfcomponent.hcl
-component "network" {
-  source  = "hashicorp/network/aws"
-  version = "1.0.0"
+component "networking" {
+  source = "./modules/networking"
   inputs = {
-    cidr = var.cidr
+    region = var.region
+    cidr   = var.cidr
+  }
+}
+
+component "cluster" {
+  source = "./modules/k8s"
+  inputs = {
+    vpc_id = component.networking.vpc_id
   }
 }
 ```
 
+Components reference each other via `component.<name>.<output>`, creating an implicit dependency graph.
+
+### Deployment Config (`.tfdeploy.hcl`)
+
+Defines the environments/deployments with their specific inputs:
+
 ```hcl
-# prod.tfdeploy.hcl
 deployment "us-east" {
   inputs = {
-    cidr = "10.0.0.0/16"
+    region = "us-east-1"
+    cidr   = "10.0.0.0/16"
   }
 }
+
 deployment "eu-west" {
   inputs = {
-    cidr = "10.1.0.0/16"
+    region = "eu-west-1"
+    cidr   = "10.1.0.0/16"
   }
 }
 ```
 
-Limits: max 20 deployments, 100 components, 10,000 resources per stack. Requires HCP Terraform.
+## CLI
+
+Stacks are managed via `terraform stacks` subcommands.
+
+## Limits
+
+- Maximum 20 deployments per stack
+- Maximum 100 components per stack
+- Maximum 10,000 resources per stack
+
+## Requirements
+
+- **Requires HCP Terraform** — Stacks are not available in open-source Terraform or OpenTofu
+- Uses the HCP Terraform orchestration layer for deployment coordination

@@ -2,9 +2,9 @@
 name: rocky-knowledge-patch
 description: "Rocky Linux changes since training cutoff (latest: 10.0) — DNF 5 (modularity removed), Valkey replaces Redis, rpmsort, rh_waived kernel arg. Load before working with Rocky Linux."
 license: MIT
+version: "10.0"
 metadata:
   author: Nevaberry
-  version: "10.0"
 ---
 
 # Rocky Linux 10+ Knowledge Patch

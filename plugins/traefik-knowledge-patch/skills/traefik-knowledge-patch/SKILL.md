@@ -2,9 +2,9 @@
 name: traefik-knowledge-patch
 description: "Traefik changes since training cutoff (latest: 3.6.9) — multi-layer routing, Redis rate limiter, p2c/leasttime LB strategies, fast proxy, ForwardAuth body forwarding, OTLP logs, post-quantum TLS, Knative provider. Load before working with Traefik."
 license: MIT
+version: "3.6.9"
 metadata:
   author: Nevaberry
-  version: "3.6.9"
 ---
 
 # Traefik Knowledge Patch (v3.1 – v3.6)
@@ -52,7 +52,7 @@ http:
   services:
     my-service:
       loadBalancer:
-        strategy: p2c    # or leasttime, highestRandomWeight, wrr
+        strategy: p2c # or leasttime, highestRandomWeight, wrr
         servers:
           - url: "http://backend1:8080"
           - url: "http://backend2:8080"
@@ -167,8 +167,8 @@ entryPoints:
     address: ":80"
     http:
       encodedCharacters:
-        allowEncodedSlash: true        # %2F - default true since v3.6.7
-        allowEncodedBackSlash: true     # %5C
+        allowEncodedSlash: true # %2F - default true since v3.6.7
+        allowEncodedBackSlash: true # %5C
         allowEncodedNullCharacter: true # %00
 ```
 

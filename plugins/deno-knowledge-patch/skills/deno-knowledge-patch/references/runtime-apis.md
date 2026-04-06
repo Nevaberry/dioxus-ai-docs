@@ -1,92 +1,72 @@
 # Runtime APIs
 
-## Temporal API (stable since 2.7)
+## `Deno.spawn()` Subprocess APIs (2.7+, unstable)
 
-`Temporal` no longer requires `--unstable-temporal`. Just use it directly.
-
-```ts
-const now = Temporal.Now.zonedDateTimeISO();
-const date = Temporal.PlainDate.from("2026-01-15");
-const duration = Temporal.Duration.from({ hours: 2, minutes: 30 });
-```
-
-## Deno.spawn() Convenience APIs (2.7+, unstable)
-
-Simpler subprocess spawning — shorthand for `new Deno.Command(...).spawn()`:
-
+Convenience shorthands for `Deno.Command`. Three variants:
 ```ts
 const child = Deno.spawn("deno", ["fmt", "--check"], { stdout: "inherit" });
-const output = await Deno.spawnAndWait("git", ["status"]); // returns CommandOutput
-const result = Deno.spawnAndWaitSync("echo", ["done"]);    // sync variant
+const output = await Deno.spawnAndWait("git", ["status"]);
+const result = Deno.spawnAndWaitSync("echo", ["done"]);
 ```
 
-## FsFile.tryLock() (2.7+)
+## `FsFile.tryLock()` (2.7+)
 
 Non-blocking file lock — returns boolean instead of blocking:
-
 ```ts
 const file = await Deno.open("data.db", { read: true, write: true });
-if (await file.tryLock(true)) { // true = exclusive
+if (await file.tryLock(true)) {
   await file.write(data);
   await file.unlock();
 }
 ```
 
-## ChildProcess stdio Convenience Methods (2.5+)
+## Brotli in CompressionStream/DecompressionStream (2.7+)
 
-`sub.stdout.text()`, `.json()`, `.bytes()`, `.arrayBuffer()` — no more `@std/streams` import needed.
-
-## Importing Text and Bytes (2.4+, unstable)
-
-Import non-JS files into the module graph with `--unstable-raw-imports`. Works with `deno bundle` and `deno compile`.
-
+`"brotli"` format now supported alongside `"gzip"` and `"deflate"`:
 ```ts
-import message from "./hello.txt" with { type: "text" };    // string
-import bytes from "./image.png" with { type: "bytes" };      // Uint8Array
+const stream = new CompressionStream("brotli");
 ```
 
-## Wasm Source Phase Imports (2.6+)
+## SHA3 in `crypto.subtle` (2.7+)
 
-Import a compiled `WebAssembly.Module` directly — no runtime fetch needed.
+SHA3-256, SHA3-384, SHA3-512 supported for RSA-OAEP `generateKey`/`encrypt`/`decrypt`.
 
+## OpenTelemetry
+
+### Built-in (2.2+, stable since 2.4)
+
+Auto-instruments `console.log`, `Deno.serve`, `fetch` for logs, metrics, traces:
+```bash
+OTEL_DENO=1 deno --allow-net server.ts
+```
+Exports to any OTLP endpoint. Custom instrumentation via `npm:@opentelemetry/api`.
+
+Previously required `--unstable-otel` (2.2–2.3), now stable with just `OTEL_DENO=1` (2.4+).
+
+## ChildProcess Stdio Convenience Methods (2.5+)
+
+`Deno.ChildProcess` stdout/stderr streams now have `Response`-like methods:
 ```ts
-import source addModule from "./add.wasm";
-const instance = WebAssembly.instantiate(addModule);
+const sub = new Deno.Command("cat", { args: ["file"], stdout: "piped" }).spawn();
+const text = await sub.stdout.text();   // also: .json(), .bytes(), .arrayBuffer()
 ```
 
-## Brotli in CompressionStream (2.7+)
-
-`"brotli"` is now a valid format:
+## WebSocket Custom Headers (2.5+)
 
 ```ts
-new CompressionStream("brotli");
-new DecompressionStream("brotli");
+const ws = new WebSocket("wss://api.example.com/socket", {
+  headers: new Headers({ "Authorization": `Bearer ${token}` }),
+});
 ```
+Server-side only (not in browsers).
 
-## SHA3 in crypto.subtle (2.7+)
+## QUIC and WebTransport (2.2+, unstable)
 
-`SHA3-256`, `SHA3-384`, `SHA3-512` supported for RSA-OAEP `generateKey`/`encrypt`/`decrypt`.
+New APIs behind `--unstable-net`: `Deno.QuicEndpoint`, `Deno.upgradeWebTransport`, and `WebTransport` client support.
 
-## node:sqlite (2.2+)
+## `deno compile --self-extracting` (2.7+)
 
-`node:sqlite` module is available:
-
-```ts
-import { DatabaseSync } from "node:sqlite";
-```
-
-## Node Globals Available Everywhere (2.4+)
-
-`Buffer`, `global`, `setImmediate`, and `clearImmediate` are now available in user code without `--unstable-node-globals`.
-
-## `@types/node` Included by Default (2.6+)
-
-Node.js type declarations work automatically — no need to manually install `@types/node`.
-
-## Deno.bench Options (2.2+)
-
-Control exact iteration counts:
-
-```ts
-Deno.bench({ warmup: 1_000, n: 100_000 }, fn);
+Extracts embedded files to disk at runtime — enables native addons in compiled binaries:
+```bash
+deno compile --self-extracting -A main.ts -o my-app
 ```

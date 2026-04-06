@@ -45,11 +45,11 @@ http:
     my-auth:
       forwardAuth:
         address: "http://auth:8080"
-        forwardBody: true                # Send request body (v3.3)
-        maxBodySize: 1048576             # Limit forwarded body size
-        preserveLocationHeader: true     # Keep Location header from auth server (v3.3)
-        preserveRequestMethod: true      # Keep original method (GET/POST/etc.) (v3.4)
-        maxResponseBodySize: 4096        # Limit auth response body (v3.6.9, default -1 = unlimited)
+        forwardBody: true # Send request body (v3.3)
+        maxBodySize: 1048576 # Limit forwarded body size
+        preserveLocationHeader: true # Keep Location header from auth server (v3.3)
+        preserveRequestMethod: true # Keep original method (GET/POST/etc.) (v3.4)
+        maxResponseBodySize: 4096 # Limit auth response body (v3.6.9, default -1 = unlimited)
 ```
 
 ---
@@ -115,7 +115,7 @@ entryPoints:
     address: ":80"
     http:
       encodedCharacters:
-        allowEncodedSlash: true        # %2F - default true since v3.6.7
-        allowEncodedBackSlash: true     # %5C
+        allowEncodedSlash: true # %2F - default true since v3.6.7
+        allowEncodedBackSlash: true # %5C
         allowEncodedNullCharacter: true # %00
 ```

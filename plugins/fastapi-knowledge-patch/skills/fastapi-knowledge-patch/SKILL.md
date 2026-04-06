@@ -1,52 +1,44 @@
 ---
 name: fastapi-knowledge-patch
-description: "FastAPI changes since training cutoff (latest: 0.135.3) — SSE with EventSourceResponse, JSON Lines streaming with yield, strict Content-Type, dependency scope, security 401. Load before working with FastAPI."
-version: "0.135.3"
+description: "FastAPI changes since training cutoff (0.112-0.135.3) -- native SSE, yield streaming, strict_content_type, dependency scopes, Pydantic v1 dropped, Starlette 1.0, Pydantic 2.12 MISSING sentinel/exclude_if, security 401 fix. Load before working with FastAPI."
 license: MIT
+version: "0.135.3"
 metadata:
   author: Nevaberry
 ---
 
-# FastAPI Knowledge Patch
+# FastAPI Knowledge Patch (0.112 to 0.135.3)
 
-Covers FastAPI 0.116.0–0.135.3 (2025-07 through 2026-04). Claude Opus 4.6 knows FastAPI through 0.115.12 with Pydantic v2, dependency injection, async/sync endpoints, OpenAPI generation, middleware, security, CORS, background tasks, WebSockets, and lifespan events. It is **unaware** of the streaming APIs, strict Content-Type enforcement, and breaking changes below.
+Claude's baseline knowledge covers FastAPI through 0.111, Pydantic v2.7, Starlette 0.37, Uvicorn 0.29. This skill covers changes from 0.112 through 0.135.3 (2024-09 to 2026-04).
 
-## Index
+## Version Compatibility
 
-| Topic | Reference | Key features |
-|---|---|---|
-| Streaming | [references/streaming.md](references/streaming.md) | `EventSourceResponse`, `ServerSentEvent`, JSON Lines with `yield`, `AsyncIterable[Model]` |
-| Breaking changes & migration | [references/breaking-changes-and-migration.md](references/breaking-changes-and-migration.md) | Strict Content-Type, security 401, dependency `scope`, Python/Pydantic version drops, ORJSON deprecated |
+| Dependency | Minimum | Notes |
+|-----------|---------|-------|
+| Python | 3.10 | Dropped 3.8 in 0.125.0, 3.9 in 0.129.0. Python 3.14 supported |
+| Pydantic | 2.9.0 | v1 fully dropped (0.126.0-0.128.0). No `pydantic.v1` compat |
+| Starlette | >=0.46.0 | Supports Starlette 1.0.0+ |
+| `fastapi-slim` | -- | Dropped in 0.129.2. Use `fastapi` or `fastapi[standard]` |
 
----
+## Key Changes Timeline
 
-## Breaking Changes Summary
-
-| What changed | Before | After | Version |
-|---|---|---|---|
-| Content-Type enforcement | Any/missing header accepted | Rejects missing `Content-Type` on JSON endpoints | 0.132.0 |
-| Security class status | `403` when credentials missing | `401` when credentials missing | 0.122.0 |
-| Python support | 3.8+ | 3.10+ (3.8 dropped 0.125.0, 3.9 dropped 0.129.0) | 0.125–0.129 |
-| Pydantic support | v1 + v2 | v2 only (min `>=2.9.0`) | 0.126–0.128 |
-| `fastapi-slim` | Separate package | Dropped — use `fastapi` or `fastapi[standard]` | 0.129.2 |
-| Starlette | `<1.0` | `>=0.46.0` (Starlette 1.0+ supported) | 0.133.0 |
-| ORJSON/UJSON responses | Needed for fast JSON | Deprecated — Pydantic Rust serialization is faster | 0.131.0 |
-
-See [references/breaking-changes-and-migration.md](references/breaking-changes-and-migration.md) for details and migration patterns.
-
-## New APIs
-
-| API | Version | Description |
-|---|---|---|
-| `fastapi.sse.EventSourceResponse` | 0.135.0 | Response class for Server-Sent Events endpoints |
-| `fastapi.sse.ServerSentEvent` | 0.135.0 | SSE event with `data`, `event`, `id`, `retry`, `raw_data` fields |
-| `yield` streaming (JSON Lines) | 0.134.0 | Return `AsyncIterable[Model]` / `Iterable[Model]` to stream JSONL |
-| `FastAPI(strict_content_type=)` | 0.132.0 | Toggle Content-Type enforcement (default `True`) |
-| `Depends(..., scope=)` | 0.121.0 | `"function"` runs cleanup before response; `"request"` (default) runs after |
+| Version | Change | Impact |
+|---------|--------|--------|
+| 0.135.0 | Native SSE via `fastapi.sse` | New API |
+| 0.134.0 | `yield` streaming (JSON lines, binary) | New pattern |
+| 0.133.0 | Starlette 1.0 support | `on_event` removed |
+| 0.132.0 | `strict_content_type=True` default | **Breaking** |
+| 0.131.0 | ORJSONResponse/UJSONResponse deprecated | Deprecation |
+| 0.130.0 | Pydantic Rust JSON serializer auto-used | Performance |
+| 0.129.1 | `bytes` JSON Schema: `contentMediaType` | **Breaking** |
+| 0.126.0 | Pydantic v1 support fully dropped | **Breaking** |
+| 0.122.0 | Security classes return 401, not 403 | **Breaking** |
+| 0.121.0 | Dependency `scope="request"` | New API |
+| 0.117.0 | `-> None` return type for no-body responses | New pattern |
 
 ## Server-Sent Events (0.135.0)
 
-New `EventSourceResponse` and `ServerSentEvent` in `fastapi.sse`:
+Native SSE via `fastapi.sse`. No third-party packages needed:
 
 ```python
 from collections.abc import AsyncIterable
@@ -56,116 +48,185 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-
 class Item(BaseModel):
     name: str
     price: float
 
-
-# Simple: yield models directly
-@app.get("/stream", response_class=EventSourceResponse)
-async def sse_items() -> AsyncIterable[Item]:
-    for item in get_items():
-        yield item
-
-
-# Advanced: control event/id/retry fields
-@app.get("/events", response_class=EventSourceResponse)
-async def sse_events() -> AsyncIterable[ServerSentEvent]:
-    yield ServerSentEvent(data=item, event="update", id="1", retry=5000)
-    yield ServerSentEvent(raw_data="[DONE]")  # raw_data skips JSON encoding
-```
-
-Read `Last-Event-ID` header for reconnection resume. Works with POST too.
-
-## Stream JSON Lines with `yield` (0.134.0)
-
-Use `yield` in path operations to stream JSON Lines (`application/jsonl`). Declare return type as `AsyncIterable[Model]` for Pydantic validation and Rust-speed serialization:
-
-```python
-from collections.abc import AsyncIterable
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-app = FastAPI()
-
-class Item(BaseModel):
-    name: str
-    price: float
-
-@app.get("/items/stream")
+@app.get("/items/stream", response_class=EventSourceResponse)
 async def stream_items() -> AsyncIterable[Item]:
-    for item in get_items():
-        yield item
+    for item in items:
+        yield item  # auto-serialized as JSON in data: field
 ```
 
-Works with sync `def` too (use `Iterable[Model]`). No `StreamingResponse` wrapper needed.
-
-See [references/streaming.md](references/streaming.md) for complete streaming patterns.
-
-## Strict Content-Type Checking (0.132.0)
-
-FastAPI now rejects JSON requests without a valid `Content-Type` header (e.g. `application/json`). Protects against CSRF on localhost apps. Disable if your clients don't send it:
+For SSE fields (`event`, `id`, `retry`, `comment`), yield `ServerSentEvent` objects:
 
 ```python
-app = FastAPI(strict_content_type=False)
+yield ServerSentEvent(data=item, event="item_update", id=str(i), retry=5000)
+yield ServerSentEvent(raw_data="[DONE]", event="done")  # raw_data skips JSON encoding
+yield ServerSentEvent(comment="keep-alive")  # comment-only event
 ```
 
-## Dependency `scope` Parameter (0.121.0)
+- `data` and `raw_data` are **mutually exclusive** on `ServerSentEvent`
+- Works with `def` (sync) too -- use `Iterable[T]` return type
+- Auto keep-alive ping every 15s, `Cache-Control: no-cache`, `X-Accel-Buffering: no` set by default
+- Works with **any HTTP method** (not just GET) -- relevant for MCP-style POST SSE
 
-Dependencies with `yield` now support `scope="function"` to run cleanup **before** the response is sent (default `scope="request"` runs after):
+See [`sse.md`](references/sse.md) for `Last-Event-ID` resumption pattern and advanced usage.
+
+## strict_content_type (0.132.0) -- Breaking Change
+
+FastAPI now checks `Content-Type` header on JSON requests by default. Requests without `application/json` are rejected with 422. Disable per-route:
 
 ```python
-@app.get("/users/me")
-def get_user(db: Annotated[Session, Depends(get_db, scope="function")]):
-    return db.query(User).first()
-    # db.close() runs here, before response is sent
+@app.post("/legacy", strict_content_type=False)
+async def legacy_endpoint(data: MyModel):
+    ...
 ```
 
-## Complete Example — AI Chat with SSE
+## Dependency Scopes (0.121.0)
 
-Combines SSE, dependency scope, and strict Content-Type in a realistic pattern:
+`scope="request"` makes yield dependency exit code run **before** the response is sent:
 
 ```python
-from collections.abc import AsyncIterable
-from typing import Annotated
-from fastapi import Depends, FastAPI
-from fastapi.sse import EventSourceResponse, ServerSentEvent
-from pydantic import BaseModel
-
-app = FastAPI(strict_content_type=True)
-
-class ChatRequest(BaseModel):
-    message: str
-
-class ChatChunk(BaseModel):
-    text: str
-    done: bool
-
-def get_llm_client():
-    client = create_client()
-    yield client
-    client.close()
-
-@app.post("/chat", response_class=EventSourceResponse)
-async def chat(
-    req: ChatRequest,
-    llm: Annotated[LLMClient, Depends(get_llm_client, scope="request")],
-) -> AsyncIterable[ServerSentEvent]:
-    async for chunk in llm.stream(req.message):
-        yield ServerSentEvent(
-            data=ChatChunk(text=chunk.text, done=False),
-            event="chunk",
-        )
-    yield ServerSentEvent(
-        data=ChatChunk(text="", done=True),
-        event="done",
-    )
+@app.get("/items/")
+async def read_items(db: Annotated[Session, Depends(get_db, scope="request")]):
+    ...
 ```
+
+Without `scope="request"` (default), exit code runs **after** the response is fully sent -- correct for `StreamingResponse` where the dep must stay alive during streaming.
+
+See [`dependency-injection.md`](references/dependency-injection.md) for `functools.partial()` support and `Response` as dependency annotation.
+
+## Security Classes Return 401 (0.122.0) -- Breaking Change
+
+`HTTPBearer`, `OAuth2`, `HTTPBasic` etc. now raise **401** (not 403) when credentials are missing. Tests asserting `status_code == 403` will break.
+
+## ORJSONResponse / UJSONResponse Deprecated (0.131.0)
+
+No longer needed. FastAPI 0.130.0+ uses Pydantic's Rust-based JSON serializer automatically when a **Pydantic return type annotation or `response_model`** is declared. Without either, falls back to `jsonable_encoder`.
+
+## Pydantic 2.12 Highlights
+
+**`MISSING` sentinel** -- canonical solution for PATCH endpoints (distinguish "not provided" from `None`):
+
+```python
+from pydantic.experimental.missing_sentinel import MISSING
+
+class UpdateItem(BaseModel):
+    name: str | None | MISSING = MISSING
+    price: float | None | MISSING = MISSING
+
+item = UpdateItem()
+item.model_dump()  # {} -- MISSING fields excluded
+```
+
+**`exclude_if`** -- conditional field exclusion:
+
+```python
+value: int = Field(ge=0, exclude_if=lambda v: v == 0)
+```
+
+**`@model_validator(mode='after')`** must now be an instance method (not `@classmethod`). See [`pydantic-updates.md`](references/pydantic-updates.md) for all Pydantic 2.9-2.12 changes.
+
+## Starlette 1.0 Removals (0.133.0+)
+
+Hard removals (not just deprecated -- will raise errors):
+
+| Removed | Replacement |
+|---------|-------------|
+| `@app.on_event("startup"/"shutdown")` | `lifespan=` context manager |
+| `on_startup`/`on_shutdown` params | `lifespan=` context manager |
+| `@app.route()` | `routes=` parameter |
+| `@app.exception_handler()` | `exception_handlers=` parameter |
+| `@app.middleware()` | `middleware=` parameter |
+| `TemplateResponse(name, context)` | `TemplateResponse(request, name, ...)` |
+
+Jinja2Templates: **autoescape enabled by default**. `jinja2` must be installed to import.
+
+### Lifespan Migration Pattern
+
+```python
+# BROKEN in Starlette 1.0:
+@app.on_event("startup")  # AttributeError -- hard removed
+async def startup():
+    ...
+
+# CORRECT:
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # startup
+    yield
+    # shutdown
+
+app = FastAPI(lifespan=lifespan)
+```
+
+### Typed Lifespan State (Starlette 0.52.0)
+
+Access lifespan state with type safety via `TypedDict`:
+
+```python
+from typing import AsyncIterator, TypedDict
+from contextlib import asynccontextmanager
+import httpx
+
+class AppState(TypedDict):
+    http_client: httpx.AsyncClient
+
+@asynccontextmanager
+async def lifespan(app) -> AsyncIterator[AppState]:
+    async with httpx.AsyncClient() as client:
+        yield {"http_client": client}
+
+# In route handler -- typed access:
+async def handler(request: Request[AppState]):
+    client = request.state["http_client"]  # typed as httpx.AsyncClient
+```
+
+See [`starlette-changes.md`](references/starlette-changes.md) for CORSMiddleware, FileResponse range, ClientDisconnect.
+
+## `None` Return Type (0.117.0)
+
+Valid return annotation for endpoints with no body (204, 304):
+
+```python
+@app.delete("/items/{item_id}", status_code=204)
+async def delete_item(item_id: int) -> None:
+    ...
+```
+
+## Streaming with yield (0.134.0)
+
+Path operations can `yield` to stream responses directly -- no manual `StreamingResponse` needed. Requires Starlette >=0.46.0.
+
+## functools.partial() Dependencies (0.123.5)
+
+Dependencies now fully support `functools.partial()` and `functools.wraps()`:
+
+```python
+from functools import partial
+
+def get_db(engine: Engine, read_only: bool = False):
+    ...
+
+get_prod_db = partial(get_db, engine=prod_engine)
+
+@app.get("/items")
+async def read_items(db=Depends(get_prod_db)):
+    ...
+```
+
+See [`dependency-injection.md`](references/dependency-injection.md) for full details.
 
 ## Reference Files
 
 | File | Contents |
-|---|---|
-| [streaming.md](references/streaming.md) | EventSourceResponse, ServerSentEvent, JSON Lines streaming, yield-based streaming |
-| [breaking-changes-and-migration.md](references/breaking-changes-and-migration.md) | Strict Content-Type, security 401, dependency scope, Python/Pydantic drops, ORJSON deprecation |
+|------|----------|
+| [`sse.md`](references/sse.md) | SSE Last-Event-ID resumption, advanced ServerSentEvent usage |
+| [`breaking-changes.md`](references/breaking-changes.md) | All breaking changes: strict_content_type, 401 security, bytes schema, Starlette 1.0 removals |
+| [`pydantic-updates.md`](references/pydantic-updates.md) | Pydantic 2.9-2.12: MISSING sentinel, exclude_if, temporal config, model_validator changes |
+| [`dependency-injection.md`](references/dependency-injection.md) | Scopes, functools.partial/wraps, Response as dep, PEP 695 TypeAliasType |
+| [`starlette-changes.md`](references/starlette-changes.md) | Starlette 0.39-1.0: typed lifespan state, CORSMiddleware, FileResponse range, ClientDisconnect |
+| [`ecosystem.md`](references/ecosystem.md) | SQLModel 0.0.25-0.0.36, Uvicorn changes, FastAPI Cloud CLI |

@@ -58,7 +58,7 @@ Bun.serve({
 });
 ```
 
-Script and stylesheet tags referenced in HTML are bundled automatically.
+Referenced script tags and stylesheet links are bundled automatically.
 
 ## Cookies
 

@@ -2,9 +2,9 @@
 name: pytorch-knowledge-patch
 description: PyTorch 2.6–2.11 changes — weights_only=True default, FSDP2 fully_shard, torch.compile improvements (mega cache, hierarchical compilation, control flow ops), varlen_attn, FlexAttention FA4, Dim.AUTO export, TorchScript deprecated. Load before writing PyTorch code.
 license: MIT
+version: "2.11.0"
 metadata:
   author: Nevaberry
-  version: "2.11.0"
 ---
 
 # PyTorch Knowledge Patch

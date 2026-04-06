@@ -2,9 +2,9 @@
 name: nextjs-knowledge-patch
 description: "Next.js changes since training cutoff (latest: 16.1) — proxy.ts, \"use cache\", Cache Components, navigation hooks, typed routes, auto PageProps, React 19.2. Load before working with Next.js."
 license: MIT
+version: "16.1"
 metadata:
   author: Nevaberry
-  version: "16.1"
 ---
 
 # Next.js Knowledge Patch (15.3 – 16.x)

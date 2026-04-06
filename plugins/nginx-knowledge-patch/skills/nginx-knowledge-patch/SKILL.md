@@ -2,9 +2,9 @@
 name: nginx-knowledge-patch
 description: "Nginx changes since training cutoff (latest: 1.29.7) — upstream keepalive defaults, sticky directive, DNS resolve, HTTP/2 proxying, TLS defaults. Load before working with Nginx."
 license: MIT
+version: "1.29.7"
 metadata:
   author: Nevaberry
-  version: "1.29.7"
 ---
 
 # Nginx Knowledge Patch (1.27.3 – 1.29.7)

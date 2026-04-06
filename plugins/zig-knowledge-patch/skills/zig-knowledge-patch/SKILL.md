@@ -2,9 +2,9 @@
 name: zig-knowledge-patch
 description: "Zig changes since training cutoff (latest: 0.14.0) \u2014 labeled switch, decl literals, @branchHint, DebugAllocator, unmanaged containers, root_module build API. Load before working with Zig."
 license: MIT
+version: "0.14.0"
 metadata:
   author: Nevaberry
-  version: "0.14.0"
 ---
 
 # Zig Knowledge Patch

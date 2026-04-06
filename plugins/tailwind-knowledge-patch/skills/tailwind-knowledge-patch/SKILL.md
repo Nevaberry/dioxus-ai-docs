@@ -1,196 +1,148 @@
 ---
 name: tailwind-knowledge-patch
-description: "Tailwind CSS v4.x changes since training cutoff (latest: 4.1) — CSS-first @theme configuration, new directives (@utility, @custom-variant, @variant, @reference, @source), gradient/mask/text-shadow utilities, container queries built-in. Load before working with Tailwind CSS v4."
+description: "Tailwind CSS changes since training cutoff (latest: 4.1) — text shadows, composable masks, overflow-wrap, safe alignment, @source directives, pointer/noscript variants. Load before working with Tailwind CSS."
+version: "4.1"
 license: MIT
 metadata:
   author: Nevaberry
-  version: "4.1"
 ---
 
-Claude's baseline knowledge covers Tailwind CSS through v3.x. This patch covers v4.0 and v4.1.
+# Tailwind CSS Knowledge Patch
 
-## Quick Reference
+Covers Tailwind CSS 4.1 (2025-04-03). Claude Opus 4.6 knows Tailwind CSS through 3.x. It is **unaware** of the features below.
 
-### CSS-First Configuration
+## Index
 
-v4 replaces `tailwind.config.js` with `@theme {}` in CSS. Theme variables use namespaced CSS custom properties:
+| Topic | Reference | Key features |
+|---|---|---|
+| New utilities | [references/utilities.md](references/utilities.md) | Text shadows, masks, overflow-wrap, colored drop shadows, alignment |
+| New variants | [references/variants.md](references/variants.md) | Pointer device, `details-content`, `inverted-colors`, `noscript`, `user-valid`/`user-invalid` |
+| Configuration | [references/configuration.md](references/configuration.md) | `@source not`, `@source inline()` |
 
-| Namespace | Creates | Example |
-|-----------|---------|---------|
-| `--color-*` | Color utilities | `bg-red-500`, `text-sky-300` |
-| `--font-*` | Font family | `font-sans` |
-| `--text-*` | Font **size** (not color) | `text-xl` |
-| `--font-weight-*` | Font weight | `font-bold` |
-| `--tracking-*` | Letter spacing | `tracking-tight` |
-| `--leading-*` | Line height | `leading-snug` |
-| `--breakpoint-*` | Responsive variants | `sm:`, `md:` |
-| `--container-*` | Container query variants | `@sm:`, `@md:` |
-| `--spacing-*` | Spacing/sizing | `px-4`, `w-16`, `max-h-*` |
-| `--radius-*` | Border radius | `rounded-sm` |
-| `--shadow-*` / `--inset-shadow-*` | Box/inset shadow | `shadow-lg` |
-| `--ease-*` | Transition timing | `ease-in-out` |
-| `--animate-*` | Animations | `animate-spin` |
-| `--blur-*` / `--drop-shadow-*` / `--perspective-*` / `--aspect-*` | Filters, etc. | `blur-md` |
+---
 
-```css
-@import "tailwindcss";
+## New Utility Classes (4.1)
 
-@theme {
-  --color-brand: oklch(0.72 0.11 221);
-  --font-display: "Satoshi", sans-serif;
-  --breakpoint-3xl: 120rem;
-  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-}
-```
+### Text Shadow
 
-See `references/configuration.md` for `@theme inline`, `@theme static`, keyframes in theme, clearing defaults, and build-time functions.
-
-### Directives
-
-| Directive | Purpose | Example |
-|-----------|---------|---------|
-| `@utility` | Custom utility with variant support | `@utility tab-4 { tab-size: 4; }` |
-| `@custom-variant` | Custom variant in CSS | `@custom-variant theme-dark (&:where([data-theme="dark"] *));` |
-| `@variant` | Apply variant in custom CSS | `@variant dark { background: black; }` |
-| `@reference` | Import theme for `@apply` without output | `@reference "../../app.css";` |
-| `@source` | Add content paths for scanning | `@source "../node_modules/@my-company/ui-lib";` |
-| `@source not` | Exclude paths from scanning | `@source not "./src/legacy";` |
-| `@config` | Load legacy JS config (v3 compat) | `@config "../../tailwind.config.js";` |
-| `@plugin` | Load legacy JS plugin (v3 compat) | `@plugin "@tailwindcss/typography";` |
-
-See `references/directives.md` for full syntax, `@source inline()` with brace expansion, and v3 compatibility notes.
-
-### New Utilities (v4.0-4.1)
-
-| Utility | What it does |
-|---------|-------------|
-| `bg-linear-*` | Linear gradients (replaces `bg-gradient-*`) |
-| `bg-linear-45` | Gradient with angle |
-| `bg-linear-to-r/oklch` | Gradient with interpolation modifier |
-| `bg-conic/*`, `bg-radial-[*]` | Conic and radial gradients |
-| `@container` + `@sm:` | Built-in container queries (no plugin) |
-| `@min-md:@max-xl:` | Container query ranges |
-| `text-shadow-{2xs,xs,sm,md,lg}` | Text shadow sizes |
-| `text-shadow-<color>` | Text shadow color |
-| `text-shadow-lg/50` | Text shadow with opacity |
-| `mask-{t,r,b,l}-from-*` | Directional linear masks |
-| `mask-radial-from-*` | Radial masks |
-| `wrap-break-word` | Break long words to prevent overflow |
-| `wrap-anywhere` | Mid-word breaks for intrinsic sizing |
-| `drop-shadow-<color>` | Colored drop shadows |
-| `items-baseline-last` | Align to last text baseline |
-| `justify-center-safe` | Safe alignment (falls back on overflow) |
-
-See `references/utilities.md` for full examples and composable mask patterns.
-
-### New Variants (v4.1)
-
-| Variant | Target |
-|---------|--------|
-| `pointer-fine` / `pointer-coarse` | Primary input device precision |
-| `any-pointer-fine` / `any-pointer-coarse` | Any connected input device |
-| `details-content` | Content of `<details>` element |
-| `inverted-colors` | OS inverted colors mode |
-| `noscript` | JavaScript disabled |
-| `user-valid` / `user-invalid` | Form validation after user interaction |
-
-## Critical Examples
-
-### Minimal v4 Setup
-
-```css
-@import "tailwindcss";
-
-@theme {
-  --color-brand: oklch(0.72 0.11 221);
-  --font-display: "Satoshi", sans-serif;
-}
-```
-
-### Custom Utility + Variant
-
-```css
-@utility tab-4 {
-  tab-size: 4;
-}
-
-@custom-variant theme-midnight (&:where([data-theme="midnight"] *));
-/* Usage: theme-midnight:tab-4 */
-```
-
-### Custom Animation
-
-```css
-@theme {
-  --animate-fade-in: fade-in 0.3s ease-out;
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-```
-
-### Gradients with Interpolation
+| Class | Effect |
+|---|---|
+| `text-shadow-{2xs,xs,sm,md,lg}` | Text shadow at size |
+| `text-shadow-<color>` | Shadow color |
+| `text-shadow-lg/50` | Size with opacity modifier |
 
 ```html
-<!-- Angle-based gradient -->
-<div class="bg-linear-45 from-indigo-500 to-pink-500">
-  <!-- oklch interpolation for vibrant transitions -->
-  <div class="bg-linear-to-r/oklch from-indigo-500 to-teal-400">
-    <!-- Radial with position -->
-    <div class="bg-radial-[at_25%_25%] from-white to-zinc-900"></div>
+<p class="text-shadow-md text-shadow-blue-500">Shadowed text</p>
+<p class="text-shadow-lg/30">30% opacity shadow</p>
+```
+
+### Composable Mask Utilities
+
+Direction-based linear masks and radial masks. Multiple masks compose together.
+
+| Pattern | Purpose |
+|---|---|
+| `mask-{t,r,b,l}-from-<value>` | Linear mask start (direction) |
+| `mask-{t,r,b,l}-to-<value>` | Linear mask end (direction) |
+| `mask-radial-from-<value>` | Radial mask start |
+| `mask-radial-to-<value>` | Radial mask end |
+| `mask-radial-at-<position>` | Radial mask position |
+
+```html
+<div class="mask-b-from-50% bg-[url(/img/photo.jpg)]"></div>
+<div class="mask-r-from-80% mask-b-from-80% mask-radial-from-70%"></div>
+```
+
+### Overflow Wrap
+
+| Class | CSS |
+|---|---|
+| `wrap-break-word` | `overflow-wrap: break-word` |
+| `wrap-anywhere` | `overflow-wrap: anywhere` |
+
+Use `wrap-anywhere` inside flex containers instead of `min-w-0` hacks:
+
+```html
+<div class="flex">
+  <div class="wrap-anywhere">
+    <p>long.email@example.com</p>
   </div>
 </div>
 ```
 
-### Container Queries
+### Colored Drop Shadows
+
+`drop-shadow-<color>` and `drop-shadow-<color>/<opacity>` to color filter drop shadows:
 
 ```html
-<div class="@container">
-  <div class="grid-cols-1 @sm:grid-cols-3 @max-md:grid-cols-1"></div>
-</div>
+<svg class="drop-shadow-xl drop-shadow-cyan-500/50">...</svg>
 ```
 
-### Composable Masks
+### Alignment
+
+- `items-baseline-last` / `self-baseline-last` — align to the last line of text baseline in flex/grid
+- Safe alignment — append `-safe` to fall back to `start` on overflow: `justify-center-safe`, `items-center-safe`, etc.
 
 ```html
-<div class="mask-b-from-50% mask-radial-from-80% bg-[url(/img/photo.jpg)]"></div>
+<ul class="flex justify-center-safe gap-2">...</ul>
 ```
 
-### Text Shadow
+## New Variants (4.1)
+
+| Variant | Purpose |
+|---|---|
+| `pointer-fine` | Primary pointer is fine (mouse) |
+| `pointer-coarse` | Primary pointer is coarse (touch) |
+| `any-pointer-fine` | Any available pointer is fine |
+| `any-pointer-coarse` | Any available pointer is coarse |
+| `details-content` | Targets content container of `<details>` |
+| `inverted-colors` | Matches OS inverted-colors mode |
+| `noscript` | Applies when JS is disabled |
+| `user-valid` | Validation styling after user interaction |
+| `user-invalid` | Validation styling after user interaction |
 
 ```html
-<button class="text-sky-950 text-shadow-2xs text-shadow-sky-300">Embossed</button>
+<!-- Responsive touch targets -->
+<label class="p-2 pointer-coarse:p-4">Option</label>
+
+<!-- Validation after interaction (no error flash on page load) -->
+<input
+  type="email"
+  required
+  class="border user-valid:border-green-500 user-invalid:border-red-500"
+/>
+
+<!-- Progressive enhancement fallback -->
+<div class="hidden noscript:block">Please enable JavaScript.</div>
+
+<!-- Style details content -->
+<details class="details-content:p-4 details-content:bg-gray-50">
+  <summary>Expand</summary>
+  <p>Styled content area.</p>
+</details>
 ```
 
-### Vue/Svelte Scoped Styles
+## Configuration (4.1)
 
-```html
-<style>
-  @reference "../../app.css";
-  h1 {
-    @apply text-2xl font-bold;
-  }
-</style>
-```
-
-### Build-Time Functions
+### `@source not` — Exclude paths from class scanning
 
 ```css
-.element {
-  color: --alpha(var(--color-lime-300) / 50%);
-  margin: --spacing(4);
-}
+@source not "./src/components/legacy";
+```
+
+### `@source inline()` — Safelist replacement
+
+Force-generate classes with brace expansion:
+
+```css
+@source inline("{hover:,}bg-red-{50,{100..900..100},950}");
+@source not inline("container"); /* prevent generation */
 ```
 
 ## Reference Files
 
 | File | Contents |
-|------|----------|
-| `references/configuration.md` | `@theme` options (inline, static), keyframes, clearing defaults, build-time functions |
-| `references/directives.md` | `@utility`, `@custom-variant`, `@variant`, `@reference`, `@source`, v3 compat |
-| `references/utilities.md` | Gradients, container queries, text shadows, masks, overflow-wrap, drop shadows, alignment |
+|---|---|
+| [utilities.md](references/utilities.md) | Text shadows, masks, overflow-wrap, colored drop shadows, alignment utilities |
+| [variants.md](references/variants.md) | Pointer device, details-content, inverted-colors, noscript, user-valid/invalid variants |
+| [configuration.md](references/configuration.md) | `@source not`, `@source inline()` directives |

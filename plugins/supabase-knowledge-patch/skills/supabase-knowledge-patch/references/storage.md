@@ -2,25 +2,25 @@
 
 ## Vector Buckets (Alpha)
 
-Supabase Storage now has specialized vector buckets for storing, indexing, and querying embeddings with similarity search. Accessed via `supabase.storage.vectors` namespace.
+New bucket type for storing and querying vector embeddings at scale via `supabase.storage.vectors`. Alternative to pgvector — built on S3 storage, optimized for large-scale similarity search rather than low-latency transactional queries.
 
-**Create bucket and index:**
+Create a vector bucket and index:
 
 ```typescript
-// Create a vector bucket
+// Create bucket
 await supabase.storage.vectors.createBucket('embeddings');
 
-// Create an index (dimension must match your embedding model)
+// Create index (dimension must match your embedding model)
 const bucket = supabase.storage.vectors.from('embeddings');
 await bucket.createIndex({
   indexName: 'documents-openai',
   dataType: 'float32',
   dimension: 1536,
-  distanceMetric: 'cosine', // 'cosine' | 'euclidean' | 'l2' — immutable after creation
+  distanceMetric: 'cosine', // 'cosine' | 'euclidean' | 'l2'
 });
 ```
 
-**Store vectors:**
+Store vectors with metadata:
 
 ```typescript
 const index = supabase.storage.vectors.from('embeddings').index('documents-openai')
@@ -30,28 +30,41 @@ await index.putVectors({
     {
       key: 'doc-1',
       data: { float32: [0.1, 0.2, 0.3 /* ... */] },
-      metadata: { title: 'My Document', category: 'docs' },
+      metadata: { title: 'My Document', category: 'guide' },
     },
   ],
 })
 ```
 
-**Similarity search with metadata filtering:**
+Query with similarity search and metadata filtering:
 
 ```typescript
 const { data } = await index.queryVectors({
   queryVector: { float32: queryEmbedding },
   topK: 10,
-  filter: { category: 'electronics', price: { $lte: 500 } },
+  filter: {
+    category: 'guide',
+    price: { $lte: 500 },
+  },
   returnDistance: true,
   returnMetadata: true,
 });
-// data.vectors[].key, .distance, .metadata
+
+// Results ranked by similarity (lowest distance = most similar)
+data.vectors.forEach((v) => console.log(v.key, v.distance, v.metadata));
 ```
 
-**Other operations:** `getVectors({ keys })`, `listVectors({ maxResults, nextToken })`, `deleteVectors({ keys })`. Manage indexes with `listIndexes()`, `getIndex(name)`, `deleteIndex(name)`.
+Other index operations:
 
-**SQL access via S3 Vector Wrapper** — query vector buckets from Postgres using the `<===>` distance operator and `embd_distance()` function:
+```typescript
+await index.getVectors({ keys: ['doc-1', 'doc-2'], returnMetadata: true });
+await index.listVectors({ maxResults: 100, nextToken });
+await index.deleteVectors({ keys: ['doc-1'] });
+await bucket.listIndexes();
+await bucket.deleteIndex('documents-openai');
+```
+
+**SQL access via S3 Vector Wrapper FDW** — query vector buckets from Postgres using the `<===>` distance operator and `embd_distance()` function:
 
 ```sql
 SELECT key, metadata->>'title', embd_distance(data) as distance
@@ -61,16 +74,16 @@ ORDER BY embd_distance(data) ASC
 LIMIT 5;
 ```
 
-Supports JOINs with relational tables for hybrid search. Limits: max 4096 dimensions, 1000 vectors per batch, 10 indexes per bucket, 10 buckets per project.
+Limits (alpha): max 10 buckets/project, 10 indexes/bucket, 4096 dimensions, 1000 vectors/batch.
 
 ## Analytics Buckets (Alpha)
 
-Store large datasets for analytics using Apache Iceberg table format, separate from your transactional Postgres database. Analytics buckets are S3-backed and designed for data warehousing, historical archiving, and complex aggregations.
+New bucket type for large-scale analytical workloads using Apache Iceberg table format. Separates analytical queries from the transactional Postgres database.
 
-Query from Postgres via the Iceberg Foreign Data Wrapper:
+Create analytics buckets via Dashboard or SDK. Populate with your own ingestion pipeline (ETL via Supabase is no longer supported). Query from Postgres via the Iceberg Foreign Data Wrapper:
 
 ```sql
--- After connecting via Dashboard (Analytics Bucket -> Query with Postgres)
+-- After connecting via Dashboard (Analytics Bucket → Query with Postgres)
 SELECT
   event_id,
   event_name,
@@ -82,13 +95,17 @@ ORDER BY
 LIMIT
   1000;
 
--- Joins with transactional data work
+-- Join analytics data with transactional tables
 SELECT
-  e.event_id,
+  e.event_name,
   u.user_email
 FROM
   analytics.events e
-  JOIN public.users u ON e.user_id = u.id;
+  JOIN public.users u ON e.user_id = u.id
+WHERE
+  e.event_timestamp > NOW() - INTERVAL '7 days';
 ```
 
-Also queryable via DuckDB, Apache Spark, and PyIceberg using S3 credentials. Limits: 2 buckets/project, 10 namespaces/bucket, 10 tables/namespace.
+Also queryable externally via DuckDB, PyIceberg, or Apache Spark using S3 credentials from project settings.
+
+Limits (alpha): 2 analytics buckets/project, 10 namespaces/bucket, 10 tables/namespace.

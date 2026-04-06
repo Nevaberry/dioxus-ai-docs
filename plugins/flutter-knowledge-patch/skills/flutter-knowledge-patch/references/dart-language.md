@@ -1,97 +1,80 @@
-# Dart Language Features (3.8–3.11)
+# Dart Language Features
 
-## Null-aware elements in collections (Dart 3.8)
+## Macros Cancelled (Dart 3.7)
 
-Prepend `?` to a collection element to include it only when non-null. Works in list, set, and map literals.
+Macros development has been stopped. The `@JsonCodable()` experiment from Dart 3.4 is discontinued. Continue using `json_serializable` / `build_runner` for JSON serialization. The team is exploring improvements to `build_runner` performance and new approaches for data serialization.
+
+Legacy web libraries are deprecated in Dart 3.7: `dart:html`, `dart:indexed_db`, `dart:js`, `dart:js_util`, `dart:web_audio`, `dart:web_gl`. Use `dart:js_interop` and `package:web` instead.
+
+## Null-Aware Elements (Dart 3.8)
+
+Prepend `?` to skip null elements in collection literals:
 
 ```dart
-var items = [
-  ?nullableString,
-  ?nullable.value,  // no need for null-check or `!`
+List<String> names = [
+  ?nullableName,      // omitted if null
+  ?user?.displayName, // omitted if null
 ];
 
-var map = {
-  ?'key': nullableValue,  // null-aware map entry
+Map<String, int> data = {
+  ?nullableKey: 1,
+  'fixed': ?nullableValue,
 };
+
+Set<String> tags = {?maybeTag, 'always'};
 ```
 
-## Cross compilation (Dart 3.8+)
+Replaces verbose `if (x != null) x` patterns in list/map/set literals.
 
-Compile to native Linux binaries from any OS with `--target-os` and `--target-arch`:
+## Cross Compilation (Dart 3.8)
+
+Compile to Linux native binaries from any OS:
 
 ```bash
 dart compile exe --target-os=linux --target-arch=arm64 bin/server.dart
 dart compile aot-snapshot --target-os=linux --target-arch=arm64 bin/server.dart
 ```
 
-Dart 3.9 added `arm` (ARM32) and `riscv64` (RV64GC) as additional cross-compilation targets for Linux.
+Supported target architectures: `arm64`, `x64`, `arm` (ARM32), `riscv64`.
 
-## Dot shorthands (Dart 3.10)
+## Doc Imports (Dart 3.8)
 
-Omit redundant type names when the compiler can infer the type. Works with enums, constructors, static methods, and static fields.
+Reference external symbols in doc comments without importing them into the library:
 
 ```dart
-// Enum values
-logMessage('error', level: .error);  // instead of LogLevel.error
+/// @docImport 'dart:async';
+library;
 
-// Named constructors
-Padding(
-  padding: .all(8.0),  // instead of EdgeInsets.all(8.0)
-  child: Text('Hello'),
-)
+/// Returns a [Future] that completes with the result.
+String getData() => 'data';
+```
 
-// Static methods and fields
+## Dot Shorthands (Dart 3.10)
+
+Omit type names when the compiler can infer them. Works with enums, constructors, static methods, and static fields:
+
+```dart
+// Before
 Column(
-  mainAxisAlignment: .start,    // MainAxisAlignment.start
-  crossAxisAlignment: .center,  // CrossAxisAlignment.center
-  children: [/* ... */],
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Padding(padding: EdgeInsets.all(8.0), child: Text('Hi')),
+  ],
 )
 
-// Default parameter values
-void logMessage(String msg, {LogLevel level = .info}) { }
+// After (Dart 3.10+ / Flutter 3.38+)
+Column(
+  mainAxisAlignment: .center,
+  children: [
+    Padding(padding: .all(8.0), child: Text('Hi')),
+  ],
+)
 ```
 
-## Build hooks stable (Dart 3.10)
-
-Compile native code (C++, Rust, Swift) or download native libraries and bundle them directly with a Dart package — no CMake/Gradle/SPM build files needed. Previously called "native assets".
-
-## Analyzer plugins (Dart 3.10)
-
-Custom static analysis rules that integrate into IDEs and `dart analyze`. Enable in `analysis_options.yaml`:
-
-```yaml
-plugins:
-  - some_plugin
-```
-
-Note: uses top-level `plugins:` key, not `analyzer: plugins:`.
-
-## Granular @Deprecated annotations (Dart 3.10)
-
-Deprecate specific capabilities of a class instead of the whole API:
+Default parameter values also support shorthands:
 
 ```dart
-@Deprecated.extend('Use composition instead')   // extending deprecated
-@Deprecated.implement('Use the concrete class')  // implementing deprecated
-@Deprecated.subclass('Sealed in next major')     // extend or implement
-@Deprecated.mixin('Use a mixin instead')         // mixing in deprecated
-@Deprecated.instantiate('Use factory method')    // instantiation deprecated
-@Deprecated.optional('Will become required in 2.0')  // optional→required param
+void log(String msg, {LogLevel level = .info}) { ... }
 ```
 
-## `dart build cli` (Dart 3.9, preview)
-
-`dart build` replaces `dart compile` syntax on beta channel: `dart build cli --target=<target>`.
-
-## Glob support in pub workspaces (Dart 3.11)
-
-Declare workspace packages using globs (requires SDK `^3.11.0`):
-
-```yaml
-workspace:
-  - pkg/* # adds all packages inside pkg/
-```
-
-## `dart pub cache gc` (Dart 3.11)
-
-New command to clean unused packages from the global pub cache. Scans active projects and deletes package versions no longer referenced.
+Works anywhere the expected type is statically known — named parameters, variable declarations with type annotations, return statements, etc.

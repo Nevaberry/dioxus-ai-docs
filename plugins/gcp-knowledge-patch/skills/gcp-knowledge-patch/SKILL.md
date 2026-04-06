@@ -2,9 +2,9 @@
 name: gcp-knowledge-patch
 description: "GCP changes since training cutoff — Gen AI SDK replaces Vertex AI SDK, Gemini 2.5/3.x models, Cloud Run worker pools, Artifact Registry migration, ADK. Load before working with GCP."
 license: MIT
+version: "latest"
 metadata:
   author: Nevaberry
-  version: "latest"
 ---
 
 # Google Cloud Platform Knowledge Patch

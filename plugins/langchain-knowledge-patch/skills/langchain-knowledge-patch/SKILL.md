@@ -2,9 +2,9 @@
 name: langchain-knowledge-patch
 description: LangChain 1.0 / LangGraph 1.0 changes — create_agent replaces create_react_agent, middleware system, ToolRuntime, content_blocks, structured output strategies, simplified namespace, Deep Agents SDK, breaking changes (Python 3.10+, .text property). Load before working with LangChain.
 license: MIT
+version: "1.0.0"
 metadata:
   author: Nevaberry
-  version: "1.0.0"
 ---
 
 # LangChain 1.0 Knowledge Patch
