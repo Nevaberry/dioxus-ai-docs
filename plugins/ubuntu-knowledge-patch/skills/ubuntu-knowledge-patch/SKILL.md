@@ -1,6 +1,6 @@
 ---
 name: ubuntu-knowledge-patch
-description: Ubuntu changes since training cutoff (latest: 25.10) — sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME. Load before working with Ubuntu.
+description: "Ubuntu changes since training cutoff (latest: 25.10) — sudo-rs, rust-coreutils, APT 3.1, OpenSSH 10.0, OpenSSL 3.5 post-quantum crypto, Chrony NTS, Wayland-only GNOME. Load before working with Ubuntu."
 license: MIT
 metadata:
   author: Nevaberry

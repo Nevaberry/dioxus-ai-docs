@@ -1,6 +1,6 @@
 ---
 name: debian-knowledge-patch
-description: Debian changes since training cutoff (latest: 13) — systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3. Load before working with Debian.
+description: "Debian changes since training cutoff (latest: 13) — systemd run0, apt deb822 format, /tmp tmpfs default, wtmpdb/lastlog2, OpenSSH DSA removal, curl HTTP/3. Load before working with Debian."
 license: MIT
 metadata:
   author: Nevaberry

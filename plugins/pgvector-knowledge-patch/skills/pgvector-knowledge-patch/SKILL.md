@@ -1,6 +1,6 @@
 ---
 name: pgvector-knowledge-patch
-description: pgvector changes since training cutoff (latest: 0.8.2) — halfvec, sparsevec, bit indexing, binary quantization, iterative index scans, subvector extraction, L1 distance. Load before working with pgvector.
+description: "pgvector changes since training cutoff (latest: 0.8.2) — halfvec, sparsevec, bit indexing, binary quantization, iterative index scans, subvector extraction, L1 distance. Load before working with pgvector."
 license: MIT
 metadata:
   author: Nevaberry

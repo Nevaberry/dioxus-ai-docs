@@ -1,6 +1,6 @@
 ---
 name: astro-knowledge-patch
-description: Astro changes since training cutoff (latest: 6.0) — Sessions API, Fonts API, live collections, CSP, route caching, responsive images, SVG components, astro:config, Rust compiler, Cloudflare workerd dev. Load before working with Astro.
+description: "Astro changes since training cutoff (latest: 6.0) — Sessions API, Fonts API, live collections, CSP, route caching, responsive images, SVG components, astro:config, Rust compiler, Cloudflare workerd dev. Load before working with Astro."
 license: MIT
 metadata:
   author: Nevaberry

@@ -1,6 +1,6 @@
 ---
 name: caddy-knowledge-patch
-description: Caddy changes since training cutoff (latest: 2.11.2) — ECH, wildcard certs by default, file placeholders, log sampling, request_body set, SIGUSR1 reload, post-quantum TLS. Load before working with Caddy.
+description: "Caddy changes since training cutoff (latest: 2.11.2) — ECH, wildcard certs by default, file placeholders, log sampling, request_body set, SIGUSR1 reload, post-quantum TLS. Load before working with Caddy."
 license: MIT
 metadata:
   author: Nevaberry

@@ -1,6 +1,6 @@
 ---
 name: rhel-knowledge-patch
-description: RHEL changes since training cutoff (latest: 10.1) — Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies. Load before working with RHEL.
+description: "RHEL changes since training cutoff (latest: 10.1) — Valkey replaces Redis, Podman v5 with pasta networking, post-quantum crypto, ISC Kea DHCP, stricter TLS/FIPS policies. Load before working with RHEL."
 license: MIT
 metadata:
   author: Nevaberry

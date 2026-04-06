@@ -1,6 +1,6 @@
 ---
 name: dioxus-knowledge-patch
-description: Dioxus changes since training cutoff (latest: 0.7.4) — Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result. Load before working with Dioxus.
+description: "Dioxus changes since training cutoff (latest: 0.7.4) — Signals replacing use_state, RSX macro overhaul, server functions, asset!() system, dx CLI, Element-as-Result. Load before working with Dioxus."
 license: MIT
 metadata:
   author: Nevaberry

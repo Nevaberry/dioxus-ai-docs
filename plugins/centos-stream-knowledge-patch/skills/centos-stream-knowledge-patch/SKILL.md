@@ -1,6 +1,6 @@
 ---
 name: centos-stream-knowledge-patch
-description: CentOS Stream changes since training cutoff (latest: 10) — x86_64_v3 minimum, Wayland-only (Xorg removed), Valkey replaces Redis, modularity removed, desktop apps to Flatpak. Load before working with CentOS Stream.
+description: "CentOS Stream changes since training cutoff (latest: 10) — x86_64_v3 minimum, Wayland-only (Xorg removed), Valkey replaces Redis, modularity removed, desktop apps to Flatpak. Load before working with CentOS Stream."
 license: MIT
 metadata:
   author: Nevaberry

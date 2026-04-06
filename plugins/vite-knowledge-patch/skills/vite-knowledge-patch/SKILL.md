@@ -1,6 +1,6 @@
 ---
 name: vite-knowledge-patch
-description: Vite changes since training cutoff (latest: 8.0) — Environment API, Rolldown bundler, resolve.conditions, tsconfigPaths, React plugin v6 with Oxc, browser target changes. Load before working with Vite 6+.
+description: "Vite changes since training cutoff (latest: 8.0) — Environment API, Rolldown bundler, resolve.conditions, tsconfigPaths, React plugin v6 with Oxc, browser target changes. Load before working with Vite 6+."
 license: MIT
 metadata:
   author: Nevaberry

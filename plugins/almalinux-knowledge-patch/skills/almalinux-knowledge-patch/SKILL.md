@@ -1,6 +1,6 @@
 ---
 name: almalinux-knowledge-patch
-description: AlmaLinux changes since training cutoff (latest: 10.1) — Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default. Load before working with AlmaLinux.
+description: "AlmaLinux changes since training cutoff (latest: 10.1) — Btrfs root support, x86-64-v2 builds, post-quantum crypto via OpenSSL 3.5, SPICE re-enabled, CRB repo on by default. Load before working with AlmaLinux."
 version: "10.1"
 license: MIT
 metadata:

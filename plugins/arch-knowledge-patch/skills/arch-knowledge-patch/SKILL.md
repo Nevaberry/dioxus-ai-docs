@@ -1,6 +1,6 @@
 ---
 name: arch-knowledge-patch
-description: Arch Linux changes since training cutoff (latest: 2025.12) — pacman 7.0 alpm user, Valkey replacing Redis, Plasma 6.4 Wayland-only, NVIDIA 590 open modules, Dovecot 2.4, linux-firmware split. Load before working with Arch Linux.
+description: "Arch Linux changes since training cutoff (latest: 2025.12) — pacman 7.0 alpm user, Valkey replacing Redis, Plasma 6.4 Wayland-only, NVIDIA 590 open modules, Dovecot 2.4, linux-firmware split. Load before working with Arch Linux."
 license: MIT
 metadata:
   author: Nevaberry

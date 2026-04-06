@@ -1,6 +1,6 @@
 ---
 name: flutter-knowledge-patch
-description: Flutter/Dart changes since training cutoff (latest: 3.41/Dart 3.11) — dot shorthands, null-aware elements, build hooks, squircle shapes, RadioGroup, UIScene lifecycle, platform-specific assets. Load before working with Flutter.
+description: "Flutter/Dart changes since training cutoff (latest: 3.41/Dart 3.11) — dot shorthands, null-aware elements, build hooks, squircle shapes, RadioGroup, UIScene lifecycle, platform-specific assets. Load before working with Flutter."
 version: "3.41"
 license: MIT
 metadata:
