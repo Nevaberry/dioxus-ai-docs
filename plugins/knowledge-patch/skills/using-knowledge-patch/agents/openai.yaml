@@ -1,0 +1,7 @@
+interface:
+  display_name: "Using Knowledge Patch"
+  short_description: "Runtime guidance injected by the knowledge patch hook"
+  default_prompt: "Load the installed knowledge patch guidance."
+
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,20 @@
+{
+  "name": "nevaberry-plugins",
+  "interface": {
+    "displayName": "Nevaberry Plugins"
+  },
+  "plugins": [
+    {
+      "name": "knowledge-patch",
+      "source": {
+        "source": "local",
+        "path": "./plugins/knowledge-patch"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    }
+  ]
+}

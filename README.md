@@ -1,8 +1,10 @@
 # Nevaberry Plugins
 
-Knowledge patches for Claude Code — fills gaps in AI training data for 40+ technologies.
+Knowledge patches for Claude Code and Codex. They fill gaps in model training data for 40+ technologies.
 
 ## Install
+
+### Claude Code
 
 Install the meta-plugin to auto-detect your project's stack and install matching patches:
 
@@ -12,9 +14,15 @@ Install the meta-plugin to auto-detect your project's stack and install matching
 
 Then run `/knowledge-patch-setup` to scan your project (package.json, Cargo.toml, go.mod, etc.) and install matching patches automatically.
 
+### Codex
+
+This repo also publishes a Codex plugin bundle at `plugins/knowledge-patch/` plus a Codex marketplace entry at `.agents/plugins/marketplace.json`.
+
+Install the `knowledge-patch` plugin from that marketplace, then invoke the `knowledge-patch-setup` skill to scan your project and install matching `*-knowledge-patch` skills into `$CODEX_HOME/skills`. The setup flow can also add the optional Codex `SessionStart` hook in repo or user scope.
+
 ### Manual install
 
-Install individual patches directly — useful before rewriting to a new technology:
+Install individual patches directly in Claude Code when you already know what technology you need:
 
 ```
 /install-plugin nevaberry-plugins/supabase-knowledge-patch

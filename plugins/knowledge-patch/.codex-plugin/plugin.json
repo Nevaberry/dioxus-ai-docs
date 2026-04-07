@@ -1,0 +1,36 @@
+{
+  "name": "knowledge-patch",
+  "version": "1.2.0",
+  "description": "Detect project technologies, install matching knowledge patch skills for Codex, and add optional session-start guidance.",
+  "author": {
+    "name": "Nevaberry",
+    "url": "https://github.com/Nevaberry"
+  },
+  "homepage": "https://github.com/Nevaberry/nevaberry-plugins",
+  "repository": "https://github.com/Nevaberry/nevaberry-plugins",
+  "license": "MIT",
+  "keywords": [
+    "knowledge-patch",
+    "codex",
+    "claude",
+    "setup",
+    "up-to-date"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Knowledge Patch",
+    "shortDescription": "Detect and install matching knowledge patches",
+    "longDescription": "Shared Claude Code and Codex plugin for detecting project technologies, installing matching knowledge patches, and wiring runtime guidance so the right patch is loaded before work starts.",
+    "developerName": "Nevaberry",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Nevaberry/nevaberry-plugins",
+    "defaultPrompt": [
+      "Detect this project and install the matching knowledge patches."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

@@ -59,11 +59,6 @@ Also check for the existence of these indicator files (no need to read contents)
 | PostgreSQL | `postgresql-knowledge-patch` | `pg`, `postgres`, `knex`, `typeorm` in package.json; `psycopg2`, `psycopg`, `asyncpg`, `sqlalchemy` in Python deps; `sqlx`, `diesel`, `tokio-postgres` in Cargo.toml; `postgres` image in docker-compose |
 | PostGIS | `postgis-knowledge-patch` | `postgis`, `knex-postgis` in package.json; `geoalchemy2`, `django.contrib.gis`, `geopandas`, `postgis` in Python deps; `postgis` in Cargo.toml |
 | Node.js | `nodejs-knowledge-patch` | `package-lock.json`, `.nvmrc`, `.node-version`, or `pnpm-lock.yaml` exists |
-
-### Detection rules → Coming soon (not yet published)
-
-| Technology | Patch name | Detected when |
-|------------|-----------|---------------|
 | React | `react-knowledge-patch` | `react` in package.json |
 | Go | `go-knowledge-patch` | `go.mod` exists |
 | Docker | `docker-knowledge-patch` | `Dockerfile` or `docker-compose.*` exists |
@@ -80,18 +75,23 @@ Also check for the existence of these indicator files (no need to read contents)
 | SQLx | `sqlx-knowledge-patch` | `sqlx` in Cargo.toml |
 | Vercel AI SDK | `vercel-ai-sdk-knowledge-patch` | `ai` or `@ai-sdk/*` in package.json |
 | SQLite | `sqlite-knowledge-patch` | `better-sqlite3` in package.json; `rusqlite` in Cargo.toml |
-| Stripe | `stripe-knowledge-patch` | `stripe` in package.json or Python deps |
-| Cloudflare | `cloudflare-knowledge-patch` | `wrangler.toml` exists, or `wrangler` in package.json |
 | Kubernetes | `kubernetes-knowledge-patch` | `k8s/`, `kubernetes/`, `*.k8s.yaml`, `helmfile.yaml`, or `Chart.yaml` exists |
-| DuckDB | `duckdb-knowledge-patch` | `duckdb` in package.json, Python deps, or Cargo.toml |
 | Supabase | `supabase-knowledge-patch` | `@supabase/supabase-js` in package.json or `supabase/` directory exists |
-| Zod | `zod-knowledge-patch` | `zod` in package.json |
 | Biome | `biome-knowledge-patch` | `biome.json` or `@biomejs/biome` in package.json |
 | Hono | `hono-knowledge-patch` | `hono` in package.json |
 | tRPC | `trpc-knowledge-patch` | `@trpc/server` or `@trpc/client` in package.json |
+| Terraform | `terraform-knowledge-patch` | `*.tf` files or `terraform/` directory exists |
+
+### Detection rules → Coming soon (not yet published)
+
+| Technology | Patch name | Detected when |
+|------------|-----------|---------------|
+| Stripe | `stripe-knowledge-patch` | `stripe` in package.json or Python deps |
+| Cloudflare | `cloudflare-knowledge-patch` | `wrangler.toml` exists, or `wrangler` in package.json |
+| DuckDB | `duckdb-knowledge-patch` | `duckdb` in package.json, Python deps, or Cargo.toml |
+| Zod | `zod-knowledge-patch` | `zod` in package.json |
 | Valkey | `valkey-knowledge-patch` | `valkey` image in docker-compose; `ioredis`, `@valkey/valkey-glide` in package.json |
 | shadcn/ui | `shadcn-knowledge-patch` | `components.json` with `$schema` containing `shadcn` |
-| Terraform | `terraform-knowledge-patch` | `*.tf` files or `terraform/` directory exists |
 
 ## Step 2: Present Results
 
