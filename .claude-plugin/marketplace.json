@@ -80,6 +80,12 @@
       "category": "development"
     },
     {
+      "name": "chrony-knowledge-patch",
+      "source": "./plugins/chrony-knowledge-patch",
+      "description": "Chrony NTP changes since training cutoff (latest: 4.8) — RTC refclock, PHC by interface name, opencommands, local waitsynced/activate, NTS AEAD, maxunreach failover. Load before working with chrony configuration.",
+      "category": "development"
+    },
+    {
       "name": "claude-memory-symlink",
       "source": "./plugins/claude-memory-symlink",
       "description": "Creates a symlink so .claude/memory/ in your project points to Claude Code's system memory directory — browse and edit memory files from your project tree. Run /claude-memory-symlink to set up.",
@@ -113,6 +119,12 @@
       "name": "django-knowledge-patch",
       "source": "./plugins/django-knowledge-patch",
       "description": "Django changes since training cutoff (latest: 6.0) — composite primary keys, CSP middleware, template partials, background tasks, async paginator. Load before working with Django.",
+      "category": "development"
+    },
+    {
+      "name": "dnf5-security-updates-knowledge-patch",
+      "source": "./plugins/dnf5-security-updates-knowledge-patch",
+      "description": "DNF5 security and package management changes since training cutoff — advisory command (replaces updateinfo), security upgrade flags, automatic updates, offline upgrades, versionlock TOML, config-manager subcommands, needs-restarting defaults, Ansible dnf5 module, replay command. This skill should be used when writing DNF5 commands, Ansible dnf5 playbooks, or configuring dnf5-automatic.",
       "category": "development"
     },
     {
@@ -158,15 +170,33 @@
       "category": "development"
     },
     {
+      "name": "geodesy-wgs84-knowledge-patch",
+      "source": "./plugins/geodesy-wgs84-knowledge-patch",
+      "description": "Geodesy & WGS84 reference (latest: 1.0.0) — ECEF↔geodetic/ENU/NED conversions, PROJ pipelines, Helmert transforms, pyproj patterns. Load before working with coordinate transformations.",
+      "category": "development"
+    },
+    {
       "name": "gleam-knowledge-patch",
       "source": "./plugins/gleam-knowledge-patch",
       "description": "Gleam changes since training cutoff (latest: 1.15) — echo debugging, assert testing, bit array improvements, JavaScript FFI API, dev directory, record update enhancements. Load before working with Gleam.",
       "category": "development"
     },
     {
+      "name": "gnss-navigation-knowledge-patch",
+      "source": "./plugins/gnss-navigation-knowledge-patch",
+      "description": "GNSS navigation since training cutoff (latest: latest) — RTK/RTCM 3.x, SPARTN v2.0.3 PPP, Galileo HAS/OSNMA, u-blox F9P UBX protocol, IGS products, Android GnssMeasurement API. Load before working with GNSS.",
+      "category": "development"
+    },
+    {
       "name": "go-knowledge-patch",
       "source": "./plugins/go-knowledge-patch",
       "description": "Go changes since training cutoff (latest: 1.26.0) — new(expr) builtin, errors.AsType, self-referential generics, reflect iterators, go fix modernizer. Load before working with Go.",
+      "category": "development"
+    },
+    {
+      "name": "gpsd-knowledge-patch",
+      "source": "./plugins/gpsd-knowledge-patch",
+      "description": "gpsd changes since training cutoff (latest: latest) — altHAE/altMSL, ECEF/NED fields, TOFF/PPS timing, gps_mainloop(), shared-memory API. Load before working with gpsd.",
       "category": "development"
     },
     {
@@ -224,15 +254,33 @@
       "category": "development"
     },
     {
+      "name": "nmea0183-knowledge-patch",
+      "source": "./plugins/nmea0183-knowledge-patch",
+      "description": "NMEA 0183 changes since training cutoff (latest: v4.30) — RTK quality values, FAA mode indicators, multi-GNSS extensions (GSA/GSV/RMC), satellite ID ranges. Load before working with NMEA 0183.",
+      "category": "development"
+    },
+    {
       "name": "nodejs-knowledge-patch",
       "source": "./plugins/nodejs-knowledge-patch",
       "description": "Node.js (nodejs) changes since training cutoff (latest: 25.5.0) — require(esm), node --run, URLPattern global, AsyncContextFrame, permission model updates, process.execve, test runner upgrades. Load before working with Node.js.",
       "category": "development"
     },
     {
+      "name": "ntrip-rtklib-knowledge-patch",
+      "source": "./plugins/ntrip-rtklib-knowledge-patch",
+      "description": "NTRIP & RTKLIB reference (latest: 0.1.0) — str2str/rtkrcv stream path syntax, NTRIP v1/v2 wire format, rtkrcv.conf parameters, demo5 fork setup, RTK2go connections. Load before working with RTKLIB or NTRIP clients.",
+      "category": "development"
+    },
+    {
       "name": "nuxt-knowledge-patch",
       "source": "./plugins/nuxt-knowledge-patch",
       "description": "Nuxt changes since training cutoff (latest: 3.12) — routeRules middleware, server/client-only pages, Nuxt 4 compatibility mode, auto-registered layers. Load before working with Nuxt 3.11+.",
+      "category": "development"
+    },
+    {
+      "name": "openssl-tls-knowledge-patch",
+      "source": "./plugins/openssl-tls-knowledge-patch",
+      "description": "OpenSSL/TLS changes since training cutoff (3.4–4.0) — post-quantum cryptography, hybrid PQC TLS, QUIC server, OpenSSL 4.0 migration. Load before working with OpenSSL or TLS configuration.",
       "category": "development"
     },
     {
@@ -290,6 +338,12 @@
       "category": "development"
     },
     {
+      "name": "ratatui-knowledge-patch",
+      "source": "./plugins/ratatui-knowledge-patch",
+      "description": "Ratatui changes since training cutoff (latest: 0.31.0) — ratatui::run() entry point, Rect arithmetic, border merging, const Style, no_std support, widget updates. Load before working with Ratatui.",
+      "category": "development"
+    },
+    {
       "name": "react-knowledge-patch",
       "source": "./plugins/react-knowledge-patch",
       "description": "React changes since training cutoff (latest: 19.2.0) — Activity component, cacheSignal, Partial Pre-rendering, prerender/resume APIs, eslint-plugin-react-hooks v6. Load before working with React.",
@@ -314,9 +368,27 @@
       "category": "development"
     },
     {
+      "name": "rtcm3-knowledge-patch",
+      "source": "./plugins/rtcm3-knowledge-patch",
+      "description": "RTCM3 protocol knowledge (latest: 2026-04-07) — frame parsing, CRC-24Q, MSM vs legacy observations, SSR phases 1-3, NTRIP v1/v2 connections. Load before working with RTCM3 or NTRIP.",
+      "category": "development"
+    },
+    {
+      "name": "rtkbase-knowledge-patch",
+      "source": "./plugins/rtkbase-knowledge-patch",
+      "description": "RTKBase changes since training cutoff (latest: 2.7.0) — str2str service chain, settings.conf structure, F9P/Mosaic-X5/UM980 receivers, install.sh flags, systemd units. Load before working with RTKBase.",
+      "category": "development"
+    },
+    {
       "name": "rust-knowledge-patch",
       "source": "./plugins/rust-knowledge-patch",
       "description": "Rust changes since training cutoff (latest: 1.94.0) \\u2014 Rust 2024 Edition, async closures, trait upcasting, new std APIs, cargo resolver v3. Load before working with Rust.",
+      "category": "development"
+    },
+    {
+      "name": "selinux-knowledge-patch",
+      "source": "./plugins/selinux-knowledge-patch",
+      "description": "SELinux changes since training cutoff (latest: 0.1.0) — CIL policy language, udica container policies, allowxperm netlink filtering, default object rules. Load before working with SELinux.",
       "category": "development"
     },
     {
@@ -377,6 +449,12 @@
       "name": "swift-knowledge-patch",
       "source": "./plugins/swift-knowledge-patch",
       "description": "Swift changes since training cutoff (5.10\\u20136.3) \\u2014 approachable concurrency, InlineArray, @c interop, module selectors, Swift Testing updates. Load before working with Swift.",
+      "category": "development"
+    },
+    {
+      "name": "systemd-knowledge-patch",
+      "source": "./plugins/systemd-knowledge-patch",
+      "description": "systemd changes since training cutoff (latest: v260) -- cgroup v2 only, SysV removal, PrivatePIDs=, BindNetworkInterface=, journalctl invocations, networkd MobileNetwork. Load before writing systemd unit files, journalctl commands, or networkd configs.",
       "category": "development"
     },
     {
