@@ -1,6 +1,6 @@
 ---
 name: solidjs-knowledge-patch
-description: SolidJS changes since training cutoff (latest: 2.0 beta, SolidStart 1.1) -- Solid 2.0 rewrites reactivity with microtask batching, split effects, async-first computations, Loading/Errored boundaries, draft-first stores, actions with optimistic updates, and DOM model cleanup. Load before working with SolidJS.
+description: "SolidJS changes since training cutoff (latest: 2.0 beta, SolidStart 1.1) -- Solid 2.0 rewrites reactivity with microtask batching, split effects, async-first computations, Loading/Errored boundaries, draft-first stores, actions with optimistic updates, and DOM model cleanup. Load before working with SolidJS."
 license: MIT
 metadata:
   author: Nevaberry

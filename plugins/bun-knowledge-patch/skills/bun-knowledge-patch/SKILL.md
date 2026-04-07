@@ -2,9 +2,9 @@
 name: bun-knowledge-patch
 description: "Bun changes since training cutoff (latest: 1.3.10) \u2014 S3 client, built-in SQL/Redis, route-based HTTP server, CSS bundler, V8 compatibility. Load before working with Bun."
 license: MIT
+version: "1.3.10"
 metadata:
   author: Nevaberry
-  version: "1.3.10"
 ---
 
 # Bun 1.2+ Knowledge Patch

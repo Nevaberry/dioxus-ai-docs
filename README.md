@@ -1,10 +1,8 @@
 # Nevaberry Plugins
 
-Knowledge patches for Claude Code and Codex. They fill gaps in model training data for 40+ technologies.
+Plugins and knowledge patches for coding agents. Knowledge patches fill gaps left by model training cutoffs.
 
 ## Install
-
-### Claude Code
 
 Install the meta-plugin to auto-detect your project's stack and install matching patches:
 
@@ -12,39 +10,49 @@ Install the meta-plugin to auto-detect your project's stack and install matching
 /install-plugin nevaberry-plugins/knowledge-patch
 ```
 
+Or:
+
+```sh
+npx skills add https://github.com/nevaberry/nevaberry-plugins --skill knowledge-patch
+```
+
 Then run `/knowledge-patch-setup` to scan your project (package.json, Cargo.toml, go.mod, etc.) and install matching patches automatically.
-
-### Codex
-
-This repo also publishes a Codex plugin bundle at `plugins/knowledge-patch/` plus a Codex marketplace entry at `.agents/plugins/marketplace.json`.
-
-Install the `knowledge-patch` plugin from that marketplace, then invoke the `knowledge-patch-setup` skill to scan your project and install matching `*-knowledge-patch` skills into `$CODEX_HOME/skills`. The setup flow can also add the optional Codex `SessionStart` hook in repo or user scope.
 
 ### Manual install
 
-Install individual patches directly in Claude Code when you already know what technology you need:
+Install individual patches directly — useful before rewriting to a new technology:
 
 ```
-/install-plugin nevaberry-plugins/supabase-knowledge-patch
-/install-plugin nevaberry-plugins/clerk-knowledge-patch
+/install-plugin nevaberry-plugins/rust-knowledge-patch
+/install-plugin nevaberry-plugins/dioxus-knowledge-patch
+```
+
+Or:
+
+```sh
+npx skills add https://github.com/nevaberry/nevaberry-plugins --skill dioxus-knowledge-patch
 ```
 
 ## How it works
 
-Claude's training data has a cutoff date. After that, APIs change, functions get deprecated, and new features ship. Knowledge patches contain only what changed — curated, verified diffs against Claude's baseline knowledge.
+AI models have training cutoffs. After that, APIs change, functions get deprecated, and new features ship. Knowledge patches contain only what changed: curated, verified diffs against baseline model knowledge.
 
-When loaded, the patch is checked **before** writing code for that technology. This prevents outdated APIs, deprecated patterns, and broken code.
+When loaded, the patch is checked **before** writing code for that technology. This helps prevent outdated APIs, deprecated patterns, and broken implementations.
 
 ## Coverage
 
-**Languages & runtimes:** Bun, Deno, Go, Node.js, Python, Rust, TypeScript, Zig
+**Languages & runtimes:** Bun, Deno, Elixir, Gleam, Go, Kotlin, Node.js, Python, Rust, Swift, TypeScript, Zig
 
-**Web frameworks:** Astro, Dioxus, Leptos, Next.js, React, Svelte, Vite
+**Frontend & app frameworks:** Angular, Astro, Dioxus, Flutter, Leptos, Next.js, Nuxt, React, React Router, SolidJS, Svelte, Tauri, Vite, Vue
 
-**Databases & ORMs:** Drizzle, PostGIS, PostgreSQL, Prisma, SQLite, SQLx
+**Backend & server frameworks:** Axum, Django, FastAPI, Hono, Rails, Spring Boot, tRPC
 
-**Auth & platforms:** Auth.js, Better Auth, Clerk, Supabase, WorkOS, Zitadel
+**Data & persistence:** Drizzle, pgvector, PostGIS, PostgreSQL, Prisma, SQLite, SQLx
 
-**Infrastructure:** Docker, Podman, Tailwind, Vercel AI SDK
+**Auth & identity:** Auth.js, Better Auth, Clerk, Supabase, WorkOS, ZITADEL
 
-**Linux distros:** AlmaLinux, Arch, CentOS Stream, Debian, openSUSE/SLES, RHEL, Rocky, Ubuntu
+**AI, cloud & APIs:** AWS SDK, GCP, LangChain, PyTorch, Stripe, Vercel AI SDK
+
+**Tooling & infrastructure:** Biome, Caddy, Docker, Kubernetes, Nginx, Playwright, Podman, Tailwind CSS, Terraform, Tokio, Traefik, Vitest
+
+**Linux distros:** AlmaLinux, Arch, CentOS Stream, Debian, Fedora, openSUSE/SLES, RHEL, Rocky, Ubuntu

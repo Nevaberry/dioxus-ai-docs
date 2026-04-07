@@ -2,9 +2,9 @@
 name: spring-boot-knowledge-patch
 description: "Spring Boot changes since training cutoff (latest: 4.0) — modular starters, Jackson 3, Spring Framework 7, Security 7, Spring AI 1.0, HTTP service clients. Load before working with Spring Boot."
 license: MIT
+version: "4.0.0"
 metadata:
   author: Nevaberry
-  version: "4.0.0"
 ---
 
 # Spring Boot Knowledge Patch

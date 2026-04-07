@@ -1,178 +1,150 @@
-# Language Features (1.85–1.94)
+# Language Features (1.84–1.94)
 
-## Async Closures (1.85)
+## Async Closures — 1.85
 
-`async || {}` closures with `AsyncFn`, `AsyncFnMut`, `AsyncFnOnce` traits:
+`async || {}` can borrow captures across `.await`. Unlike `|| async {}`, the returned future holds a borrow into the closure's environment. New traits in prelude: `AsyncFn`, `AsyncFnMut`, `AsyncFnOnce`.
 
 ```rust
-// Async closure can borrow from its captures (unlike `|| async {}`)
-let mut data = vec![];
+let mut vec: Vec<String> = vec![];
 let closure = async || {
-    data.push(String::from("hello"));
+    vec.push(ready(String::from("")).await);  // borrows vec across await point
 };
-closure().await;
 
-// AsyncFn trait bounds work with higher-ranked lifetimes
-async fn call_with_ref(f: impl for<'a> AsyncFn(&'a str)) {
-    f("hello").await;
+// Higher-ranked async bounds — not expressible with Fn + Future:
+async fn call_it(_: impl for<'a> AsyncFn(&'a u8)) {}
+
+// Accepting async closures in function signatures:
+async fn run<F: AsyncFn() -> String>(f: F) {
+    println!("{}", f().await);
 }
 ```
 
-Key difference from `|| async {}`: async closures can borrow from their environment across `.await` points.
+## `#[diagnostic::do_not_recommend]` — 1.85
 
-## Trait Upcasting (1.86)
-
-Trait objects can be upcast to supertrait objects via implicit coercion:
-
-```rust
-trait Supertrait {}
-trait Trait: Supertrait {}
-
-fn upcast(x: &dyn Trait) -> &dyn Supertrait {
-    x // implicit coercion, no cast needed
-}
-// Works with any pointer type: Arc<dyn Trait> -> Arc<dyn Supertrait>
-```
-
-Especially useful with `Any` — add `Any` as a supertrait, then upcast to `dyn Any` for downcasting.
-
-## `#[diagnostic::do_not_recommend]` (1.85)
-
-Hint to compiler to hide a trait impl from error diagnostics:
+Hint to suppress a blanket impl from appearing in compiler error messages. For library authors.
 
 ```rust
 #[diagnostic::do_not_recommend]
-impl<T: Foo> Bar for T {} // won't suggest implementing Foo when Bar is missing
+impl<T: Foo> Bar for T {}
+// Compiler won't say "implement Foo to satisfy Bar" in errors
 ```
 
-## Precise Capturing `use<...>` in Trait Definitions (1.87)
+## Trait Upcasting — 1.86
 
-The `+ use<...>` syntax now works in trait method return types:
-
-```rust
-trait Foo {
-    fn method<'a>(&'a self) -> impl Sized + use<Self>; // captures Self but not 'a
-}
-```
-
-## Safe `#[target_feature]` (1.86) + Safe `std::arch` Intrinsics (1.87)
-
-Safe functions can use `#[target_feature]`. They can only be called safely from other `#[target_feature]` functions with the same feature:
+Coerce `dyn Trait` to `dyn Supertrait`. Works for `&`, `&mut`, `Box`, `Arc`, `Rc`, `*const`, `*mut`.
 
 ```rust
-#[target_feature(enable = "avx2")]
-fn do_avx2_work() { /* safe, no unsafe needed */
-}
+trait Trait: Supertrait {}
+trait Supertrait {}
 
-#[target_feature(enable = "avx2")]
-fn caller() {
-    do_avx2_work();
-} // safe call
+fn upcast(x: &dyn Trait) -> &dyn Supertrait { x }
+fn upcast_box(x: Box<dyn Trait>) -> Box<dyn Supertrait> { x }
 
-fn generic_caller() {
-    if is_x86_feature_detected!("avx2") {
-        unsafe {
-            do_avx2_work();
-        } // requires unsafe from non-target_feature context
+// Downcasting without external crates:
+use std::any::Any;
+trait MyAny: Any {}
+impl dyn MyAny {
+    fn downcast_ref<T: 'static>(&self) -> Option<&T> {
+        (self as &dyn Any).downcast_ref()
+    }
+    fn downcast_mut<T: 'static>(&mut self) -> Option<&mut T> {
+        (self as &mut dyn Any).downcast_mut()
     }
 }
 ```
 
-Since 1.87, most `std::arch` intrinsics (that don't take pointer args) are safe within `#[target_feature]` functions:
+## Safe `#[target_feature]` Functions — 1.86
+
+Non-`unsafe` functions can carry `#[target_feature]`. Safe to call from functions with the same feature; requires `unsafe {}` from general code.
 
 ```rust
 #[target_feature(enable = "avx2")]
-fn sum_avx2(a: __m256i, b: __m256i) -> __m256i {
-    _mm256_add_epi32(a, b) // safe call, no unsafe needed
+fn avx2_work() { /* safe, no unsafe fn */
+}
+
+#[target_feature(enable = "avx2")]
+fn caller() {
+    avx2_work();
+} // safe: same feature context
+
+fn dynamic_caller() {
+    if is_x86_feature_detected!("avx2") {
+        unsafe {
+            avx2_work();
+        } // still requires unsafe
+    }
 }
 ```
 
-## Let Chains (1.88, 2024 Edition Only)
+## Safe `std::arch` Intrinsics — 1.87
 
-Chain `let` patterns with `&&` in `if`/`while` conditions:
+`std::arch` intrinsics that only need a target feature are now safe inside `#[target_feature]` functions with that feature enabled.
 
 ```rust
-if let Some(user) = get_user()
-    && let Role::Admin(level) = user.role
-    && level > 3
-{
-    grant_access(user);
+#[target_feature(enable = "avx2")]
+fn process() {
+    let a = _mm256_setzero_si256(); // safe here, no unsafe block needed
+    let b = _mm256_set1_epi32(1);
+    let c = _mm256_add_epi32(a, b);
 }
 ```
 
-Bindings from earlier `let`s are available in later parts of the chain and the body. Requires 2024 edition.
+## Naked Functions — 1.88
 
-## Naked Functions (1.88)
-
-`#[unsafe(naked)]` with `naked_asm!` — no compiler-generated prologue/epilogue:
+`#[unsafe(naked)]` functions have no compiler-generated prologue/epilogue. Body must be a single `naked_asm!` call.
 
 ```rust
+use core::arch::naked_asm;
+
 #[unsafe(naked)]
 pub unsafe extern "sysv64" fn wrapping_add(a: u64, b: u64) -> u64 {
-    core::arch::naked_asm!(
-        "lea rax, [rdi + rsi]",
-        "ret"
-    );
+    naked_asm!("lea rax, [rdi + rsi]", "ret");
 }
+
+// Useful for: OS/hypervisor stubs, FFI thunks, custom calling conventions
 ```
 
-More ergonomic than `global_asm!` for defining individual assembly functions.
+## `cfg(true)` / `cfg(false)` — 1.88
 
-## `asm!` Label Operand (1.87)
-
-Inline assembly can jump to Rust code blocks:
+Boolean literals in `cfg`/`cfg_attr`/`cfg!`. Clearer alternatives to `cfg(all())` and `cfg(any())`.
 
 ```rust
-unsafe {
-    asm!(
-        "jmp {}",
-        label {
-            println!("Jumped from asm!");
-        }
-    );
-}
+#[cfg(false)]
+fn dead_code() {} // never compiled
+
+#[cfg(true)]
+fn always_compiled() {}
+
+#[cfg_attr(true, derive(Debug))]
+struct Foo;
+
+// In macros:
+let always = cfg!(true);
 ```
 
-The label block must return `()` or `!`. Using output and label operands together is still unstable.
+## `_` in Const Generic Arguments (Body Context) — 1.89
 
-## Const Generic Inference with `_` (1.89)
-
-Use `_` as a const generic argument to infer the value:
+Infer const generic values with `_` inside function/const bodies. Not allowed in signatures.
 
 ```rust
 pub fn all_false<const LEN: usize>() -> [bool; LEN] {
-    [false; _] // inferred as LEN
+    [false; _] // compiler infers LEN from return type
 }
+
+// Not allowed:
+// fn foo() -> [bool; _]  // error: in signatures
 ```
 
-Not allowed in signatures or const item types.
+## Closure Capture Changes with Patterns — 1.94
 
-## `#[repr(u128)]` / `#[repr(i128)]` (1.89)
-
-Enums can use 128-bit discriminant representations:
+Closures that pattern-match captured variables may now capture only sub-fields by move (others by borrow). Can cause new borrow errors or changed `Drop` order.
 
 ```rust
-#[repr(u128)]
-enum BigEnum {
-    A = 1,
-    B = u128::MAX,
-}
-```
-
-## `cfg(true)` / `cfg(false)` (1.88)
-
-Boolean literals in cfg predicates — clearer replacement for `cfg(all())` / `cfg(any())`.
-
-## `dangerous_implicit_autorefs` Lint (1.88–1.89)
-
-Warn-by-default in 1.88, deny-by-default in 1.89. Implicit autoref of raw pointer dereferences is now a hard error.
-
-## `&raw` on Union Fields in Safe Code (1.92)
-
-`&raw const` and `&raw mut` on union fields no longer requires `unsafe`:
-
-```rust
-union MyUnion { f1: u32, f2: f32 }
-let u = MyUnion { f1: 42 };
-let ptr: *const u32 = &raw const u.f1; // safe
+let s = (String::new(), String::new());
+// Previously: move captured all of `s`
+// Now: may only capture `s.0` by move, `s.1` by borrow
+let f = move || println!("{}", s.0);
+// If this causes issues, capture explicitly:
+let s0 = s.0;
+let f = move || println!("{}", s0);
 ```

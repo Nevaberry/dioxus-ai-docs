@@ -206,7 +206,7 @@ When building `--format=cjs`:
 
 ## Self-Contained HTML (`--target=browser`)
 
-Produces a single HTML file with all JS, CSS, and assets inlined (scripts become inline script tags, stylesheets become inline style tags, assets become `data:` URIs). Works via `file://` without a server.
+Produces a single HTML file with all JS, CSS, and assets inlined. Script tags become inline scripts, stylesheet links become inline styles, and assets become `data:` URIs. Works via `file://` without a server.
 
 ```sh
 bun build --compile --target=browser ./index.html

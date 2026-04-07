@@ -39,7 +39,8 @@ use tokio::task::coop;
 let result = coop::cooperative(async {
     // CPU-intensive or custom work
     heavy_computation()
-}).await;
+})
+.await;
 ```
 
 Use `cooperative()` when your async code does significant work between `.await` points and you want to be a good citizen in the runtime.
@@ -72,7 +73,7 @@ This function walks the error's source chain looking for Tokio's internal shutdo
 // stream.set_linger(Some(Duration::from_secs(0)))?;
 
 // New:
-stream.set_zero_linger(true)?;  // RST on close
+stream.set_zero_linger(true)?; // RST on close
 stream.set_zero_linger(false)?; // Normal close (OS default)
 ```
 

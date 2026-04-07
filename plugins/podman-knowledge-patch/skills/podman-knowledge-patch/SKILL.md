@@ -1,6 +1,6 @@
 ---
 name: podman-knowledge-patch
-description: Podman changes since training cutoff (latest: 5.8.0) — Quadlet CLI management, OCI artifacts, multi-file install, BoltDB→SQLite migration, TLS remote. Load before working with Podman.
+description: "Podman changes since training cutoff (latest: 5.8.0) — Quadlet CLI management, OCI artifacts, multi-file install, BoltDB→SQLite migration, TLS remote. Load before working with Podman."
 version: "5.8.0"
 license: MIT
 metadata:

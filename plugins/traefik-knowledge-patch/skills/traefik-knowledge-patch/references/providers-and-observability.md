@@ -48,7 +48,7 @@ entryPoints:
   websecure:
     address: ":443"
     observability:
-      traceVerbosity: detailed  # or "minimal" (default)
+      traceVerbosity: detailed # or "minimal" (default)
 ```
 
 Routers can override their entrypoint's verbosity.

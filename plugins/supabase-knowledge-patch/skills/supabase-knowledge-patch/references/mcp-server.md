@@ -1,8 +1,8 @@
 # MCP Server
 
-## Hosted MCP Server (HTTP Transport)
+## Remote Hosted MCP Server
 
-Supabase provides an official hosted MCP server at `https://mcp.supabase.com/mcp` using HTTP transport (not stdio). Configure in any MCP client:
+Supabase provides a hosted MCP server at `https://mcp.supabase.com/mcp` using HTTP transport (not stdio). Configure any MCP client:
 
 ```json
 {
@@ -15,69 +15,64 @@ Supabase provides an official hosted MCP server at `https://mcp.supabase.com/mcp
 }
 ```
 
-OAuth 2.1 login is triggered automatically on first use. The server supports URL query parameters for configuration:
+Authentication uses OAuth 2.1 — the client prompts you to log in via browser during setup.
 
-- `project_ref=<id>` — scope to a single project (recommended; disables account-level tools like `list_projects`)
-- `read_only=true` — execute SQL as read-only Postgres user, disable all mutating tools
+## URL Query Parameter Configuration
+
+Configure the server via URL query parameters:
+
+- `project_ref=<id>` — scope to a single project (recommended). Disables account-level tools like `list_projects`
+- `read_only=true` — restrict to read-only queries. Executes SQL as read-only Postgres user. Disables all mutating tools (`apply_migration`, `create_project`, `deploy_edge_function`, etc.)
 - `features=database,docs` — enable only specific tool groups
 
 Example fully configured URL:
 
 ```
-https://mcp.supabase.com/mcp?project_ref=abcdefghijkl&read_only=true&features=database,docs
+https://mcp.supabase.com/mcp?project_ref=abcdefghijklmnop&read_only=true&features=database,docs
 ```
 
 ## Feature Groups
 
-Available groups: `account`, `docs`, `database`, `debugging`, `development`, `functions`, `storage`, `branching`. Default enabled: all except `storage`.
+Available groups: `account`, `docs`, `database`, `debugging`, `development`, `functions`, `storage`, `branching`.
 
-Key tools by group:
-- **database**: `list_tables`, `list_extensions`, `list_migrations`, `apply_migration`, `execute_sql`
-- **development**: `get_project_url`, `get_publishable_keys`, `generate_typescript_types`
-- **functions**: `list_edge_functions`, `get_edge_function`, `deploy_edge_function`
-- **branching**: `create_branch`, `list_branches`, `delete_branch`, `merge_branch`, `reset_branch`, `rebase_branch`
-- **debugging**: `get_logs` (by service type), `get_advisors`
-- **docs**: `search_docs`
+Default enabled: all except `storage`. Storage is disabled by default to reduce tool count — enable explicitly with `features` parameter.
 
-## Local CLI MCP Endpoint
+## Local CLI MCP
 
-When running Supabase locally via CLI, the MCP server is available at `http://localhost:54321/mcp` with a limited tool subset and no OAuth 2.1.
+When running Supabase locally via CLI, the MCP server is available at `http://localhost:54321/mcp`. Offers a limited subset of tools and no OAuth 2.1.
 
-## AI SDK Integration with `createToolSchemas()`
+## AI SDK Integration with createToolSchemas()
 
-The `@supabase/mcp-server-supabase` package exports `createToolSchemas()` for Vercel AI SDK's MCP client, providing typed input/output schemas:
+The `@supabase/mcp-server-supabase` package exports `createToolSchemas()` for typed tool integration with Vercel AI SDK's MCP client:
 
 ```typescript
-import { createToolSchemas } from '@supabase/mcp-server-supabase';
-import { createMCPClient } from '@ai-sdk/mcp';
-import { streamText } from 'ai';
+import { createToolSchemas } from '@supabase/mcp-server-supabase'
+import { createMCPClient } from '@ai-sdk/mcp'
+import { streamText } from 'ai'
 
 const mcpClient = await createMCPClient({
   transport: { type: 'http', url: 'https://mcp.supabase.com/mcp' },
-});
+})
 
 const tools = await mcpClient.tools({
   schemas: createToolSchemas(),
-});
+})
 
-const result = streamText({ model, tools, prompt: '...' });
-
-// Tool results are fully typed
-for (const step of await result.steps) {
-  for (const toolResult of step.staticToolResults) {
-    if (toolResult.toolName === 'get_project_url') {
-      toolResult.input;  // { project_id: string }
-      toolResult.output; // { url: string }
-    }
-  }
-}
+const result = streamText({ model, tools, prompt: '...' })
 ```
 
-`createToolSchemas()` options mirror the URL params:
-- `features`: array of feature groups (e.g. `['database', 'docs']`)
-- `projectScoped: true`: omits `project_id` from inputs, excludes account tools
-- `readOnly: true`: excludes mutating tools
+Options mirror the URL parameters: `features` (array), `projectScoped` (boolean), `readOnly` (boolean).
 
-## PostgREST MCP Server (`@supabase/mcp-server-postgrest`)
+```typescript
+const tools = await mcpClient.tools({
+  schemas: createToolSchemas({
+    features: ['database', 'docs'],
+    projectScoped: true,
+    readOnly: true,
+  }),
+});
+```
 
-Separate MCP server for connecting end users to your app via REST API (distinct from the main developer-facing MCP server).
+## PostgREST MCP Server
+
+Separate package `@supabase/mcp-server-postgrest` allows connecting end users to your app via REST API through MCP. Distinct from the main MCP server which uses developer-level permissions.

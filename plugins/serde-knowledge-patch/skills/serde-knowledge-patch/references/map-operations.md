@@ -5,7 +5,7 @@
 Sort JSON map keys alphabetically in place. `sort_all_objects` recurses into all nested objects within a `Value`.
 
 ```rust
-use serde_json::{json, Map, Value};
+use serde_json::{Map, Value, json};
 
 // Sort top-level keys
 let mut map: Map<String, Value> = serde_json::from_str(r#"{"z":1,"a":2}"#)?;

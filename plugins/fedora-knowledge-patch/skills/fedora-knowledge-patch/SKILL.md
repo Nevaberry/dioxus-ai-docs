@@ -1,10 +1,10 @@
 ---
 name: fedora-knowledge-patch
-description: Fedora Linux changes since training cutoff (latest: 44) — DNF5 replaces DNF4, /usr/sbin merged, ifcfg removed, Redis→Valkey, SHA-1 distrusted, cert.pem dropped, RPM 6.0, Podman 6, CMake 4.0, lastlog2, nftables default. Load before writing Fedora scripts, Dockerfiles, or system automation.
+description: "Fedora Linux changes since training cutoff (latest: 44) — DNF5 replaces DNF4, /usr/sbin merged, ifcfg removed, Redis→Valkey, SHA-1 distrusted, cert.pem dropped, RPM 6.0, Podman 6, CMake 4.0, lastlog2, nftables default. Load before writing Fedora scripts, Dockerfiles, or system automation."
 license: MIT
+version: "44"
 metadata:
   author: Nevaberry
-  version: "44"
 ---
 
 # Fedora Linux Knowledge Patch

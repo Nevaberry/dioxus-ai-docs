@@ -2,9 +2,9 @@
 name: suse-knowledge-patch
 description: This skill should be used when working with SUSE Linux (SLES 16+), openSUSE Leap 15.6+, or openSUSE Tumbleweed — including Agama installer, SELinux, NetworkManager migration from wicked, /usr-merge system defaults, Cockpit administration, or SUSE 16 component removals. Triggers on SUSE, SLES, openSUSE, Leap, Tumbleweed.
 license: MIT
+version: "16.0"
 metadata:
   author: Nevaberry
-  version: "16.0"
 ---
 
 # SUSE 16+ Knowledge Patch

@@ -1,6 +1,6 @@
 ---
 name: htmx-knowledge-patch
-description: htmx changes since training cutoff (latest: 4.0 pre-release) — explicit inheritance, hx-status, hx-partial, new swap styles, fetch-based rewrite, extension API v2. Load before working with htmx 2.0+ or 4.0.
+description: "htmx changes since training cutoff (latest: 4.0 pre-release) — explicit inheritance, hx-status, hx-partial, new swap styles, fetch-based rewrite, extension API v2. Load before working with htmx 2.0+ or 4.0."
 version: "4.0.0"
 license: MIT
 metadata:

@@ -1,88 +1,65 @@
-# Concurrency: Interpreters, Free-Threading, GIL
+# Concurrency
 
-## concurrent.interpreters (PEP 734) — Python 3.14
+## Free-threaded CPython (3.13+, PEP 703)
 
-New module exposing subinterpreters — isolated Python instances in the same process. Each interpreter has its own GIL, enabling true multi-core parallelism.
+Experimental support for running without the GIL (Global Interpreter Lock), enabling true parallel execution of Python threads.
 
-### Basic Usage
+### Setup
+
+| What | How |
+|------|-----|
+| Install | Use "free-threaded" installer variant or build with `--disable-gil` |
+| Executable | `python3.13t` (note the `t` suffix) |
+| Re-enable GIL | `PYTHON_GIL=1` or `-X gil=1` |
+| Force disable GIL | `PYTHON_GIL=0` or `-X gil=0` |
+| Check at runtime | `sys._is_gil_enabled()` → `False` when GIL disabled |
+| Detect build | `python -VV` includes "experimental free-threading build" |
+
+### C extension compatibility
+
+- Extensions must declare free-threading support via `Py_mod_gil` slot
+- Extensions without this declaration **silently re-enable the GIL** on import
+- Exception: `PYTHON_GIL=0` forces GIL off even with incompatible extensions
+- pip 24.1+ required to install C extensions for free-threaded builds
+
+### Performance notes
+
+- **3.13**: Notable single-threaded performance penalty (experimental)
+- **3.14**: Penalty reduced to ~5-10%; free-threaded mode officially supported (PEP 779)
+
+## Subinterpreters (3.14, PEP 734)
+
+Multiple isolated Python interpreters in one process. Like threads with opt-in sharing, or multiprocessing without process overhead.
+
+### `concurrent.interpreters` module
 
 ```python
 import concurrent.interpreters as interpreters
 
-# Create and run code in a subinterpreter
+# Create and run code in an interpreter
 interp = interpreters.create()
 interp.exec("print('hello from subinterpreter')")
-
-# Pass data via channels (CSP-style)
-# Note: only simple types and memoryview can be shared
+interp.close()
 ```
 
-### InterpreterPoolExecutor
+### `InterpreterPoolExecutor`
 
 ```python
 from concurrent.futures import InterpreterPoolExecutor
 
-
-def cpu_work(n):
-    return sum(i * i for i in range(n))
-
-
-with InterpreterPoolExecutor(max_workers=4) as executor:
-    futures = [executor.submit(cpu_work, 10_000_000) for _ in range(4)]
-    results = [f.result() for f in futures]
+with InterpreterPoolExecutor() as executor:
+    results = list(executor.map(cpu_bound_func, data))
 ```
 
-### Key Properties
+### Key properties
 
-- **Isolation**: Each interpreter has its own globals, modules, GIL — like processes but in-process
-- **Efficiency**: Lower overhead than `multiprocessing` (no IPC, shared memory space)
-- **Sharing**: Limited to `memoryview` and simple types currently
-- **Compatibility**: All stdlib extension modules work; many PyPI extensions don't yet
+- **Isolation**: Each interpreter has its own GIL and global state (like separate processes)
+- **Efficiency**: All in one process (like threads), no IPC overhead
+- **Sharing**: Opt-in only via `memoryview`; data typically passed by copy
 
-### vs Other Concurrency
+### Current limitations (expected to improve)
 
-| | `threading` | `multiprocessing` | `interpreters` |
-|---|---|---|---|
-| Isolation | None (shared memory) | Full (separate process) | High (separate GIL, opt-in sharing) |
-| Parallelism | No (GIL) | Yes | Yes |
-| Overhead | Low | High (process spawn) | Medium |
-| Data sharing | Direct | Pickle/shared memory | memoryview, channels |
-
-## Free-Threaded Python — Python 3.14
-
-Free-threaded mode (no-GIL, PEP 703) is now officially supported (PEP 779) in 3.14. Performance penalty is ~5-10% for single-threaded code.
-
-### Notable 3.14 Changes
-
-- Specializing adaptive interpreter enabled in free-threaded mode
-- `asyncio` supports parallel event loops across threads
-- `Py_GIL_DISABLED` must be set explicitly by build backends on Windows
-- `-X context_aware_warnings` flag (defaults to true for free-threaded builds)
-- `-X thread_inherit_context` flag — new threads inherit caller's `Context` (defaults to true for free-threaded builds)
-
-## multiprocessing Default Start Method Change — Python 3.14
-
-**Breaking on Linux/Unix (not macOS)**: Default start method changed from `'fork'` to `'forkserver'`.
-
-### Impact
-
-- Code relying on shared mutable globals after fork may break
-- Objects must be picklable to pass to child processes
-- More similar to `'spawn'` behavior (already default on Windows/macOS)
-
-### If You Need fork
-
-```python
-import multiprocessing
-
-# Option 1: explicit context (preferred)
-ctx = multiprocessing.get_context('fork')
-p = ctx.Process(target=fn)
-
-# Option 2: change default (affects entire program)
-multiprocessing.set_start_method('fork')
-
-# Also affects ProcessPoolExecutor:
-from concurrent.futures import ProcessPoolExecutor
-executor = ProcessPoolExecutor(mp_context=multiprocessing.get_context('fork'))
-```
+- Interpreter startup not optimized yet
+- Each interpreter uses more memory than needed
+- Limited options for sharing objects between interpreters
+- Many third-party C extensions not yet compatible

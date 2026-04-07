@@ -1,106 +1,72 @@
-# Server Rendering Features
+# Server Rendering APIs
 
-*Added in React 19.2 (2025-10-01)*
+New server-side APIs added in React 19.2 for cache management and Partial Pre-rendering.
 
-## cacheSignal (Server Components only)
+## `cacheSignal` (RSC only)
 
-### Overview
+Returns an `AbortSignal` tied to the `cache()` lifetime. Use to abort in-flight work (e.g., fetch requests) when cached results are invalidated or no longer needed.
 
-`cacheSignal()` returns an `AbortSignal` tied to the lifetime of a `cache()` call. Use it to abort in-flight fetch requests when the cached result is no longer needed — the render completed, was aborted, or failed.
-
-### Import
-
-```jsx
+```js
 import { cache, cacheSignal } from 'react';
-```
 
-### Usage
-
-```jsx
 const dedupedFetch = cache(fetch);
 
 async function Component() {
-  // Signal auto-aborts when cache entry is invalidated or render completes
+  // Signal aborts when this cache entry is evicted
   await dedupedFetch(url, { signal: cacheSignal() });
 }
 ```
 
-### Key details
+- Only available in React Server Components
+- The signal aborts when the cache entry that called `cacheSignal()` is garbage collected
+- Pairs with `cache()` for deduplication — the signal is scoped to the same cache boundary
 
-- Only available inside Server Components
-- Pairs with `cache()` for request deduplication
-- The signal aborts automatically when:
-  - The render completes and the cached value is consumed
-  - The render is aborted (e.g., client navigated away)
-  - The render fails with an error
-- Prevents resource leaks from long-running fetch requests in server rendering
+## Partial Pre-rendering
 
----
+APIs to pre-render a static shell at build time, then resume with dynamic content at request time. Enables hybrid static/dynamic rendering in a single page.
 
-## Partial Pre-rendering (PPR)
+### Two-step flow
 
-### Overview
+**Step 1: Pre-render** — generates static HTML and captures a postponed state object.
 
-Partial Pre-rendering splits SSR into two phases: a static shell pre-rendered at build time, and dynamic content rendered at request time. The static shell is served instantly while dynamic portions stream in.
-
-### API
-
-#### Phase 1: Pre-render the static shell
-
-```jsx
-import { prerender } from 'react-dom/static';
-
+```js
 const { prelude, postponed } = await prerender(<App />, {
-  signal: controller.signal, // optional AbortSignal
+  signal: controller.signal,
 });
-
-// Save postponed state for later resumption
-await savePostponedState(postponed);
 ```
 
-- `prelude` — readable stream of the static HTML shell
-- `postponed` — serializable state representing the dynamic holes
+- `prelude` — the static HTML shell (everything outside `<Suspense>` boundaries)
+- `postponed` — serializable state needed to resume rendering later
 
-#### Phase 2a: Resume to SSR stream (request-time dynamic content)
+**Step 2: Resume** — picks up where pre-rendering left off, rendering the dynamic parts.
 
-```jsx
-import { resume } from 'react-dom/server';
+### Resume to SSR stream
 
+Use when serving dynamic content at request time:
+
+```js
 const stream = await resume(<App />, postponed);
 ```
 
-Use this at request time to fill in dynamic content as a streaming SSR response.
+Returns a readable stream of the dynamic HTML that slots into the pre-rendered shell.
 
-#### Phase 2b: Resume to static HTML (SSG / incremental static regeneration)
+### Resume to static HTML (SSG)
 
-```jsx
-import { resumeAndPrerender } from 'react-dom/static';
+Use when generating fully static pages at build time:
 
+```js
 const { prelude } = await resumeAndPrerender(<App />, postponedState);
 ```
 
-Use this to produce fully static HTML from postponed state (e.g., during a build step or ISR).
+Returns static HTML for both the shell and the dynamic content.
 
 ### Node.js stream variants
 
-| API | Module | Use case |
-|---|---|---|
-| `prerender` | `react-dom/static` | Web streams |
-| `prerenderToNodeStream` | `react-dom/static.node` | Node streams |
-| `resume` | `react-dom/server` | Web streams |
-| `resumeToPipeableStream` | `react-dom/server.node` | Node streams |
-| `resumeAndPrerender` | `react-dom/static` | Web streams |
-| `resumeAndPrerenderToNodeStream` | `react-dom/static.node` | Node streams |
+For Node.js environments using `pipe`-based streams:
 
-### Typical PPR flow
+| API | Use case |
+|---|---|
+| `resumeToPipeableStream` | SSR with Node.js streams (request-time dynamic content) |
+| `resumeAndPrerenderToNodeStream` | SSG with Node.js streams (build-time static generation) |
 
-1. **Build time**: Call `prerender()` → save `prelude` as static HTML, serialize `postponed`
-2. **Request time**: Load serialized `postponed` → call `resume()` → stream dynamic content
-3. **Client**: Static shell loads instantly, dynamic content streams in progressively
-
-### Key details
-
-- The `postponed` object is serializable — store it in a database, file, or cache
-- Suspense boundaries define the split between static and dynamic content
-- Static shell includes all content outside Suspense boundaries
-- Dynamic content fills in Suspense fallbacks at request time
+These are the Node-specific equivalents of `resume` and `resumeAndPrerender`, returning pipeable Node streams instead of web-standard readable streams.

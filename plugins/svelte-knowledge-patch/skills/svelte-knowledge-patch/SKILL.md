@@ -1,6 +1,6 @@
 ---
 name: svelte-knowledge-patch
-description: Svelte changes since training cutoff (latest: 5.0.0) — runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events, mount/hydrate API. Load before working with Svelte.
+description: "Svelte changes since training cutoff (latest: 5.0.0) — runes ($state, $derived, $effect, $props), snippets replacing slots, callback props replacing events, mount/hydrate API. Load before working with Svelte."
 version: "5.0.0"
 license: MIT
 metadata:

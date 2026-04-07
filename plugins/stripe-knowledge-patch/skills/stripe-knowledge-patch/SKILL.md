@@ -2,9 +2,9 @@
 name: stripe-knowledge-patch
 description: "Stripe changes since training cutoff (latest: 2026-03-25.dahlia) -- named API versions, stripe-node v21 Decimal type, stripe-python v15 dict removal, Billing Mode, Accounts v2, Event Destinations. Load before working with Stripe."
 license: MIT
+version: "2026-03-25.dahlia"
 metadata:
   author: Nevaberry
-  version: "2026-03-25.dahlia"
 ---
 
 # Stripe Knowledge Patch (Acacia to Dahlia)

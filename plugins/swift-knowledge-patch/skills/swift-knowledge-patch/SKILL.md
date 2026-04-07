@@ -1,161 +1,162 @@
 ---
 name: swift-knowledge-patch
-description: "Swift 6.1–6.3 knowledge: default MainActor isolation, @concurrent, InlineArray, Span, @c interop, module selectors, Swift Testing updates. Load before writing Swift 6.1+ code."
+description: "Swift changes since training cutoff (5.10\u20136.3) \u2014 approachable concurrency, InlineArray, @c interop, module selectors, Swift Testing updates. Load before working with Swift."
 license: MIT
+version: "6.3"
 metadata:
   author: Nevaberry
-  version: "6.3.0"
 ---
 
-# Swift Knowledge Patch (6.1–6.3)
+# Swift 5.10\u20136.3 Knowledge Patch
 
-Covers Swift 6.1 (March 2025) through 6.3 (March 2026). Assumes knowledge of Swift through 6.0 (typed throws, ~Copyable generics, data-race safety, Swift Testing, Embedded Swift preview, 128-bit integers).
+Claude's baseline knowledge covers Swift through 5.9. This skill provides features from 5.10 (March 2024) through 6.3 (March 2026).
+
+## Quick Reference
+
+### Concurrency
+
+| Feature | Summary |
+|---------|---------|
+| `-default-isolation MainActor` | All code MainActor-isolated by default (per module) |
+| `@concurrent` | Opt function into concurrent thread pool |
+| Nonisolated async | Runs on caller's actor by default (SE-0461) |
+| `Task.immediate` | Starts synchronously on caller's executor |
+| `isolated deinit` | Runs deinit on actor's executor |
+| `weak let` | Immutable weak ref, enables Sendable |
+| `@MainActor Equatable` | Actor-isolated protocol conformances |
+| `Task(name:)` | Named tasks for debugging |
+
+```swift
+// Enable approachable concurrency features per-target:
+.enableUpcomingFeature("NonisolatedNonsendingByDefault")
+.enableUpcomingFeature("InferIsolatedConformances")
+```
+
+See `references/concurrency.md` for full details and examples.
+
+### Language Features
+
+| Feature | Example |
+|---------|---------|
+| `InlineArray` | `var buf: InlineArray<40, Sprite>` or `[40 of Sprite]` |
+| Method key paths | `strings.map(\.uppercased())` |
+| Default interpolation | `"\(age, default: "Unknown")"` |
+| `enumerated()` | Now conforms to `Collection` |
+| Module selectors | `ModuleA::getValue()` |
+| `@c` attribute | Expose Swift functions to C |
+
+See `references/language-features.md` for syntax, limitations, and examples.
+
+### Swift Testing
+
+| Feature | API |
+|---------|-----|
+| Exit tests | `#expect(processExitsWith: .failure) { ... }` |
+| Attachments | `Attachment.record("debug info")` |
+| Warnings | `Issue.record("msg", severity: .warning)` |
+| Cancel test | `try Test.cancel()` |
+
+See `references/swift-testing.md` for details.
+
+### New APIs
+
+| API | Purpose |
+|-----|---------|
+| `Observations { }` | Async sequence from `@Observable` types |
+| `Subprocess` | Process execution (`import Subprocess`) |
+| Typed `NotificationCenter` | Type-safe notifications (no string names) |
+
+See `references/new-apis.md` for details.
 
 ## Reference Files
 
-- **`references/concurrency.md`** — default MainActor isolation, @concurrent, nonisolated changes, task group inference, Observations async sequence
-- **`references/new-types-and-apis.md`** — InlineArray, Span, Subprocess, Typed NotificationCenter
-- **`references/interop.md`** — @c attribute, @objc @implementation, module selectors
-- **`references/swift-testing.md`** — TestScoping, exit tests, attachments, warning issues, cancellation
+| File | Contents |
+|------|----------|
+| `concurrency.md` | MainActor default, @concurrent, Task.immediate, isolated deinit, weak let |
+| `language-features.md` | InlineArray, key paths, interpolation, module selectors, @c interop |
+| `swift-testing.md` | Exit tests, attachments, warnings, test cancellation |
+| `new-apis.md` | Observations, Subprocess, typed NotificationCenter |
 
-## What's New by Version
+## Critical Examples
 
-| Version | Key Features |
-|---------|-------------|
-| 6.1 | `nonisolated` on types/extensions, task group type inference, trailing commas everywhere, `@objc @implementation`, package traits, Swift Testing `TestScoping` |
-| 6.2 | Default `@MainActor` isolation, `@concurrent`, `InlineArray`, `Span`, `Subprocess`, Typed `NotificationCenter`, `Observations`, exit tests, attachments, precise warning control, strict memory safety |
-| 6.3 | `@c` attribute (Swift→C interop), module selectors (`ModuleA::name`), Swift Testing warning issues + cancellation |
+### Approachable Concurrency (6.2)
 
-## Concurrency Model Changes (6.1–6.2)
-
-The biggest behavioral changes across these releases. See **`references/concurrency.md`** for full details.
-
-### Default MainActor isolation (6.2)
-New compiler flag makes all unannotated code `@MainActor` by default — ideal for apps and UI code:
 ```swift
-// Package.swift
-.target(name: "MyApp", swiftSettings: [
-  .defaultIsolation(MainActor.self),
-])
-```
-Use `nonisolated` to opt out. Use `@concurrent` for concurrent thread pool execution.
+// With -default-isolation MainActor, no annotations needed:
+struct ImageCache {
+    static var cache: [URL: Image] = [:]
 
-### @concurrent (6.2)
-Explicitly marks async functions to run on the concurrent thread pool (off-actor):
-```swift
-@concurrent
-static func fetchImage(at url: URL) async throws -> Image {
-  let (data, _) = try await URLSession.shared.data(from: url)
-  return await decode(data: data)
+    static func load(from url: URL) async throws -> Image {
+        if let img = cache[url] { return img }
+        let img = try await fetchImage(at: url) // stays on MainActor
+        cache[url] = img
+        return img
+    }
+
+    @concurrent // explicitly run off MainActor
+    static func fetchImage(at url: URL) async throws -> Image {
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return decode(data)
+    }
 }
 ```
 
-### nonisolated async runs on caller's actor (6.2)
-Under the `NonisolatedNonsendingByDefault` feature flag (default in 6.2), nonisolated async functions run on the caller's actor instead of switching to the global executor. Use `@concurrent` when you explicitly want off-actor execution.
+### InlineArray (6.2)
 
-### nonisolated on types and extensions (6.1)
-Prevents `@MainActor` inference on conformances:
 ```swift
-@MainActor struct S { let id: Int }
+var bricks: InlineArray<40, Sprite> = .init(repeating: defaultSprite)
+// Shorthand:
+var bricks2: [40 of Sprite] = .init(repeating: defaultSprite)
 
-nonisolated extension S: Equatable {
-  static func ==(lhs: S, rhs: S) -> Bool { lhs.id == rhs.id }
-}
+bricks[0] = specialSprite
+for i in bricks.indices { print(bricks[i]) } // use indices, not for-in
 ```
 
-### Task group type inference (6.1)
-`withTaskGroup` / `withThrowingTaskGroup` no longer require the `of:` parameter:
+### @c Attribute for C Interop (6.3)
+
 ```swift
-let results = await withTaskGroup { group in
-  for id in ids {
-    group.addTask { await fetch(id) }
-  }
-  return await group.reduce(into: []) { $0.append($1) }
-}
+@c func mySwiftFunction() { /* ... */ }
+// Generated header: void mySwiftFunction(void);
+
+@c(MyLib_doWork) func doWork() { /* ... */ }
+// Generated header: void MyLib_doWork(void);
+
+@c @implementation func existingCFunction() { /* ... */ }
+// Validates against pre-existing C header declaration
 ```
 
-## InlineArray (6.2)
+### Module Selectors (6.3)
 
-Fixed-size, stack-allocated array. Shorthand syntax `[N of T]`:
-```swift
-struct Game {
-  var bricks: [40 of Sprite]  // shorthand for InlineArray<40, Sprite>
-  init(_ sprite: Sprite) {
-    bricks = .init(repeating: sprite)
-  }
-}
-
-var arr: InlineArray<3, Int> = [1, 2, 3]
-arr[0] = 10
-for item in arr { print(item) }
-```
-
-## Span (6.2)
-
-Safe, non-owning view into contiguous memory with compile-time lifetime safety (no runtime overhead). Replaces many `UnsafeBufferPointer` uses:
-```swift
-func process(_ data: Span<UInt8>) {
-  for byte in data { /* ... */ }
-}
-
-let array = [1, 2, 3]
-let span: Span<Int> = array.span
-```
-
-## C Interop: @c Attribute (6.3)
-
-Expose Swift functions to C via generated headers. See **`references/interop.md`** for full details.
-```swift
-@c func processData(_ ptr: UnsafePointer<UInt8>, count: Int) -> Int32 { ... }
-// Generated C header: int32_t processData(const uint8_t *, int);
-
-@c(MyLib_processData)  // custom C name
-func processData(_ ptr: UnsafePointer<UInt8>, count: Int) -> Int32 { ... }
-```
-
-## Module Selectors (6.3)
-
-Disambiguate APIs from different modules using `::` syntax:
 ```swift
 import ModuleA
 import ModuleB
-
 let x = ModuleA::getValue()
+let y = ModuleB::getValue()
+
+// Access Swift concurrency types without ambiguity:
 let task = Swift::Task { await doWork() }
 ```
 
-## Language Ergonomics
+### Observations Async Sequence (6.2)
 
-### Trailing commas everywhere (6.1)
-Allowed in tuples, parameter/argument lists, generic params, capture lists, and string interpolations:
 ```swift
-let point = (x: 1, y: 2,)
-func foo(a: Int, b: Int,) {}
-foo(a: 1, b: 2,)
+@Observable class Store { var items: [String] = []; var loading = false }
+let store = Store()
+
+let stream = Observations {
+    (items: store.items, loading: store.loading) // tracks both properties
+}
+for await snapshot in stream {
+    render(snapshot.items, snapshot.loading)
+}
 ```
 
-### Precise warning control (6.2)
-```swift
-.target(name: "MyLib", swiftSettings: [
-  .treatAllWarnings(as: .error),
-  .treatWarning("DeprecatedDeclaration", as: .warning),
-])
-```
+### Swift Testing: Exit Tests (6.2)
 
-### Package traits (6.1)
-Conditional compilation and optional dependencies:
 ```swift
-dependencies: [
-  .package(url: "...", from: "1.0.0", traits: [.default, "Embedded"]),
-]
-```
-
-### Opt-in strict memory safety (6.2)
-Flags uses of unsafe constructs so you can replace them or explicitly acknowledge them. Opt-in per module for security-critical code.
-
-### Raw identifier test names (6.2)
-```swift
-@Test func `square() returns x * x`() {
-  #expect(square(4) == 16)
+@Test func preconditionFires() async {
+    await #expect(processExitsWith: .failure) {
+        precondition(false)
+    }
 }
 ```

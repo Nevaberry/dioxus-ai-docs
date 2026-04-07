@@ -1,212 +1,126 @@
-# JS Client
+# JS Client (supabase-js v2.74–v2.101)
 
-## Monorepo Restructure (supabase-js v2.74.0+)
+## Node.js 20+ Required (v2.79.0+)
 
-All Supabase JS libraries have been consolidated into a single monorepo at `github.com/supabase/supabase-js`. The old separate repos (`auth-js`, `postgrest-js`, `realtime-js`, `storage-js`, `functions-js`) are archived.
+Starting with v2.79.0, all Supabase JS libraries require Node.js 20+. The `@supabase/node-fetch` polyfill was removed — native fetch is now required. If you must stay on Node.js 18, pin to `@supabase/supabase-js@2.78.0`.
 
-New structure:
+## New PostgREST Filters
 
-```
-github.com/supabase/supabase-js/
-├── packages/core/
-│   ├── supabase-js/       # Main SDK
-│   ├── auth-js/
-│   ├── postgrest-js/
-│   ├── realtime-js/
-│   ├── storage-js/
-│   └── functions-js/
-├── nx.json                # Nx workspace config
-└── package.json           # Root workspace
-```
-
-**For package users**: Nothing changed — same `npm install @supabase/supabase-js`, same APIs, same imports. All packages now share a single version number for guaranteed compatibility (no more version matrix issues).
-
-**For contributors**: Use Nx commands instead of per-repo npm scripts:
-
-```bash
-npx nx build auth-js          # Build a specific library
-npx nx test postgrest-js      # Test a specific library
-npx nx affected --target=test # Test only what changed
-npx nx graph                  # Visualize dependency graph
-```
-
-## Node.js 18 Support Dropped (v2.79.0+)
-
-All Supabase JS libraries require **Node.js 20+** as of v2.79.0. The `@supabase/node-fetch` polyfill was removed — native `fetch()` is now required. If you get `fetch is not defined`, upgrade Node. Last version supporting Node 18: `@supabase/supabase-js@2.78.0`.
-
-## Enhanced JSON Type Inference (v2.48.0+)
-
-Define custom types for JSON/JSONB columns and get type-safe inference when using `->` and `->>` operators in `.select()` strings.
+**`notin(column, values)`** — inverse of `in()`, excludes rows matching any value:
 
 ```typescript
-import { MergeDeep } from 'type-fest';
-import { Database as DatabaseGenerated } from './database.types';
-
-type Metadata = {
-  foo: string;
-  bar: { baz: number };
-  status: 'active' | 'inactive';
-};
-
-type Database = MergeDeep<
-  DatabaseGenerated,
-  {
-    public: {
-      Tables: {
-        items: { Row: { data: Metadata | null } };
-      };
-    };
-  }
->;
-
-// Type-safe JSON path queries
 const { data } = await supabase
-  .from('items')
-  .select('data->bar->baz, data->status, data->>foo');
-// Inferred: { baz: number; status: 'active' | 'inactive'; foo: string }[]
-// -> returns JSON type, ->> returns string
+  .from('countries')
+  .select()
+  .notin('id', [1, 2, 3]);
 ```
 
-## `overrideTypes<>()` for Response Type Control
-
-Override the inferred return type of any query:
+**`isdistinct(column, value)`** — SQL `IS DISTINCT FROM`, treats NULL as a comparable value (unlike `neq` which returns NULL for NULL comparisons):
 
 ```typescript
-// Partial override (merges with inferred type)
-const { data } = await supabase.from('countries').select()
-  .overrideTypes<Array<{ id: string }>>()
-
-// Full replacement (discards inferred type)
-const { data } = await supabase.from('countries').select()
-  .overrideTypes<Array<{ id: string }>, { merge: false }>()
-
-// Works with .single() / .maybeSingle()
-const { data } = await supabase.from('countries').select().single()
-  .overrideTypes<{ id: string }>()
+const { data } = await supabase
+  .from('users')
+  .select()
+  .isdistinct('deleted_at', null); // returns rows where deleted_at IS DISTINCT FROM NULL (i.e., not null)
 ```
 
-## New PostgREST Filter Methods (v2.84.0+)
+## Auth Throw Mode (v2.79.0+)
 
-New filter operators added to the query builder:
-
-```typescript
-// IS DISTINCT FROM — null-safe inequality (v2.84.0)
-const { data } = await supabase.from('items')
-  .select().isDistinct('status', 'active')
-
-// Regex pattern matching (v2.84.0)
-const { data } = await supabase.from('items')
-  .select().match('name', '~', '^A.*z$')       // POSIX regex
-  .match('name', '~*', '^a.*z$')               // case-insensitive regex
-
-// NOT IN shorthand (v2.88.0)
-const { data } = await supabase.from('items')
-  .select().notin('status', ['archived', 'deleted'])
-```
-
-## Throw-on-Error Mode for Auth (v2.79.0)
-
-Auth methods can now throw errors instead of returning `{ data, error }`:
+Auth methods can now throw errors instead of returning `{ data, error }`. Configure at client creation:
 
 ```typescript
 const supabase = createClient(url, key, {
-  auth: { throwOnError: true }
-})
+  auth: { throwOnError: true },
+});
 
+// Now throws instead of returning error
 try {
-  // Throws on failure instead of returning { error }
-  const { data } = await supabase.auth.signInWithPassword({
-    email: 'user@example.com',
-    password: 'password',
-  })
+  const { data } = await supabase.auth.signInWithPassword({ email, password });
 } catch (err) {
-  console.error(err) // AuthError instance
+  console.error(err.message);
 }
 ```
 
-## `DatabaseWithoutInternals` Utility Type (v2.89.0)
+## Auth `skipAutoInitialize` (v2.97.0+)
 
-New exported type that strips Supabase-internal schemas from the Database type, useful when building libraries or utilities that should only operate on user schemas:
+Prevents the auth client from automatically restoring the session on creation. Useful for SSR or service-side usage where you don't want the constructor to trigger async session recovery:
 
 ```typescript
-import { DatabaseWithoutInternals } from '@supabase/supabase-js'
-import { Database } from './database.types'
+const supabase = createClient(url, key, {
+  auth: { skipAutoInitialize: true },
+});
 
-type UserDB = DatabaseWithoutInternals<Database>
-// Excludes auth, storage, realtime, etc. schemas
+// Manually initialize when ready
+await supabase.auth.initialize();
 ```
 
-## Embedded/Computed Function Type Inference (v2.75.0)
+## Auth `detectSessionInUrl` Custom Predicate (v2.88.0+)
 
-PostgREST computed fields (SQL functions that take a table row as input) are now type-inferred in `.select()`:
+`detectSessionInUrl` now accepts a function (not just boolean) for custom session detection logic:
 
 ```typescript
-// Given: CREATE FUNCTION full_name(profiles) RETURNS text ...
-const { data } = await supabase
-  .from('profiles')
-  .select('id, full_name')  // full_name is inferred as string
+const supabase = createClient(url, key, {
+  auth: {
+    detectSessionInUrl: (url) =>
+      url.searchParams.has('code') && url.pathname === '/auth/callback',
+  },
+});
 ```
 
-## Functions Client: Configurable Timeout (v2.81.0)
+## Auth `currentPassword` for User Updates (v2.98.0+)
 
-Edge Function invocations now support a configurable timeout. Abort and timeout errors are normalized to `FunctionsFetchError`:
+`updateUser()` now accepts `currentPassword` to require password verification before changes:
 
 ```typescript
-const { data, error } = await supabase.functions.invoke('my-function', {
+await supabase.auth.updateUser({
+  password: 'new-password',
+  data: { currentPassword: 'old-password' },
+});
+```
+
+## Functions Configurable Timeout (v2.81.0+)
+
+Edge Function invocations now support a timeout option. Abort and timeout errors are normalized as `FunctionsFetchError`:
+
+```typescript
+const { data, error } = await supabase.functions.invoke('slow-function', {
   body: { input: 'data' },
-  signal: AbortSignal.timeout(10_000), // 10 second timeout
-})
-// error instanceof FunctionsFetchError for both abort and timeout
+  signal: AbortSignal.timeout(30000), // 30 second timeout
+});
 ```
 
-## PostgREST URL Length Validation (v2.94.0)
+## CORS Headers Export (v2.95.0+)
 
-The PostgREST client now validates URL length and provides timeout protection. Queries that would generate URLs exceeding browser/server limits are caught early with a descriptive error, rather than failing silently or with cryptic HTTP errors.
-
-## Canonical CORS Headers Export (v2.95.3)
-
-Convenience export for Edge Functions CORS setup:
+Canonical CORS headers for Edge Functions available as a named export:
 
 ```typescript
-import { corsHeaders } from '@supabase/supabase-js'
+import { corsHeaders } from '@supabase/supabase-js/cors'
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
   }
-  // ... handler logic
-  return new Response(JSON.stringify(data), {
-    headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-  })
+
+  return new Response(
+    JSON.stringify({ data: 'Hello' }),
+    { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+  )
 })
 ```
 
-## Auth: `skipAutoInitialize` Option (v2.97.0)
+Includes all headers sent by Supabase client libraries and allows all standard HTTP methods.
 
-Prevent the auth client from automatically initializing (fetching session, setting up listeners) on construction:
+## `DatabaseWithoutInternals` Utility Type (v2.89.0+)
+
+New exported type that strips Supabase internal schemas from your Database type, useful when passing database types to utilities that shouldn't see internal tables:
 
 ```typescript
-const supabase = createClient(url, key, {
-  auth: { skipAutoInitialize: true }
-})
+import { DatabaseWithoutInternals } from '@supabase/supabase-js';
+import { Database } from './database.types';
 
-// Manually initialize when ready
-await supabase.auth.initialize()
+type PublicDB = DatabaseWithoutInternals<Database>;
 ```
 
-Useful for SSR environments or when you need to set up auth state before the client starts managing sessions.
+## PostgREST URL Length Validation (v2.94.0+)
 
-## Auth: Custom `detectSessionInUrl` Predicate (v2.88.0)
-
-Replace the boolean `detectSessionInUrl` option with a custom predicate function for fine-grained control over when the auth client processes URL tokens:
-
-```typescript
-const supabase = createClient(url, key, {
-  auth: {
-    detectSessionInUrl: (url) => {
-      // Only process auth callbacks on specific paths
-      return url.pathname.startsWith('/auth/callback')
-    },
-  },
-})
-```
+Queries that would produce URLs exceeding the server's max length are now detected. The client automatically validates URL length and provides timeout protection for long-running filter chains.

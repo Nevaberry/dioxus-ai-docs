@@ -1,6 +1,6 @@
 ---
 name: zitadel-knowledge-patch
-description: Zitadel IAM changes since training cutoff (latest: v4.13) — V2 ConnectRPC APIs, Actions V2 webhooks, Session API custom login, Login V2 Next.js, token exchange GA, new language SDKs. Load before working with Zitadel.
+description: "Zitadel IAM changes since training cutoff (latest: v4.13) — V2 ConnectRPC APIs, Actions V2 webhooks, Session API custom login, Login V2 Next.js, token exchange GA, new language SDKs. Load before working with Zitadel."
 version: "4.13"
 license: MIT
 metadata:

@@ -11,7 +11,7 @@ http:
   services:
     my-service:
       loadBalancer:
-        strategy: p2c          # Power of Two Choices (v3.4)
+        strategy: p2c # Power of Two Choices (v3.4)
         # strategy: leasttime  # Lowest response time (v3.6)
         # strategy: highestRandomWeight  # Probabilistic (v3.6)
         servers:
@@ -35,7 +35,7 @@ http:
           mode: tcp
           interval: "10s"
           timeout: "5s"
-        passiveHealthCheck:    # Observes real traffic patterns
+        passiveHealthCheck: # Observes real traffic patterns
           maxConsecutiveFailures: 3
           interval: "30s"
 ```
@@ -52,8 +52,8 @@ http:
         sticky:
           cookie:
             name: "my_cookie"
-            path: "/api"        # Custom cookie path (v3.3)
-            domain: ".example.com"  # Cookie domain (v3.4)
+            path: "/api" # Custom cookie path (v3.3)
+            domain: ".example.com" # Cookie domain (v3.4)
 ```
 
 ---

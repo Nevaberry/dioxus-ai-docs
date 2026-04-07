@@ -1,6 +1,6 @@
 ---
 name: nuxt-knowledge-patch
-description: Nuxt changes since training cutoff (latest: 3.12) — routeRules middleware, server/client-only pages, Nuxt 4 compatibility mode, auto-registered layers. Load before working with Nuxt 3.11+.
+description: "Nuxt changes since training cutoff (latest: 3.12) — routeRules middleware, server/client-only pages, Nuxt 4 compatibility mode, auto-registered layers. Load before working with Nuxt 3.11+."
 license: MIT
 metadata:
   author: Nevaberry

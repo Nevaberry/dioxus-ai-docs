@@ -40,7 +40,7 @@ Covers serde_json 1.0.129–1.0.143 (Nov 2024 – Aug 2025). Claude Opus 4.6 kno
 ### Sort JSON keys — deterministic output
 
 ```rust
-use serde_json::{json, Map, Value};
+use serde_json::{Map, Value, json};
 
 // Sort a single map's keys
 let mut map: Map<String, Value> = serde_json::from_str(r#"{"z":1,"a":2}"#)?;

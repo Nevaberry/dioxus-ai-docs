@@ -1,97 +1,89 @@
-# TypeScript 7 (tsgo) Transition Guide
+# TypeScript 7 (Native Port) Transition Guide
 
-## Trying tsgo Now
+## Overview
+
+TypeScript is being rewritten from JavaScript to Go for ~10x performance. The native version will be released as **TypeScript 7.0** (`tsgo`).
+
+## Versioning
+
+| Version | Codebase | Role |
+|---------|----------|------|
+| 5.9 | JavaScript | Current stable |
+| 6.0 | JavaScript | **Last JS-based release**. Bridge/transition — adds deprecations to align with TS 7. No 6.1 planned, patches only for security/regressions. |
+| 7.x | Go (native) | Native port |
+
+- Codenames: **Strada** (JS codebase), **Corsa** (native port)
+- Repo: `microsoft/typescript-go`
+
+## What changes for users
+
+- **Same type system** — TS 7 aims for full parity with TS 5.x/6.x type checking
+- **New CLI binary**: `tsgo` (instead of `tsc` via Node.js)
+- **Language Server Protocol (LSP)** — TS 7 moves to standard LSP instead of the custom tsserver protocol
+- **New compiler API** — the current `ts.*` programmatic API will not work with Corsa. API is still in progress.
+- **Side-by-side usage** — install both `typescript` (6.0) and `@typescript/native-preview` (7.0). Use `tsgo` for fast type-checking, `tsc` for tooling that needs the Strada API.
+
+## Trying the native preview today
 
 ```bash
 npm install -D @typescript/native-preview
 npx tsgo --project ./tsconfig.json
+npx tsgo -b some.tsconfig.json # --build mode works
 ```
 
-The `tsgo` executable mirrors `tsc` usage. Eventually `tsgo` will be renamed to `tsc` in the `typescript` package.
-
-## Timeline
-
-- **TypeScript 6.0**: Last JavaScript-based release. Transition/bridge release preparing codebases for 7.0. API-compatible with 5.9. There will be no 6.1 — 6.0 only receives security and high-severity patches.
-- **TypeScript 7.0 (`tsgo`)**: Native Go port. All future development happens here.
-
-## New Defaults in TS 7.0 (Breaking)
-
-| Setting | Old Default | New Default |
-|---------|-------------|-------------|
-| `--strict` | off | **enabled by default** |
-| `--target` | `es3` | latest stable ES (e.g. `es2025`) |
-| `--target es5` | supported | **removed** — `es2015` is the lowest supported target |
-| `--baseUrl` | supported | **removed** — use `paths` with explicit `rootDir` instead |
-| `--moduleResolution node10` | supported | **removed** — use `bundler` or `nodenext` |
-| `rootDir` | inferred from source files | defaults to `.` — using `outDir` requires explicit `rootDir` or source files next to `tsconfig.json` |
-
-## Required Migration: Module Resolution
-
-tsgo **drops** `--moduleResolution node` (aka `node10`) and `--module commonjs`. If your tsconfig uses these, you'll get errors like:
-
-```
-Cannot find module 'blah' or its corresponding type declarations.
-Module '"module"' has no exported member 'Thing'.
+VS Code extension: search "TypeScript Native Preview" in marketplace, then enable with:
+```json
+"typescript.experimental.useTsgo": true
 ```
 
-**Fix** — switch to one of:
+`tsgo` will eventually be renamed to `tsc` in the `typescript` package.
 
-```jsonc
-// For bundler-based projects (Vite, webpack, esbuild, etc.)
-{
-  "compilerOptions": {
-    "module": "preserve",
-    "moduleResolution": "bundler"
-  }
-}
-```
+## TS 6.0 / 7.0 breaking changes (deprecations)
 
-```jsonc
-// For Node.js projects
-{
-  "compilerOptions": {
-    "module": "nodenext"
-  }
-}
-```
+These are removed in TS 7.0 and deprecated in TS 6.0:
 
-## Migration Tool: `ts5to6`
+| Change | Details |
+|--------|---------|
+| `--strict` on by default | No longer need to specify it |
+| `--target` defaults to latest stable ES | e.g. `es2025` instead of `es3` |
+| `--target es5` removed | `es2015` is the lowest supported target |
+| `--baseUrl` removed | Use `paths` with explicit base or remove |
+| `--moduleResolution node10`/`node` removed | Use `bundler`, `nodenext`, or `node20` |
+| `rootDir` defaults to `.` | Using `outDir` requires explicit `rootDir`, or top-level sources must be alongside `tsconfig.json` |
+
+### Migration tool
 
 ```bash
 npx @andrewbranch/ts5to6 --fixBaseUrl your-tsconfig.json
 npx @andrewbranch/ts5to6 --fixRootDir your-tsconfig.json
 ```
 
-Automatically updates `baseUrl` and `rootDir` settings across project references. Run this before upgrading to TS 7.0 to fix the most common breaking config changes.
+## Current limitations (preview)
 
-## tsgo Compiler Status (as of December 2025)
+**Working**: type-checking, `--build`, `--incremental`, project references, editor features (completions, auto-imports, go-to-definition, find-all-references, rename, hover, signature help, formatting).
 
-### What Works
-- `--build` mode with project references
-- `--incremental` compilation
-- Type-checking: 99.6% of error-producing test cases pass
+**Not yet complete**:
+- Downlevel emit only goes back to `es2021` (no `es2015`–`es2020` targets yet, no decorator compilation)
+- `--declaration` emit still in progress
+- `--watch` mode may be less efficient (workaround: use `nodemon` + `tsgo --incremental`)
+- No Strada API compatibility — linters/formatters using `ts.*` API won't work with Corsa
 
-### Current Limitations
-- **Emit targets**: Only supports down to `es2021`. No `es2015`-`es2020` targets yet, no decorator downlevel emit.
-- **Watch mode**: May be less efficient than tsc. Workaround: use `nodemon` + `tsgo --incremental`.
-- **No stable API**: Tools using the TypeScript Strada API (compiler API) won't work with tsgo yet.
+## JSDoc / JavaScript checking changes
 
-## Architecture: Standard LSP
+TypeScript 7 **rewrote** (not ported) JS/JSDoc type-checking. Dropped patterns:
 
-tsgo uses the standard Language Server Protocol (LSP) instead of the custom TSServer protocol:
-- Language service plugins that depend on TSServer **will not work**
-- Editor integrations using standard LSP work out of the box
-- Custom tooling built on TSServer's protocol needs migration
+- `@enum` and `@constructor` tags not recognized
+- `Object` is no longer treated as `any`
+- `String` is no longer treated as `string`
+- `Foo` is no longer interpreted as `typeof Foo` where the latter would be valid in TS
+- `any`/`unknown`/`undefined`-typed parameters are no longer implicitly optional
 
-## JSDoc Behavior Changes
+JS codebases may see new errors. Use more idiomatic/modern JSDoc patterns.
 
-In JavaScript files, tsgo drops several legacy behaviors:
+## Migration path
 
-| JSDoc Feature | Change |
-|---------------|--------|
-| `@enum` tag | Not recognized |
-| `@constructor` tag | Not recognized |
-| `Object` type | No longer treated as `any` in JS files |
-| `String` type | No longer coerced to `string` |
-| `Foo` type reference | No longer interpreted as `typeof Foo` where the latter would be valid in TS |
-| `any`/`unknown`/`undefined`-typed parameters | No longer treated as optional |
+1. Upgrade to TS 6.0 first (addresses deprecations)
+2. Run `ts5to6` tool to fix `baseUrl` and `rootDir` automatically
+3. Fix remaining TS 6 breaking changes (module resolution, target, etc.)
+4. Install `@typescript/native-preview` side-by-side for fast type-checking
+5. Switch fully to TS 7 when it supports your project's needs
