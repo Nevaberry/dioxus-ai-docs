@@ -94,7 +94,7 @@ PUBLISHED_PATCHES = {
 }
 
 DEFAULT_PUBLIC_REPO_URL = "https://github.com/Nevaberry/nevaberry-plugins.git"
-DEFAULT_PUBLIC_REPO_REF = os.environ.get("KP_PUBLIC_REF", "master")
+DEFAULT_PUBLIC_REPO_REF = os.environ.get("KP_PUBLIC_REF", "main")
 
 
 @dataclass(frozen=True)
