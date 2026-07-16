@@ -37,6 +37,16 @@ The `startup|resume|clear|compact` matcher is deliberate. Resume re-reads activa
 
 In `catalog/detection.json`, a plain file glob means that the path's existence is evidence. A signal in `glob::marker` form requires a matching file whose contents contain the literal marker. Content markers keep shared manifests such as `package.json` and `Cargo.toml` from activating unrelated patches.
 
+## Versioning
+
+The knowledge-patch plugin uses the form `COMPAT.DATE.PATCH`:
+
+- `COMPAT` indicates backwards compatibility.
+- `DATE` is the UTC build date as `yyyymmdd`.
+- `PATCH` counts builds within that date, starting at `0`.
+
+A new version is minted only when shipped content actually changes; `catalog/build.json` records the version and a content hash over every shipped file. Technology coverage is versioned separately: `covered_through` in the catalogs, mirrored in each skill's frontmatter `version`, states the upper boundary a patch covers.
+
 ## Shipped Layout
 
 - `.claude-plugin/marketplace.json` exposes the Claude Code marketplace entry.
