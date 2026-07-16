@@ -12,7 +12,7 @@ Use this gateway when a task involves a technology that may have a bundled knowl
 1. Before writing, reviewing, debugging, planning, or administering a patched technology, load the matching `knowledge-patch:<tech>-knowledge-patch` skill.
 2. Determine the project's pinned technology version from its manifest first; consult its lockfile or configuration only when the manifest does not pin it. For `coverage_kind` `versioned` or `range`, compare the project version with `covered_through`, apply only notes introduced at or below the project version, and state that the patch may be stale when the project is newer. Trust project reality—its manifest, code, tests, and current behavior—over stale guidance. For `rolling` or `multi-product`, `covered_through` is JSON null and must not be used for a version comparison. State the coverage kind, inspect the coverage metadata, and prefer project manifests, code, and tests.
 3. If the user manually activated patches, treat that as confirmed intent and load those patches before related work.
-4. If multiple patches apply, load the narrowest relevant set. Do not load every patch just because the catalog exists.
+4. If multiple patches apply, load the relevant set. Do not load every patch just because the catalog exists.
 5. Within the applicable version floor, knowledge patches override stale model memory when they conflict. Follow the loaded patch and mention the current behavior when it matters.
 6. If no exact patch exists, continue normally and say that no bundled patch matched when that affects confidence.
 

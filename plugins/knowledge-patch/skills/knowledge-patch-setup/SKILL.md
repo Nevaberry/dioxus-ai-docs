@@ -12,7 +12,7 @@ Use this skill when the user wants to set up, activate, deactivate, or verify kn
 1. Load `knowledge-patch:using-knowledge-patch` if it is not already loaded.
 2. Read `../../catalog/patches.json`, `../../catalog/aliases.json`, and `../../catalog/detection.json`.
 3. Inspect the current project and, when relevant, the server environment. A plain detection file signal checks path existence; `glob::marker` requires the matching file to contain that literal marker. Use curated terms only as supporting evidence, not as a substitute for stronger file or manifest evidence.
-4. Recommend the narrowest useful patch set. Use each catalog `short_label` in user-facing activation messages. For server-looking evidence, ask whether admin guidance is desired before treating service patches as active.
+4. Recommend the relevant patch set. Use each catalog `short_label` in user-facing activation messages. For server-looking evidence, ask whether admin guidance is desired before treating service patches as active.
 5. If the user approves activation, write priority state only. Do not copy skill files, install separate plugins, or fetch anything from the network.
 6. If the user asks to deactivate or remove patches, remove the resolved patch names and their activation reasons. If the user says `none` or asks to clear all activation, write an empty `active_patches` list and empty `activation_reasons` object.
 

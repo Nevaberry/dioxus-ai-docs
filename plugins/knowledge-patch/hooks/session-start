@@ -53,7 +53,7 @@ def main():
     context = (
         "Knowledge Patch is installed. Use knowledge-patch:using-knowledge-patch "
         "before writing, reviewing, debugging, or administering patched technologies. "
-        "Load active or matching patch skills, choose the narrowest relevant set, and "
+        "Load active or matching patch skills, choose the relevant set, and "
         "apply each patch only through the project's pinned version. "
         f"Active patches: {active_text}."
     )
