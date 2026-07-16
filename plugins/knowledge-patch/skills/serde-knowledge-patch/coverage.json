@@ -1,0 +1,32 @@
+{
+  "patch": "serde-knowledge-patch",
+  "merged_at": "2026-07-12T22:31:01Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "1.0.220-serde-core": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.0.220": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "serde-json-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "serde-json-value-apis": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": [
+    "1.0.220"
+  ]
+}

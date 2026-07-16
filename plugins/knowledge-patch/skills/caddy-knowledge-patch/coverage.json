@@ -1,0 +1,35 @@
+{
+  "patch": "caddy-knowledge-patch",
+  "merged_at": "2026-07-12T19:46:21Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "2.9.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2.11.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "automatic-https": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "global-and-tls-options": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

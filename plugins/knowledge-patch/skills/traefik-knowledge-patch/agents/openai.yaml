@@ -1,0 +1,3 @@
+interface:
+  display_name: "Traefik"
+  short_description: "Traefik 3.7.0 compatibility. Use for Traefik work."

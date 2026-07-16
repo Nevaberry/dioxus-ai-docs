@@ -1,0 +1,3 @@
+interface:
+  display_name: "Ubuntu"
+  short_description: "Ubuntu 26.04 compatibility. Use for Ubuntu work."

@@ -1,0 +1,85 @@
+{
+  "patch": "geodesy-wgs84-knowledge-patch",
+  "merged_at": "2026-07-12T20:14:56Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "wgs84-and-datums": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "itrf-and-etrs-reference-frames": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "reference-system-fundamentals": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "helmert-transformations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "ecef-enu-implementation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "coordinate-conversions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "ellipsoidal-geodesics": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "vincenty-methods": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "geodesy-libraries": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "utm-and-transverse-mercator": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "vertical-datums-and-geoids": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "proj-transform-pipelines": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "proj-release-history": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "pyproj-crs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "pyproj-transformers": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

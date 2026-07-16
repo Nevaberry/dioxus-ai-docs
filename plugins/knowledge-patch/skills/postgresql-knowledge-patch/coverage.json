@@ -1,0 +1,35 @@
+{
+  "patch": "postgresql-knowledge-patch",
+  "merged_at": "2026-07-15T04:54:55Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "17-json-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "17.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "18-uuid-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "18.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-catalog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

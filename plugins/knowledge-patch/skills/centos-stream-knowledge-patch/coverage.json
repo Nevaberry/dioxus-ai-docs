@@ -1,0 +1,35 @@
+{
+  "patch": "centos-stream-knowledge-patch",
+  "merged_at": "2026-07-12T19:46:24Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "10.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "enterprise-linux-10-adoption": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "project-news": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

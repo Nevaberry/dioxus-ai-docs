@@ -1,0 +1,2174 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-07-15T23:21:58Z",
+  "patches": [
+    {
+      "id": "almalinux-knowledge-patch",
+      "display_name": "AlmaLinux",
+      "short_label": "AlmaLinux",
+      "description": "AlmaLinux 10.2 compatibility. Use for AlmaLinux work.",
+      "coverage_kind": "versioned",
+      "covered_through": "10.2",
+      "coverage_label": "10.2",
+      "path": "skills/almalinux-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "enterprise-linux",
+        "packages",
+        "system-administration",
+        "security"
+      ],
+      "content_hash": "sha256:4f111b86ce05392d2888ed18581a7f83428e329fb94286a6c7e37ebef13279ea",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/almalinux-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "angular-knowledge-patch",
+      "display_name": "Angular",
+      "short_label": "Angular",
+      "description": "Angular 22.0.0 compatibility. Use for Angular work.",
+      "coverage_kind": "versioned",
+      "covered_through": "22.0.0",
+      "coverage_label": "22.0.0",
+      "path": "skills/angular-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "frontend",
+        "components",
+        "signals",
+        "dependency-injection",
+        "routing",
+        "ssr"
+      ],
+      "content_hash": "sha256:37a3024ab3e9736878f079cbab98152621000be7b4c65a955ddb65175438459a",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/angular-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "arch-knowledge-patch",
+      "display_name": "Arch Linux",
+      "short_label": "Arch Linux",
+      "description": "Arch Linux rolling coverage. Use for Arch Linux work.",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/arch-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "rolling-release",
+        "packages",
+        "system-administration",
+        "pacman"
+      ],
+      "content_hash": "sha256:b44eb2549b93f36c55c59f52738d67cf69d2d74a005941807e6fae027aee281f",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/arch-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "astro-knowledge-patch",
+      "display_name": "Astro",
+      "short_label": "Astro",
+      "description": "Astro 7.0.0 compatibility. Use for Astro work.",
+      "coverage_kind": "versioned",
+      "covered_through": "7.0.0",
+      "coverage_label": "7.0.0",
+      "path": "skills/astro-knowledge-patch",
+      "languages": [
+        "typescript",
+        "jsx",
+        "css"
+      ],
+      "tags": [
+        "static-sites",
+        "frontend",
+        "islands",
+        "ssr",
+        "content-collections"
+      ],
+      "content_hash": "sha256:3453f917b699492d12f6aa0e8cc99c24ab0178aed1b6885c6fc366a7d9747f79",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/astro-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "authjs-knowledge-patch",
+      "display_name": "Auth.js",
+      "short_label": "Auth.js",
+      "description": "Auth.js 5.0.0 compatibility. Use for Auth.js work.",
+      "coverage_kind": "versioned",
+      "covered_through": "5.0.0",
+      "coverage_label": "5.0.0",
+      "path": "skills/authjs-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "authentication",
+        "oauth",
+        "sessions",
+        "adapters",
+        "nextjs"
+      ],
+      "content_hash": "sha256:0fef1b457ee03f8732cc3baec74f9d96d54c5c234c26253fc1051e18ccea7cf1",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/authjs-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "aws-sdk-knowledge-patch",
+      "display_name": "AWS SDK",
+      "short_label": "AWS SDK",
+      "description": "AWS SDK rolling coverage. Use for AWS SDK work.",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/aws-sdk-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "python",
+        "go",
+        "java",
+        "kotlin",
+        "ruby",
+        "php",
+        "rust"
+      ],
+      "tags": [
+        "cloud",
+        "sdk",
+        "credentials",
+        "retries",
+        "clients"
+      ],
+      "content_hash": "sha256:262d0f72189fd5aa0532182e7ef490c9efe96c7cb9fa841c44721973407f34b5",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/aws-sdk-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "axum-knowledge-patch",
+      "display_name": "Axum",
+      "short_label": "Axum",
+      "description": "Axum 0.8.0 compatibility. Use for Axum work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.8.0",
+      "coverage_label": "0.8.0",
+      "path": "skills/axum-knowledge-patch",
+      "languages": [
+        "rust",
+        "toml"
+      ],
+      "tags": [
+        "web-framework",
+        "routing",
+        "middleware",
+        "extractors",
+        "async"
+      ],
+      "content_hash": "sha256:6cbbb61cb2f5617a714ee8e8ee57a099ae83a5bdbad0994ea77f2de1e771d95d",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/axum-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "better-auth-knowledge-patch",
+      "display_name": "Better Auth",
+      "short_label": "Better Auth",
+      "description": "Better Auth 1.6.0 compatibility. Use for Better Auth work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.6.0",
+      "coverage_label": "1.6.0",
+      "path": "skills/better-auth-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "authentication",
+        "sessions",
+        "oauth",
+        "plugins",
+        "typescript"
+      ],
+      "content_hash": "sha256:266a4f45c1938943eaa6c1ae8da14d5b478eabfdc168cbbbe8db874cbb254e4b",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/better-auth-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "biome-knowledge-patch",
+      "display_name": "Biome",
+      "short_label": "Biome",
+      "description": "Biome 2.5.0 compatibility. Use for Biome work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.5.0",
+      "coverage_label": "2.5.0",
+      "path": "skills/biome-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "json",
+        "css"
+      ],
+      "tags": [
+        "linting",
+        "formatting",
+        "tooling",
+        "javascript",
+        "css"
+      ],
+      "content_hash": "sha256:f7c6bfccac3ad9f737e172cb4e9c4e8586b748e3a379ffdc44f78de8a9c7d3ab",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/biome-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "bun-knowledge-patch",
+      "display_name": "Bun",
+      "short_label": "Bun",
+      "description": "Bun 1.3.14 compatibility. Use for Bun work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.3.14",
+      "coverage_label": "1.3.14",
+      "path": "skills/bun-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "json"
+      ],
+      "tags": [
+        "runtime",
+        "package-manager",
+        "bundler",
+        "testing",
+        "javascript"
+      ],
+      "content_hash": "sha256:67a0874e327bbdab55f90feb85a81a03d6f7baebb519e6ecc3852f4b6a3c7717",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/bun-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "caddy-knowledge-patch",
+      "display_name": "Caddy",
+      "short_label": "Caddy",
+      "description": "Caddy 2.11.1 compatibility. Use for Caddy work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.11.1",
+      "coverage_label": "2.11.1",
+      "path": "skills/caddy-knowledge-patch",
+      "languages": [
+        "caddyfile",
+        "json"
+      ],
+      "tags": [
+        "web-server",
+        "reverse-proxy",
+        "tls",
+        "routing",
+        "configuration"
+      ],
+      "content_hash": "sha256:e7fa2e636efa3ec40ce80282e3806ec1a3df60274103b8e00401167aa8b667b8",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/caddy-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "centos-stream-knowledge-patch",
+      "display_name": "CentOS Stream",
+      "short_label": "CentOS Stream",
+      "description": "CentOS Stream 10.0 compatibility. Use for CentOS Stream work.",
+      "coverage_kind": "versioned",
+      "covered_through": "10.0",
+      "coverage_label": "10.0",
+      "path": "skills/centos-stream-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "enterprise-linux",
+        "packages",
+        "system-administration",
+        "rpm"
+      ],
+      "content_hash": "sha256:81a88f882deaceb6cf9948392ed4f5099662f6325ba9720074edb3b6e01b4241",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/centos-stream-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "chrony-knowledge-patch",
+      "display_name": "chrony",
+      "short_label": "chrony",
+      "description": "chrony 4.7–4.8 compatibility. Use for chrony work.",
+      "coverage_kind": "range",
+      "covered_through": "4.8",
+      "coverage_label": "4.7–4.8",
+      "path": "skills/chrony-knowledge-patch",
+      "languages": [
+        "c",
+        "bash"
+      ],
+      "tags": [
+        "time-sync",
+        "ntp",
+        "system-administration",
+        "networking",
+        "clock"
+      ],
+      "content_hash": "sha256:973dd103fe7aa4056612784933174b9ade57a81021ee265d6e5d96af857332f5",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/chrony-knowledge-patch/coverage.json",
+      "covered_from": "4.7"
+    },
+    {
+      "id": "clerk-knowledge-patch",
+      "display_name": "Clerk",
+      "short_label": "Clerk",
+      "description": "Clerk 1.0.0 compatibility. Use for Clerk work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.0.0",
+      "coverage_label": "1.0.0",
+      "path": "skills/clerk-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "go",
+        "python",
+        "ruby"
+      ],
+      "tags": [
+        "authentication",
+        "identity",
+        "sessions",
+        "organizations",
+        "oauth"
+      ],
+      "content_hash": "sha256:32a4e5b825ffe29c62247f8acb084019f5ae5fdb1fd60081db3df3048de9b562",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/clerk-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "codex-knowledge-patch",
+      "display_name": "Codex",
+      "short_label": "Codex",
+      "description": "Codex 0.144.0 compatibility. Use for Codex work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.144.0",
+      "coverage_label": "0.144.0",
+      "path": "skills/codex-knowledge-patch",
+      "languages": [
+        "bash",
+        "toml",
+        "markdown"
+      ],
+      "tags": [
+        "coding-agent",
+        "cli",
+        "ide",
+        "automation",
+        "configuration"
+      ],
+      "content_hash": "sha256:e316f59b8650fdcb8779fa612bd89246d44ba6ba28efc680c86c951388ca61f4",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/codex-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "debian-knowledge-patch",
+      "display_name": "Debian",
+      "short_label": "Debian",
+      "description": "Debian 13.0 compatibility. Use for Debian work.",
+      "coverage_kind": "versioned",
+      "covered_through": "13.0",
+      "coverage_label": "13.0",
+      "path": "skills/debian-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "packages",
+        "apt",
+        "system-administration",
+        "security"
+      ],
+      "content_hash": "sha256:62e2d74e12a9cf74fa35ac6a4d4a10547ff70b508891d99a4bd4be0770163824",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/debian-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "deno-knowledge-patch",
+      "display_name": "Deno",
+      "short_label": "Deno",
+      "description": "Deno 2.9.0 compatibility. Use for Deno work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.9.0",
+      "coverage_label": "2.9.0",
+      "path": "skills/deno-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "json"
+      ],
+      "tags": [
+        "runtime",
+        "permissions",
+        "typescript",
+        "javascript",
+        "tooling"
+      ],
+      "content_hash": "sha256:ae6c5d6143b131ccfc99bbdcccf5a7276a419bafc38f66f1e0ddaa02e0fb01ee",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/deno-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "dioxus-knowledge-patch",
+      "display_name": "Dioxus",
+      "short_label": "Dioxus",
+      "description": "Dioxus 0.7.9 compatibility. Use for Dioxus work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.7.9",
+      "coverage_label": "0.7.9",
+      "path": "skills/dioxus-knowledge-patch",
+      "languages": [
+        "rust"
+      ],
+      "tags": [
+        "ui",
+        "reactivity",
+        "fullstack",
+        "routing",
+        "hot-reload",
+        "desktop",
+        "mobile"
+      ],
+      "content_hash": "sha256:964563dc1abb59eff551d9a3eb3458a3f03cb54ac68304ac1651457da7c9404c",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/dioxus-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "django-knowledge-patch",
+      "display_name": "Django",
+      "short_label": "Django",
+      "description": "Django 6.0.8 compatibility. Use for Django work.",
+      "coverage_kind": "versioned",
+      "covered_through": "6.0.8",
+      "coverage_label": "6.0.8",
+      "path": "skills/django-knowledge-patch",
+      "languages": [
+        "python"
+      ],
+      "tags": [
+        "web-framework",
+        "orm",
+        "migrations",
+        "templates",
+        "async"
+      ],
+      "content_hash": "sha256:7f4f8d28a26e58ec7cce96f88d18eee2c50df1599905916db4ea9fce5e29a300",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/django-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "dnf5-security-updates-knowledge-patch",
+      "display_name": "DNF5",
+      "short_label": "DNF5",
+      "description": "DNF5 5.4.1 compatibility. Use for DNF5 work.",
+      "coverage_kind": "versioned",
+      "covered_through": "5.4.1",
+      "coverage_label": "5.4.1",
+      "path": "skills/dnf5-security-updates-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "packages",
+        "security",
+        "updates",
+        "rpm"
+      ],
+      "content_hash": "sha256:27289aa48ac2d7d5049af942d8d9764256c88002317f6afac41c030319b3517c",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/dnf5-security-updates-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "docker-knowledge-patch",
+      "display_name": "Docker",
+      "short_label": "Docker",
+      "description": "Docker 25.0.0–29.3 compatibility. Use for Docker work.",
+      "coverage_kind": "range",
+      "covered_through": "29.3",
+      "coverage_label": "25.0.0–29.3",
+      "path": "skills/docker-knowledge-patch",
+      "languages": [
+        "bash",
+        "yaml"
+      ],
+      "tags": [
+        "containers",
+        "images",
+        "compose",
+        "buildkit",
+        "networking"
+      ],
+      "content_hash": "sha256:3177bc54e17edae8b12dc9792673824f9948b84d1d893ab70393357bc40b5507",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/docker-knowledge-patch/coverage.json",
+      "covered_from": "25.0.0"
+    },
+    {
+      "id": "drizzle-knowledge-patch",
+      "display_name": "Drizzle ORM",
+      "short_label": "Drizzle ORM",
+      "description": "Drizzle ORM 1.0.0-beta.19 compatibility. Use for Drizzle ORM work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.0.0-beta.19",
+      "coverage_label": "1.0.0-beta.19",
+      "path": "skills/drizzle-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "orm",
+        "sql",
+        "migrations",
+        "schema",
+        "database"
+      ],
+      "content_hash": "sha256:359fe52e34b6a2f3606422f34bef7f17b3207eb855587b3da187048630617ecc",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/drizzle-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "elixir-knowledge-patch",
+      "display_name": "Elixir",
+      "short_label": "Elixir",
+      "description": "Elixir 1.20.0-rc compatibility. Use for Elixir work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.20.0-rc",
+      "coverage_label": "1.20.0-rc",
+      "path": "skills/elixir-knowledge-patch",
+      "languages": [
+        "elixir"
+      ],
+      "tags": [
+        "functional-programming",
+        "beam",
+        "otp",
+        "phoenix",
+        "liveview"
+      ],
+      "content_hash": "sha256:951c5a8634b663b7b6f799251ea314a54ecea0ad163fc863cf43a8d4642995ef",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/elixir-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "fastapi-knowledge-patch",
+      "display_name": "FastAPI",
+      "short_label": "FastAPI",
+      "description": "FastAPI 0.135.3 compatibility. Use for FastAPI work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.135.3",
+      "coverage_label": "0.135.3",
+      "path": "skills/fastapi-knowledge-patch",
+      "languages": [
+        "python"
+      ],
+      "tags": [
+        "api",
+        "async",
+        "web-framework",
+        "validation",
+        "openapi"
+      ],
+      "content_hash": "sha256:4ba898dbe2ad7079ae7665dbd7039b565baa85cb610ab817b21b619378fd7342",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/fastapi-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "fedora-knowledge-patch",
+      "display_name": "Fedora Linux",
+      "short_label": "Fedora Linux",
+      "description": "Fedora Linux 44 compatibility. Use for Fedora Linux work.",
+      "coverage_kind": "versioned",
+      "covered_through": "44",
+      "coverage_label": "44",
+      "path": "skills/fedora-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "packages",
+        "dnf",
+        "system-administration",
+        "selinux"
+      ],
+      "content_hash": "sha256:e0b8ead747c372b6f235d7e9a54632b99fe0f50d1401a3f18c9907bce8647f7b",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/fedora-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "flutter-knowledge-patch",
+      "display_name": "Flutter",
+      "short_label": "Flutter",
+      "description": "Flutter 3.44.0 compatibility. Use for Flutter work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.44.0",
+      "coverage_label": "3.44.0",
+      "path": "skills/flutter-knowledge-patch",
+      "languages": [
+        "dart"
+      ],
+      "tags": [
+        "mobile",
+        "ui",
+        "widgets",
+        "dart",
+        "cross-platform"
+      ],
+      "content_hash": "sha256:90b727a8c38bf6d07449c8f6036bb65da395a93598a8d4319e45ada94387f1dc",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/flutter-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "gcp-knowledge-patch",
+      "display_name": "GCP",
+      "short_label": "GCP",
+      "description": "GCP rolling coverage. Use for GCP work.",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/gcp-knowledge-patch",
+      "languages": [
+        "yaml",
+        "bash",
+        "python"
+      ],
+      "tags": [
+        "cloud",
+        "iam",
+        "compute",
+        "serverless",
+        "kubernetes",
+        "data"
+      ],
+      "content_hash": "sha256:dbf2b8cb7b6544fd69f76d77e74d031cef3f6f18201a29c0522d9abb9bb327b0",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/gcp-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "geodesy-wgs84-knowledge-patch",
+      "display_name": "WGS 84",
+      "short_label": "WGS 84",
+      "description": "WGS 84 current compatibility guidance. Use for WGS 84 work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/geodesy-wgs84-knowledge-patch",
+      "languages": [
+        "python",
+        "cpp"
+      ],
+      "tags": [
+        "geodesy",
+        "coordinates",
+        "datum",
+        "projections",
+        "reference-frames"
+      ],
+      "content_hash": "sha256:bb7c603b397b0c6421f4a950fe989ac98b0196667e90321173f84e10d78d45b7",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/geodesy-wgs84-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "gleam-knowledge-patch",
+      "display_name": "Gleam",
+      "short_label": "Gleam",
+      "description": "Gleam 1.7.0–1.17.0 compatibility. Use for Gleam work.",
+      "coverage_kind": "range",
+      "covered_through": "1.17.0",
+      "coverage_label": "1.7.0–1.17.0",
+      "path": "skills/gleam-knowledge-patch",
+      "languages": [
+        "gleam"
+      ],
+      "tags": [
+        "functional-programming",
+        "beam",
+        "type-system",
+        "concurrency",
+        "ffi"
+      ],
+      "content_hash": "sha256:ecab894f09472444220a3649d5db958672ed0578da0be86c785945b73fcf6b98",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/gleam-knowledge-patch/coverage.json",
+      "covered_from": "1.7.0"
+    },
+    {
+      "id": "gnss-navigation-knowledge-patch",
+      "display_name": "GNSS",
+      "short_label": "GNSS",
+      "description": "GNSS current compatibility guidance. Use for GNSS work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/gnss-navigation-knowledge-patch",
+      "languages": [
+        "cpp",
+        "python"
+      ],
+      "tags": [
+        "satellite-navigation",
+        "gps",
+        "positioning",
+        "rtk",
+        "ppp"
+      ],
+      "content_hash": "sha256:4423a1677a5a73355fb4373802991babaa4d4ebf982c37d277c9f63b8180a754",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/gnss-navigation-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "go-knowledge-patch",
+      "display_name": "Go",
+      "short_label": "Go",
+      "description": "Go 1.26.0 compatibility. Use for Go work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.26.0",
+      "coverage_label": "1.26.0",
+      "path": "skills/go-knowledge-patch",
+      "languages": [
+        "go"
+      ],
+      "tags": [
+        "language",
+        "toolchain",
+        "modules",
+        "concurrency",
+        "generics"
+      ],
+      "content_hash": "sha256:0dc7677abd117807de0fe86b3620ea11bd6e0c6537f91a3f80f4a478d7e01b31",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/go-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "gpsd-knowledge-patch",
+      "display_name": "gpsd",
+      "short_label": "gpsd",
+      "description": "gpsd 3.27 compatibility. Use for gpsd work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.27",
+      "coverage_label": "3.27",
+      "path": "skills/gpsd-knowledge-patch",
+      "languages": [
+        "c",
+        "python",
+        "bash"
+      ],
+      "tags": [
+        "gps",
+        "gnss",
+        "daemon",
+        "positioning",
+        "nmea"
+      ],
+      "content_hash": "sha256:158afc9dd6a6e65214227d1ec6a746e29ddfc9ab5b086e503aaad6709fdaf666",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/gpsd-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "hono-knowledge-patch",
+      "display_name": "Hono",
+      "short_label": "Hono",
+      "description": "Hono 4.8.0–4.12.0 compatibility. Use for Hono work.",
+      "coverage_kind": "range",
+      "covered_through": "4.12.0",
+      "coverage_label": "4.8.0–4.12.0",
+      "path": "skills/hono-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "web-framework",
+        "routing",
+        "middleware",
+        "edge-runtime",
+        "rpc"
+      ],
+      "content_hash": "sha256:4a3c5a62aa1dd03d98b9c84b498f12dd5c57bdb02b425e9411b509bb1ccd1336",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/hono-knowledge-patch/coverage.json",
+      "covered_from": "4.8.0"
+    },
+    {
+      "id": "htmx-knowledge-patch",
+      "display_name": "htmx",
+      "short_label": "htmx",
+      "description": "htmx 4.0.0 compatibility. Use for htmx work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.0.0",
+      "coverage_label": "4.0.0",
+      "path": "skills/htmx-knowledge-patch",
+      "languages": [
+        "html",
+        "javascript"
+      ],
+      "tags": [
+        "hypermedia",
+        "html",
+        "ajax",
+        "frontend",
+        "sse"
+      ],
+      "content_hash": "sha256:05ec7637fad21d05f3cf8db0ef5603c94c3fa07a9eba9c2623f80ec5d9cfcc99",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/htmx-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "kotlin-knowledge-patch",
+      "display_name": "Kotlin",
+      "short_label": "Kotlin",
+      "description": "Kotlin 2.3.20 compatibility. Use for Kotlin work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.3.20",
+      "coverage_label": "2.3.20",
+      "path": "skills/kotlin-knowledge-patch",
+      "languages": [
+        "kotlin"
+      ],
+      "tags": [
+        "language",
+        "jvm",
+        "multiplatform",
+        "coroutines",
+        "compose"
+      ],
+      "content_hash": "sha256:6acc63032c50af9e9f5bafa3ca72b7412f3893d10ae44e583d3f5324125befd8",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/kotlin-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "kubernetes-knowledge-patch",
+      "display_name": "Kubernetes",
+      "short_label": "Kubernetes",
+      "description": "Kubernetes 1.36.0 compatibility. Use for Kubernetes work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.36.0",
+      "coverage_label": "1.36.0",
+      "path": "skills/kubernetes-knowledge-patch",
+      "languages": [
+        "yaml",
+        "bash"
+      ],
+      "tags": [
+        "orchestration",
+        "containers",
+        "workloads",
+        "networking",
+        "rbac",
+        "gateway-api"
+      ],
+      "content_hash": "sha256:e00fb079f9412c5e9b279fc1a818adf6cfeb182231ded55ec43a50647a2f7396",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/kubernetes-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "langchain-knowledge-patch",
+      "display_name": "LangChain",
+      "short_label": "LangChain",
+      "description": "LangChain 1.1.0 compatibility. Use for LangChain work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.1.0",
+      "coverage_label": "1.1.0",
+      "path": "skills/langchain-knowledge-patch",
+      "languages": [
+        "python",
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "ai",
+        "agents",
+        "chains",
+        "retrieval",
+        "tools",
+        "langgraph"
+      ],
+      "content_hash": "sha256:1a18470bcc21af56484d36f05f416c2564b280267c0044c852d606c9702bda3f",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/langchain-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "leptos-knowledge-patch",
+      "display_name": "Leptos",
+      "short_label": "Leptos",
+      "description": "Leptos 0.8.17 compatibility. Use for Leptos work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.8.17",
+      "coverage_label": "0.8.17",
+      "path": "skills/leptos-knowledge-patch",
+      "languages": [
+        "rust"
+      ],
+      "tags": [
+        "ui",
+        "reactivity",
+        "fullstack",
+        "ssr",
+        "hydration"
+      ],
+      "content_hash": "sha256:e4846681281d78d215f7f7af39364d685063ce40c5c57db34430c7d648075b08",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/leptos-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "nextjs-knowledge-patch",
+      "display_name": "Next.js",
+      "short_label": "Next.js",
+      "description": "Next.js 16.3.0 compatibility. Use for Next.js work.",
+      "coverage_kind": "versioned",
+      "covered_through": "16.3.0",
+      "coverage_label": "16.3.0",
+      "path": "skills/nextjs-knowledge-patch",
+      "languages": [
+        "typescript",
+        "tsx",
+        "javascript"
+      ],
+      "tags": [
+        "frontend",
+        "react",
+        "server-components",
+        "routing",
+        "ssr",
+        "caching"
+      ],
+      "content_hash": "sha256:8b7f757bd026d3137bcd65eb0d670b69ec22a97d0cd04e4fd4f59ce6d9c9ff32",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/nextjs-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "nginx-knowledge-patch",
+      "display_name": "NGINX",
+      "short_label": "NGINX",
+      "description": "NGINX 1.31.0 compatibility. Use for NGINX work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.31.0",
+      "coverage_label": "1.31.0",
+      "path": "skills/nginx-knowledge-patch",
+      "languages": [
+        "nginx",
+        "bash"
+      ],
+      "tags": [
+        "web-server",
+        "reverse-proxy",
+        "routing",
+        "tls",
+        "load-balancing"
+      ],
+      "content_hash": "sha256:f6588e10496a2c9b2f52d90d1a6bb6075236777aec531bbdcf364bd3e31c5b9d",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/nginx-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "nmea0183-knowledge-patch",
+      "display_name": "NMEA 0183",
+      "short_label": "NMEA 0183",
+      "description": "NMEA 0183 4.30 compatibility. Use for NMEA 0183 work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.30",
+      "coverage_label": "4.30",
+      "path": "skills/nmea0183-knowledge-patch",
+      "languages": [
+        "c",
+        "cpp",
+        "python"
+      ],
+      "tags": [
+        "marine",
+        "navigation",
+        "gps",
+        "sentences",
+        "serial"
+      ],
+      "content_hash": "sha256:55d452c812d9f2b9ee4dea85ffcd2f74ae0605bbc5389cec997a7b8076b5a286",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/nmea0183-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "nodejs-knowledge-patch",
+      "display_name": "Node.js",
+      "short_label": "Node.js",
+      "description": "Node.js 23.0.0–26.5.0 compatibility. Use for Node.js work.",
+      "coverage_kind": "range",
+      "covered_through": "26.5.0",
+      "coverage_label": "23.0.0–26.5.0",
+      "path": "skills/nodejs-knowledge-patch",
+      "languages": [
+        "javascript",
+        "typescript"
+      ],
+      "tags": [
+        "runtime",
+        "javascript",
+        "modules",
+        "npm",
+        "streams"
+      ],
+      "content_hash": "sha256:53b9666dbea4f50efee1683a57809beb62fa38f02e5349a3f79bb4963a679716",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/nodejs-knowledge-patch/coverage.json",
+      "covered_from": "23.0.0"
+    },
+    {
+      "id": "ntrip-rtklib-knowledge-patch",
+      "display_name": "NTRIP / RTKLIB",
+      "short_label": "NTRIP / RTKLIB",
+      "description": "NTRIP / RTKLIB current compatibility guidance. Use for NTRIP / RTKLIB work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/ntrip-rtklib-knowledge-patch",
+      "languages": [
+        "c",
+        "cpp",
+        "bash"
+      ],
+      "tags": [
+        "gnss",
+        "rtk",
+        "corrections",
+        "ntrip",
+        "positioning"
+      ],
+      "content_hash": "sha256:b4d504673b3730ac2e339880f206c20277ecf3e753d779a2b3393c7f22b52f39",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/ntrip-rtklib-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "nuxt-knowledge-patch",
+      "display_name": "Nuxt",
+      "short_label": "Nuxt",
+      "description": "Nuxt 4.4.0 compatibility. Use for Nuxt work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.4.0",
+      "coverage_label": "4.4.0",
+      "path": "skills/nuxt-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "frontend",
+        "vue",
+        "ssr",
+        "routing",
+        "nitro"
+      ],
+      "content_hash": "sha256:d66e52c26d53869541a18e63b7fa74f2fee620b5e4eba838ab94db43c95b999f",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/nuxt-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "openssl-tls-knowledge-patch",
+      "display_name": "OpenSSL",
+      "short_label": "OpenSSL",
+      "description": "OpenSSL 4.0.0 compatibility. Use for OpenSSL work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.0.0",
+      "coverage_label": "4.0.0",
+      "path": "skills/openssl-tls-knowledge-patch",
+      "languages": [
+        "c",
+        "bash"
+      ],
+      "tags": [
+        "cryptography",
+        "tls",
+        "certificates",
+        "pki",
+        "security"
+      ],
+      "content_hash": "sha256:68dfecbbcafe87ded004eab1778673ba2c4a510fb4afe6ce04e8bde1facbe1ce",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/openssl-tls-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "pgvector-knowledge-patch",
+      "display_name": "pgvector",
+      "short_label": "pgvector",
+      "description": "pgvector 0.8.5 compatibility. Use for pgvector work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.8.5",
+      "coverage_label": "0.8.5",
+      "path": "skills/pgvector-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "vectors",
+        "embeddings",
+        "similarity-search",
+        "postgresql",
+        "indexing"
+      ],
+      "content_hash": "sha256:31a934a084d78cacaa4e7299019813355b1235052a94746c2f91f13acb46cc01",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/pgvector-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "playwright-knowledge-patch",
+      "display_name": "Playwright",
+      "short_label": "Playwright",
+      "description": "Playwright 1.61.0 compatibility. Use for Playwright work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.61.0",
+      "coverage_label": "1.61.0",
+      "path": "skills/playwright-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "python"
+      ],
+      "tags": [
+        "testing",
+        "browser",
+        "automation",
+        "e2e",
+        "fixtures"
+      ],
+      "content_hash": "sha256:9a0214a1d0c1ba593514f950f5d30010692705db537fc681334658bb516bd45c",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/playwright-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "podman-knowledge-patch",
+      "display_name": "Podman",
+      "short_label": "Podman",
+      "description": "Podman 6.0.0 compatibility. Use for Podman work.",
+      "coverage_kind": "versioned",
+      "covered_through": "6.0.0",
+      "coverage_label": "6.0.0",
+      "path": "skills/podman-knowledge-patch",
+      "languages": [
+        "bash",
+        "yaml"
+      ],
+      "tags": [
+        "containers",
+        "images",
+        "pods",
+        "compose",
+        "rootless"
+      ],
+      "content_hash": "sha256:254f7c4fa27562e8a9c1815d01d5a5be8477e870ed395b72858e8f9130c8b824",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/podman-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "postgis-knowledge-patch",
+      "display_name": "PostGIS",
+      "short_label": "PostGIS",
+      "description": "PostGIS 3.6.1 compatibility. Use for PostGIS work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.6.1",
+      "coverage_label": "3.6.1",
+      "path": "skills/postgis-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "spatial",
+        "database",
+        "gis",
+        "geometry",
+        "geography"
+      ],
+      "content_hash": "sha256:00081baabe0c9fbe04f32b2fc03fff792f8fa5273972ef9a4e557525cd2a455d",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/postgis-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "postgresql-knowledge-patch",
+      "display_name": "PostgreSQL",
+      "short_label": "PostgreSQL",
+      "description": "PostgreSQL 18.0 compatibility. Use for PostgreSQL work.",
+      "coverage_kind": "versioned",
+      "covered_through": "18.0",
+      "coverage_label": "18.0",
+      "path": "skills/postgresql-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "database",
+        "sql",
+        "transactions",
+        "replication",
+        "indexing"
+      ],
+      "content_hash": "sha256:96afbe24db2956a8ba5be3cb172df104baeaa86f9dc75d662545062e7c7a72f4",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/postgresql-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "prisma-knowledge-patch",
+      "display_name": "Prisma",
+      "short_label": "Prisma",
+      "description": "Prisma 7.8.0 compatibility. Use for Prisma work.",
+      "coverage_kind": "versioned",
+      "covered_through": "7.8.0",
+      "coverage_label": "7.8.0",
+      "path": "skills/prisma-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "orm",
+        "schema",
+        "migrations",
+        "database",
+        "client"
+      ],
+      "content_hash": "sha256:694fdfa2964433177b9cdbf0132829e6142d912d3a78779020cc2484312448bc",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/prisma-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "python-knowledge-patch",
+      "display_name": "Python",
+      "short_label": "Python",
+      "description": "Python 3.14 compatibility. Use for Python work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.14",
+      "coverage_label": "3.14",
+      "path": "skills/python-knowledge-patch",
+      "languages": [
+        "python"
+      ],
+      "tags": [
+        "language",
+        "packaging",
+        "typing",
+        "async",
+        "runtime"
+      ],
+      "content_hash": "sha256:ac4f5b0efa4c5cd7f5d4e623202896189b848bcd76880551181bf0df8ad93199",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/python-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "pytorch-knowledge-patch",
+      "display_name": "PyTorch",
+      "short_label": "PyTorch",
+      "description": "PyTorch 2.11.0 compatibility. Use for PyTorch work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.11.0",
+      "coverage_label": "2.11.0",
+      "path": "skills/pytorch-knowledge-patch",
+      "languages": [
+        "python"
+      ],
+      "tags": [
+        "machine-learning",
+        "tensors",
+        "autograd",
+        "training",
+        "gpu"
+      ],
+      "content_hash": "sha256:271c4a6f92a2401d03a4567c027d62d37dd6e262348e664721c2c80a0df85d6c",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/pytorch-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rails-knowledge-patch",
+      "display_name": "Ruby on Rails",
+      "short_label": "Ruby on Rails",
+      "description": "Ruby on Rails 8.1 compatibility. Use for Ruby on Rails work.",
+      "coverage_kind": "versioned",
+      "covered_through": "8.1",
+      "coverage_label": "8.1",
+      "path": "skills/rails-knowledge-patch",
+      "languages": [
+        "ruby"
+      ],
+      "tags": [
+        "web-framework",
+        "orm",
+        "mvc",
+        "jobs",
+        "hotwire"
+      ],
+      "content_hash": "sha256:eeb317f6adea33fb3d6bc8da09c9c7615f01e116de6dc0b88ddfcdc4fd8a240a",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/rails-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "ratatui-knowledge-patch",
+      "display_name": "Ratatui",
+      "short_label": "Ratatui",
+      "description": "Ratatui 0.29.0–0.31.0 compatibility. Use for Ratatui work.",
+      "coverage_kind": "range",
+      "covered_through": "0.31.0",
+      "coverage_label": "0.29.0–0.31.0",
+      "path": "skills/ratatui-knowledge-patch",
+      "languages": [
+        "rust"
+      ],
+      "tags": [
+        "tui",
+        "terminal",
+        "widgets",
+        "rendering",
+        "events"
+      ],
+      "content_hash": "sha256:ff0d53c1371a504a3a034da3fa7efbd49acf41146199161c63ee4617c4d021d5",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/ratatui-knowledge-patch/coverage.json",
+      "covered_from": "0.29.0"
+    },
+    {
+      "id": "react-knowledge-patch",
+      "display_name": "React",
+      "short_label": "React",
+      "description": "React 19.2.0 compatibility. Use for React work.",
+      "coverage_kind": "versioned",
+      "covered_through": "19.2.0",
+      "coverage_label": "19.2.0",
+      "path": "skills/react-knowledge-patch",
+      "languages": [
+        "typescript",
+        "tsx",
+        "jsx"
+      ],
+      "tags": [
+        "frontend",
+        "components",
+        "hooks",
+        "rendering",
+        "jsx"
+      ],
+      "content_hash": "sha256:d2325fff30a34316b5f01751729b3ef2e5b30f3fb2f940cffed192221bb368ac",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/react-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "react-router-knowledge-patch",
+      "display_name": "React Router",
+      "short_label": "React Router",
+      "description": "React Router 8.2.0 compatibility. Use for React Router work.",
+      "coverage_kind": "versioned",
+      "covered_through": "8.2.0",
+      "coverage_label": "8.2.0",
+      "path": "skills/react-router-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "tsx",
+        "jsx"
+      ],
+      "tags": [
+        "routing",
+        "react",
+        "loaders",
+        "actions",
+        "framework"
+      ],
+      "content_hash": "sha256:644d102523b5de68eec7453f0763c72b8af232b7c006d3276670d7f4f15f3d0a",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/react-router-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rhel-knowledge-patch",
+      "display_name": "RHEL",
+      "short_label": "RHEL",
+      "description": "RHEL 10.2 compatibility. Use for RHEL work.",
+      "coverage_kind": "versioned",
+      "covered_through": "10.2",
+      "coverage_label": "10.2",
+      "path": "skills/rhel-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "enterprise-linux",
+        "packages",
+        "system-administration",
+        "selinux"
+      ],
+      "content_hash": "sha256:a091d8848aeb81a4ab80cec85ea2dd3c90d2c11d89bc5e97d214eabe0f6d7f7e",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/rhel-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rocky-knowledge-patch",
+      "display_name": "Rocky Linux",
+      "short_label": "Rocky Linux",
+      "description": "Rocky Linux 10.2 compatibility. Use for Rocky Linux work.",
+      "coverage_kind": "versioned",
+      "covered_through": "10.2",
+      "coverage_label": "10.2",
+      "path": "skills/rocky-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "enterprise-linux",
+        "packages",
+        "system-administration",
+        "rpm"
+      ],
+      "content_hash": "sha256:4ade3e17061a9158ad845dd65cfe95247a501895cd8b7e00bedf1a9d3f4f8036",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/rocky-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rtcm3-knowledge-patch",
+      "display_name": "RTCM 3",
+      "short_label": "RTCM 3",
+      "description": "RTCM 3 10403.4 Amendment 1 compatibility. Use for RTCM 3 work.",
+      "coverage_kind": "versioned",
+      "covered_through": "10403.4 Amendment 1",
+      "coverage_label": "10403.4 Amendment 1",
+      "path": "skills/rtcm3-knowledge-patch",
+      "languages": [
+        "c",
+        "cpp",
+        "python"
+      ],
+      "tags": [
+        "gnss",
+        "corrections",
+        "rtk",
+        "messages",
+        "msm",
+        "ssr"
+      ],
+      "content_hash": "sha256:7c49eb7953cac760495886fca2dc420c415679e1c674cd04339da8f06a3f3b59",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/rtcm3-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rtkbase-knowledge-patch",
+      "display_name": "RTKBase",
+      "short_label": "RTKBase",
+      "description": "RTKBase 2.7.0 compatibility. Use for RTKBase work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.7.0",
+      "coverage_label": "2.7.0",
+      "path": "skills/rtkbase-knowledge-patch",
+      "languages": [
+        "python",
+        "bash"
+      ],
+      "tags": [
+        "gnss",
+        "base-station",
+        "ntrip",
+        "rtk",
+        "corrections"
+      ],
+      "content_hash": "sha256:d8c931737efc72468ff663dc2b126bd1a5cd836f1ba7faeecc16f5e3b9754c24",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/rtkbase-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "rust-knowledge-patch",
+      "display_name": "Rust",
+      "short_label": "Rust",
+      "description": "Rust 1.84.0–1.97.0 compatibility. Use for Rust work.",
+      "coverage_kind": "range",
+      "covered_through": "1.97.0",
+      "coverage_label": "1.84.0–1.97.0",
+      "path": "skills/rust-knowledge-patch",
+      "languages": [
+        "rust",
+        "toml"
+      ],
+      "tags": [
+        "language",
+        "cargo",
+        "ownership",
+        "async",
+        "edition-2024"
+      ],
+      "content_hash": "sha256:6cbd67b6ce30cbdde12422939028993a350ff9c56620cc179c6273c8d2c29aa0",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/rust-knowledge-patch/coverage.json",
+      "covered_from": "1.84.0"
+    },
+    {
+      "id": "selinux-knowledge-patch",
+      "display_name": "SELinux",
+      "short_label": "SELinux",
+      "description": "SELinux current compatibility guidance. Use for SELinux work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/selinux-knowledge-patch",
+      "languages": [
+        "bash",
+        "cil"
+      ],
+      "tags": [
+        "linux",
+        "security",
+        "policy",
+        "labels",
+        "access-control"
+      ],
+      "content_hash": "sha256:85ef8a76a6ffe54ab1bb7675f807e3ec16e5f870ad6d9e6590d4fb1fa7159024",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/selinux-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "serde-knowledge-patch",
+      "display_name": "Serde",
+      "short_label": "Serde",
+      "description": "Serde 1.0.220 compatibility. Use for Serde work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.0.220",
+      "coverage_label": "1.0.220",
+      "path": "skills/serde-knowledge-patch",
+      "languages": [
+        "rust"
+      ],
+      "tags": [
+        "serialization",
+        "deserialization",
+        "derive",
+        "formats",
+        "rust"
+      ],
+      "content_hash": "sha256:8090ee7994af634bacfa290fd27c38879447a7a8cda74051a1e5290ea93766db",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/serde-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "solidjs-knowledge-patch",
+      "display_name": "SolidJS",
+      "short_label": "SolidJS",
+      "description": "SolidJS current compatibility guidance. Use for SolidJS work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/solidjs-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "tsx",
+        "jsx"
+      ],
+      "tags": [
+        "frontend",
+        "reactivity",
+        "signals",
+        "components",
+        "ssr"
+      ],
+      "content_hash": "sha256:94c70b6b7a9c3eb9378e7f967f3bbed84529a90744792aaab00abfe1befcb2ac",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/solidjs-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "spring-boot-knowledge-patch",
+      "display_name": "Spring Boot",
+      "short_label": "Spring Boot",
+      "description": "Spring Boot 4.1.0 compatibility. Use for Spring Boot work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.1.0",
+      "coverage_label": "4.1.0",
+      "path": "skills/spring-boot-knowledge-patch",
+      "languages": [
+        "java",
+        "kotlin"
+      ],
+      "tags": [
+        "web-framework",
+        "dependency-injection",
+        "java",
+        "configuration",
+        "actuator"
+      ],
+      "content_hash": "sha256:31677e98c532f6f91bd6e56b9289fb7b213b966bc5e8a2544f2a41431b59954a",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/spring-boot-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "sqlite-knowledge-patch",
+      "display_name": "SQLite",
+      "short_label": "SQLite",
+      "description": "SQLite 3.46.0–3.53.0 compatibility. Use for SQLite work.",
+      "coverage_kind": "range",
+      "covered_through": "3.53.0",
+      "coverage_label": "3.46.0–3.53.0",
+      "path": "skills/sqlite-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "database",
+        "sql",
+        "embedded",
+        "transactions",
+        "indexing"
+      ],
+      "content_hash": "sha256:8c66fdeaf755d3ae82b9f518a732f83f7d18198d4876e84dae579d95f823f94a",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/sqlite-knowledge-patch/coverage.json",
+      "covered_from": "3.46.0"
+    },
+    {
+      "id": "sqlx-knowledge-patch",
+      "display_name": "SQLx",
+      "short_label": "SQLx",
+      "description": "SQLx 0.9.0 compatibility. Use for SQLx work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.9.0",
+      "coverage_label": "0.9.0",
+      "path": "skills/sqlx-knowledge-patch",
+      "languages": [
+        "rust",
+        "sql"
+      ],
+      "tags": [
+        "database",
+        "async",
+        "queries",
+        "macros",
+        "migrations"
+      ],
+      "content_hash": "sha256:4cecbc0888bacd18b06a7e0cf24696622291664388a7d85750ad990f5f9f8675",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/sqlx-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "stripe-knowledge-patch",
+      "display_name": "Stripe",
+      "short_label": "Stripe",
+      "description": "Stripe rolling coverage. Use for Stripe work.",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/stripe-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "python",
+        "ruby",
+        "go",
+        "java",
+        "php"
+      ],
+      "tags": [
+        "payments",
+        "billing",
+        "checkout",
+        "webhooks",
+        "connect"
+      ],
+      "content_hash": "sha256:4b26ec38e073686631f046574aaa29ae32b9b76a07f3474bfe1b87c813b4466e",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/stripe-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "supabase-knowledge-patch",
+      "display_name": "Supabase",
+      "short_label": "Supabase",
+      "description": "Supabase rolling coverage. Use for Supabase work.",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/supabase-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "python",
+        "dart",
+        "swift",
+        "kotlin",
+        "sql"
+      ],
+      "tags": [
+        "backend",
+        "database",
+        "authentication",
+        "realtime",
+        "storage"
+      ],
+      "content_hash": "sha256:58443cde1b049cbf7d87ab30e00267172c4dd8f6892f41e571acc48a8fdb8fa9",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/supabase-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "suse-knowledge-patch",
+      "display_name": "SUSE / openSUSE",
+      "short_label": "SUSE / openSUSE",
+      "description": "SUSE / openSUSE current compatibility guidance. Use for SUSE / openSUSE work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/suse-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "enterprise-linux",
+        "packages",
+        "system-administration",
+        "zypper"
+      ],
+      "content_hash": "sha256:0e86f8a5ed9ca4ef25d659d8a69a5f7e5b0d2123aa357cb492de218b2ca59ea3",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/suse-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "svelte-knowledge-patch",
+      "display_name": "Svelte",
+      "short_label": "Svelte",
+      "description": "Svelte current compatibility guidance. Use for Svelte work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/svelte-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "css"
+      ],
+      "tags": [
+        "frontend",
+        "reactivity",
+        "components",
+        "sveltekit",
+        "runes"
+      ],
+      "content_hash": "sha256:80c501564f77deb20a8635c2740db66b843b97ced83c6d6dd76c27f3e875a756",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/svelte-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "swift-knowledge-patch",
+      "display_name": "Swift",
+      "short_label": "Swift",
+      "description": "Swift 6.1–6.3.0 compatibility. Use for Swift work.",
+      "coverage_kind": "range",
+      "covered_through": "6.3.0",
+      "coverage_label": "6.1–6.3.0",
+      "path": "skills/swift-knowledge-patch",
+      "languages": [
+        "swift"
+      ],
+      "tags": [
+        "language",
+        "concurrency",
+        "ios",
+        "macos",
+        "package-manager"
+      ],
+      "content_hash": "sha256:da8d63573d61af7b7539ea3a9da5ae73129f0a8f880cf9be1abb9c13224f7667",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/swift-knowledge-patch/coverage.json",
+      "covered_from": "6.1"
+    },
+    {
+      "id": "systemd-knowledge-patch",
+      "display_name": "systemd",
+      "short_label": "systemd",
+      "description": "systemd 256–260 compatibility. Use for systemd work.",
+      "coverage_kind": "range",
+      "covered_through": "260",
+      "coverage_label": "256–260",
+      "path": "skills/systemd-knowledge-patch",
+      "languages": [
+        "c",
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "services",
+        "units",
+        "journald",
+        "system-administration"
+      ],
+      "content_hash": "sha256:f4331785f3d808e0ec156d212531d58be3a3991df5a706752ed30d66ba4d25d0",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/systemd-knowledge-patch/coverage.json",
+      "covered_from": "256"
+    },
+    {
+      "id": "tailwind-knowledge-patch",
+      "display_name": "Tailwind CSS",
+      "short_label": "Tailwind CSS",
+      "description": "Tailwind CSS 4.2.2 compatibility. Use for Tailwind CSS work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.2.2",
+      "coverage_label": "4.2.2",
+      "path": "skills/tailwind-knowledge-patch",
+      "languages": [
+        "html",
+        "css",
+        "javascript"
+      ],
+      "tags": [
+        "css",
+        "utilities",
+        "styling",
+        "frontend",
+        "design-system"
+      ],
+      "content_hash": "sha256:d7f986e27f6b0b9f0ce8b97e36e878114ff107cc8c2132bf148d861179a829ef",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/tailwind-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "tauri-knowledge-patch",
+      "display_name": "Tauri",
+      "short_label": "Tauri",
+      "description": "Tauri 2.5.0 compatibility. Use for Tauri work.",
+      "coverage_kind": "versioned",
+      "covered_through": "2.5.0",
+      "coverage_label": "2.5.0",
+      "path": "skills/tauri-knowledge-patch",
+      "languages": [
+        "rust",
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "desktop",
+        "ipc",
+        "rust",
+        "webview",
+        "plugins"
+      ],
+      "content_hash": "sha256:98b9740e9a7a8c1cce7bfa1694ecbe3f7439b4d032a3955140f77e6590bd3957",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/tauri-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "terraform-knowledge-patch",
+      "display_name": "Terraform / OpenTofu",
+      "short_label": "Terraform / OpenTofu",
+      "description": "Terraform / OpenTofu current compatibility guidance. Use for Terraform / OpenTofu work.",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/terraform-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "infrastructure-as-code",
+        "hcl",
+        "providers",
+        "state",
+        "modules"
+      ],
+      "content_hash": "sha256:a7ca3f0dd78dfcaf240172abc667676504598fb210957cc18c26d3355d3a063d",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/terraform-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "tokio-knowledge-patch",
+      "display_name": "Tokio",
+      "short_label": "Tokio",
+      "description": "Tokio 1.52.0 compatibility. Use for Tokio work.",
+      "coverage_kind": "versioned",
+      "covered_through": "1.52.0",
+      "coverage_label": "1.52.0",
+      "path": "skills/tokio-knowledge-patch",
+      "languages": [
+        "rust",
+        "toml"
+      ],
+      "tags": [
+        "async",
+        "runtime",
+        "concurrency",
+        "io",
+        "networking"
+      ],
+      "content_hash": "sha256:4ff20c9ea2508d28c260abdc1a6e9a04ce1022809d6e6f17bad43770128b3d7a",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/tokio-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "traefik-knowledge-patch",
+      "display_name": "Traefik",
+      "short_label": "Traefik",
+      "description": "Traefik 3.7.0 compatibility. Use for Traefik work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.7.0",
+      "coverage_label": "3.7.0",
+      "path": "skills/traefik-knowledge-patch",
+      "languages": [
+        "yaml",
+        "toml"
+      ],
+      "tags": [
+        "reverse-proxy",
+        "routing",
+        "middleware",
+        "kubernetes",
+        "gateway-api",
+        "tls",
+        "acme",
+        "observability"
+      ],
+      "content_hash": "sha256:8003c39ea6da50160012b3bb0b898129f79163e3d273b36eef02cba1d3bf93d6",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/traefik-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "trpc-knowledge-patch",
+      "display_name": "tRPC",
+      "short_label": "tRPC",
+      "description": "tRPC 11.18.0 compatibility. Use for tRPC work.",
+      "coverage_kind": "versioned",
+      "covered_through": "11.18.0",
+      "coverage_label": "11.18.0",
+      "path": "skills/trpc-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "api",
+        "rpc",
+        "type-safety",
+        "procedures",
+        "typescript"
+      ],
+      "content_hash": "sha256:6cc4eb5b83e32e29fd999261ec247aee7f5735e53ee20c778c61e87e6f47487b",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/trpc-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "typescript-knowledge-patch",
+      "display_name": "TypeScript",
+      "short_label": "TypeScript",
+      "description": "TypeScript 7.0.0 compatibility. Use for TypeScript work.",
+      "coverage_kind": "versioned",
+      "covered_through": "7.0.0",
+      "coverage_label": "7.0.0",
+      "path": "skills/typescript-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "language",
+        "types",
+        "compiler",
+        "javascript",
+        "modules"
+      ],
+      "content_hash": "sha256:1b6437aceb91b5a166055e8834e5c8babf9b8637d03683600e9d5d6d92454dce",
+      "generated_at": "2026-07-15T23:21:23Z",
+      "coverage_path": "skills/typescript-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "ubuntu-knowledge-patch",
+      "display_name": "Ubuntu",
+      "short_label": "Ubuntu",
+      "description": "Ubuntu 26.04 compatibility. Use for Ubuntu work.",
+      "coverage_kind": "versioned",
+      "covered_through": "26.04",
+      "coverage_label": "26.04",
+      "path": "skills/ubuntu-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "linux",
+        "packages",
+        "apt",
+        "system-administration",
+        "lts"
+      ],
+      "content_hash": "sha256:96f3663d0bc9e0a4a7f837ea15537e87cace3fd6af5c91cb8cf88f1fb2c5cb4d",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/ubuntu-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "vercel-ai-sdk-knowledge-patch",
+      "display_name": "Vercel AI SDK",
+      "short_label": "Vercel AI SDK",
+      "description": "Vercel AI SDK 6.0 compatibility. Use for Vercel AI SDK work.",
+      "coverage_kind": "versioned",
+      "covered_through": "6.0",
+      "coverage_label": "6.0",
+      "path": "skills/vercel-ai-sdk-knowledge-patch",
+      "languages": [
+        "typescript"
+      ],
+      "tags": [
+        "ai",
+        "streaming",
+        "agents",
+        "tools",
+        "generative-ui"
+      ],
+      "content_hash": "sha256:952d80a1cb3643a0b6477535b202d5580aaa9789e5ac21874e87de42361fd835",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/vercel-ai-sdk-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "vite-knowledge-patch",
+      "display_name": "Vite",
+      "short_label": "Vite",
+      "description": "Vite 8.1.0 compatibility. Use for Vite work.",
+      "coverage_kind": "versioned",
+      "covered_through": "8.1.0",
+      "coverage_label": "8.1.0",
+      "path": "skills/vite-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "json"
+      ],
+      "tags": [
+        "build-tool",
+        "dev-server",
+        "bundling",
+        "hmr",
+        "frontend"
+      ],
+      "content_hash": "sha256:25f3c1159ef228744ce422f74934b38f1607f7a47a6ad1e52601e879795e28fb",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/vite-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "vitest-knowledge-patch",
+      "display_name": "Vitest",
+      "short_label": "Vitest",
+      "description": "Vitest 4.1 compatibility. Use for Vitest work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.1",
+      "coverage_label": "4.1",
+      "path": "skills/vitest-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "testing",
+        "unit-testing",
+        "mocking",
+        "coverage",
+        "vite"
+      ],
+      "content_hash": "sha256:2726cf2db8da0cafd9ddeb847d5e0fc62ccc4dd085b087e7daf79309ee53d9f7",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/vitest-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "vuejs-knowledge-patch",
+      "display_name": "Vue.js",
+      "short_label": "Vue.js",
+      "description": "Vue.js 3.6.0-beta compatibility. Use for Vue.js work.",
+      "coverage_kind": "versioned",
+      "covered_through": "3.6.0-beta",
+      "coverage_label": "3.6.0-beta",
+      "path": "skills/vuejs-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript"
+      ],
+      "tags": [
+        "frontend",
+        "reactivity",
+        "components",
+        "composition-api",
+        "sfc"
+      ],
+      "content_hash": "sha256:2e02ebb9a47afa13a388a8f5433bd021ec65e3b51748351abb9ea9c565a86ef2",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/vuejs-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "workos-knowledge-patch",
+      "display_name": "WorkOS",
+      "short_label": "WorkOS",
+      "description": "WorkOS 8.10 compatibility. Use for WorkOS work.",
+      "coverage_kind": "versioned",
+      "covered_through": "8.10",
+      "coverage_label": "8.10",
+      "path": "skills/workos-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "go",
+        "python",
+        "ruby",
+        "php"
+      ],
+      "tags": [
+        "authentication",
+        "sso",
+        "scim",
+        "directory-sync",
+        "organizations"
+      ],
+      "content_hash": "sha256:7d5bd187e684040c92ceaa84951a9f2433f63a3c41b2e62a23bbd4e9395374cd",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/workos-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "zig-knowledge-patch",
+      "display_name": "Zig",
+      "short_label": "Zig",
+      "description": "Zig 0.15.1 compatibility. Use for Zig work.",
+      "coverage_kind": "versioned",
+      "covered_through": "0.15.1",
+      "coverage_label": "0.15.1",
+      "path": "skills/zig-knowledge-patch",
+      "languages": [
+        "zig"
+      ],
+      "tags": [
+        "language",
+        "comptime",
+        "build-system",
+        "memory",
+        "cross-compilation"
+      ],
+      "content_hash": "sha256:cfb9e9d3e52b063e3759d8a5dfd4b1e9d1fac157e436b3316c325e67c5a869f3",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/zig-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "zitadel-knowledge-patch",
+      "display_name": "Zitadel",
+      "short_label": "Zitadel",
+      "description": "Zitadel 4.15.3 compatibility. Use for Zitadel work.",
+      "coverage_kind": "versioned",
+      "covered_through": "4.15.3",
+      "coverage_label": "4.15.3",
+      "path": "skills/zitadel-knowledge-patch",
+      "languages": [
+        "go",
+        "typescript",
+        "python"
+      ],
+      "tags": [
+        "identity",
+        "oauth",
+        "oidc",
+        "authentication",
+        "authorization"
+      ],
+      "content_hash": "sha256:97c18b28b5b1675df98006b869fe4e8e7d70167f0fa46cb8c9adba41f98a857d",
+      "generated_at": "2026-07-15T23:21:58Z",
+      "coverage_path": "skills/zitadel-knowledge-patch/coverage.json"
+    }
+  ]
+}

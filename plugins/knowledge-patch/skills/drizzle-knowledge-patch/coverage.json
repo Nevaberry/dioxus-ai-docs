@@ -1,0 +1,25 @@
+{
+  "patch": "drizzle-knowledge-patch",
+  "merged_at": "2026-07-15T01:19:46Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.45.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "drizzle-kit": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "schema-validation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

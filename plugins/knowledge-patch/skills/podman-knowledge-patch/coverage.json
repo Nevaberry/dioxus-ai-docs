@@ -1,0 +1,60 @@
+{
+  "patch": "podman-knowledge-patch",
+  "merged_at": "2026-07-15T01:36:07Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "5.2.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "6.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "6.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "system-migration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

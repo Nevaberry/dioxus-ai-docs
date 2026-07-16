@@ -1,0 +1,130 @@
+{
+  "patch": "flutter-knowledge-patch",
+  "merged_at": "2026-07-15T03:44:45Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.29.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.32-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.32.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.35-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.35.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.9.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.38-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.38.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.10-dot-shorthands": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.11-tooling-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.11.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.41-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.41.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.44-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.44.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-3.12.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-and-news-catalogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "dart-language-roadmap": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "rendering-and-web": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "apple-platform-migrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "breaking-change-guides": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

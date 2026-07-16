@@ -1,7 +1,3 @@
 interface:
   display_name: "Knowledge Patch Setup"
-  short_description: "Detect and install matching knowledge patches"
-  default_prompt: "Detect this project's technologies and install the matching knowledge patches."
-
-policy:
-  allow_implicit_invocation: false
+  short_description: "Detect, activate, or deactivate bundled knowledge patches."

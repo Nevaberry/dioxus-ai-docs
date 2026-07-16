@@ -1,0 +1,30 @@
+{
+  "patch": "pgvector-knowledge-patch",
+  "merged_at": "2026-07-12T22:46:00Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "0.8-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "current-reference": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "hosted-deployment": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,32 @@
+{
+  "patch": "vite-knowledge-patch",
+  "merged_at": "2026-07-15T05:27:48Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "6.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "7.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "8.0.0": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "8.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": [
+    "8.0.0"
+  ]
+}

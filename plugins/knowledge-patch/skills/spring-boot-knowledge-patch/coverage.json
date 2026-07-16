@@ -1,0 +1,55 @@
+{
+  "patch": "spring-boot-knowledge-patch",
+  "merged_at": "2026-07-15T03:58:49Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.4.0-framework-6.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "spring-data-2025.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "spring-ai-1.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "spring-cloud-2025.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.0.0-framework-7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,55 @@
+{
+  "patch": "chrony-knowledge-patch",
+  "merged_at": "2026-07-12T19:46:25Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "4.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.8-configuration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "commands-and-monitoring": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "deployment-examples": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "pps-gps-reference-clocks": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "hardware-timestamping-and-virtualization": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "network-time-security": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "selection-and-troubleshooting": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

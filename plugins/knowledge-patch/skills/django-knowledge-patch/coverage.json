@@ -1,0 +1,45 @@
+{
+  "patch": "django-knowledge-patch",
+  "merged_at": "2026-07-15T00:58:08Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "5.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.2-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "6.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-and-upgrade-catalog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "deprecation-roadmap": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

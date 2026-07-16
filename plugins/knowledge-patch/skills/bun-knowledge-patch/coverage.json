@@ -1,0 +1,215 @@
+{
+  "patch": "bun-knowledge-patch",
+  "merged_at": "2026-07-14T13:01:31Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.2-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.13": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.15": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.16": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.17": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.18": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.19": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.20": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.21": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.22": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.2.23": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.13": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "1.3.14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-index": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "nodejs-compatibility": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

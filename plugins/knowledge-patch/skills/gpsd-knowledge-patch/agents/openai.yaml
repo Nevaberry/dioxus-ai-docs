@@ -1,0 +1,3 @@
+interface:
+  display_name: "gpsd"
+  short_description: "gpsd 3.27 compatibility. Use for gpsd work."

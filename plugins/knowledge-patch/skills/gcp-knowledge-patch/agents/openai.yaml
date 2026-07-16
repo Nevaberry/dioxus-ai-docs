@@ -1,0 +1,3 @@
+interface:
+  display_name: "GCP"
+  short_description: "GCP rolling coverage. Use for GCP work."

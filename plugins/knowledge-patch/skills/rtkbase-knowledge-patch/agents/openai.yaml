@@ -1,0 +1,3 @@
+interface:
+  display_name: "RTKBase"
+  short_description: "RTKBase 2.7.0 compatibility. Use for RTKBase work."

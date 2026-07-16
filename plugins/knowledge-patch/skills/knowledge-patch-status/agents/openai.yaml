@@ -1,0 +1,3 @@
+interface:
+  display_name: "Knowledge Patch Status"
+  short_description: "Report bundled patch versions, activation state, age, and missing artifacts."

@@ -1,0 +1,40 @@
+{
+  "patch": "aws-sdk-knowledge-patch",
+  "merged_at": "2026-07-12T19:58:07Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "2026-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "sdk-lifecycle-and-eol": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "shared-defaults-and-runtime-support": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "crypto-auth-and-rust-runtime": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "service-client-launches": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,30 @@
+{
+  "patch": "leptos-knowledge-patch",
+  "merged_at": "2026-07-15T04:04:07Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "cargo-leptos": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "getting-started": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    }
+  },
+  "retire_candidates": []
+}

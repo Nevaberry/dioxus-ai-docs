@@ -1,0 +1,50 @@
+{
+  "patch": "vuejs-knowledge-patch",
+  "merged_at": "2026-07-15T04:24:00Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.5.14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.0-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "pinia-colada": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "vue-ecosystem-news": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "vue-core-release-catalog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

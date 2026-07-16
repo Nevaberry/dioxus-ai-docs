@@ -1,31 +1,80 @@
 #!/usr/bin/env bash
-# SessionStart hook for knowledge-patch runtimes.
-# Injects the using-knowledge-patch guidance into every conversation.
+# Optional SessionStart hook. It injects only gateway guidance and active patch names.
 
-set -euo pipefail
+set -uo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+command -v python3 >/dev/null 2>&1 || exit 0
 
-skill_content=$(cat "${PLUGIN_ROOT}/skills/using-knowledge-patch/SKILL.md" 2>&1 || echo "Error reading using-knowledge-patch skill")
+python3 - 2>/dev/null <<'PY' || exit 0
+import json
+import os
+from pathlib import Path
 
-escape_for_json() {
-    local s="$1"
-    s="${s//\\/\\\\}"
-    s="${s//\"/\\\"}"
-    s="${s//$'\n'/\\n}"
-    s="${s//$'\r'/\\r}"
-    s="${s//$'\t'/\\t}"
-    printf '%s' "$s"
-}
 
-skill_escaped=$(escape_for_json "$skill_content")
-session_context="<EXTREMELY_IMPORTANT>\nThe user has installed knowledge patches for you. These contain up-to-date information for technologies where your training data is outdated.\n\n**Below are your instructions for using them. You MUST follow these — the user chose to give you these patches and expects you to use them:**\n\n${skill_escaped}\n</EXTREMELY_IMPORTANT>"
+def project_root():
+    configured = os.environ.get("CLAUDE_PROJECT_DIR", "").strip()
+    return Path(configured).expanduser() if configured else Path.cwd()
 
-if [ -n "${CURSOR_PLUGIN_ROOT:-}" ]; then
-  printf '{\n  "additional_context": "%s"\n}\n' "$session_context"
-else
-  printf '{\n  "hookSpecificOutput": {\n    "hookEventName": "SessionStart",\n    "additionalContext": "%s"\n  }\n}\n' "$session_context"
-fi
+
+def state_candidates():
+    seen = set()
+    raw = [
+        os.environ.get("KNOWLEDGE_PATCH_STATE", ""),
+        str(project_root() / ".knowledge-patch" / "activation.json"),
+    ]
+    xdg_state = os.environ.get("XDG_STATE_HOME")
+    if xdg_state:
+        raw.append(str(Path(xdg_state) / "knowledge-patch" / "activation.json"))
+    home = os.environ.get("HOME")
+    if home:
+        raw.append(str(Path(home) / ".local" / "state" / "knowledge-patch" / "activation.json"))
+
+    for item in raw:
+        if item and item not in seen:
+            seen.add(item)
+            yield Path(item)
+
+
+def main():
+    active = []
+    for path in state_candidates():
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            names = data.get("active_patches", []) if isinstance(data, dict) else []
+        except Exception:
+            continue
+        for name in names:
+            if isinstance(name, str) and name not in active:
+                active.append(name)
+
+    active_text = ", ".join(active) if active else "none"
+    context = (
+        "Knowledge Patch is installed. Use knowledge-patch:using-knowledge-patch "
+        "before writing, reviewing, debugging, or administering patched technologies. "
+        "Load active or matching patch skills, choose the narrowest relevant set, and "
+        "apply each patch only through the project's pinned version. "
+        f"Active patches: {active_text}."
+    )
+
+    print(
+        json.dumps(
+            {
+                "hookSpecificOutput": {
+                    "hookEventName": "SessionStart",
+                    "additionalContext": context,
+                }
+            },
+            indent=2,
+        )
+    )
+
+
+try:
+    main()
+except Exception:
+    pass
+PY
 
 exit 0

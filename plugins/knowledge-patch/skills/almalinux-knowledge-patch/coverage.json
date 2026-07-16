@@ -1,0 +1,70 @@
+{
+  "patch": "almalinux-knowledge-patch",
+  "merged_at": "2026-07-12T19:28:06Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "9.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "10.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.8-10.2-ga": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "9.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "10.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "elevate-upgrades": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-catalog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "project-news": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

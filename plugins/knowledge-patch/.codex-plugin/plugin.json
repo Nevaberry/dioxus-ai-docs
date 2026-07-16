@@ -1,7 +1,7 @@
 {
   "name": "knowledge-patch",
-  "version": "1.2.0",
-  "description": "Detect project technologies, install matching knowledge patch skills for Codex, and add optional session-start guidance.",
+  "version": "2.20260716.0",
+  "description": "Offline monoplugin that ships current technology knowledge patches as native skills with catalog-based activation.",
   "author": {
     "name": "Nevaberry",
     "url": "https://github.com/Nevaberry"
@@ -13,23 +13,23 @@
     "knowledge-patch",
     "codex",
     "claude",
-    "setup",
-    "up-to-date"
+    "skills",
+    "offline"
   ],
   "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "Knowledge Patch",
-    "shortDescription": "Detect and install matching knowledge patches",
-    "longDescription": "Shared Claude Code and Codex plugin for detecting project technologies, installing matching knowledge patches, and wiring runtime guidance so the right patch is loaded before work starts.",
+    "shortDescription": "Current tech patches as native skills",
+    "longDescription": "A single offline plugin that bundles current technology knowledge patches as native skills, with generated catalogs and lightweight activation state for priority routing.",
     "developerName": "Nevaberry",
     "category": "Coding",
     "capabilities": [
-      "Interactive",
-      "Write"
+      "Interactive"
     ],
     "websiteURL": "https://github.com/Nevaberry/nevaberry-plugins",
     "defaultPrompt": [
-      "Detect this project and install the matching knowledge patches."
+      "Use Knowledge Patch to load current guidance for this stack."
     ],
     "brandColor": "#0F766E"
   }

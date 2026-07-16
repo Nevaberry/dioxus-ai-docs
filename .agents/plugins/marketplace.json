@@ -1,7 +1,7 @@
 {
-  "name": "nevaberry-plugins",
+  "name": "nevaberry",
   "interface": {
-    "displayName": "Nevaberry Plugins"
+    "displayName": "Nevaberry"
   },
   "plugins": [
     {
@@ -12,7 +12,7 @@
       },
       "policy": {
         "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
+        "authentication": "ON_USE"
       },
       "category": "Coding"
     }

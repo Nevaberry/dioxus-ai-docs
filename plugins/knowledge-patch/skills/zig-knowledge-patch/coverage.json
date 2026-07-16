@@ -1,0 +1,25 @@
+{
+  "patch": "zig-knowledge-patch",
+  "merged_at": "2026-07-12T22:36:49Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "0.13.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.14.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.15.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

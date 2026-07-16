@@ -1,0 +1,3 @@
+interface:
+  display_name: "SELinux"
+  short_description: "SELinux current compatibility guidance. Use for SELinux work."

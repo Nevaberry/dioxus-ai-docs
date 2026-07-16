@@ -1,0 +1,130 @@
+{
+  "patch": "zitadel-knowledge-patch",
+  "merged_at": "2026-07-15T02:21:53Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025-05": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "4.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-09": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-01": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-02": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-03": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-04": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-05": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "api-protocols": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "actions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "service-integration-and-idps": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "login-and-management": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "concepts-and-migrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "application-examples": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "sdk-examples-and-clients": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "self-hosting": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "product-news-and-help": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

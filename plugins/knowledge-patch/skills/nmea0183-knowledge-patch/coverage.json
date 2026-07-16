@@ -1,0 +1,50 @@
+{
+  "patch": "nmea0183-knowledge-patch",
+  "merged_at": "2026-07-12T20:17:01Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "standard-and-version-4.30": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "electrical-and-networking": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "sentence-format-and-checksums": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "gnss-core-messages": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "vendor-specific-messages": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "parsers-and-libraries": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "navigation-software": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "nmea0183-and-nmea2000": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    }
+  },
+  "retire_candidates": []
+}

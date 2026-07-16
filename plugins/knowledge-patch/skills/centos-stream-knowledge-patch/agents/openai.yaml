@@ -1,0 +1,3 @@
+interface:
+  display_name: "CentOS Stream"
+  short_description: "CentOS Stream 10.0 compatibility. Use for CentOS Stream work."

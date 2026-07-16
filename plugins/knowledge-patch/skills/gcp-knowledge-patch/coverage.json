@@ -1,0 +1,105 @@
+{
+  "patch": "gcp-knowledge-patch",
+  "merged_at": "2026-07-15T00:50:06Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025-01": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-02": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-03": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-04": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-05": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-09": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-01": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-02": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-03": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-04": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-05": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,70 @@
+{
+  "patch": "arch-knowledge-patch",
+  "merged_at": "2026-07-12T22:22:59Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "9.8p1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "7.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2024-11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "3.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2.41": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-h1-platform": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-q3-operations": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "7.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-q4-interventions": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-h1-platform": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "unversioned": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

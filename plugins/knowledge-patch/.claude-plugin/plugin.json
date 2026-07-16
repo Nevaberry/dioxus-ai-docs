@@ -1,12 +1,21 @@
 {
   "name": "knowledge-patch",
-  "version": "1.2.0",
-  "description": "Detects project technologies, installs matching knowledge patches, and enforces patch content over outdated training data",
+  "version": "2.20260716.0",
+  "description": "Offline monoplugin that ships current technology knowledge patches as native skills with catalog-based activation.",
   "author": {
-    "name": "Nevaberry"
+    "name": "Nevaberry",
+    "url": "https://github.com/Nevaberry"
   },
-  "homepage": "https://nevaberry.com/ai-plugins",
+  "homepage": "https://github.com/Nevaberry/nevaberry-plugins",
   "repository": "https://github.com/Nevaberry/nevaberry-plugins",
   "license": "MIT",
-  "keywords": ["knowledge-patches", "training-data", "api-updates", "up-to-date", "setup", "auto-detect"]
+  "keywords": [
+    "knowledge-patch",
+    "claude",
+    "codex",
+    "skills",
+    "offline"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
 }

@@ -1,0 +1,53 @@
+{
+  "patch": "react-knowledge-patch",
+  "merged_at": "2026-07-15T03:12:20Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "19.0.0": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "19.2-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "19.2.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "compiler-1-guide": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "compiler-1.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "server-components-security": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "react-conf-2025": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "news-and-versions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": [
+    "19.0.0",
+    "compiler-1-guide"
+  ]
+}

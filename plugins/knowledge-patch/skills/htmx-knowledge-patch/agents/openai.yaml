@@ -1,0 +1,3 @@
+interface:
+  display_name: "htmx"
+  short_description: "htmx 4.0.0 compatibility. Use for htmx work."

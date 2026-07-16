@@ -1,0 +1,162 @@
+{
+  "patch": "dioxus-knowledge-patch",
+  "merged_at": "2026-07-14T12:44:33Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "0.7.8": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "0.7.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "release-supplemental": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-essentials-basics": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-essentials-fullstack": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-essentials-ui": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-essentials-misc": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-getting-started": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-guides-router": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "architecture-internals": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "site-nav-stubs": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "merged": "omitted"
+    },
+    "0.8.0-alpha.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-tutorial": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-beyond": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-guides-deploy-depth": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-guides-platforms": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-guides-testing-tips": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "docsite-guides-tools-utilities": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "architecture-internals-2": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "ecosystem-sdk-components": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": [
+    "0.7.8"
+  ]
+}

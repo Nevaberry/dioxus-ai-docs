@@ -1,0 +1,55 @@
+{
+  "patch": "stripe-knowledge-patch",
+  "merged_at": "2026-07-15T03:14:54Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2024-09-30.acacia": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-03-31.basil": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2025-09-30.clover": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "2026-03-25.dahlia": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "api-release-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "billing-and-payments-v2": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "event-destinations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "node-sdk-v18-v21": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "python-sdk-v12-v15": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

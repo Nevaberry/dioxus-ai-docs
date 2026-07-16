@@ -1,58 +1,57 @@
-# Nevaberry Plugins
+# nevaberry-plugins
 
-Plugins and knowledge patches for coding agents. Knowledge patches fill gaps left by model training cutoffs.
+Public plugin marketplace for the `knowledge-patch` plugin: one dual-format Claude Code / Codex plugin shipping versioned technology knowledge patches as native skills.
+
+## Public Repository Notice
+
+THIS REPO IS PUBLIC.
+
+Future contributors and AI agents: never commit anything sensitive, private, local-machine-specific, or questionable to this repository. That includes absolute home paths, hostnames, emails, keys, credentials, internal repository names, private notes, or generated material that has not been reviewed for public release.
+
+## Knowledge Patch Plugin
+
+See `plugins/knowledge-patch/README.md` for plugin layout, commands, hooks, and activation details.
+
+This repository also ships a Codex marketplace manifest at `.agents/plugins/marketplace.json` for Codex's plugin installer.
+
+Knowledge patches are derived from the respective projects' official release notes and documentation. This project is not affiliated with or endorsed by those projects.
 
 ## Install
 
-Install the meta-plugin to auto-detect your project's stack and install matching patches:
+Add the marketplace in Claude Code:
 
-```
-/install-plugin nevaberry-plugins/knowledge-patch
-```
-
-Or:
-
-```sh
-npx skills add https://github.com/nevaberry/nevaberry-plugins --skill knowledge-patch
+```text
+/plugin marketplace add Nevaberry/nevaberry-plugins
 ```
 
-Then run `/knowledge-patch-setup` to scan your project (package.json, Cargo.toml, go.mod, etc.) and install matching patches automatically.
+Install the plugin:
 
-### Manual install
-
-Install individual patches directly — useful before rewriting to a new technology:
-
-```
-/install-plugin nevaberry-plugins/rust-knowledge-patch
-/install-plugin nevaberry-plugins/dioxus-knowledge-patch
+```text
+/plugin install knowledge-patch@nevaberry
 ```
 
-Or:
+Reload plugins:
 
-```sh
-npx skills add https://github.com/nevaberry/nevaberry-plugins --skill dioxus-knowledge-patch
+```text
+/reload-plugins
 ```
 
-## How it works
+Then invoke the native setup skill:
 
-AI models have training cutoffs. After that, APIs change, functions get deprecated, and new features ship. Knowledge patches contain only what changed: curated, verified diffs against baseline model knowledge.
+```text
+/knowledge-patch:knowledge-patch-setup
+```
 
-When loaded, the patch is checked **before** writing code for that technology. This helps prevent outdated APIs, deprecated patterns, and broken implementations.
+You can also ask Claude Code to set up Knowledge Patch in natural language. The shorter `/knowledge-patch:setup` command remains a compatibility alias.
 
-## Coverage
+## Install with Codex
 
-**Languages & runtimes:** Bun, Deno, Elixir, Gleam, Go, Kotlin, Node.js, Python, Rust, Swift, TypeScript, Zig
+Add the marketplace from the Codex CLI:
 
-**Frontend & app frameworks:** Angular, Astro, Dioxus, Flutter, Leptos, Next.js, Nuxt, React, React Router, SolidJS, Svelte, Tauri, Vite, Vue
+```text
+codex plugin marketplace add Nevaberry/nevaberry-plugins
+```
 
-**Backend & server frameworks:** Axum, Django, FastAPI, Hono, Rails, Spring Boot, tRPC
+Open `/plugins`, choose **Nevaberry**, install `knowledge-patch`, and start a new session. In the IDE extension, use **Settings > Plugins** and start a new chat after installation.
 
-**Data & persistence:** Drizzle, pgvector, PostGIS, PostgreSQL, Prisma, SQLite, SQLx
-
-**Auth & identity:** Auth.js, Better Auth, Clerk, Supabase, WorkOS, ZITADEL
-
-**AI, cloud & APIs:** AWS SDK, GCP, LangChain, PyTorch, Stripe, Vercel AI SDK
-
-**Tooling & infrastructure:** Biome, Caddy, Docker, Kubernetes, Nginx, Playwright, Podman, Tailwind CSS, Terraform, Tokio, Traefik, Vitest
-
-**Linux distros:** AlmaLinux, Arch, CentOS Stream, Debian, Fedora, openSUSE/SLES, RHEL, Rocky, Ubuntu
+Then invoke `$knowledge-patch-setup` or ask Codex to set up Knowledge Patch for the current project. The plugin is fully offline and does not require service credentials.

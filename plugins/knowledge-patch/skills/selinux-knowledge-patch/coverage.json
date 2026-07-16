@@ -1,0 +1,35 @@
+{
+  "patch": "selinux-knowledge-patch",
+  "merged_at": "2026-07-15T05:08:35Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "container-policy": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "rhel10-mls-and-upgrade": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "opensuse-default-policy": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "suse-enterprise-selinux": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

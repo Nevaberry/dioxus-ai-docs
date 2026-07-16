@@ -1,52 +1,54 @@
 ---
 name: knowledge-patch-setup
-description: Detect technologies in the current project and install matching `*-knowledge-patch` skills into `$CODEX_HOME/skills`, with an optional Codex `SessionStart` hook in repo or user scope.
+description: Detect, activate, or deactivate bundled knowledge patches.
 ---
 
-Use this skill when the user wants to set up knowledge patches for a project or verify which patches match a repo.
+# Knowledge Patch Setup
+
+Use this skill when the user wants to set up, activate, deactivate, or verify knowledge patches for a project, server, VPS, or working session.
 
 ## Workflow
 
-1. Resolve the project root with:
+1. Load `knowledge-patch:using-knowledge-patch` if it is not already loaded.
+2. Read `../../catalog/patches.json`, `../../catalog/aliases.json`, and `../../catalog/detection.json`.
+3. Inspect the current project and, when relevant, the server environment. A plain detection file signal checks path existence; `glob::marker` requires the matching file to contain that literal marker. Use curated terms only as supporting evidence, not as a substitute for stronger file or manifest evidence.
+4. Recommend the narrowest useful patch set. Use each catalog `short_label` in user-facing activation messages. For server-looking evidence, ask whether admin guidance is desired before treating service patches as active.
+5. If the user approves activation, write priority state only. Do not copy skill files, install separate plugins, or fetch anything from the network.
+6. If the user asks to deactivate or remove patches, remove the resolved patch names and their activation reasons. If the user says `none` or asks to clear all activation, write an empty `active_patches` list and empty `activation_reasons` object.
 
-   ```bash
-   git rev-parse --show-toplevel 2>/dev/null || pwd
-   ```
+Preferred project state path:
 
-2. Scan the project:
+```text
+.knowledge-patch/activation.json
+```
 
-   ```bash
-   python3 ../../scripts/knowledge_patch_setup.py scan --project-root "<project-root>" --format json
-   ```
+User-level fallback:
 
-3. Summarize the detected installable patches and why they matched. Mention that detection is heuristic and the user can also select any available patch manually.
+```text
+$XDG_STATE_HOME/knowledge-patch/activation.json
+```
 
-4. If the user did not specify patches to install, ask. Default to all detected patches.
+Use this JSON shape:
 
-5. If the user did not specify a hook scope, ask whether they want:
-   - `repo`: write `<project-root>/.codex/hooks.json` so the hook is shared with the repo
-   - `user`: write `$CODEX_HOME/hooks.json` so the hook applies everywhere
-   - `none`: install only the skills
+```json
+{
+  "schema_version": 1,
+  "active_patches": [
+    "traefik-knowledge-patch"
+  ],
+  "activation_reasons": {
+    "traefik-knowledge-patch": "manual: user is editing Traefik routing"
+  },
+  "updated_at": "2026-07-06T00:00:00Z"
+}
+```
 
-   Default to `repo`.
+Preserve unrelated fields if a state file already exists. Manual activation reasons should not be overwritten by weaker automatic detections.
 
-6. Install the requested patches:
+## Constraints
 
-   ```bash
-   python3 ../../scripts/knowledge_patch_setup.py install --project-root "<project-root>" --all-detected --hook-scope repo --format json
-   ```
-
-   If the user selected a subset, replace `--all-detected` with repeated `--patch <name>` flags.
-
-7. Report:
-   - installed patch skills
-   - `$CODEX_HOME/skills` destination
-   - hook config path, if installed
-   - that Codex should be restarted to pick up new skills and hooks
-
-## Notes
-
-- Installation is additive. Preserve unrelated skills and unrelated hooks.
-- Codex plugins do not currently package hooks through `.codex-plugin/plugin.json`.
-- The helper script installs patch skills from the public `Nevaberry/nevaberry-plugins` repo, or from `KP_PUBLIC_REPO` / `--public-repo` during local testing.
-- The helper script is the source of truth for detection and installation behavior.
+- Everything works offline.
+- Bundled tech patches already live under `skills/`.
+- Activation changes priority and routing, not installation.
+- Deactivation removes priority state, not bundled skills.
+- Hooks are optional. Manual use through this skill and `using-knowledge-patch` is the reliable path.
