@@ -1,6 +1,6 @@
 ---
 name: kubernetes-knowledge-patch
-description: Kubernetes 1.36.0 compatibility. Use for Kubernetes work.
+description: Kubernetes
 license: MIT
 version: 1.36.0
 metadata:

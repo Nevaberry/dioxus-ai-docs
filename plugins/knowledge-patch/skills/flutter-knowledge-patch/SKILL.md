@@ -1,6 +1,6 @@
 ---
 name: flutter-knowledge-patch
-description: Flutter 3.44.0 compatibility. Use for Flutter work.
+description: Flutter
 license: MIT
 version: 3.44.0
 metadata:

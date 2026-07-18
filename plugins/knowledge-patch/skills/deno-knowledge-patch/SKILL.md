@@ -1,6 +1,6 @@
 ---
 name: deno-knowledge-patch
-description: Deno 2.9.0 compatibility. Use for Deno work.
+description: Deno
 license: MIT
 version: 2.9.0
 metadata:

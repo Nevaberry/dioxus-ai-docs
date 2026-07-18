@@ -1,6 +1,6 @@
 ---
 name: rtcm3-knowledge-patch
-description: RTCM 3 10403.4 Amendment 1 compatibility. Use for RTCM 3 work.
+description: RTCM 3
 license: MIT
 version: 10403.4 Amendment 1
 metadata:

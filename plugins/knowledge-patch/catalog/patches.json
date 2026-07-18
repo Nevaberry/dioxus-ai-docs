@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-15T23:21:58Z",
+  "generated_at": "2026-07-18T07:39:54Z",
   "patches": [
     {
       "id": "almalinux-knowledge-patch",
       "display_name": "AlmaLinux",
       "short_label": "AlmaLinux",
-      "description": "AlmaLinux 10.2 compatibility. Use for AlmaLinux work.",
+      "description": "AlmaLinux",
       "coverage_kind": "versioned",
       "covered_through": "10.2",
       "coverage_label": "10.2",
@@ -21,15 +21,15 @@
         "system-administration",
         "security"
       ],
-      "content_hash": "sha256:4f111b86ce05392d2888ed18581a7f83428e329fb94286a6c7e37ebef13279ea",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:eea383213870109b58e43b6a58ed86d91cb6c520560cc0b5388dfc721f557c31",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/almalinux-knowledge-patch/coverage.json"
     },
     {
       "id": "angular-knowledge-patch",
       "display_name": "Angular",
       "short_label": "Angular",
-      "description": "Angular 22.0.0 compatibility. Use for Angular work.",
+      "description": "Angular",
       "coverage_kind": "versioned",
       "covered_through": "22.0.0",
       "coverage_label": "22.0.0",
@@ -45,15 +45,15 @@
         "routing",
         "ssr"
       ],
-      "content_hash": "sha256:37a3024ab3e9736878f079cbab98152621000be7b4c65a955ddb65175438459a",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:01f429aeba9a6838a80124d0adf9101c96f1e44f6c6c7bea7bfaf80a946a11c6",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/angular-knowledge-patch/coverage.json"
     },
     {
       "id": "arch-knowledge-patch",
       "display_name": "Arch Linux",
       "short_label": "Arch Linux",
-      "description": "Arch Linux rolling coverage. Use for Arch Linux work.",
+      "description": "Arch Linux",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",
@@ -68,15 +68,15 @@
         "system-administration",
         "pacman"
       ],
-      "content_hash": "sha256:b44eb2549b93f36c55c59f52738d67cf69d2d74a005941807e6fae027aee281f",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:13702e6dcb9458ed56c917c26c3d2eee893870f0a035e66b0c788856ed6ab945",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/arch-knowledge-patch/coverage.json"
     },
     {
       "id": "astro-knowledge-patch",
       "display_name": "Astro",
       "short_label": "Astro",
-      "description": "Astro 7.0.0 compatibility. Use for Astro work.",
+      "description": "Astro",
       "coverage_kind": "versioned",
       "covered_through": "7.0.0",
       "coverage_label": "7.0.0",
@@ -93,15 +93,15 @@
         "ssr",
         "content-collections"
       ],
-      "content_hash": "sha256:3453f917b699492d12f6aa0e8cc99c24ab0178aed1b6885c6fc366a7d9747f79",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:b17c1aef4e0d36465e024eaafc7317fd8be75fdf10aa4556ba8f3ed6e8767680",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/astro-knowledge-patch/coverage.json"
     },
     {
       "id": "authjs-knowledge-patch",
       "display_name": "Auth.js",
       "short_label": "Auth.js",
-      "description": "Auth.js 5.0.0 compatibility. Use for Auth.js work.",
+      "description": "Auth.js",
       "coverage_kind": "versioned",
       "covered_through": "5.0.0",
       "coverage_label": "5.0.0",
@@ -117,15 +117,15 @@
         "adapters",
         "nextjs"
       ],
-      "content_hash": "sha256:0fef1b457ee03f8732cc3baec74f9d96d54c5c234c26253fc1051e18ccea7cf1",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:fa4299ec8f7e6ebe0b380a543444e4b5f714995c64c3fdf64655f342223d0dc3",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/authjs-knowledge-patch/coverage.json"
     },
     {
       "id": "aws-sdk-knowledge-patch",
       "display_name": "AWS SDK",
       "short_label": "AWS SDK",
-      "description": "AWS SDK rolling coverage. Use for AWS SDK work.",
+      "description": "AWS SDK",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",
@@ -148,15 +148,15 @@
         "retries",
         "clients"
       ],
-      "content_hash": "sha256:262d0f72189fd5aa0532182e7ef490c9efe96c7cb9fa841c44721973407f34b5",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:6b59dc5e55eb20434bca88355bee614667ab39e8dc4c4fd32de7fcdef5149153",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/aws-sdk-knowledge-patch/coverage.json"
     },
     {
       "id": "axum-knowledge-patch",
       "display_name": "Axum",
       "short_label": "Axum",
-      "description": "Axum 0.8.0 compatibility. Use for Axum work.",
+      "description": "Axum",
       "coverage_kind": "versioned",
       "covered_through": "0.8.0",
       "coverage_label": "0.8.0",
@@ -172,15 +172,15 @@
         "extractors",
         "async"
       ],
-      "content_hash": "sha256:6cbbb61cb2f5617a714ee8e8ee57a099ae83a5bdbad0994ea77f2de1e771d95d",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:06553c4e066e366c4c45afc10f162bd98f2c5c5f8c8aad9795783d0f3b714507",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/axum-knowledge-patch/coverage.json"
     },
     {
       "id": "better-auth-knowledge-patch",
       "display_name": "Better Auth",
       "short_label": "Better Auth",
-      "description": "Better Auth 1.6.0 compatibility. Use for Better Auth work.",
+      "description": "Better Auth",
       "coverage_kind": "versioned",
       "covered_through": "1.6.0",
       "coverage_label": "1.6.0",
@@ -196,15 +196,15 @@
         "plugins",
         "typescript"
       ],
-      "content_hash": "sha256:266a4f45c1938943eaa6c1ae8da14d5b478eabfdc168cbbbe8db874cbb254e4b",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:dbf8d90be7f94beecd2ebf83799283d162396fea0ba35725d7ca6b6390c8bbee",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/better-auth-knowledge-patch/coverage.json"
     },
     {
       "id": "biome-knowledge-patch",
       "display_name": "Biome",
       "short_label": "Biome",
-      "description": "Biome 2.5.0 compatibility. Use for Biome work.",
+      "description": "Biome",
       "coverage_kind": "versioned",
       "covered_through": "2.5.0",
       "coverage_label": "2.5.0",
@@ -222,15 +222,15 @@
         "javascript",
         "css"
       ],
-      "content_hash": "sha256:f7c6bfccac3ad9f737e172cb4e9c4e8586b748e3a379ffdc44f78de8a9c7d3ab",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:111b7a520bf87d3de364589eb626ed70302b103214a7a92524da374bd2bc0833",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/biome-knowledge-patch/coverage.json"
     },
     {
       "id": "bun-knowledge-patch",
       "display_name": "Bun",
       "short_label": "Bun",
-      "description": "Bun 1.3.14 compatibility. Use for Bun work.",
+      "description": "Bun",
       "coverage_kind": "versioned",
       "covered_through": "1.3.14",
       "coverage_label": "1.3.14",
@@ -247,15 +247,15 @@
         "testing",
         "javascript"
       ],
-      "content_hash": "sha256:67a0874e327bbdab55f90feb85a81a03d6f7baebb519e6ecc3852f4b6a3c7717",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:8faaadb28d84304350247d5306cfe2f501d4715a40a5cd4b5676448ef14c0582",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/bun-knowledge-patch/coverage.json"
     },
     {
       "id": "caddy-knowledge-patch",
       "display_name": "Caddy",
       "short_label": "Caddy",
-      "description": "Caddy 2.11.1 compatibility. Use for Caddy work.",
+      "description": "Caddy",
       "coverage_kind": "versioned",
       "covered_through": "2.11.1",
       "coverage_label": "2.11.1",
@@ -271,15 +271,15 @@
         "routing",
         "configuration"
       ],
-      "content_hash": "sha256:e7fa2e636efa3ec40ce80282e3806ec1a3df60274103b8e00401167aa8b667b8",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:aa864bd9dadca02970bc36608c782111c7d13668c994f841867b667d1f471345",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/caddy-knowledge-patch/coverage.json"
     },
     {
       "id": "centos-stream-knowledge-patch",
       "display_name": "CentOS Stream",
       "short_label": "CentOS Stream",
-      "description": "CentOS Stream 10.0 compatibility. Use for CentOS Stream work.",
+      "description": "CentOS Stream",
       "coverage_kind": "versioned",
       "covered_through": "10.0",
       "coverage_label": "10.0",
@@ -294,15 +294,15 @@
         "system-administration",
         "rpm"
       ],
-      "content_hash": "sha256:81a88f882deaceb6cf9948392ed4f5099662f6325ba9720074edb3b6e01b4241",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:e30a1fa8e9ccb818cfb2ba0d8b7842e37c5ac559683ddcb2ab6624a22cce1252",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/centos-stream-knowledge-patch/coverage.json"
     },
     {
       "id": "chrony-knowledge-patch",
       "display_name": "chrony",
       "short_label": "chrony",
-      "description": "chrony 4.7–4.8 compatibility. Use for chrony work.",
+      "description": "chrony",
       "coverage_kind": "range",
       "covered_through": "4.8",
       "coverage_label": "4.7–4.8",
@@ -318,8 +318,8 @@
         "networking",
         "clock"
       ],
-      "content_hash": "sha256:973dd103fe7aa4056612784933174b9ade57a81021ee265d6e5d96af857332f5",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:c05d840200e4deeb74ea5592f9e9bdd3bf3a7800492becc0aae48aac8e113c33",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/chrony-knowledge-patch/coverage.json",
       "covered_from": "4.7"
     },
@@ -327,7 +327,7 @@
       "id": "clerk-knowledge-patch",
       "display_name": "Clerk",
       "short_label": "Clerk",
-      "description": "Clerk 1.0.0 compatibility. Use for Clerk work.",
+      "description": "Clerk",
       "coverage_kind": "versioned",
       "covered_through": "1.0.0",
       "coverage_label": "1.0.0",
@@ -346,15 +346,15 @@
         "organizations",
         "oauth"
       ],
-      "content_hash": "sha256:32a4e5b825ffe29c62247f8acb084019f5ae5fdb1fd60081db3df3048de9b562",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:fd2c8cea63088a1e7c5e7f8188bf87105ec0d92e3126b96ed9dd6b5f0aaafd3e",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/clerk-knowledge-patch/coverage.json"
     },
     {
       "id": "codex-knowledge-patch",
       "display_name": "Codex",
       "short_label": "Codex",
-      "description": "Codex 0.144.0 compatibility. Use for Codex work.",
+      "description": "Codex",
       "coverage_kind": "versioned",
       "covered_through": "0.144.0",
       "coverage_label": "0.144.0",
@@ -371,15 +371,15 @@
         "automation",
         "configuration"
       ],
-      "content_hash": "sha256:e316f59b8650fdcb8779fa612bd89246d44ba6ba28efc680c86c951388ca61f4",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:5aecd71fe768275f5878711b1f71970f4c6c2d4b4030638d6b130653afd8606e",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/codex-knowledge-patch/coverage.json"
     },
     {
       "id": "debian-knowledge-patch",
       "display_name": "Debian",
       "short_label": "Debian",
-      "description": "Debian 13.0 compatibility. Use for Debian work.",
+      "description": "Debian",
       "coverage_kind": "versioned",
       "covered_through": "13.0",
       "coverage_label": "13.0",
@@ -394,15 +394,15 @@
         "system-administration",
         "security"
       ],
-      "content_hash": "sha256:62e2d74e12a9cf74fa35ac6a4d4a10547ff70b508891d99a4bd4be0770163824",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:3020af229fcf15c04ae6bca10058bed8508c11e37833af1e7a0c4ebff35e30ce",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/debian-knowledge-patch/coverage.json"
     },
     {
       "id": "deno-knowledge-patch",
       "display_name": "Deno",
       "short_label": "Deno",
-      "description": "Deno 2.9.0 compatibility. Use for Deno work.",
+      "description": "Deno",
       "coverage_kind": "versioned",
       "covered_through": "2.9.0",
       "coverage_label": "2.9.0",
@@ -419,15 +419,15 @@
         "javascript",
         "tooling"
       ],
-      "content_hash": "sha256:ae6c5d6143b131ccfc99bbdcccf5a7276a419bafc38f66f1e0ddaa02e0fb01ee",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:a81194aa8c3fe3d607cec420dcc01d7bae01c11480cf6b4e8a457f28a1feec17",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/deno-knowledge-patch/coverage.json"
     },
     {
       "id": "dioxus-knowledge-patch",
       "display_name": "Dioxus",
       "short_label": "Dioxus",
-      "description": "Dioxus 0.7.9 compatibility. Use for Dioxus work.",
+      "description": "Dioxus",
       "coverage_kind": "versioned",
       "covered_through": "0.7.9",
       "coverage_label": "0.7.9",
@@ -444,15 +444,15 @@
         "desktop",
         "mobile"
       ],
-      "content_hash": "sha256:964563dc1abb59eff551d9a3eb3458a3f03cb54ac68304ac1651457da7c9404c",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:1360629f63ee5e0621a0447ab4159a8de18a64dd42116b32abedf480b6d5f907",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/dioxus-knowledge-patch/coverage.json"
     },
     {
       "id": "django-knowledge-patch",
       "display_name": "Django",
       "short_label": "Django",
-      "description": "Django 6.0.8 compatibility. Use for Django work.",
+      "description": "Django",
       "coverage_kind": "versioned",
       "covered_through": "6.0.8",
       "coverage_label": "6.0.8",
@@ -467,15 +467,15 @@
         "templates",
         "async"
       ],
-      "content_hash": "sha256:7f4f8d28a26e58ec7cce96f88d18eee2c50df1599905916db4ea9fce5e29a300",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:ec654b49a30717174b0a3dcbea3d55156c8e0b8b01cbc7122d9b5d2d8a9ad87d",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/django-knowledge-patch/coverage.json"
     },
     {
       "id": "dnf5-security-updates-knowledge-patch",
       "display_name": "DNF5",
       "short_label": "DNF5",
-      "description": "DNF5 5.4.1 compatibility. Use for DNF5 work.",
+      "description": "DNF5",
       "coverage_kind": "versioned",
       "covered_through": "5.4.1",
       "coverage_label": "5.4.1",
@@ -490,15 +490,15 @@
         "updates",
         "rpm"
       ],
-      "content_hash": "sha256:27289aa48ac2d7d5049af942d8d9764256c88002317f6afac41c030319b3517c",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:0b5e539a78e4ff12c907e72dd953eff549aed5730044dd9bb527204f56dcfd2c",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/dnf5-security-updates-knowledge-patch/coverage.json"
     },
     {
       "id": "docker-knowledge-patch",
       "display_name": "Docker",
       "short_label": "Docker",
-      "description": "Docker 25.0.0–29.3 compatibility. Use for Docker work.",
+      "description": "Docker",
       "coverage_kind": "range",
       "covered_through": "29.3",
       "coverage_label": "25.0.0–29.3",
@@ -514,8 +514,8 @@
         "buildkit",
         "networking"
       ],
-      "content_hash": "sha256:3177bc54e17edae8b12dc9792673824f9948b84d1d893ab70393357bc40b5507",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:98a95c470cb216618dfb7cf57cae8708e4de0d7df1d687023445bce5c630e043",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/docker-knowledge-patch/coverage.json",
       "covered_from": "25.0.0"
     },
@@ -523,7 +523,7 @@
       "id": "drizzle-knowledge-patch",
       "display_name": "Drizzle ORM",
       "short_label": "Drizzle ORM",
-      "description": "Drizzle ORM 1.0.0-beta.19 compatibility. Use for Drizzle ORM work.",
+      "description": "Drizzle ORM",
       "coverage_kind": "versioned",
       "covered_through": "1.0.0-beta.19",
       "coverage_label": "1.0.0-beta.19",
@@ -538,15 +538,15 @@
         "schema",
         "database"
       ],
-      "content_hash": "sha256:359fe52e34b6a2f3606422f34bef7f17b3207eb855587b3da187048630617ecc",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:b1e378c23fb6537bc0132fca9d9608fdf0f8b02d98ac0ac48dafcd2c5cf76cfe",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/drizzle-knowledge-patch/coverage.json"
     },
     {
       "id": "elixir-knowledge-patch",
       "display_name": "Elixir",
       "short_label": "Elixir",
-      "description": "Elixir 1.20.0-rc compatibility. Use for Elixir work.",
+      "description": "Elixir",
       "coverage_kind": "versioned",
       "covered_through": "1.20.0-rc",
       "coverage_label": "1.20.0-rc",
@@ -561,15 +561,15 @@
         "phoenix",
         "liveview"
       ],
-      "content_hash": "sha256:951c5a8634b663b7b6f799251ea314a54ecea0ad163fc863cf43a8d4642995ef",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:c57e7e0f75518bed97352fa5e61663f6607d77cd27e4533768c3f70153e000ae",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/elixir-knowledge-patch/coverage.json"
     },
     {
       "id": "fastapi-knowledge-patch",
       "display_name": "FastAPI",
       "short_label": "FastAPI",
-      "description": "FastAPI 0.135.3 compatibility. Use for FastAPI work.",
+      "description": "FastAPI",
       "coverage_kind": "versioned",
       "covered_through": "0.135.3",
       "coverage_label": "0.135.3",
@@ -584,15 +584,15 @@
         "validation",
         "openapi"
       ],
-      "content_hash": "sha256:4ba898dbe2ad7079ae7665dbd7039b565baa85cb610ab817b21b619378fd7342",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:28169edb63bfc4de24558c1ec0f2679da90ec32bba91c317bd3a24a814bcbbd6",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/fastapi-knowledge-patch/coverage.json"
     },
     {
       "id": "fedora-knowledge-patch",
       "display_name": "Fedora Linux",
       "short_label": "Fedora Linux",
-      "description": "Fedora Linux 44 compatibility. Use for Fedora Linux work.",
+      "description": "Fedora Linux",
       "coverage_kind": "versioned",
       "covered_through": "44",
       "coverage_label": "44",
@@ -607,15 +607,15 @@
         "system-administration",
         "selinux"
       ],
-      "content_hash": "sha256:e0b8ead747c372b6f235d7e9a54632b99fe0f50d1401a3f18c9907bce8647f7b",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:cef58d0ee9f193c5d82f1dccbe2d032b0c4366f5fd8e1a109fb294d148ba4084",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/fedora-knowledge-patch/coverage.json"
     },
     {
       "id": "flutter-knowledge-patch",
       "display_name": "Flutter",
       "short_label": "Flutter",
-      "description": "Flutter 3.44.0 compatibility. Use for Flutter work.",
+      "description": "Flutter",
       "coverage_kind": "versioned",
       "covered_through": "3.44.0",
       "coverage_label": "3.44.0",
@@ -630,15 +630,15 @@
         "dart",
         "cross-platform"
       ],
-      "content_hash": "sha256:90b727a8c38bf6d07449c8f6036bb65da395a93598a8d4319e45ada94387f1dc",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:7a5e08a6e65405a310ddbe709d01b4ed02ce64c4cd7c65f85a24fed9f8b88342",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/flutter-knowledge-patch/coverage.json"
     },
     {
       "id": "gcp-knowledge-patch",
-      "display_name": "GCP",
-      "short_label": "GCP",
-      "description": "GCP rolling coverage. Use for GCP work.",
+      "display_name": "Google Cloud Platform",
+      "short_label": "Google Cloud Platform",
+      "description": "Google Cloud Platform",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",
@@ -656,15 +656,15 @@
         "kubernetes",
         "data"
       ],
-      "content_hash": "sha256:dbf2b8cb7b6544fd69f76d77e74d031cef3f6f18201a29c0522d9abb9bb327b0",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:a82d679c0d93a082fe00559cf099370c6b3980a59ca7c1f8e8695e533809d633",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/gcp-knowledge-patch/coverage.json"
     },
     {
       "id": "geodesy-wgs84-knowledge-patch",
       "display_name": "WGS 84",
       "short_label": "WGS 84",
-      "description": "WGS 84 current compatibility guidance. Use for WGS 84 work.",
+      "description": "WGS 84",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -680,15 +680,15 @@
         "projections",
         "reference-frames"
       ],
-      "content_hash": "sha256:bb7c603b397b0c6421f4a950fe989ac98b0196667e90321173f84e10d78d45b7",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:b7eb7254aafd0ed65efb59958708c311f2f0936ae28959e12282f2cb84591c87",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/geodesy-wgs84-knowledge-patch/coverage.json"
     },
     {
       "id": "gleam-knowledge-patch",
       "display_name": "Gleam",
       "short_label": "Gleam",
-      "description": "Gleam 1.7.0–1.17.0 compatibility. Use for Gleam work.",
+      "description": "Gleam",
       "coverage_kind": "range",
       "covered_through": "1.17.0",
       "coverage_label": "1.7.0–1.17.0",
@@ -703,8 +703,8 @@
         "concurrency",
         "ffi"
       ],
-      "content_hash": "sha256:ecab894f09472444220a3649d5db958672ed0578da0be86c785945b73fcf6b98",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:15b8362e989af8558b704cdeb3fd6c59bc015f094f84c89bd984e49028fa8088",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/gleam-knowledge-patch/coverage.json",
       "covered_from": "1.7.0"
     },
@@ -712,7 +712,7 @@
       "id": "gnss-navigation-knowledge-patch",
       "display_name": "GNSS",
       "short_label": "GNSS",
-      "description": "GNSS current compatibility guidance. Use for GNSS work.",
+      "description": "GNSS",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -728,15 +728,15 @@
         "rtk",
         "ppp"
       ],
-      "content_hash": "sha256:4423a1677a5a73355fb4373802991babaa4d4ebf982c37d277c9f63b8180a754",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:3459ce4f545ea70f83fd7576fe507cfc9affd9578aa1cd38ee4fd612f6b1e2a6",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/gnss-navigation-knowledge-patch/coverage.json"
     },
     {
       "id": "go-knowledge-patch",
       "display_name": "Go",
       "short_label": "Go",
-      "description": "Go 1.26.0 compatibility. Use for Go work.",
+      "description": "Go",
       "coverage_kind": "versioned",
       "covered_through": "1.26.0",
       "coverage_label": "1.26.0",
@@ -751,15 +751,15 @@
         "concurrency",
         "generics"
       ],
-      "content_hash": "sha256:0dc7677abd117807de0fe86b3620ea11bd6e0c6537f91a3f80f4a478d7e01b31",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:3623e069279abf0941ebce0dc4260f9f1239975e64a13e5f5e3602a11b3e8ce3",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/go-knowledge-patch/coverage.json"
     },
     {
       "id": "gpsd-knowledge-patch",
       "display_name": "gpsd",
       "short_label": "gpsd",
-      "description": "gpsd 3.27 compatibility. Use for gpsd work.",
+      "description": "gpsd",
       "coverage_kind": "versioned",
       "covered_through": "3.27",
       "coverage_label": "3.27",
@@ -776,15 +776,15 @@
         "positioning",
         "nmea"
       ],
-      "content_hash": "sha256:158afc9dd6a6e65214227d1ec6a746e29ddfc9ab5b086e503aaad6709fdaf666",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:488c02af0711e6aaf5be41eb41246df34c5422810f0253c93756267510b1a906",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/gpsd-knowledge-patch/coverage.json"
     },
     {
       "id": "hono-knowledge-patch",
       "display_name": "Hono",
       "short_label": "Hono",
-      "description": "Hono 4.8.0–4.12.0 compatibility. Use for Hono work.",
+      "description": "Hono",
       "coverage_kind": "range",
       "covered_through": "4.12.0",
       "coverage_label": "4.8.0–4.12.0",
@@ -800,8 +800,8 @@
         "edge-runtime",
         "rpc"
       ],
-      "content_hash": "sha256:4a3c5a62aa1dd03d98b9c84b498f12dd5c57bdb02b425e9411b509bb1ccd1336",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:ae53f0a716a57ff693effbd0643e25e82b3ba5a88a5a6b8478ea23227fb8f3fa",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/hono-knowledge-patch/coverage.json",
       "covered_from": "4.8.0"
     },
@@ -809,7 +809,7 @@
       "id": "htmx-knowledge-patch",
       "display_name": "htmx",
       "short_label": "htmx",
-      "description": "htmx 4.0.0 compatibility. Use for htmx work.",
+      "description": "htmx",
       "coverage_kind": "versioned",
       "covered_through": "4.0.0",
       "coverage_label": "4.0.0",
@@ -825,15 +825,15 @@
         "frontend",
         "sse"
       ],
-      "content_hash": "sha256:05ec7637fad21d05f3cf8db0ef5603c94c3fa07a9eba9c2623f80ec5d9cfcc99",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:094691d3a2b839931e79a396b452bcfb0bf64f155ff5466aaba7853b8c477308",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/htmx-knowledge-patch/coverage.json"
     },
     {
       "id": "kotlin-knowledge-patch",
       "display_name": "Kotlin",
       "short_label": "Kotlin",
-      "description": "Kotlin 2.3.20 compatibility. Use for Kotlin work.",
+      "description": "Kotlin",
       "coverage_kind": "versioned",
       "covered_through": "2.3.20",
       "coverage_label": "2.3.20",
@@ -848,15 +848,15 @@
         "coroutines",
         "compose"
       ],
-      "content_hash": "sha256:6acc63032c50af9e9f5bafa3ca72b7412f3893d10ae44e583d3f5324125befd8",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:d344e9db6b933744acadb11fc955a69f315d2aa585e1ff0bee3472c0e4859e7d",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/kotlin-knowledge-patch/coverage.json"
     },
     {
       "id": "kubernetes-knowledge-patch",
       "display_name": "Kubernetes",
       "short_label": "Kubernetes",
-      "description": "Kubernetes 1.36.0 compatibility. Use for Kubernetes work.",
+      "description": "Kubernetes",
       "coverage_kind": "versioned",
       "covered_through": "1.36.0",
       "coverage_label": "1.36.0",
@@ -873,15 +873,15 @@
         "rbac",
         "gateway-api"
       ],
-      "content_hash": "sha256:e00fb079f9412c5e9b279fc1a818adf6cfeb182231ded55ec43a50647a2f7396",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:79bf39d80af20bbb6d245aac27c692f63d16beea573282c8ccac08d750d3ce4f",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/kubernetes-knowledge-patch/coverage.json"
     },
     {
       "id": "langchain-knowledge-patch",
       "display_name": "LangChain",
       "short_label": "LangChain",
-      "description": "LangChain 1.1.0 compatibility. Use for LangChain work.",
+      "description": "LangChain",
       "coverage_kind": "versioned",
       "covered_through": "1.1.0",
       "coverage_label": "1.1.0",
@@ -899,15 +899,15 @@
         "tools",
         "langgraph"
       ],
-      "content_hash": "sha256:1a18470bcc21af56484d36f05f416c2564b280267c0044c852d606c9702bda3f",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:9c4ed957ab7f28530ff5250bc03e06718c85d3c2c3fec6443d6651c3e1167a53",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/langchain-knowledge-patch/coverage.json"
     },
     {
       "id": "leptos-knowledge-patch",
       "display_name": "Leptos",
       "short_label": "Leptos",
-      "description": "Leptos 0.8.17 compatibility. Use for Leptos work.",
+      "description": "Leptos",
       "coverage_kind": "versioned",
       "covered_through": "0.8.17",
       "coverage_label": "0.8.17",
@@ -922,15 +922,15 @@
         "ssr",
         "hydration"
       ],
-      "content_hash": "sha256:e4846681281d78d215f7f7af39364d685063ce40c5c57db34430c7d648075b08",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:76ddb3626d534409c68bc8f66d3042a4ba009e91dd5a046f881a19f4cd7015a2",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/leptos-knowledge-patch/coverage.json"
     },
     {
       "id": "nextjs-knowledge-patch",
       "display_name": "Next.js",
       "short_label": "Next.js",
-      "description": "Next.js 16.3.0 compatibility. Use for Next.js work.",
+      "description": "Next.js",
       "coverage_kind": "versioned",
       "covered_through": "16.3.0",
       "coverage_label": "16.3.0",
@@ -948,15 +948,15 @@
         "ssr",
         "caching"
       ],
-      "content_hash": "sha256:8b7f757bd026d3137bcd65eb0d670b69ec22a97d0cd04e4fd4f59ce6d9c9ff32",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:5861d9219d7a8dabdb904a6ccc1c4b02aa24b13a2532a40a8e349f91ad34a478",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/nextjs-knowledge-patch/coverage.json"
     },
     {
       "id": "nginx-knowledge-patch",
       "display_name": "NGINX",
       "short_label": "NGINX",
-      "description": "NGINX 1.31.0 compatibility. Use for NGINX work.",
+      "description": "NGINX",
       "coverage_kind": "versioned",
       "covered_through": "1.31.0",
       "coverage_label": "1.31.0",
@@ -972,15 +972,15 @@
         "tls",
         "load-balancing"
       ],
-      "content_hash": "sha256:f6588e10496a2c9b2f52d90d1a6bb6075236777aec531bbdcf364bd3e31c5b9d",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:8bc3867a85dcb0a8a071bfa386f09a210003215b60d858b07e2df0bb9f2947d3",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/nginx-knowledge-patch/coverage.json"
     },
     {
       "id": "nmea0183-knowledge-patch",
       "display_name": "NMEA 0183",
       "short_label": "NMEA 0183",
-      "description": "NMEA 0183 4.30 compatibility. Use for NMEA 0183 work.",
+      "description": "NMEA 0183",
       "coverage_kind": "versioned",
       "covered_through": "4.30",
       "coverage_label": "4.30",
@@ -997,15 +997,15 @@
         "sentences",
         "serial"
       ],
-      "content_hash": "sha256:55d452c812d9f2b9ee4dea85ffcd2f74ae0605bbc5389cec997a7b8076b5a286",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:a77e0c13aee049a391fe861148fb60035c11e2396ac5799477973ae421ef3b17",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/nmea0183-knowledge-patch/coverage.json"
     },
     {
       "id": "nodejs-knowledge-patch",
       "display_name": "Node.js",
       "short_label": "Node.js",
-      "description": "Node.js 23.0.0–26.5.0 compatibility. Use for Node.js work.",
+      "description": "Node.js",
       "coverage_kind": "range",
       "covered_through": "26.5.0",
       "coverage_label": "23.0.0–26.5.0",
@@ -1021,8 +1021,8 @@
         "npm",
         "streams"
       ],
-      "content_hash": "sha256:53b9666dbea4f50efee1683a57809beb62fa38f02e5349a3f79bb4963a679716",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:cdc577f80267c769c9c18f47ad5bf20eb4d8be81c899c6ce731dcf238652f9a2",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/nodejs-knowledge-patch/coverage.json",
       "covered_from": "23.0.0"
     },
@@ -1030,7 +1030,7 @@
       "id": "ntrip-rtklib-knowledge-patch",
       "display_name": "NTRIP / RTKLIB",
       "short_label": "NTRIP / RTKLIB",
-      "description": "NTRIP / RTKLIB current compatibility guidance. Use for NTRIP / RTKLIB work.",
+      "description": "NTRIP / RTKLIB",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1047,15 +1047,15 @@
         "ntrip",
         "positioning"
       ],
-      "content_hash": "sha256:b4d504673b3730ac2e339880f206c20277ecf3e753d779a2b3393c7f22b52f39",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:2eb886dc0ad87e4d15ac00021687a41eb762ed063930c1540c842c1a58fed63d",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/ntrip-rtklib-knowledge-patch/coverage.json"
     },
     {
       "id": "nuxt-knowledge-patch",
       "display_name": "Nuxt",
       "short_label": "Nuxt",
-      "description": "Nuxt 4.4.0 compatibility. Use for Nuxt work.",
+      "description": "Nuxt",
       "coverage_kind": "versioned",
       "covered_through": "4.4.0",
       "coverage_label": "4.4.0",
@@ -1071,15 +1071,15 @@
         "routing",
         "nitro"
       ],
-      "content_hash": "sha256:d66e52c26d53869541a18e63b7fa74f2fee620b5e4eba838ab94db43c95b999f",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:16cfe3fbe9a5ca53a913d5f9845719a57d4b3128d9becc591697fe0d6867f153",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/nuxt-knowledge-patch/coverage.json"
     },
     {
       "id": "openssl-tls-knowledge-patch",
       "display_name": "OpenSSL",
       "short_label": "OpenSSL",
-      "description": "OpenSSL 4.0.0 compatibility. Use for OpenSSL work.",
+      "description": "OpenSSL",
       "coverage_kind": "versioned",
       "covered_through": "4.0.0",
       "coverage_label": "4.0.0",
@@ -1095,15 +1095,15 @@
         "pki",
         "security"
       ],
-      "content_hash": "sha256:68dfecbbcafe87ded004eab1778673ba2c4a510fb4afe6ce04e8bde1facbe1ce",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:66b5afc13c8eed5d6bd26f8502160e5ff6b5951ee9f3fa42f1b6b6b17612d02b",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/openssl-tls-knowledge-patch/coverage.json"
     },
     {
       "id": "pgvector-knowledge-patch",
       "display_name": "pgvector",
       "short_label": "pgvector",
-      "description": "pgvector 0.8.5 compatibility. Use for pgvector work.",
+      "description": "pgvector",
       "coverage_kind": "versioned",
       "covered_through": "0.8.5",
       "coverage_label": "0.8.5",
@@ -1118,15 +1118,15 @@
         "postgresql",
         "indexing"
       ],
-      "content_hash": "sha256:31a934a084d78cacaa4e7299019813355b1235052a94746c2f91f13acb46cc01",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:eb61eaee0aa4bb1a518604c8c64aa771c3c986ff1fc6aaf042dfcaccacdd5a90",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/pgvector-knowledge-patch/coverage.json"
     },
     {
       "id": "playwright-knowledge-patch",
       "display_name": "Playwright",
       "short_label": "Playwright",
-      "description": "Playwright 1.61.0 compatibility. Use for Playwright work.",
+      "description": "Playwright",
       "coverage_kind": "versioned",
       "covered_through": "1.61.0",
       "coverage_label": "1.61.0",
@@ -1143,15 +1143,15 @@
         "e2e",
         "fixtures"
       ],
-      "content_hash": "sha256:9a0214a1d0c1ba593514f950f5d30010692705db537fc681334658bb516bd45c",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:504dfc8304db78b067272b2fa613da5fae1dfaa2f1321a20a8f6f837f5e24793",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/playwright-knowledge-patch/coverage.json"
     },
     {
       "id": "podman-knowledge-patch",
       "display_name": "Podman",
       "short_label": "Podman",
-      "description": "Podman 6.0.0 compatibility. Use for Podman work.",
+      "description": "Podman",
       "coverage_kind": "versioned",
       "covered_through": "6.0.0",
       "coverage_label": "6.0.0",
@@ -1167,15 +1167,15 @@
         "compose",
         "rootless"
       ],
-      "content_hash": "sha256:254f7c4fa27562e8a9c1815d01d5a5be8477e870ed395b72858e8f9130c8b824",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:ea545d4e368d77ca81de82d84afab632381d706ffaa68b3fdef105813881cf66",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/podman-knowledge-patch/coverage.json"
     },
     {
       "id": "postgis-knowledge-patch",
       "display_name": "PostGIS",
       "short_label": "PostGIS",
-      "description": "PostGIS 3.6.1 compatibility. Use for PostGIS work.",
+      "description": "PostGIS",
       "coverage_kind": "versioned",
       "covered_through": "3.6.1",
       "coverage_label": "3.6.1",
@@ -1190,15 +1190,15 @@
         "geometry",
         "geography"
       ],
-      "content_hash": "sha256:00081baabe0c9fbe04f32b2fc03fff792f8fa5273972ef9a4e557525cd2a455d",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:129d1a333d33213c56df6b239935f4767938b9ca1c46130871d017584c8741d6",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/postgis-knowledge-patch/coverage.json"
     },
     {
       "id": "postgresql-knowledge-patch",
       "display_name": "PostgreSQL",
       "short_label": "PostgreSQL",
-      "description": "PostgreSQL 18.0 compatibility. Use for PostgreSQL work.",
+      "description": "PostgreSQL",
       "coverage_kind": "versioned",
       "covered_through": "18.0",
       "coverage_label": "18.0",
@@ -1213,15 +1213,15 @@
         "replication",
         "indexing"
       ],
-      "content_hash": "sha256:96afbe24db2956a8ba5be3cb172df104baeaa86f9dc75d662545062e7c7a72f4",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:c2daed28ead7a98a7aa250f6e0cf0ee3346647bfd94d77a8d6b0e87f70556004",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/postgresql-knowledge-patch/coverage.json"
     },
     {
       "id": "prisma-knowledge-patch",
       "display_name": "Prisma",
       "short_label": "Prisma",
-      "description": "Prisma 7.8.0 compatibility. Use for Prisma work.",
+      "description": "Prisma",
       "coverage_kind": "versioned",
       "covered_through": "7.8.0",
       "coverage_label": "7.8.0",
@@ -1236,15 +1236,15 @@
         "database",
         "client"
       ],
-      "content_hash": "sha256:694fdfa2964433177b9cdbf0132829e6142d912d3a78779020cc2484312448bc",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:c902e614fe1a873121fb96f9da0880e02a684acdc4db75ea0cfcaa1ec180913c",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/prisma-knowledge-patch/coverage.json"
     },
     {
       "id": "python-knowledge-patch",
       "display_name": "Python",
       "short_label": "Python",
-      "description": "Python 3.14 compatibility. Use for Python work.",
+      "description": "Python",
       "coverage_kind": "versioned",
       "covered_through": "3.14",
       "coverage_label": "3.14",
@@ -1259,15 +1259,15 @@
         "async",
         "runtime"
       ],
-      "content_hash": "sha256:ac4f5b0efa4c5cd7f5d4e623202896189b848bcd76880551181bf0df8ad93199",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:8dca3cba356851bd988d29a13aed61a99a2b17ca17863a91bf4a056a730d0f6b",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/python-knowledge-patch/coverage.json"
     },
     {
       "id": "pytorch-knowledge-patch",
       "display_name": "PyTorch",
       "short_label": "PyTorch",
-      "description": "PyTorch 2.11.0 compatibility. Use for PyTorch work.",
+      "description": "PyTorch",
       "coverage_kind": "versioned",
       "covered_through": "2.11.0",
       "coverage_label": "2.11.0",
@@ -1282,15 +1282,15 @@
         "training",
         "gpu"
       ],
-      "content_hash": "sha256:271c4a6f92a2401d03a4567c027d62d37dd6e262348e664721c2c80a0df85d6c",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:821aef73a4cbb509c90bcfc53e2fe173036fb94b18002f7030f4c44a7aeed70a",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/pytorch-knowledge-patch/coverage.json"
     },
     {
       "id": "rails-knowledge-patch",
       "display_name": "Ruby on Rails",
       "short_label": "Ruby on Rails",
-      "description": "Ruby on Rails 8.1 compatibility. Use for Ruby on Rails work.",
+      "description": "Ruby on Rails",
       "coverage_kind": "versioned",
       "covered_through": "8.1",
       "coverage_label": "8.1",
@@ -1305,15 +1305,15 @@
         "jobs",
         "hotwire"
       ],
-      "content_hash": "sha256:eeb317f6adea33fb3d6bc8da09c9c7615f01e116de6dc0b88ddfcdc4fd8a240a",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:aacef4c9afb7c6c2e19d9d8eaa65de46752be52a5e598d73290293e0b5bf7579",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rails-knowledge-patch/coverage.json"
     },
     {
       "id": "ratatui-knowledge-patch",
       "display_name": "Ratatui",
       "short_label": "Ratatui",
-      "description": "Ratatui 0.29.0–0.31.0 compatibility. Use for Ratatui work.",
+      "description": "Ratatui",
       "coverage_kind": "range",
       "covered_through": "0.31.0",
       "coverage_label": "0.29.0–0.31.0",
@@ -1328,8 +1328,8 @@
         "rendering",
         "events"
       ],
-      "content_hash": "sha256:ff0d53c1371a504a3a034da3fa7efbd49acf41146199161c63ee4617c4d021d5",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:83e15b504ff46aa337dc885333a21eb3b2d51ebe1a37998ddea253b00912f98e",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/ratatui-knowledge-patch/coverage.json",
       "covered_from": "0.29.0"
     },
@@ -1337,7 +1337,7 @@
       "id": "react-knowledge-patch",
       "display_name": "React",
       "short_label": "React",
-      "description": "React 19.2.0 compatibility. Use for React work.",
+      "description": "React",
       "coverage_kind": "versioned",
       "covered_through": "19.2.0",
       "coverage_label": "19.2.0",
@@ -1354,15 +1354,15 @@
         "rendering",
         "jsx"
       ],
-      "content_hash": "sha256:d2325fff30a34316b5f01751729b3ef2e5b30f3fb2f940cffed192221bb368ac",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:9b98f662439347a624159c5d39524298d358956a3d2506fb66379afb07701a22",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/react-knowledge-patch/coverage.json"
     },
     {
       "id": "react-router-knowledge-patch",
       "display_name": "React Router",
       "short_label": "React Router",
-      "description": "React Router 8.2.0 compatibility. Use for React Router work.",
+      "description": "React Router",
       "coverage_kind": "versioned",
       "covered_through": "8.2.0",
       "coverage_label": "8.2.0",
@@ -1380,15 +1380,15 @@
         "actions",
         "framework"
       ],
-      "content_hash": "sha256:644d102523b5de68eec7453f0763c72b8af232b7c006d3276670d7f4f15f3d0a",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:a987edd6b4b832520b3534fcb72a7927536fd89ca4544582b4294debaec52eea",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/react-router-knowledge-patch/coverage.json"
     },
     {
       "id": "rhel-knowledge-patch",
       "display_name": "RHEL",
       "short_label": "RHEL",
-      "description": "RHEL 10.2 compatibility. Use for RHEL work.",
+      "description": "RHEL",
       "coverage_kind": "versioned",
       "covered_through": "10.2",
       "coverage_label": "10.2",
@@ -1403,15 +1403,15 @@
         "system-administration",
         "selinux"
       ],
-      "content_hash": "sha256:a091d8848aeb81a4ab80cec85ea2dd3c90d2c11d89bc5e97d214eabe0f6d7f7e",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:0b6bef165841910d7808cd8494ba1e845a0423d3bc4c3f590c4e9cca12086a2c",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rhel-knowledge-patch/coverage.json"
     },
     {
       "id": "rocky-knowledge-patch",
       "display_name": "Rocky Linux",
       "short_label": "Rocky Linux",
-      "description": "Rocky Linux 10.2 compatibility. Use for Rocky Linux work.",
+      "description": "Rocky Linux",
       "coverage_kind": "versioned",
       "covered_through": "10.2",
       "coverage_label": "10.2",
@@ -1426,15 +1426,15 @@
         "system-administration",
         "rpm"
       ],
-      "content_hash": "sha256:4ade3e17061a9158ad845dd65cfe95247a501895cd8b7e00bedf1a9d3f4f8036",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:2fb9018c6ccfb9dfe6308e87e0f4167e13570471e1ab8d26478792a66e5583dc",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rocky-knowledge-patch/coverage.json"
     },
     {
       "id": "rtcm3-knowledge-patch",
       "display_name": "RTCM 3",
       "short_label": "RTCM 3",
-      "description": "RTCM 3 10403.4 Amendment 1 compatibility. Use for RTCM 3 work.",
+      "description": "RTCM 3",
       "coverage_kind": "versioned",
       "covered_through": "10403.4 Amendment 1",
       "coverage_label": "10403.4 Amendment 1",
@@ -1452,15 +1452,15 @@
         "msm",
         "ssr"
       ],
-      "content_hash": "sha256:7c49eb7953cac760495886fca2dc420c415679e1c674cd04339da8f06a3f3b59",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:e5d450e4a19f51b58111715ca88cd995398d0ee45e030cc3275fb3e57919f891",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rtcm3-knowledge-patch/coverage.json"
     },
     {
       "id": "rtkbase-knowledge-patch",
       "display_name": "RTKBase",
       "short_label": "RTKBase",
-      "description": "RTKBase 2.7.0 compatibility. Use for RTKBase work.",
+      "description": "RTKBase",
       "coverage_kind": "versioned",
       "covered_through": "2.7.0",
       "coverage_label": "2.7.0",
@@ -1476,15 +1476,15 @@
         "rtk",
         "corrections"
       ],
-      "content_hash": "sha256:d8c931737efc72468ff663dc2b126bd1a5cd836f1ba7faeecc16f5e3b9754c24",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:d55b56e8356317a50f4cb529fa1a7a0a761212ae79a08688b2bdaf5841f13775",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rtkbase-knowledge-patch/coverage.json"
     },
     {
       "id": "rust-knowledge-patch",
       "display_name": "Rust",
       "short_label": "Rust",
-      "description": "Rust 1.84.0–1.97.0 compatibility. Use for Rust work.",
+      "description": "Rust",
       "coverage_kind": "range",
       "covered_through": "1.97.0",
       "coverage_label": "1.84.0–1.97.0",
@@ -1500,8 +1500,8 @@
         "async",
         "edition-2024"
       ],
-      "content_hash": "sha256:6cbd67b6ce30cbdde12422939028993a350ff9c56620cc179c6273c8d2c29aa0",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:6ab95896e347c5c7d61b726ab828884dabf3f8a8e2e13c9a321df9172c7d0026",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/rust-knowledge-patch/coverage.json",
       "covered_from": "1.84.0"
     },
@@ -1509,7 +1509,7 @@
       "id": "selinux-knowledge-patch",
       "display_name": "SELinux",
       "short_label": "SELinux",
-      "description": "SELinux current compatibility guidance. Use for SELinux work.",
+      "description": "SELinux",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1525,15 +1525,15 @@
         "labels",
         "access-control"
       ],
-      "content_hash": "sha256:85ef8a76a6ffe54ab1bb7675f807e3ec16e5f870ad6d9e6590d4fb1fa7159024",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:5284dc1bf55bcb9107e92067f091aab9b5db92a865baacf8df9090bad5ce5360",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/selinux-knowledge-patch/coverage.json"
     },
     {
       "id": "serde-knowledge-patch",
       "display_name": "Serde",
       "short_label": "Serde",
-      "description": "Serde 1.0.220 compatibility. Use for Serde work.",
+      "description": "Serde",
       "coverage_kind": "versioned",
       "covered_through": "1.0.220",
       "coverage_label": "1.0.220",
@@ -1548,15 +1548,15 @@
         "formats",
         "rust"
       ],
-      "content_hash": "sha256:8090ee7994af634bacfa290fd27c38879447a7a8cda74051a1e5290ea93766db",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:d6f6a0bcf54d2b113ecd4665e02c288f000d1526f196c679230332eb594fc837",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/serde-knowledge-patch/coverage.json"
     },
     {
       "id": "solidjs-knowledge-patch",
       "display_name": "SolidJS",
       "short_label": "SolidJS",
-      "description": "SolidJS current compatibility guidance. Use for SolidJS work.",
+      "description": "SolidJS",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1574,15 +1574,15 @@
         "components",
         "ssr"
       ],
-      "content_hash": "sha256:94c70b6b7a9c3eb9378e7f967f3bbed84529a90744792aaab00abfe1befcb2ac",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:b3e7d9ac2fcff15c057a8407efddcaca00b1e1626ffcdcf5dcccc0a728fb1c22",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/solidjs-knowledge-patch/coverage.json"
     },
     {
       "id": "spring-boot-knowledge-patch",
       "display_name": "Spring Boot",
       "short_label": "Spring Boot",
-      "description": "Spring Boot 4.1.0 compatibility. Use for Spring Boot work.",
+      "description": "Spring Boot",
       "coverage_kind": "versioned",
       "covered_through": "4.1.0",
       "coverage_label": "4.1.0",
@@ -1598,15 +1598,15 @@
         "configuration",
         "actuator"
       ],
-      "content_hash": "sha256:31677e98c532f6f91bd6e56b9289fb7b213b966bc5e8a2544f2a41431b59954a",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:d61bd4ea9c13c6eb39c89655d328fa126026aaa8011a80a13d494191f246eb8c",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/spring-boot-knowledge-patch/coverage.json"
     },
     {
       "id": "sqlite-knowledge-patch",
       "display_name": "SQLite",
       "short_label": "SQLite",
-      "description": "SQLite 3.46.0–3.53.0 compatibility. Use for SQLite work.",
+      "description": "SQLite",
       "coverage_kind": "range",
       "covered_through": "3.53.0",
       "coverage_label": "3.46.0–3.53.0",
@@ -1621,8 +1621,8 @@
         "transactions",
         "indexing"
       ],
-      "content_hash": "sha256:8c66fdeaf755d3ae82b9f518a732f83f7d18198d4876e84dae579d95f823f94a",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:62236448328b60a656d384476a2d3a615327fb83827401822127e5f5052054e9",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/sqlite-knowledge-patch/coverage.json",
       "covered_from": "3.46.0"
     },
@@ -1630,7 +1630,7 @@
       "id": "sqlx-knowledge-patch",
       "display_name": "SQLx",
       "short_label": "SQLx",
-      "description": "SQLx 0.9.0 compatibility. Use for SQLx work.",
+      "description": "SQLx",
       "coverage_kind": "versioned",
       "covered_through": "0.9.0",
       "coverage_label": "0.9.0",
@@ -1646,15 +1646,15 @@
         "macros",
         "migrations"
       ],
-      "content_hash": "sha256:4cecbc0888bacd18b06a7e0cf24696622291664388a7d85750ad990f5f9f8675",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:2d7305be0c59e0ef2615a70be36df1a32cc5e5df93972a918f06ec6f472261b9",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/sqlx-knowledge-patch/coverage.json"
     },
     {
       "id": "stripe-knowledge-patch",
       "display_name": "Stripe",
       "short_label": "Stripe",
-      "description": "Stripe rolling coverage. Use for Stripe work.",
+      "description": "Stripe",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",
@@ -1675,15 +1675,15 @@
         "webhooks",
         "connect"
       ],
-      "content_hash": "sha256:4b26ec38e073686631f046574aaa29ae32b9b76a07f3474bfe1b87c813b4466e",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:e9e3838816735356b7e5dee8aaa10619dce60e47a277a893657f46f53a90b196",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/stripe-knowledge-patch/coverage.json"
     },
     {
       "id": "supabase-knowledge-patch",
       "display_name": "Supabase",
       "short_label": "Supabase",
-      "description": "Supabase rolling coverage. Use for Supabase work.",
+      "description": "Supabase",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",
@@ -1704,15 +1704,15 @@
         "realtime",
         "storage"
       ],
-      "content_hash": "sha256:58443cde1b049cbf7d87ab30e00267172c4dd8f6892f41e571acc48a8fdb8fa9",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:cb2eeb372cf1307d066cc489cdd34ad028b60c74816a8ea55486ed75dded94ec",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/supabase-knowledge-patch/coverage.json"
     },
     {
       "id": "suse-knowledge-patch",
       "display_name": "SUSE / openSUSE",
       "short_label": "SUSE / openSUSE",
-      "description": "SUSE / openSUSE current compatibility guidance. Use for SUSE / openSUSE work.",
+      "description": "SUSE / openSUSE",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1727,15 +1727,15 @@
         "system-administration",
         "zypper"
       ],
-      "content_hash": "sha256:0e86f8a5ed9ca4ef25d659d8a69a5f7e5b0d2123aa357cb492de218b2ca59ea3",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:8509b9f287e003a59b050904d6d784e53ac7fa46a56bd84e26bfc59a2f895b90",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/suse-knowledge-patch/coverage.json"
     },
     {
       "id": "svelte-knowledge-patch",
       "display_name": "Svelte",
       "short_label": "Svelte",
-      "description": "Svelte current compatibility guidance. Use for Svelte work.",
+      "description": "Svelte",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1752,15 +1752,15 @@
         "sveltekit",
         "runes"
       ],
-      "content_hash": "sha256:80c501564f77deb20a8635c2740db66b843b97ced83c6d6dd76c27f3e875a756",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:2c83a7d4ced99e1e990e7f7be313a657df39f28a399afe1d174b2dccc3f89087",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/svelte-knowledge-patch/coverage.json"
     },
     {
       "id": "swift-knowledge-patch",
       "display_name": "Swift",
       "short_label": "Swift",
-      "description": "Swift 6.1–6.3.0 compatibility. Use for Swift work.",
+      "description": "Swift",
       "coverage_kind": "range",
       "covered_through": "6.3.0",
       "coverage_label": "6.1–6.3.0",
@@ -1775,8 +1775,8 @@
         "macos",
         "package-manager"
       ],
-      "content_hash": "sha256:da8d63573d61af7b7539ea3a9da5ae73129f0a8f880cf9be1abb9c13224f7667",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:b0e618f1e8a1157a517ee2e27d7c8388c0d1b5b1056c4cddba47b2b2187cdc5e",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/swift-knowledge-patch/coverage.json",
       "covered_from": "6.1"
     },
@@ -1784,7 +1784,7 @@
       "id": "systemd-knowledge-patch",
       "display_name": "systemd",
       "short_label": "systemd",
-      "description": "systemd 256–260 compatibility. Use for systemd work.",
+      "description": "systemd",
       "coverage_kind": "range",
       "covered_through": "260",
       "coverage_label": "256–260",
@@ -1800,8 +1800,8 @@
         "journald",
         "system-administration"
       ],
-      "content_hash": "sha256:f4331785f3d808e0ec156d212531d58be3a3991df5a706752ed30d66ba4d25d0",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:c8bb8eed5a756dae366ad8c7bb661877387d9e2749fe9b1132ea6f58938dc7c1",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/systemd-knowledge-patch/coverage.json",
       "covered_from": "256"
     },
@@ -1809,7 +1809,7 @@
       "id": "tailwind-knowledge-patch",
       "display_name": "Tailwind CSS",
       "short_label": "Tailwind CSS",
-      "description": "Tailwind CSS 4.2.2 compatibility. Use for Tailwind CSS work.",
+      "description": "Tailwind CSS",
       "coverage_kind": "versioned",
       "covered_through": "4.2.2",
       "coverage_label": "4.2.2",
@@ -1826,15 +1826,15 @@
         "frontend",
         "design-system"
       ],
-      "content_hash": "sha256:d7f986e27f6b0b9f0ce8b97e36e878114ff107cc8c2132bf148d861179a829ef",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:2652e17955c8f79a09e71b7978501a89d06f60e2807a5e8afe9cb91b66f0d365",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/tailwind-knowledge-patch/coverage.json"
     },
     {
       "id": "tauri-knowledge-patch",
       "display_name": "Tauri",
       "short_label": "Tauri",
-      "description": "Tauri 2.5.0 compatibility. Use for Tauri work.",
+      "description": "Tauri",
       "coverage_kind": "versioned",
       "covered_through": "2.5.0",
       "coverage_label": "2.5.0",
@@ -1851,15 +1851,15 @@
         "webview",
         "plugins"
       ],
-      "content_hash": "sha256:98b9740e9a7a8c1cce7bfa1694ecbe3f7439b4d032a3955140f77e6590bd3957",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:aa29b8f7d415c788e303c44c5777d4517fbe94bc66b97cb5f779d2ba6a293f28",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/tauri-knowledge-patch/coverage.json"
     },
     {
       "id": "terraform-knowledge-patch",
       "display_name": "Terraform / OpenTofu",
       "short_label": "Terraform / OpenTofu",
-      "description": "Terraform / OpenTofu current compatibility guidance. Use for Terraform / OpenTofu work.",
+      "description": "Terraform / OpenTofu",
       "coverage_kind": "multi-product",
       "covered_through": null,
       "coverage_label": "current compatibility guidance",
@@ -1874,15 +1874,15 @@
         "state",
         "modules"
       ],
-      "content_hash": "sha256:a7ca3f0dd78dfcaf240172abc667676504598fb210957cc18c26d3355d3a063d",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:4693f7ceff2f195677920a0d8a549f9e119a4c60893ad6b89f21be2e9a5aa551",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/terraform-knowledge-patch/coverage.json"
     },
     {
       "id": "tokio-knowledge-patch",
       "display_name": "Tokio",
       "short_label": "Tokio",
-      "description": "Tokio 1.52.0 compatibility. Use for Tokio work.",
+      "description": "Tokio",
       "coverage_kind": "versioned",
       "covered_through": "1.52.0",
       "coverage_label": "1.52.0",
@@ -1898,15 +1898,15 @@
         "io",
         "networking"
       ],
-      "content_hash": "sha256:4ff20c9ea2508d28c260abdc1a6e9a04ce1022809d6e6f17bad43770128b3d7a",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:8361c0327af17c66831c4f2ae5c9e88713bf64d0f0041444486c070493d3c7cb",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/tokio-knowledge-patch/coverage.json"
     },
     {
       "id": "traefik-knowledge-patch",
       "display_name": "Traefik",
       "short_label": "Traefik",
-      "description": "Traefik 3.7.0 compatibility. Use for Traefik work.",
+      "description": "Traefik",
       "coverage_kind": "versioned",
       "covered_through": "3.7.0",
       "coverage_label": "3.7.0",
@@ -1925,15 +1925,15 @@
         "acme",
         "observability"
       ],
-      "content_hash": "sha256:8003c39ea6da50160012b3bb0b898129f79163e3d273b36eef02cba1d3bf93d6",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:be4bc4392235507f9e66d8f2857e4ce6dde6d56ffb7f07317badac4c09060f86",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/traefik-knowledge-patch/coverage.json"
     },
     {
       "id": "trpc-knowledge-patch",
       "display_name": "tRPC",
       "short_label": "tRPC",
-      "description": "tRPC 11.18.0 compatibility. Use for tRPC work.",
+      "description": "tRPC",
       "coverage_kind": "versioned",
       "covered_through": "11.18.0",
       "coverage_label": "11.18.0",
@@ -1948,15 +1948,15 @@
         "procedures",
         "typescript"
       ],
-      "content_hash": "sha256:6cc4eb5b83e32e29fd999261ec247aee7f5735e53ee20c778c61e87e6f47487b",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:ec8b535c9371032d5073d0e0b9f68f643cbb47484cb798453043d9f3b5967c84",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/trpc-knowledge-patch/coverage.json"
     },
     {
       "id": "typescript-knowledge-patch",
       "display_name": "TypeScript",
       "short_label": "TypeScript",
-      "description": "TypeScript 7.0.0 compatibility. Use for TypeScript work.",
+      "description": "TypeScript",
       "coverage_kind": "versioned",
       "covered_through": "7.0.0",
       "coverage_label": "7.0.0",
@@ -1971,15 +1971,15 @@
         "javascript",
         "modules"
       ],
-      "content_hash": "sha256:1b6437aceb91b5a166055e8834e5c8babf9b8637d03683600e9d5d6d92454dce",
-      "generated_at": "2026-07-15T23:21:23Z",
+      "content_hash": "sha256:025cc29fc2b342a4e848c346ed8c9febe89d04607772100c8a15f49838c7e566",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/typescript-knowledge-patch/coverage.json"
     },
     {
       "id": "ubuntu-knowledge-patch",
       "display_name": "Ubuntu",
       "short_label": "Ubuntu",
-      "description": "Ubuntu 26.04 compatibility. Use for Ubuntu work.",
+      "description": "Ubuntu",
       "coverage_kind": "versioned",
       "covered_through": "26.04",
       "coverage_label": "26.04",
@@ -1994,15 +1994,15 @@
         "system-administration",
         "lts"
       ],
-      "content_hash": "sha256:96f3663d0bc9e0a4a7f837ea15537e87cace3fd6af5c91cb8cf88f1fb2c5cb4d",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:31e0db6df397f6095abd453f4c16dd7f62fc1180ca2fa07e4f927086ec2bf064",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/ubuntu-knowledge-patch/coverage.json"
     },
     {
       "id": "vercel-ai-sdk-knowledge-patch",
       "display_name": "Vercel AI SDK",
       "short_label": "Vercel AI SDK",
-      "description": "Vercel AI SDK 6.0 compatibility. Use for Vercel AI SDK work.",
+      "description": "Vercel AI SDK",
       "coverage_kind": "versioned",
       "covered_through": "6.0",
       "coverage_label": "6.0",
@@ -2017,15 +2017,15 @@
         "tools",
         "generative-ui"
       ],
-      "content_hash": "sha256:952d80a1cb3643a0b6477535b202d5580aaa9789e5ac21874e87de42361fd835",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:de6fb62b9589a4a2b055c076427781bd1cb5c47016506785429f2ee042afaadf",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/vercel-ai-sdk-knowledge-patch/coverage.json"
     },
     {
       "id": "vite-knowledge-patch",
       "display_name": "Vite",
       "short_label": "Vite",
-      "description": "Vite 8.1.0 compatibility. Use for Vite work.",
+      "description": "Vite",
       "coverage_kind": "versioned",
       "covered_through": "8.1.0",
       "coverage_label": "8.1.0",
@@ -2042,15 +2042,15 @@
         "hmr",
         "frontend"
       ],
-      "content_hash": "sha256:25f3c1159ef228744ce422f74934b38f1607f7a47a6ad1e52601e879795e28fb",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:0de0511737635b3c4cc6f02f2493e630d6c5489d047503be8f2fa05868400dc1",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/vite-knowledge-patch/coverage.json"
     },
     {
       "id": "vitest-knowledge-patch",
       "display_name": "Vitest",
       "short_label": "Vitest",
-      "description": "Vitest 4.1 compatibility. Use for Vitest work.",
+      "description": "Vitest",
       "coverage_kind": "versioned",
       "covered_through": "4.1",
       "coverage_label": "4.1",
@@ -2066,15 +2066,15 @@
         "coverage",
         "vite"
       ],
-      "content_hash": "sha256:2726cf2db8da0cafd9ddeb847d5e0fc62ccc4dd085b087e7daf79309ee53d9f7",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:a8568c040fb91ab86757c07a3d084421012c3a22e131f2a1e1d63dd75b4488b1",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/vitest-knowledge-patch/coverage.json"
     },
     {
       "id": "vuejs-knowledge-patch",
       "display_name": "Vue.js",
       "short_label": "Vue.js",
-      "description": "Vue.js 3.6.0-beta compatibility. Use for Vue.js work.",
+      "description": "Vue.js",
       "coverage_kind": "versioned",
       "covered_through": "3.6.0-beta",
       "coverage_label": "3.6.0-beta",
@@ -2090,15 +2090,15 @@
         "composition-api",
         "sfc"
       ],
-      "content_hash": "sha256:2e02ebb9a47afa13a388a8f5433bd021ec65e3b51748351abb9ea9c565a86ef2",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:e158fa9646ce586ff0bc767edc41271b33ca5c1e9b7524411e0b327607b900e5",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/vuejs-knowledge-patch/coverage.json"
     },
     {
       "id": "workos-knowledge-patch",
       "display_name": "WorkOS",
       "short_label": "WorkOS",
-      "description": "WorkOS 8.10 compatibility. Use for WorkOS work.",
+      "description": "WorkOS",
       "coverage_kind": "versioned",
       "covered_through": "8.10",
       "coverage_label": "8.10",
@@ -2118,15 +2118,15 @@
         "directory-sync",
         "organizations"
       ],
-      "content_hash": "sha256:7d5bd187e684040c92ceaa84951a9f2433f63a3c41b2e62a23bbd4e9395374cd",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:d374cb816a0d0f59479601f3a9e14dd70450c910c86a771f87f756a8899628d7",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/workos-knowledge-patch/coverage.json"
     },
     {
       "id": "zig-knowledge-patch",
       "display_name": "Zig",
       "short_label": "Zig",
-      "description": "Zig 0.15.1 compatibility. Use for Zig work.",
+      "description": "Zig",
       "coverage_kind": "versioned",
       "covered_through": "0.15.1",
       "coverage_label": "0.15.1",
@@ -2141,15 +2141,15 @@
         "memory",
         "cross-compilation"
       ],
-      "content_hash": "sha256:cfb9e9d3e52b063e3759d8a5dfd4b1e9d1fac157e436b3316c325e67c5a869f3",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:e0a1ac7cb21ce311d001a9667a4a99a97a5aa338f8fa8dbb8d16789ec4495852",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/zig-knowledge-patch/coverage.json"
     },
     {
       "id": "zitadel-knowledge-patch",
       "display_name": "Zitadel",
       "short_label": "Zitadel",
-      "description": "Zitadel 4.15.3 compatibility. Use for Zitadel work.",
+      "description": "Zitadel",
       "coverage_kind": "versioned",
       "covered_through": "4.15.3",
       "coverage_label": "4.15.3",
@@ -2166,8 +2166,8 @@
         "authentication",
         "authorization"
       ],
-      "content_hash": "sha256:97c18b28b5b1675df98006b869fe4e8e7d70167f0fa46cb8c9adba41f98a857d",
-      "generated_at": "2026-07-15T23:21:58Z",
+      "content_hash": "sha256:c6104c0efa4116be21d930c46714f17af0249277712eae345d09f1911889f683",
+      "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/zitadel-knowledge-patch/coverage.json"
     }
   ]

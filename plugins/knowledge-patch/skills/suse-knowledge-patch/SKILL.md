@@ -1,6 +1,6 @@
 ---
 name: suse-knowledge-patch
-description: SUSE / openSUSE current compatibility guidance. Use for SUSE / openSUSE work.
+description: SUSE / openSUSE
 license: MIT
 version: null
 metadata:

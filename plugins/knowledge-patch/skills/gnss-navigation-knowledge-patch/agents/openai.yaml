@@ -1,3 +1,3 @@
 interface:
   display_name: "GNSS"
-  short_description: "GNSS current compatibility guidance. Use for GNSS work."
+  short_description: "GNSS"

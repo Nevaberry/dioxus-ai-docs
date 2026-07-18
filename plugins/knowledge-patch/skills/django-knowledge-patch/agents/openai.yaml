@@ -1,3 +1,3 @@
 interface:
   display_name: "Django"
-  short_description: "Django 6.0.8 compatibility. Use for Django work."
+  short_description: "Django"

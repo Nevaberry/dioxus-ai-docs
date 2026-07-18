@@ -1,6 +1,6 @@
 ---
 name: ratatui-knowledge-patch
-description: Ratatui 0.29.0–0.31.0 compatibility. Use for Ratatui work.
+description: Ratatui
 license: MIT
 version: 0.31.0
 metadata:

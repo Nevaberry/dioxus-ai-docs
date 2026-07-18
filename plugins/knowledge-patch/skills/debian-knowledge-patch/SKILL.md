@@ -1,6 +1,6 @@
 ---
 name: debian-knowledge-patch
-description: Debian 13.0 compatibility. Use for Debian work.
+description: Debian
 license: MIT
 version: "13.0"
 metadata:

@@ -1,3 +1,3 @@
 interface:
   display_name: "PostGIS"
-  short_description: "PostGIS 3.6.1 compatibility. Use for PostGIS work."
+  short_description: "PostGIS"

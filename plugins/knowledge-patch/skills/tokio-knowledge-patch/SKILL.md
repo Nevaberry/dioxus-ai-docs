@@ -1,6 +1,6 @@
 ---
 name: tokio-knowledge-patch
-description: Tokio 1.52.0 compatibility. Use for Tokio work.
+description: Tokio
 license: MIT
 version: "1.52.0"
 metadata:

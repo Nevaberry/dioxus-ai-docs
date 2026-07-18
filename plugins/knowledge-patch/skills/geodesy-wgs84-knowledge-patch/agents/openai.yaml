@@ -1,3 +1,3 @@
 interface:
   display_name: "WGS 84"
-  short_description: "WGS 84 current compatibility guidance. Use for WGS 84 work."
+  short_description: "WGS 84"

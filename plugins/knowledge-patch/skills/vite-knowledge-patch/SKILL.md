@@ -1,6 +1,6 @@
 ---
 name: vite-knowledge-patch
-description: Vite 8.1.0 compatibility. Use for Vite work.
+description: Vite
 license: MIT
 version: 8.1.0
 metadata:

@@ -1,3 +1,3 @@
 interface:
   display_name: "Gleam"
-  short_description: "Gleam 1.7.0–1.17.0 compatibility. Use for Gleam work."
+  short_description: "Gleam"

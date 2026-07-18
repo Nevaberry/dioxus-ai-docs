@@ -1,3 +1,3 @@
 interface:
   display_name: "pgvector"
-  short_description: "pgvector 0.8.5 compatibility. Use for pgvector work."
+  short_description: "pgvector"

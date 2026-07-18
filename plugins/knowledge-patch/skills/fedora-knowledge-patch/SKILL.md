@@ -1,6 +1,6 @@
 ---
 name: fedora-knowledge-patch
-description: Fedora Linux 44 compatibility. Use for Fedora Linux work.
+description: Fedora Linux
 license: MIT
 version: "44"
 metadata:

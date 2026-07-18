@@ -1,6 +1,6 @@
 ---
 name: kotlin-knowledge-patch
-description: Kotlin 2.3.20 compatibility. Use for Kotlin work.
+description: Kotlin
 license: MIT
 version: 2.3.20
 metadata:

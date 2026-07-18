@@ -1,6 +1,6 @@
 ---
 name: nginx-knowledge-patch
-description: NGINX 1.31.0 compatibility. Use for NGINX work.
+description: NGINX
 license: MIT
 version: "1.31.0"
 metadata:

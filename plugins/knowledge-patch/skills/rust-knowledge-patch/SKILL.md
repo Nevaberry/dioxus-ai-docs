@@ -1,6 +1,6 @@
 ---
 name: rust-knowledge-patch
-description: Rust 1.84.0–1.97.0 compatibility. Use for Rust work.
+description: Rust
 license: MIT
 version: 1.97.0
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: prisma-knowledge-patch
-description: Prisma 7.8.0 compatibility. Use for Prisma work.
+description: Prisma
 license: MIT
 version: 7.8.0
 metadata:

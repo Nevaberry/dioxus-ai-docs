@@ -1,6 +1,6 @@
 ---
 name: supabase-knowledge-patch
-description: Supabase rolling coverage. Use for Supabase work.
+description: Supabase
 license: MIT
 version: null
 metadata:

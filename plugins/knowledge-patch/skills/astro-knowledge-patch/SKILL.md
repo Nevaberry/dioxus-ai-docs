@@ -1,6 +1,6 @@
 ---
 name: astro-knowledge-patch
-description: Astro 7.0.0 compatibility. Use for Astro work.
+description: Astro
 license: MIT
 version: "7.0.0"
 metadata:

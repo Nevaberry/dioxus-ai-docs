@@ -1,6 +1,6 @@
 ---
 name: centos-stream-knowledge-patch
-description: CentOS Stream 10.0 compatibility. Use for CentOS Stream work.
+description: CentOS Stream
 license: MIT
 version: "10.0"
 metadata:

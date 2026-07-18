@@ -1,6 +1,6 @@
 ---
 name: traefik-knowledge-patch
-description: Traefik 3.7.0 compatibility. Use for Traefik work.
+description: Traefik
 license: MIT
 version: 3.7.0
 metadata:

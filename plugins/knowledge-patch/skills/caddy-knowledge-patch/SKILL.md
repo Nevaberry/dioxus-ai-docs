@@ -1,6 +1,6 @@
 ---
 name: caddy-knowledge-patch
-description: Caddy 2.11.1 compatibility. Use for Caddy work.
+description: Caddy
 license: MIT
 version: "2.11.1"
 metadata:

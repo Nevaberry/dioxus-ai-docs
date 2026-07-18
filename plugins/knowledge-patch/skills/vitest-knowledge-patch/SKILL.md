@@ -1,6 +1,6 @@
 ---
 name: vitest-knowledge-patch
-description: Vitest 4.1 compatibility. Use for Vitest work.
+description: Vitest
 license: MIT
 version: "4.1"
 metadata:

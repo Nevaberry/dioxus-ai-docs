@@ -1,6 +1,6 @@
 ---
 name: clerk-knowledge-patch
-description: Clerk 1.0.0 compatibility. Use for Clerk work.
+description: Clerk
 license: MIT
 version: 1.0.0
 metadata:

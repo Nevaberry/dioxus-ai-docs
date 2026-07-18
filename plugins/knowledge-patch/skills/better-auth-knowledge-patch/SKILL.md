@@ -1,6 +1,6 @@
 ---
 name: better-auth-knowledge-patch
-description: Better Auth 1.6.0 compatibility. Use for Better Auth work.
+description: Better Auth
 license: MIT
 version: 1.6.0
 metadata:

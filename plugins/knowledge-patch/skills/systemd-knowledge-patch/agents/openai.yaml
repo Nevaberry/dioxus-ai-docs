@@ -1,3 +1,3 @@
 interface:
   display_name: "systemd"
-  short_description: "systemd 256–260 compatibility. Use for systemd work."
+  short_description: "systemd"

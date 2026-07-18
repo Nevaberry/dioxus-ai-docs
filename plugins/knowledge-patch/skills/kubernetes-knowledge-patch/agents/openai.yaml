@@ -1,3 +1,3 @@
 interface:
   display_name: "Kubernetes"
-  short_description: "Kubernetes 1.36.0 compatibility. Use for Kubernetes work."
+  short_description: "Kubernetes"

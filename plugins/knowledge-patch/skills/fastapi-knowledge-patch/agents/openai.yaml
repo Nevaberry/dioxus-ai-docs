@@ -1,3 +1,3 @@
 interface:
   display_name: "FastAPI"
-  short_description: "FastAPI 0.135.3 compatibility. Use for FastAPI work."
+  short_description: "FastAPI"

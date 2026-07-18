@@ -1,6 +1,6 @@
 ---
 name: authjs-knowledge-patch
-description: Auth.js 5.0.0 compatibility. Use for Auth.js work.
+description: Auth.js
 license: MIT
 version: 5.0.0
 metadata:

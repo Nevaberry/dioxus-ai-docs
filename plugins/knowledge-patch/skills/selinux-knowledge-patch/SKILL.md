@@ -1,6 +1,6 @@
 ---
 name: selinux-knowledge-patch
-description: SELinux current compatibility guidance. Use for SELinux work.
+description: SELinux
 license: MIT
 version: null
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: fastapi-knowledge-patch
-description: FastAPI 0.135.3 compatibility. Use for FastAPI work.
+description: FastAPI
 license: MIT
 version: 0.135.3
 metadata:

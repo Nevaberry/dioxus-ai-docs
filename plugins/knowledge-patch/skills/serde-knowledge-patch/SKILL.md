@@ -1,6 +1,6 @@
 ---
 name: serde-knowledge-patch
-description: Serde 1.0.220 compatibility. Use for Serde work.
+description: Serde
 license: MIT
 version: "1.0.220"
 metadata:

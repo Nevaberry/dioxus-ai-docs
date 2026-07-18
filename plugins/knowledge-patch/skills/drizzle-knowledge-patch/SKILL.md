@@ -1,6 +1,6 @@
 ---
 name: drizzle-knowledge-patch
-description: Drizzle ORM 1.0.0-beta.19 compatibility. Use for Drizzle ORM work.
+description: Drizzle ORM
 license: MIT
 version: 1.0.0-beta.19
 metadata:

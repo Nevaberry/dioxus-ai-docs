@@ -1,6 +1,6 @@
 ---
 name: dioxus-knowledge-patch
-description: Dioxus 0.7.9 compatibility. Use for Dioxus work.
+description: Dioxus
 license: MIT
 version: 0.7.9
 metadata:

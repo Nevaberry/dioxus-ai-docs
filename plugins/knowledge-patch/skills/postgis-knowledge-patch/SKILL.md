@@ -1,6 +1,6 @@
 ---
 name: postgis-knowledge-patch
-description: PostGIS 3.6.1 compatibility. Use for PostGIS work.
+description: PostGIS
 license: MIT
 version: 3.6.1
 metadata:

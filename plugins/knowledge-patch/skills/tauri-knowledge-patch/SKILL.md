@@ -1,6 +1,6 @@
 ---
 name: tauri-knowledge-patch
-description: Tauri 2.5.0 compatibility. Use for Tauri work.
+description: Tauri
 license: MIT
 version: 2.5.0
 metadata:

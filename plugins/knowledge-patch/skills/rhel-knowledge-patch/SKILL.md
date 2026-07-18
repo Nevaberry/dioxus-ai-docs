@@ -1,6 +1,6 @@
 ---
 name: rhel-knowledge-patch
-description: RHEL 10.2 compatibility. Use for RHEL work.
+description: RHEL
 license: MIT
 version: "10.2"
 metadata:

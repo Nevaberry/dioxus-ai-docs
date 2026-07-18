@@ -1,6 +1,6 @@
 ---
 name: react-router-knowledge-patch
-description: React Router 8.2.0 compatibility. Use for React Router work.
+description: React Router
 license: MIT
 version: 8.2.0
 metadata:

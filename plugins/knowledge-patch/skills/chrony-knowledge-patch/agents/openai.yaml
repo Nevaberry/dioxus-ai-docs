@@ -1,3 +1,3 @@
 interface:
   display_name: "chrony"
-  short_description: "chrony 4.7–4.8 compatibility. Use for chrony work."
+  short_description: "chrony"

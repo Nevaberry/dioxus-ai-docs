@@ -1,6 +1,6 @@
 ---
 name: spring-boot-knowledge-patch
-description: Spring Boot 4.1.0 compatibility. Use for Spring Boot work.
+description: Spring Boot
 license: MIT
 version: 4.1.0
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: leptos-knowledge-patch
-description: Leptos 0.8.17 compatibility. Use for Leptos work.
+description: Leptos
 license: MIT
 version: 0.8.17
 metadata:

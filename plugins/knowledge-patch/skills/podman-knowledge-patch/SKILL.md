@@ -1,6 +1,6 @@
 ---
 name: podman-knowledge-patch
-description: Podman 6.0.0 compatibility. Use for Podman work.
+description: Podman
 license: MIT
 version: 6.0.0
 metadata:

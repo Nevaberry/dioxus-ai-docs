@@ -1,6 +1,6 @@
 ---
 name: sqlx-knowledge-patch
-description: SQLx 0.9.0 compatibility. Use for SQLx work.
+description: SQLx
 license: MIT
 version: "0.9.0"
 metadata:

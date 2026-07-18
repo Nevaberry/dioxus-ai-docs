@@ -1,6 +1,6 @@
 ---
 name: gpsd-knowledge-patch
-description: gpsd 3.27 compatibility. Use for gpsd work.
+description: gpsd
 license: MIT
 version: "3.27"
 metadata:

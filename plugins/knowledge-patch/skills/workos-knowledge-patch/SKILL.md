@@ -1,6 +1,6 @@
 ---
 name: workos-knowledge-patch
-description: WorkOS 8.10 compatibility. Use for WorkOS work.
+description: WorkOS
 license: MIT
 version: "8.10"
 metadata:

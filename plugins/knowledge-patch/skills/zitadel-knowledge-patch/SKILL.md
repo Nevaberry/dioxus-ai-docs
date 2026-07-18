@@ -1,6 +1,6 @@
 ---
 name: zitadel-knowledge-patch
-description: Zitadel 4.15.3 compatibility. Use for Zitadel work.
+description: Zitadel
 license: MIT
 version: 4.15.3
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: trpc-knowledge-patch
-description: tRPC 11.18.0 compatibility. Use for tRPC work.
+description: tRPC
 license: MIT
 version: 11.18.0
 metadata:

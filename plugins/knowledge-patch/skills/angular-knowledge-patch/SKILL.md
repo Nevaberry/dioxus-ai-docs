@@ -1,6 +1,6 @@
 ---
 name: angular-knowledge-patch
-description: Angular 22.0.0 compatibility. Use for Angular work.
+description: Angular
 license: MIT
 version: 22.0.0
 metadata:

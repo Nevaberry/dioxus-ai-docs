@@ -1,6 +1,6 @@
 ---
 name: pytorch-knowledge-patch
-description: PyTorch 2.11.0 compatibility. Use for PyTorch work.
+description: PyTorch
 license: MIT
 version: "2.11.0"
 metadata:

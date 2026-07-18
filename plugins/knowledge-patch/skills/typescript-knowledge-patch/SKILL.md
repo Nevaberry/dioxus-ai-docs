@@ -1,6 +1,6 @@
 ---
 name: typescript-knowledge-patch
-description: TypeScript 7.0.0 compatibility. Use for TypeScript work.
+description: TypeScript
 license: MIT
 version: 7.0.0
 metadata:

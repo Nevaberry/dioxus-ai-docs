@@ -1,6 +1,6 @@
 ---
 name: django-knowledge-patch
-description: Django 6.0.8 compatibility. Use for Django work.
+description: Django
 license: MIT
 version: 6.0.8
 metadata:

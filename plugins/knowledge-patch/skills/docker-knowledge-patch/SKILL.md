@@ -1,6 +1,6 @@
 ---
 name: docker-knowledge-patch
-description: Docker 25.0.0–29.3 compatibility. Use for Docker work.
+description: Docker
 license: MIT
 version: "29.3"
 metadata:

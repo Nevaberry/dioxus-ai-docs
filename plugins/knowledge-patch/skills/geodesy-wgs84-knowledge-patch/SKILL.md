@@ -1,6 +1,6 @@
 ---
 name: geodesy-wgs84-knowledge-patch
-description: WGS 84 current compatibility guidance. Use for WGS 84 work.
+description: WGS 84
 license: MIT
 version: null
 metadata:

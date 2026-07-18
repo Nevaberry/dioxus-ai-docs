@@ -1,6 +1,6 @@
 ---
 name: tailwind-knowledge-patch
-description: Tailwind CSS 4.2.2 compatibility. Use for Tailwind CSS work.
+description: Tailwind CSS
 license: MIT
 version: 4.2.2
 metadata:

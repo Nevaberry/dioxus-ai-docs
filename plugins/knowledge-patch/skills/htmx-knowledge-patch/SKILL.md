@@ -1,6 +1,6 @@
 ---
 name: htmx-knowledge-patch
-description: htmx 4.0.0 compatibility. Use for htmx work.
+description: htmx
 license: MIT
 version: "4.0.0"
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: gcp-knowledge-patch
-description: GCP rolling coverage. Use for GCP work.
+description: Google Cloud Platform
 license: MIT
 version: null
 metadata:

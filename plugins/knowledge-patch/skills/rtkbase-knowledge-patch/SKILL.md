@@ -1,6 +1,6 @@
 ---
 name: rtkbase-knowledge-patch
-description: RTKBase 2.7.0 compatibility. Use for RTKBase work.
+description: RTKBase
 license: MIT
 version: "2.7.0"
 metadata:

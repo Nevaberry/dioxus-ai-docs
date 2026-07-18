@@ -1,6 +1,6 @@
 ---
 name: langchain-knowledge-patch
-description: LangChain 1.1.0 compatibility. Use for LangChain work.
+description: LangChain
 license: MIT
 version: "1.1.0"
 metadata:

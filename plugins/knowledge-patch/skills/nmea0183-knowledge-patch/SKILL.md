@@ -1,6 +1,6 @@
 ---
 name: nmea0183-knowledge-patch
-description: NMEA 0183 4.30 compatibility. Use for NMEA 0183 work.
+description: NMEA 0183
 license: MIT
 version: "4.30"
 metadata:

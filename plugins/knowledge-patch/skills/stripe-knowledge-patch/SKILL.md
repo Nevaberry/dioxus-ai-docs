@@ -1,6 +1,6 @@
 ---
 name: stripe-knowledge-patch
-description: Stripe rolling coverage. Use for Stripe work.
+description: Stripe
 license: MIT
 version: null
 metadata:

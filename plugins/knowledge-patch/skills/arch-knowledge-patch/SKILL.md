@@ -1,6 +1,6 @@
 ---
 name: arch-knowledge-patch
-description: Arch Linux rolling coverage. Use for Arch Linux work.
+description: Arch Linux
 license: MIT
 version: null
 metadata:

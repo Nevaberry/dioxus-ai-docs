@@ -1,6 +1,6 @@
 ---
 name: ubuntu-knowledge-patch
-description: Ubuntu 26.04 compatibility. Use for Ubuntu work.
+description: Ubuntu
 license: MIT
 version: "26.04"
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: aws-sdk-knowledge-patch
-description: AWS SDK rolling coverage. Use for AWS SDK work.
+description: AWS SDK
 license: MIT
 version: null
 metadata:

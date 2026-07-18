@@ -1,6 +1,6 @@
 ---
 name: axum-knowledge-patch
-description: Axum 0.8.0 compatibility. Use for Axum work.
+description: Axum
 license: MIT
 version: "0.8.0"
 metadata:

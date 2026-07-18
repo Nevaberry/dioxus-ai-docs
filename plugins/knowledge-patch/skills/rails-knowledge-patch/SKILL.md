@@ -1,6 +1,6 @@
 ---
 name: rails-knowledge-patch
-description: Ruby on Rails 8.1 compatibility. Use for Ruby on Rails work.
+description: Ruby on Rails
 license: MIT
 version: "8.1"
 metadata:

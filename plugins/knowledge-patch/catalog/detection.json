@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-15T23:21:58Z",
+  "generated_at": "2026-07-18T07:39:54Z",
   "rules": [
     {
       "id": "almalinux-knowledge-patch",
@@ -917,7 +917,7 @@
     },
     {
       "id": "gcp-knowledge-patch",
-      "short_label": "GCP",
+      "short_label": "Google Cloud Platform",
       "coverage_kind": "rolling",
       "covered_through": null,
       "coverage_label": "rolling coverage",

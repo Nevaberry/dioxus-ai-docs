@@ -1,6 +1,6 @@
 ---
 name: terraform-knowledge-patch
-description: Terraform / OpenTofu current compatibility guidance. Use for Terraform / OpenTofu work.
+description: Terraform / OpenTofu
 license: MIT
 version: null
 metadata:

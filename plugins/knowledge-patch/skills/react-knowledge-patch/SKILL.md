@@ -1,6 +1,6 @@
 ---
 name: react-knowledge-patch
-description: React 19.2.0 compatibility. Use for React work.
+description: React
 license: MIT
 version: "19.2.0"
 metadata:

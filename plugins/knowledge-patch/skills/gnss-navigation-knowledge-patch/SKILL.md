@@ -1,6 +1,6 @@
 ---
 name: gnss-navigation-knowledge-patch
-description: GNSS current compatibility guidance. Use for GNSS work.
+description: GNSS
 license: MIT
 version: null
 metadata:

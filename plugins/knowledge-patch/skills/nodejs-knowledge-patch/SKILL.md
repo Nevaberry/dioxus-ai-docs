@@ -1,6 +1,6 @@
 ---
 name: nodejs-knowledge-patch
-description: Node.js 23.0.0–26.5.0 compatibility. Use for Node.js work.
+description: Node.js
 license: MIT
 version: 26.5.0
 metadata:

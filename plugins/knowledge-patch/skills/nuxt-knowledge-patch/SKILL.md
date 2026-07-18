@@ -1,6 +1,6 @@
 ---
 name: nuxt-knowledge-patch
-description: Nuxt 4.4.0 compatibility. Use for Nuxt work.
+description: Nuxt
 license: MIT
 version: 4.4.0
 metadata:

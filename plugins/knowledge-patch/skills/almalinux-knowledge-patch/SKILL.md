@@ -1,6 +1,6 @@
 ---
 name: almalinux-knowledge-patch
-description: AlmaLinux 10.2 compatibility. Use for AlmaLinux work.
+description: AlmaLinux
 license: MIT
 version: "10.2"
 metadata:

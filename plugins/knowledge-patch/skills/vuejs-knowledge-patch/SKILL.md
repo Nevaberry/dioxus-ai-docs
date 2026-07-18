@@ -1,6 +1,6 @@
 ---
 name: vuejs-knowledge-patch
-description: Vue.js 3.6.0-beta compatibility. Use for Vue.js work.
+description: Vue.js
 license: MIT
 version: 3.6.0-beta
 metadata:

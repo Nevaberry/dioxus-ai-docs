@@ -1,6 +1,6 @@
 ---
 name: zig-knowledge-patch
-description: Zig 0.15.1 compatibility. Use for Zig work.
+description: Zig
 license: MIT
 version: "0.15.1"
 metadata:

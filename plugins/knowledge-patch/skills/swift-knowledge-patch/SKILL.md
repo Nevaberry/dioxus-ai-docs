@@ -1,6 +1,6 @@
 ---
 name: swift-knowledge-patch
-description: Swift 6.1–6.3.0 compatibility. Use for Swift work.
+description: Swift
 license: MIT
 version: 6.3.0
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: pgvector-knowledge-patch
-description: pgvector 0.8.5 compatibility. Use for pgvector work.
+description: pgvector
 license: MIT
 version: "0.8.5"
 metadata:

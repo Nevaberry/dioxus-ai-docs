@@ -1,6 +1,6 @@
 ---
 name: go-knowledge-patch
-description: Go 1.26.0 compatibility. Use for Go work.
+description: Go
 license: MIT
 version: 1.26.0
 metadata:

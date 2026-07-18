@@ -1,6 +1,6 @@
 ---
 name: codex-knowledge-patch
-description: Codex 0.144.0 compatibility. Use for Codex work.
+description: Codex
 license: MIT
 version: "0.144.0"
 metadata:

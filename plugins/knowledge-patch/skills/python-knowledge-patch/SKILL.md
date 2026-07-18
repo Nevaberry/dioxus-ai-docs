@@ -1,6 +1,6 @@
 ---
 name: python-knowledge-patch
-description: Python 3.14 compatibility. Use for Python work.
+description: Python
 license: MIT
 version: "3.14"
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: chrony-knowledge-patch
-description: chrony 4.7–4.8 compatibility. Use for chrony work.
+description: chrony
 license: MIT
 version: "4.8"
 metadata:

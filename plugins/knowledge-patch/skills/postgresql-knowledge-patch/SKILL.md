@@ -1,6 +1,6 @@
 ---
 name: postgresql-knowledge-patch
-description: PostgreSQL 18.0 compatibility. Use for PostgreSQL work.
+description: PostgreSQL
 license: MIT
 version: "18.0"
 metadata:

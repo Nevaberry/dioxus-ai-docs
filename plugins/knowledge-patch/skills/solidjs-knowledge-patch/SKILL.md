@@ -1,6 +1,6 @@
 ---
 name: solidjs-knowledge-patch
-description: SolidJS current compatibility guidance. Use for SolidJS work.
+description: SolidJS
 license: MIT
 version: null
 metadata:

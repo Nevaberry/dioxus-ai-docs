@@ -1,6 +1,6 @@
 ---
 name: svelte-knowledge-patch
-description: Svelte current compatibility guidance. Use for Svelte work.
+description: Svelte
 license: MIT
 version: null
 metadata:

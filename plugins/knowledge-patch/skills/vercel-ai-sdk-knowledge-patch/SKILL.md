@@ -1,6 +1,6 @@
 ---
 name: vercel-ai-sdk-knowledge-patch
-description: Vercel AI SDK 6.0 compatibility. Use for Vercel AI SDK work.
+description: Vercel AI SDK
 license: MIT
 version: "6.0"
 metadata:

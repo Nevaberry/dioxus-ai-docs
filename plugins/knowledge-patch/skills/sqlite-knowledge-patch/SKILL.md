@@ -1,6 +1,6 @@
 ---
 name: sqlite-knowledge-patch
-description: SQLite 3.46.0–3.53.0 compatibility. Use for SQLite work.
+description: SQLite
 license: MIT
 version: 3.53.0
 metadata:

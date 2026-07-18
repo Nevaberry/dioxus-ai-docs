@@ -1,6 +1,6 @@
 ---
 name: elixir-knowledge-patch
-description: Elixir 1.20.0-rc compatibility. Use for Elixir work.
+description: Elixir
 license: MIT
 version: 1.20.0-rc
 metadata:

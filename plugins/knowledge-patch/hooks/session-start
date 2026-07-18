@@ -51,10 +51,7 @@ def main():
 
     active_text = ", ".join(active) if active else "none"
     context = (
-        "Knowledge Patch is installed. Use knowledge-patch:using-knowledge-patch "
-        "before writing, reviewing, debugging, or administering patched technologies. "
-        "Load active or matching patch skills, choose the relevant set, and "
-        "apply each patch only through the project's pinned version. "
+        "Use knowledge-patch:using-knowledge-patch. Load matching patch skills. "
         f"Active patches: {active_text}."
     )
 

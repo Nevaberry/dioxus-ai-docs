@@ -1,6 +1,6 @@
 ---
 name: biome-knowledge-patch
-description: Biome 2.5.0 compatibility. Use for Biome work.
+description: Biome
 license: MIT
 version: 2.5.0
 metadata:

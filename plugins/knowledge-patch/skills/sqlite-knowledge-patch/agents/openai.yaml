@@ -1,3 +1,3 @@
 interface:
   display_name: "SQLite"
-  short_description: "SQLite 3.46.0–3.53.0 compatibility. Use for SQLite work."
+  short_description: "SQLite"

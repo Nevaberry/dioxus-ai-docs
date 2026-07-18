@@ -1,6 +1,6 @@
 ---
 name: gleam-knowledge-patch
-description: Gleam 1.7.0–1.17.0 compatibility. Use for Gleam work.
+description: Gleam
 license: MIT
 version: 1.17.0
 metadata:

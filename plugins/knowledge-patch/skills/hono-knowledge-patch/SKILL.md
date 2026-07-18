@@ -1,6 +1,6 @@
 ---
 name: hono-knowledge-patch
-description: Hono 4.8.0–4.12.0 compatibility. Use for Hono work.
+description: Hono
 license: MIT
 version: 4.12.0
 metadata:

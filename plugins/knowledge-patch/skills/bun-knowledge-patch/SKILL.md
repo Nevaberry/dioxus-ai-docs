@@ -1,6 +1,6 @@
 ---
 name: bun-knowledge-patch
-description: Bun 1.3.14 compatibility. Use for Bun work.
+description: Bun
 license: MIT
 version: "1.3.14"
 metadata:

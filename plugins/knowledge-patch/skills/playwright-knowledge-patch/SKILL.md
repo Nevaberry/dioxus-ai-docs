@@ -1,6 +1,6 @@
 ---
 name: playwright-knowledge-patch
-description: Playwright 1.61.0 compatibility. Use for Playwright work.
+description: Playwright
 license: MIT
 version: 1.61.0
 metadata:

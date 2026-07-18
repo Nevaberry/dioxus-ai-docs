@@ -1,6 +1,6 @@
 # Patch Index
 
-Generated at `2026-07-15T23:21:58Z`.
+Generated at `2026-07-18T07:39:54Z`.
 
 | Patch | Covers | Languages | Tags |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ Generated at `2026-07-15T23:21:58Z`.
 | FastAPI (`fastapi-knowledge-patch`) | 0.135.3 | python | api, async, web-framework, validation, openapi |
 | Fedora Linux (`fedora-knowledge-patch`) | 44 | bash | linux, packages, dnf, system-administration, selinux |
 | Flutter (`flutter-knowledge-patch`) | 3.44.0 | dart | mobile, ui, widgets, dart, cross-platform |
-| GCP (`gcp-knowledge-patch`) | rolling coverage | yaml, bash, python | cloud, iam, compute, serverless, kubernetes, data |
+| Google Cloud Platform (`gcp-knowledge-patch`) | rolling coverage | yaml, bash, python | cloud, iam, compute, serverless, kubernetes, data |
 | WGS 84 (`geodesy-wgs84-knowledge-patch`) | current compatibility guidance | python, cpp | geodesy, coordinates, datum, projections, reference-frames |
 | Gleam (`gleam-knowledge-patch`) | 1.7.0–1.17.0 | gleam | functional-programming, beam, type-system, concurrency, ffi |
 | GNSS (`gnss-navigation-knowledge-patch`) | current compatibility guidance | cpp, python | satellite-navigation, gps, positioning, rtk, ppp |

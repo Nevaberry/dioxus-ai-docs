@@ -1,3 +1,3 @@
 interface:
   display_name: "AlmaLinux"
-  short_description: "AlmaLinux 10.2 compatibility. Use for AlmaLinux work."
+  short_description: "AlmaLinux"

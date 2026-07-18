@@ -1,6 +1,6 @@
 ---
 name: ntrip-rtklib-knowledge-patch
-description: NTRIP / RTKLIB current compatibility guidance. Use for NTRIP / RTKLIB work.
+description: NTRIP / RTKLIB
 license: MIT
 version: null
 metadata:

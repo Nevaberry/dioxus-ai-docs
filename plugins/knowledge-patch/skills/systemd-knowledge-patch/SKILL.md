@@ -1,6 +1,6 @@
 ---
 name: systemd-knowledge-patch
-description: systemd 256–260 compatibility. Use for systemd work.
+description: systemd
 license: MIT
 version: 260
 metadata:

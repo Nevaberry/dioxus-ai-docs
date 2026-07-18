@@ -1,6 +1,6 @@
 ---
 name: rocky-knowledge-patch
-description: Rocky Linux 10.2 compatibility. Use for Rocky Linux work.
+description: Rocky Linux
 license: MIT
 version: "10.2"
 metadata:

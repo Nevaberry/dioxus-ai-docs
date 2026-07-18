@@ -1,6 +1,6 @@
 ---
 name: nextjs-knowledge-patch
-description: Next.js 16.3.0 compatibility. Use for Next.js work.
+description: Next.js
 license: MIT
 version: 16.3.0
 metadata:

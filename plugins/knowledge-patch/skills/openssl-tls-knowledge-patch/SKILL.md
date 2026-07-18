@@ -1,6 +1,6 @@
 ---
 name: openssl-tls-knowledge-patch
-description: OpenSSL 4.0.0 compatibility. Use for OpenSSL work.
+description: OpenSSL
 license: MIT
 version: 4.0.0
 metadata:

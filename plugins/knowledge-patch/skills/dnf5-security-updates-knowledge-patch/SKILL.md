@@ -1,6 +1,6 @@
 ---
 name: dnf5-security-updates-knowledge-patch
-description: DNF5 5.4.1 compatibility. Use for DNF5 work.
+description: DNF5
 license: MIT
 version: 5.4.1
 metadata:
