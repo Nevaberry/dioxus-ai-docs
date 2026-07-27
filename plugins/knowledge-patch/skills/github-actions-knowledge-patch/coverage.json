@@ -1,0 +1,20 @@
+{
+  "patch": "github-actions-knowledge-patch",
+  "merged_at": "2026-07-26T23:38:51Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "platform-hardening-2025-2026": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "platform-2026": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

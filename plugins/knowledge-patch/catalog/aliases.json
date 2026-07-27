@@ -1,7 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-18T07:39:54Z",
+  "generated_at": "2026-07-26T23:44:06Z",
   "aliases": {
+    "actions runner": [
+      "github-actions-knowledge-patch"
+    ],
     "ai sdk": [
       "vercel-ai-sdk-knowledge-patch"
     ],
@@ -26,6 +29,21 @@
     "angular knowledge patch": [
       "angular-knowledge-patch"
     ],
+    "ansible": [
+      "ansible-knowledge-patch"
+    ],
+    "ansible core": [
+      "ansible-knowledge-patch"
+    ],
+    "ansible knowledge patch": [
+      "ansible-knowledge-patch"
+    ],
+    "ansible playbook": [
+      "ansible-knowledge-patch"
+    ],
+    "application set": [
+      "argo-cd-knowledge-patch"
+    ],
     "arch": [
       "arch-knowledge-patch"
     ],
@@ -37,6 +55,18 @@
     ],
     "archlinux": [
       "arch-knowledge-patch"
+    ],
+    "argo cd": [
+      "argo-cd-knowledge-patch"
+    ],
+    "argo cd knowledge patch": [
+      "argo-cd-knowledge-patch"
+    ],
+    "argocd": [
+      "argo-cd-knowledge-patch"
+    ],
+    "astral uv": [
+      "uv-knowledge-patch"
     ],
     "astro": [
       "astro-knowledge-patch"
@@ -140,6 +170,12 @@
     "centos stream knowledge patch": [
       "centos-stream-knowledge-patch"
     ],
+    "cfa": [
+      "lavaan-cfa-knowledge-patch"
+    ],
+    "chart yaml": [
+      "helm-knowledge-patch"
+    ],
     "chrony": [
       "chrony-knowledge-patch"
     ],
@@ -164,6 +200,27 @@
     "clerkjs": [
       "clerk-knowledge-patch"
     ],
+    "clickhouse": [
+      "clickhouse-knowledge-patch"
+    ],
+    "clickhouse client": [
+      "clickhouse-knowledge-patch"
+    ],
+    "clickhouse knowledge patch": [
+      "clickhouse-knowledge-patch"
+    ],
+    "clickhouse server": [
+      "clickhouse-knowledge-patch"
+    ],
+    "cloud config": [
+      "cloud-init-knowledge-patch"
+    ],
+    "cloud init": [
+      "cloud-init-knowledge-patch"
+    ],
+    "cloud init knowledge patch": [
+      "cloud-init-knowledge-patch"
+    ],
     "codex": [
       "codex-knowledge-patch"
     ],
@@ -173,8 +230,26 @@
     "codex knowledge patch": [
       "codex-knowledge-patch"
     ],
+    "component stories": [
+      "storybook-knowledge-patch"
+    ],
+    "confirmatory factor analysis": [
+      "lavaan-cfa-knowledge-patch"
+    ],
+    "cosign": [
+      "sigstore-cosign-knowledge-patch"
+    ],
     "cpython": [
       "python-knowledge-patch"
+    ],
+    "cran": [
+      "r-cran-knowledge-patch"
+    ],
+    "csf": [
+      "storybook-knowledge-patch"
+    ],
+    "ctap": [
+      "webauthn-passkeys-knowledge-patch"
     ],
     "debian": [
       "debian-knowledge-patch"
@@ -245,8 +320,23 @@
     "drizzle orm": [
       "drizzle-knowledge-patch"
     ],
+    "duck db": [
+      "duckdb-knowledge-patch"
+    ],
+    "duckdb": [
+      "duckdb-knowledge-patch"
+    ],
+    "duckdb cli": [
+      "duckdb-knowledge-patch"
+    ],
+    "duckdb knowledge patch": [
+      "duckdb-knowledge-patch"
+    ],
     "dx": [
       "dioxus-knowledge-patch"
+    ],
+    "eas": [
+      "expo-knowledge-patch"
     ],
     "elixir": [
       "elixir-knowledge-patch"
@@ -262,6 +352,30 @@
     ],
     "epsg 4326": [
       "geodesy-wgs84-knowledge-patch"
+    ],
+    "eslint": [
+      "eslint-knowledge-patch"
+    ],
+    "eslint flat config": [
+      "eslint-knowledge-patch"
+    ],
+    "eslint knowledge patch": [
+      "eslint-knowledge-patch"
+    ],
+    "eslintjs": [
+      "eslint-knowledge-patch"
+    ],
+    "expo": [
+      "expo-knowledge-patch"
+    ],
+    "expo go": [
+      "expo-knowledge-patch"
+    ],
+    "expo knowledge patch": [
+      "expo-knowledge-patch"
+    ],
+    "expo sdk": [
+      "expo-knowledge-patch"
     ],
     "fast api": [
       "fastapi-knowledge-patch"
@@ -280,6 +394,9 @@
     ],
     "fedora linux": [
       "fedora-knowledge-patch"
+    ],
+    "fido2": [
+      "webauthn-passkeys-knowledge-patch"
     ],
     "flutter": [
       "flutter-knowledge-patch"
@@ -304,6 +421,18 @@
     ],
     "geodesy wgs84 knowledge patch": [
       "geodesy-wgs84-knowledge-patch"
+    ],
+    "gha": [
+      "github-actions-knowledge-patch"
+    ],
+    "github actions": [
+      "github-actions-knowledge-patch"
+    ],
+    "github actions knowledge patch": [
+      "github-actions-knowledge-patch"
+    ],
+    "github workflows": [
+      "github-actions-knowledge-patch"
     ],
     "gleam": [
       "gleam-knowledge-patch"
@@ -353,6 +482,33 @@
     "gpsd knowledge patch": [
       "gpsd-knowledge-patch"
     ],
+    "grpc": [
+      "grpc-knowledge-patch"
+    ],
+    "grpc core": [
+      "grpc-knowledge-patch"
+    ],
+    "grpc go": [
+      "grpc-knowledge-patch"
+    ],
+    "grpc java": [
+      "grpc-knowledge-patch"
+    ],
+    "grpc knowledge patch": [
+      "grpc-knowledge-patch"
+    ],
+    "helm": [
+      "helm-knowledge-patch"
+    ],
+    "helm charts": [
+      "helm-knowledge-patch"
+    ],
+    "helm knowledge patch": [
+      "helm-knowledge-patch"
+    ],
+    "helmfile": [
+      "helm-knowledge-patch"
+    ],
     "hono": [
       "hono-knowledge-patch"
     ],
@@ -374,11 +530,17 @@
     "htmx org": [
       "htmx-knowledge-patch"
     ],
+    "innodb": [
+      "mysql-knowledge-patch"
+    ],
     "journald": [
       "systemd-knowledge-patch"
     ],
     "k8s": [
       "kubernetes-knowledge-patch"
+    ],
+    "keyless signing": [
+      "sigstore-cosign-knowledge-patch"
     ],
     "kmp": [
       "kotlin-knowledge-patch"
@@ -413,6 +575,15 @@
     "langgraph": [
       "langchain-knowledge-patch"
     ],
+    "lavaan": [
+      "lavaan-cfa-knowledge-patch"
+    ],
+    "lavaan cfa": [
+      "lavaan-cfa-knowledge-patch"
+    ],
+    "lavaan cfa knowledge patch": [
+      "lavaan-cfa-knowledge-patch"
+    ],
     "leptos": [
       "leptos-knowledge-patch"
     ],
@@ -433,6 +604,33 @@
     ],
     "moby": [
       "docker-knowledge-patch"
+    ],
+    "mongo": [
+      "mongodb-knowledge-patch"
+    ],
+    "mongod": [
+      "mongodb-knowledge-patch"
+    ],
+    "mongodb": [
+      "mongodb-knowledge-patch"
+    ],
+    "mongodb knowledge patch": [
+      "mongodb-knowledge-patch"
+    ],
+    "mongosh": [
+      "mongodb-knowledge-patch"
+    ],
+    "mysql": [
+      "mysql-knowledge-patch"
+    ],
+    "mysql knowledge patch": [
+      "mysql-knowledge-patch"
+    ],
+    "mysql server": [
+      "mysql-knowledge-patch"
+    ],
+    "mysqld": [
+      "mysql-knowledge-patch"
     ],
     "next": [
       "nextjs-knowledge-patch"
@@ -509,8 +707,47 @@
     "nuxtjs": [
       "nuxt-knowledge-patch"
     ],
+    "oas": [
+      "openapi-knowledge-patch"
+    ],
+    "oauth 2 0": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "oauth2": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "oauth2 oidc": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "oauth2 oidc knowledge patch": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "oidc": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "open api": [
+      "openapi-knowledge-patch"
+    ],
+    "open telemetry": [
+      "opentelemetry-knowledge-patch"
+    ],
     "openai codex": [
       "codex-knowledge-patch"
+    ],
+    "openapi": [
+      "openapi-knowledge-patch"
+    ],
+    "openapi knowledge patch": [
+      "openapi-knowledge-patch"
+    ],
+    "openid connect": [
+      "oauth2-oidc-knowledge-patch"
+    ],
+    "openssh": [
+      "openssh-knowledge-patch"
+    ],
+    "openssh knowledge patch": [
+      "openssh-knowledge-patch"
     ],
     "openssl": [
       "openssl-tls-knowledge-patch"
@@ -524,8 +761,23 @@
     "opensuse": [
       "suse-knowledge-patch"
     ],
+    "opentelemetry": [
+      "opentelemetry-knowledge-patch"
+    ],
+    "opentelemetry knowledge patch": [
+      "opentelemetry-knowledge-patch"
+    ],
     "opentofu": [
       "terraform-knowledge-patch"
+    ],
+    "otel": [
+      "opentelemetry-knowledge-patch"
+    ],
+    "otel collector": [
+      "opentelemetry-knowledge-patch"
+    ],
+    "passkeys": [
+      "webauthn-passkeys-knowledge-patch"
     ],
     "pgsql": [
       "postgresql-knowledge-patch"
@@ -608,6 +860,24 @@
     "pytorch knowledge patch": [
       "pytorch-knowledge-patch"
     ],
+    "query core": [
+      "tanstack-query-knowledge-patch"
+    ],
+    "r cran": [
+      "r-cran-knowledge-patch"
+    ],
+    "r cran knowledge patch": [
+      "r-cran-knowledge-patch"
+    ],
+    "r language": [
+      "r-cran-knowledge-patch"
+    ],
+    "r packages": [
+      "r-cran-knowledge-patch"
+    ],
+    "r programming": [
+      "r-cran-knowledge-patch"
+    ],
     "rails": [
       "rails-knowledge-patch"
     ],
@@ -629,6 +899,18 @@
     "react knowledge patch": [
       "react-knowledge-patch"
     ],
+    "react native": [
+      "react-native-knowledge-patch"
+    ],
+    "react native cli": [
+      "react-native-knowledge-patch"
+    ],
+    "react native knowledge patch": [
+      "react-native-knowledge-patch"
+    ],
+    "react query": [
+      "tanstack-query-knowledge-patch"
+    ],
     "react router": [
       "react-router-knowledge-patch"
     ],
@@ -644,6 +926,21 @@
     "redhat": [
       "rhel-knowledge-patch"
     ],
+    "redis": [
+      "redis-knowledge-patch"
+    ],
+    "redis cli": [
+      "redis-knowledge-patch"
+    ],
+    "redis knowledge patch": [
+      "redis-knowledge-patch"
+    ],
+    "redis open source": [
+      "redis-knowledge-patch"
+    ],
+    "redis server": [
+      "redis-knowledge-patch"
+    ],
     "remix": [
       "react-router-knowledge-patch"
     ],
@@ -652,6 +949,9 @@
     ],
     "rhel knowledge patch": [
       "rhel-knowledge-patch"
+    ],
+    "rn": [
+      "react-native-knowledge-patch"
     ],
     "rocky": [
       "rocky-knowledge-patch"
@@ -667,6 +967,9 @@
     ],
     "rr7": [
       "react-router-knowledge-patch"
+    ],
+    "rstats": [
+      "r-cran-knowledge-patch"
     ],
     "rtcm": [
       "rtcm3-knowledge-patch"
@@ -725,6 +1028,9 @@
     "selinux knowledge patch": [
       "selinux-knowledge-patch"
     ],
+    "sem": [
+      "lavaan-cfa-knowledge-patch"
+    ],
     "semanage": [
       "selinux-knowledge-patch"
     ],
@@ -737,8 +1043,29 @@
     "serde rs": [
       "serde-knowledge-patch"
     ],
+    "sigstore": [
+      "sigstore-cosign-knowledge-patch"
+    ],
+    "sigstore cosign": [
+      "sigstore-cosign-knowledge-patch"
+    ],
+    "sigstore cosign knowledge patch": [
+      "sigstore-cosign-knowledge-patch"
+    ],
     "sles": [
       "suse-knowledge-patch"
+    ],
+    "slsa": [
+      "slsa-knowledge-patch"
+    ],
+    "slsa knowledge patch": [
+      "slsa-knowledge-patch"
+    ],
+    "slsa provenance": [
+      "slsa-knowledge-patch"
+    ],
+    "slsa source": [
+      "slsa-knowledge-patch"
     ],
     "solid": [
       "solidjs-knowledge-patch"
@@ -764,6 +1091,21 @@
     "springboot": [
       "spring-boot-knowledge-patch"
     ],
+    "sql alchemy": [
+      "sqlalchemy-knowledge-patch"
+    ],
+    "sqlalchemy": [
+      "sqlalchemy-knowledge-patch"
+    ],
+    "sqlalchemy core": [
+      "sqlalchemy-knowledge-patch"
+    ],
+    "sqlalchemy knowledge patch": [
+      "sqlalchemy-knowledge-patch"
+    ],
+    "sqlalchemy orm": [
+      "sqlalchemy-knowledge-patch"
+    ],
     "sqlite": [
       "sqlite-knowledge-patch"
     ],
@@ -779,8 +1121,26 @@
     "sqlx knowledge patch": [
       "sqlx-knowledge-patch"
     ],
+    "ssh": [
+      "openssh-knowledge-patch"
+    ],
+    "ssh keygen": [
+      "openssh-knowledge-patch"
+    ],
+    "sshd": [
+      "openssh-knowledge-patch"
+    ],
     "ssl": [
       "openssl-tls-knowledge-patch"
+    ],
+    "storybook": [
+      "storybook-knowledge-patch"
+    ],
+    "storybook knowledge patch": [
+      "storybook-knowledge-patch"
+    ],
+    "storybookjs": [
+      "storybook-knowledge-patch"
     ],
     "str2str": [
       "ntrip-rtklib-knowledge-patch"
@@ -797,6 +1157,9 @@
     "stripe sdk": [
       "stripe-knowledge-patch"
     ],
+    "structural equation modeling": [
+      "lavaan-cfa-knowledge-patch"
+    ],
     "supabase": [
       "supabase-knowledge-patch"
     ],
@@ -805,6 +1168,9 @@
     ],
     "supabase knowledge patch": [
       "supabase-knowledge-patch"
+    ],
+    "supply chain levels for software artifacts": [
+      "slsa-knowledge-patch"
     ],
     "suse": [
       "suse-knowledge-patch"
@@ -826,6 +1192,9 @@
     ],
     "sveltekit": [
       "svelte-knowledge-patch"
+    ],
+    "swagger": [
+      "openapi-knowledge-patch"
     ],
     "swift": [
       "swift-knowledge-patch"
@@ -862,6 +1231,12 @@
     ],
     "tailwindcss": [
       "tailwind-knowledge-patch"
+    ],
+    "tanstack query": [
+      "tanstack-query-knowledge-patch"
+    ],
+    "tanstack query knowledge patch": [
+      "tanstack-query-knowledge-patch"
     ],
     "tauri": [
       "tauri-knowledge-patch"
@@ -947,6 +1322,18 @@
     "ubuntu linux": [
       "ubuntu-knowledge-patch"
     ],
+    "user data": [
+      "cloud-init-knowledge-patch"
+    ],
+    "uv": [
+      "uv-knowledge-patch"
+    ],
+    "uv knowledge patch": [
+      "uv-knowledge-patch"
+    ],
+    "uv package manager": [
+      "uv-knowledge-patch"
+    ],
     "vector extension": [
       "pgvector-knowledge-patch"
     ],
@@ -986,11 +1373,26 @@
     "vue js": [
       "vuejs-knowledge-patch"
     ],
+    "vue query": [
+      "tanstack-query-knowledge-patch"
+    ],
     "vuejs": [
       "vuejs-knowledge-patch"
     ],
     "vuejs knowledge patch": [
       "vuejs-knowledge-patch"
+    ],
+    "web authentication": [
+      "webauthn-passkeys-knowledge-patch"
+    ],
+    "webauthn": [
+      "webauthn-passkeys-knowledge-patch"
+    ],
+    "webauthn passkeys": [
+      "webauthn-passkeys-knowledge-patch"
+    ],
+    "webauthn passkeys knowledge patch": [
+      "webauthn-passkeys-knowledge-patch"
     ],
     "wgs 84": [
       "geodesy-wgs84-knowledge-patch"

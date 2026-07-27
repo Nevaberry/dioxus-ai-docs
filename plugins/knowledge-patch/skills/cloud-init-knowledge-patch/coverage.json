@@ -1,0 +1,15 @@
+{
+  "patch": "cloud-init-knowledge-patch",
+  "merged_at": "2026-07-26T21:16:24Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "26.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

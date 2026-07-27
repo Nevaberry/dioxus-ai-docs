@@ -1,0 +1,25 @@
+{
+  "patch": "tanstack-query-knowledge-patch",
+  "merged_at": "2026-07-26T22:50:03Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "5.66-5.90": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.101-environment-manager": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    },
+    "5.101.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "merged": "included"
+    }
+  },
+  "retire_candidates": []
+}

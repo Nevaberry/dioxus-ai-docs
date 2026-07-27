@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:39:54Z",
+  "generated_at": "2026-07-26T23:44:06Z",
   "patches": [
     {
       "id": "almalinux-knowledge-patch",
@@ -50,6 +50,31 @@
       "coverage_path": "skills/angular-knowledge-patch/coverage.json"
     },
     {
+      "id": "ansible-knowledge-patch",
+      "display_name": "Ansible Core",
+      "short_label": "Ansible Core",
+      "description": "Ansible Core",
+      "coverage_kind": "range",
+      "covered_through": "2.21.2",
+      "coverage_label": "2.19–2.21.2",
+      "path": "skills/ansible-knowledge-patch",
+      "languages": [
+        "yaml",
+        "python"
+      ],
+      "tags": [
+        "automation",
+        "configuration-management",
+        "infrastructure",
+        "yaml",
+        "operations"
+      ],
+      "content_hash": "sha256:a5219d77846d68cbfec620fa1e811be8fd31041f9198ffbba0aa0042fbb94e34",
+      "generated_at": "2026-07-26T22:39:44Z",
+      "coverage_path": "skills/ansible-knowledge-patch/coverage.json",
+      "covered_from": "2.19"
+    },
+    {
       "id": "arch-knowledge-patch",
       "display_name": "Arch Linux",
       "short_label": "Arch Linux",
@@ -71,6 +96,30 @@
       "content_hash": "sha256:13702e6dcb9458ed56c917c26c3d2eee893870f0a035e66b0c788856ed6ab945",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/arch-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "argo-cd-knowledge-patch",
+      "display_name": "Argo CD",
+      "short_label": "Argo CD",
+      "description": "Argo CD",
+      "coverage_kind": "range",
+      "covered_through": "3.2.0",
+      "coverage_label": "3.0.0–3.2.0",
+      "path": "skills/argo-cd-knowledge-patch",
+      "languages": [
+        "yaml"
+      ],
+      "tags": [
+        "kubernetes",
+        "gitops",
+        "deployment",
+        "continuous-delivery",
+        "operations"
+      ],
+      "content_hash": "sha256:f890c9f66eefdf057c6b7c915b4f6c4d486ccc8c7a9a3e9dc8616309be92712c",
+      "generated_at": "2026-07-26T22:45:09Z",
+      "coverage_path": "skills/argo-cd-knowledge-patch/coverage.json",
+      "covered_from": "3.0.0"
     },
     {
       "id": "astro-knowledge-patch",
@@ -351,6 +400,54 @@
       "coverage_path": "skills/clerk-knowledge-patch/coverage.json"
     },
     {
+      "id": "clickhouse-knowledge-patch",
+      "display_name": "ClickHouse",
+      "short_label": "ClickHouse",
+      "description": "ClickHouse",
+      "coverage_kind": "range",
+      "covered_through": "26.7",
+      "coverage_label": "25.1–26.7",
+      "path": "skills/clickhouse-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "database",
+        "analytics",
+        "columnar",
+        "sql",
+        "operations"
+      ],
+      "content_hash": "sha256:e566ab824086d2a1d1cabe84cc618c88b73be67538c487e196d87db2bbac254e",
+      "generated_at": "2026-07-26T23:25:45Z",
+      "coverage_path": "skills/clickhouse-knowledge-patch/coverage.json",
+      "covered_from": "25.1"
+    },
+    {
+      "id": "cloud-init-knowledge-patch",
+      "display_name": "cloud-init",
+      "short_label": "cloud-init",
+      "description": "cloud-init",
+      "coverage_kind": "versioned",
+      "covered_through": "26.1",
+      "coverage_label": "26.1",
+      "path": "skills/cloud-init-knowledge-patch",
+      "languages": [
+        "yaml",
+        "python"
+      ],
+      "tags": [
+        "cloud",
+        "provisioning",
+        "linux",
+        "configuration",
+        "infrastructure"
+      ],
+      "content_hash": "sha256:896e450ddf974820e16456b7ba6b5d4fa1aac709d48ff9ff5a73009afef4a8fc",
+      "generated_at": "2026-07-26T21:21:29Z",
+      "coverage_path": "skills/cloud-init-knowledge-patch/coverage.json"
+    },
+    {
       "id": "codex-knowledge-patch",
       "display_name": "Codex",
       "short_label": "Codex",
@@ -543,6 +640,31 @@
       "coverage_path": "skills/drizzle-knowledge-patch/coverage.json"
     },
     {
+      "id": "duckdb-knowledge-patch",
+      "display_name": "DuckDB",
+      "short_label": "DuckDB",
+      "description": "DuckDB",
+      "coverage_kind": "range",
+      "covered_through": "1.5.0",
+      "coverage_label": "1.2.0–1.5.0",
+      "path": "skills/duckdb-knowledge-patch",
+      "languages": [
+        "sql",
+        "python"
+      ],
+      "tags": [
+        "database",
+        "analytics",
+        "sql",
+        "embedded",
+        "data-science"
+      ],
+      "content_hash": "sha256:25ab5b03013228b9698b92f91bb5209d902c52dc7350cb287f4e8eae8d2cb473",
+      "generated_at": "2026-07-26T23:31:39Z",
+      "coverage_path": "skills/duckdb-knowledge-patch/coverage.json",
+      "covered_from": "1.2.0"
+    },
+    {
       "id": "elixir-knowledge-patch",
       "display_name": "Elixir",
       "short_label": "Elixir",
@@ -564,6 +686,58 @@
       "content_hash": "sha256:c57e7e0f75518bed97352fa5e61663f6607d77cd27e4533768c3f70153e000ae",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/elixir-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "eslint-knowledge-patch",
+      "display_name": "ESLint",
+      "short_label": "ESLint",
+      "description": "ESLint",
+      "coverage_kind": "versioned",
+      "covered_through": "10.0.0",
+      "coverage_label": "10.0.0",
+      "path": "skills/eslint-knowledge-patch",
+      "languages": [
+        "javascript",
+        "typescript",
+        "json"
+      ],
+      "tags": [
+        "javascript",
+        "typescript",
+        "linting",
+        "static-analysis",
+        "tooling"
+      ],
+      "content_hash": "sha256:46b9ea0d69ba92e1afecbcf3ca34d41b8ee417b738a7d73d04e820f78b7f3da5",
+      "generated_at": "2026-07-26T21:35:35Z",
+      "coverage_path": "skills/eslint-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "expo-knowledge-patch",
+      "display_name": "Expo",
+      "short_label": "Expo",
+      "description": "Expo",
+      "coverage_kind": "range",
+      "covered_through": "SDK 56",
+      "coverage_label": "SDK 55–SDK 56",
+      "path": "skills/expo-knowledge-patch",
+      "languages": [
+        "javascript",
+        "typescript",
+        "tsx",
+        "json"
+      ],
+      "tags": [
+        "mobile",
+        "react-native",
+        "ios",
+        "android",
+        "tooling"
+      ],
+      "content_hash": "sha256:066fd7144028fa5dc96d29abab35f3516951068fb7191e0bd55b4ae3f438ed3f",
+      "generated_at": "2026-07-26T21:44:12Z",
+      "coverage_path": "skills/expo-knowledge-patch/coverage.json",
+      "covered_from": "SDK 55"
     },
     {
       "id": "fastapi-knowledge-patch",
@@ -685,6 +859,30 @@
       "coverage_path": "skills/geodesy-wgs84-knowledge-patch/coverage.json"
     },
     {
+      "id": "github-actions-knowledge-patch",
+      "display_name": "GitHub Actions",
+      "short_label": "GitHub Actions",
+      "description": "GitHub Actions",
+      "coverage_kind": "rolling",
+      "covered_through": null,
+      "coverage_label": "rolling coverage",
+      "path": "skills/github-actions-knowledge-patch",
+      "languages": [
+        "yaml",
+        "bash"
+      ],
+      "tags": [
+        "ci-cd",
+        "github",
+        "workflows",
+        "automation",
+        "security"
+      ],
+      "content_hash": "sha256:aab10daecab4ed79f5554ccf3f4efc5293d8fae2d964cb90fd140489dd0db547",
+      "generated_at": "2026-07-26T23:42:54Z",
+      "coverage_path": "skills/github-actions-knowledge-patch/coverage.json"
+    },
+    {
       "id": "gleam-knowledge-patch",
       "display_name": "Gleam",
       "short_label": "Gleam",
@@ -779,6 +977,57 @@
       "content_hash": "sha256:488c02af0711e6aaf5be41eb41246df34c5422810f0253c93756267510b1a906",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/gpsd-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "grpc-knowledge-patch",
+      "display_name": "gRPC",
+      "short_label": "gRPC",
+      "description": "gRPC",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/grpc-knowledge-patch",
+      "languages": [
+        "go",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "tags": [
+        "rpc",
+        "protobuf",
+        "networking",
+        "services",
+        "streaming"
+      ],
+      "content_hash": "sha256:8cac71c25ffa370e76eb04b11b36bf1348ffec54290ec86df0fa97a44620f29f",
+      "generated_at": "2026-07-26T21:07:00Z",
+      "coverage_path": "skills/grpc-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "helm-knowledge-patch",
+      "display_name": "Helm",
+      "short_label": "Helm",
+      "description": "Helm",
+      "coverage_kind": "range",
+      "covered_through": "4.2.3",
+      "coverage_label": "4.0.0–4.2.3",
+      "path": "skills/helm-knowledge-patch",
+      "languages": [
+        "yaml",
+        "go"
+      ],
+      "tags": [
+        "kubernetes",
+        "charts",
+        "deployment",
+        "templating",
+        "package-manager"
+      ],
+      "content_hash": "sha256:1b3e9b9de3c23b7e31f8b669eac26ff465604d34a0df9d778f1e7196362e2f7f",
+      "generated_at": "2026-07-26T21:47:42Z",
+      "coverage_path": "skills/helm-knowledge-patch/coverage.json",
+      "covered_from": "4.0.0"
     },
     {
       "id": "hono-knowledge-patch",
@@ -904,6 +1153,29 @@
       "coverage_path": "skills/langchain-knowledge-patch/coverage.json"
     },
     {
+      "id": "lavaan-cfa-knowledge-patch",
+      "display_name": "lavaan / CFA",
+      "short_label": "lavaan / CFA",
+      "description": "lavaan / CFA",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/lavaan-cfa-knowledge-patch",
+      "languages": [
+        "r"
+      ],
+      "tags": [
+        "r",
+        "statistics",
+        "structural-equation-modeling",
+        "confirmatory-factor-analysis",
+        "research"
+      ],
+      "content_hash": "sha256:7c01a52229620184f62167d271efe03b219b20808a93c56c39d3389649582735",
+      "generated_at": "2026-07-26T22:11:54Z",
+      "coverage_path": "skills/lavaan-cfa-knowledge-patch/coverage.json"
+    },
+    {
       "id": "leptos-knowledge-patch",
       "display_name": "Leptos",
       "short_label": "Leptos",
@@ -925,6 +1197,54 @@
       "content_hash": "sha256:76ddb3626d534409c68bc8f66d3042a4ba009e91dd5a046f881a19f4cd7015a2",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/leptos-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "mongodb-knowledge-patch",
+      "display_name": "MongoDB",
+      "short_label": "MongoDB",
+      "description": "MongoDB",
+      "coverage_kind": "versioned",
+      "covered_through": "8.2",
+      "coverage_label": "8.2",
+      "path": "skills/mongodb-knowledge-patch",
+      "languages": [
+        "javascript",
+        "json"
+      ],
+      "tags": [
+        "database",
+        "document-store",
+        "aggregation",
+        "replication",
+        "sharding"
+      ],
+      "content_hash": "sha256:b134cd1a50a1bc60e5c20da54919256557e602aeae44e39ea4b8a1a70bcc5e80",
+      "generated_at": "2026-07-26T21:26:21Z",
+      "coverage_path": "skills/mongodb-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "mysql-knowledge-patch",
+      "display_name": "MySQL",
+      "short_label": "MySQL",
+      "description": "MySQL",
+      "coverage_kind": "range",
+      "covered_through": "9.7.0",
+      "coverage_label": "9.2–9.7.0",
+      "path": "skills/mysql-knowledge-patch",
+      "languages": [
+        "sql"
+      ],
+      "tags": [
+        "database",
+        "sql",
+        "replication",
+        "administration",
+        "innodb"
+      ],
+      "content_hash": "sha256:35610fdb00e58724911e5ba80e8c704f55ccbf9b44512ac4f269696369720431",
+      "generated_at": "2026-07-26T23:16:23Z",
+      "coverage_path": "skills/mysql-knowledge-patch/coverage.json",
+      "covered_from": "9.2"
     },
     {
       "id": "nextjs-knowledge-patch",
@@ -1076,6 +1396,79 @@
       "coverage_path": "skills/nuxt-knowledge-patch/coverage.json"
     },
     {
+      "id": "oauth2-oidc-knowledge-patch",
+      "display_name": "OAuth 2.0 / OIDC",
+      "short_label": "OAuth 2.0 / OIDC",
+      "description": "OAuth 2.0 / OIDC",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/oauth2-oidc-knowledge-patch",
+      "languages": [
+        "json",
+        "javascript",
+        "typescript"
+      ],
+      "tags": [
+        "authentication",
+        "authorization",
+        "oauth",
+        "openid-connect",
+        "security"
+      ],
+      "content_hash": "sha256:56d549518fabd7498a503b13567857eef532377fcbd25524d7eed779ac6a0d54",
+      "generated_at": "2026-07-26T23:44:06Z",
+      "coverage_path": "skills/oauth2-oidc-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "openapi-knowledge-patch",
+      "display_name": "OpenAPI",
+      "short_label": "OpenAPI",
+      "description": "OpenAPI",
+      "coverage_kind": "versioned",
+      "covered_through": "3.2.0",
+      "coverage_label": "3.2.0",
+      "path": "skills/openapi-knowledge-patch",
+      "languages": [
+        "yaml",
+        "json"
+      ],
+      "tags": [
+        "api",
+        "schema",
+        "http",
+        "documentation",
+        "code-generation"
+      ],
+      "content_hash": "sha256:c238384bb9ee24d304bcaa656a1e5c910fbe2ab1797849b075321c49065596ec",
+      "generated_at": "2026-07-26T21:00:08Z",
+      "coverage_path": "skills/openapi-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "openssh-knowledge-patch",
+      "display_name": "OpenSSH",
+      "short_label": "OpenSSH",
+      "description": "OpenSSH",
+      "coverage_kind": "range",
+      "covered_through": "10.4",
+      "coverage_label": "10.0–10.4",
+      "path": "skills/openssh-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "ssh",
+        "security",
+        "networking",
+        "system-administration",
+        "cryptography"
+      ],
+      "content_hash": "sha256:3bb348687c678b9e8c36b2f866fe380932bca042018392fc58457cd196758887",
+      "generated_at": "2026-07-26T23:38:51Z",
+      "coverage_path": "skills/openssh-knowledge-patch/coverage.json",
+      "covered_from": "10.0"
+    },
+    {
       "id": "openssl-tls-knowledge-patch",
       "display_name": "OpenSSL",
       "short_label": "OpenSSL",
@@ -1098,6 +1491,34 @@
       "content_hash": "sha256:66b5afc13c8eed5d6bd26f8502160e5ff6b5951ee9f3fa42f1b6b6b17612d02b",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/openssl-tls-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "opentelemetry-knowledge-patch",
+      "display_name": "OpenTelemetry",
+      "short_label": "OpenTelemetry",
+      "description": "OpenTelemetry",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/opentelemetry-knowledge-patch",
+      "languages": [
+        "yaml",
+        "json",
+        "go",
+        "python",
+        "typescript",
+        "java"
+      ],
+      "tags": [
+        "observability",
+        "tracing",
+        "metrics",
+        "logs",
+        "collector"
+      ],
+      "content_hash": "sha256:aa169a3ac08bae5c00909777bb2f517d31e64c6e5c93dd7114a59f5254e20826",
+      "generated_at": "2026-07-26T20:55:38Z",
+      "coverage_path": "skills/opentelemetry-knowledge-patch/coverage.json"
     },
     {
       "id": "pgvector-knowledge-patch",
@@ -1287,6 +1708,29 @@
       "coverage_path": "skills/pytorch-knowledge-patch/coverage.json"
     },
     {
+      "id": "r-cran-knowledge-patch",
+      "display_name": "R / CRAN",
+      "short_label": "R / CRAN",
+      "description": "R / CRAN",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/r-cran-knowledge-patch",
+      "languages": [
+        "r"
+      ],
+      "tags": [
+        "r",
+        "cran",
+        "statistics",
+        "packages",
+        "scientific-computing"
+      ],
+      "content_hash": "sha256:201b08e523c5a6d84ca91cde63f8334d9bf33d47ce0bf7e75fc89bb2e597ef79",
+      "generated_at": "2026-07-26T22:04:30Z",
+      "coverage_path": "skills/r-cran-knowledge-patch/coverage.json"
+    },
+    {
       "id": "rails-knowledge-patch",
       "display_name": "Ruby on Rails",
       "short_label": "Ruby on Rails",
@@ -1359,6 +1803,32 @@
       "coverage_path": "skills/react-knowledge-patch/coverage.json"
     },
     {
+      "id": "react-native-knowledge-patch",
+      "display_name": "React Native",
+      "short_label": "React Native",
+      "description": "React Native",
+      "coverage_kind": "range",
+      "covered_through": "0.86.0",
+      "coverage_label": "0.77–0.86.0",
+      "path": "skills/react-native-knowledge-patch",
+      "languages": [
+        "javascript",
+        "typescript",
+        "tsx"
+      ],
+      "tags": [
+        "mobile",
+        "react",
+        "ios",
+        "android",
+        "javascript"
+      ],
+      "content_hash": "sha256:ed1e9967b8bbf9536fcce8f3c78fa4e961389ab5188968926339c2f8edc1bd39",
+      "generated_at": "2026-07-26T23:03:16Z",
+      "coverage_path": "skills/react-native-knowledge-patch/coverage.json",
+      "covered_from": "0.77"
+    },
+    {
       "id": "react-router-knowledge-patch",
       "display_name": "React Router",
       "short_label": "React Router",
@@ -1383,6 +1853,30 @@
       "content_hash": "sha256:a987edd6b4b832520b3534fcb72a7927536fd89ca4544582b4294debaec52eea",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/react-router-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "redis-knowledge-patch",
+      "display_name": "Redis",
+      "short_label": "Redis",
+      "description": "Redis",
+      "coverage_kind": "range",
+      "covered_through": "8.8.1",
+      "coverage_label": "8.0–8.8.1",
+      "path": "skills/redis-knowledge-patch",
+      "languages": [
+        "bash"
+      ],
+      "tags": [
+        "database",
+        "cache",
+        "key-value",
+        "streams",
+        "operations"
+      ],
+      "content_hash": "sha256:8c342de77b97b4f4c6d69c08d1af8856ef018ad6657c1e16e4a7c69ede9fcbc8",
+      "generated_at": "2026-07-26T23:08:31Z",
+      "coverage_path": "skills/redis-knowledge-patch/coverage.json",
+      "covered_from": "8.0"
     },
     {
       "id": "rhel-knowledge-patch",
@@ -1553,6 +2047,56 @@
       "coverage_path": "skills/serde-knowledge-patch/coverage.json"
     },
     {
+      "id": "sigstore-cosign-knowledge-patch",
+      "display_name": "Sigstore Cosign",
+      "short_label": "Sigstore Cosign",
+      "description": "Sigstore Cosign",
+      "coverage_kind": "range",
+      "covered_through": "3.1.2",
+      "coverage_label": "3.0.0–3.1.2",
+      "path": "skills/sigstore-cosign-knowledge-patch",
+      "languages": [
+        "bash",
+        "yaml",
+        "json"
+      ],
+      "tags": [
+        "supply-chain",
+        "signing",
+        "verification",
+        "containers",
+        "security"
+      ],
+      "content_hash": "sha256:aadaffc7d1dcf313b643e385259f47e27fa5ddb26951453e2d9410e93facdc5f",
+      "generated_at": "2026-07-26T23:44:06Z",
+      "coverage_path": "skills/sigstore-cosign-knowledge-patch/coverage.json",
+      "covered_from": "3.0.0"
+    },
+    {
+      "id": "slsa-knowledge-patch",
+      "display_name": "SLSA",
+      "short_label": "SLSA",
+      "description": "SLSA",
+      "coverage_kind": "versioned",
+      "covered_through": "1.2",
+      "coverage_label": "1.2",
+      "path": "skills/slsa-knowledge-patch",
+      "languages": [
+        "yaml",
+        "json"
+      ],
+      "tags": [
+        "supply-chain",
+        "provenance",
+        "builds",
+        "security",
+        "compliance"
+      ],
+      "content_hash": "sha256:96476e62e09e95c05395a61e1e35a62e04569e8c27b1d17d929a95bd83d69bed",
+      "generated_at": "2026-07-26T21:59:07Z",
+      "coverage_path": "skills/slsa-knowledge-patch/coverage.json"
+    },
+    {
       "id": "solidjs-knowledge-patch",
       "display_name": "SolidJS",
       "short_label": "SolidJS",
@@ -1603,6 +2147,31 @@
       "coverage_path": "skills/spring-boot-knowledge-patch/coverage.json"
     },
     {
+      "id": "sqlalchemy-knowledge-patch",
+      "display_name": "SQLAlchemy",
+      "short_label": "SQLAlchemy",
+      "description": "SQLAlchemy",
+      "coverage_kind": "range",
+      "covered_through": "2.0.51",
+      "coverage_label": "2.0.37–2.0.51",
+      "path": "skills/sqlalchemy-knowledge-patch",
+      "languages": [
+        "python",
+        "sql"
+      ],
+      "tags": [
+        "python",
+        "orm",
+        "sql",
+        "database",
+        "async"
+      ],
+      "content_hash": "sha256:26a2f9f9a29c3e0dc3eeedd84a8a2a282bcec5f4702e9d8e08a9645d5f26fb84",
+      "generated_at": "2026-07-26T23:44:06Z",
+      "coverage_path": "skills/sqlalchemy-knowledge-patch/coverage.json",
+      "covered_from": "2.0.37"
+    },
+    {
       "id": "sqlite-knowledge-patch",
       "display_name": "SQLite",
       "short_label": "SQLite",
@@ -1649,6 +2218,32 @@
       "content_hash": "sha256:2d7305be0c59e0ef2615a70be36df1a32cc5e5df93972a918f06ec6f472261b9",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/sqlx-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "storybook-knowledge-patch",
+      "display_name": "Storybook",
+      "short_label": "Storybook",
+      "description": "Storybook",
+      "coverage_kind": "range",
+      "covered_through": "10.5.0",
+      "coverage_label": "9.0–10.5.0",
+      "path": "skills/storybook-knowledge-patch",
+      "languages": [
+        "typescript",
+        "javascript",
+        "tsx"
+      ],
+      "tags": [
+        "frontend",
+        "components",
+        "testing",
+        "documentation",
+        "ui"
+      ],
+      "content_hash": "sha256:636d9d9640eac08ef9e670ea7e77e0a7fd4f3ec427e147fec22e7194985f36d9",
+      "generated_at": "2026-07-26T22:50:03Z",
+      "coverage_path": "skills/storybook-knowledge-patch/coverage.json",
+      "covered_from": "9.0"
     },
     {
       "id": "stripe-knowledge-patch",
@@ -1831,6 +2426,31 @@
       "coverage_path": "skills/tailwind-knowledge-patch/coverage.json"
     },
     {
+      "id": "tanstack-query-knowledge-patch",
+      "display_name": "TanStack Query",
+      "short_label": "TanStack Query",
+      "description": "TanStack Query",
+      "coverage_kind": "range",
+      "covered_through": "5.101.4",
+      "coverage_label": "5.66.0–5.101.4",
+      "path": "skills/tanstack-query-knowledge-patch",
+      "languages": [
+        "typescript",
+        "tsx"
+      ],
+      "tags": [
+        "typescript",
+        "react",
+        "data-fetching",
+        "cache",
+        "state-management"
+      ],
+      "content_hash": "sha256:7fb394735ce7b3ac0a1ae1af1540af44a06f8a8282ea25bf6ae00e3fc135f01d",
+      "generated_at": "2026-07-26T22:55:18Z",
+      "coverage_path": "skills/tanstack-query-knowledge-patch/coverage.json",
+      "covered_from": "5.66.0"
+    },
+    {
       "id": "tauri-knowledge-patch",
       "display_name": "Tauri",
       "short_label": "Tauri",
@@ -1999,6 +2619,32 @@
       "coverage_path": "skills/ubuntu-knowledge-patch/coverage.json"
     },
     {
+      "id": "uv-knowledge-patch",
+      "display_name": "uv",
+      "short_label": "uv",
+      "description": "uv",
+      "coverage_kind": "range",
+      "covered_through": "0.11.32",
+      "coverage_label": "0.6.0–0.11.32",
+      "path": "skills/uv-knowledge-patch",
+      "languages": [
+        "python",
+        "toml",
+        "bash"
+      ],
+      "tags": [
+        "python",
+        "package-manager",
+        "projects",
+        "virtual-environments",
+        "tooling"
+      ],
+      "content_hash": "sha256:04a2255d558d6d9ba4293b59aab0b5508365d81a504d7d5859c9fe8fcae4c420",
+      "generated_at": "2026-07-26T22:34:50Z",
+      "coverage_path": "skills/uv-knowledge-patch/coverage.json",
+      "covered_from": "0.6.0"
+    },
+    {
       "id": "vercel-ai-sdk-knowledge-patch",
       "display_name": "Vercel AI SDK",
       "short_label": "Vercel AI SDK",
@@ -2093,6 +2739,31 @@
       "content_hash": "sha256:e158fa9646ce586ff0bc767edc41271b33ca5c1e9b7524411e0b327607b900e5",
       "generated_at": "2026-07-18T07:39:54Z",
       "coverage_path": "skills/vuejs-knowledge-patch/coverage.json"
+    },
+    {
+      "id": "webauthn-passkeys-knowledge-patch",
+      "display_name": "WebAuthn / Passkeys",
+      "short_label": "WebAuthn / Passkeys",
+      "description": "WebAuthn / Passkeys",
+      "coverage_kind": "multi-product",
+      "covered_through": null,
+      "coverage_label": "current compatibility guidance",
+      "path": "skills/webauthn-passkeys-knowledge-patch",
+      "languages": [
+        "javascript",
+        "typescript",
+        "json"
+      ],
+      "tags": [
+        "authentication",
+        "passkeys",
+        "webauthn",
+        "fido2",
+        "security"
+      ],
+      "content_hash": "sha256:d65731493270a24fee587eb15b29b0b4472f8f65201e43eb6d2d934286e51009",
+      "generated_at": "2026-07-26T21:16:24Z",
+      "coverage_path": "skills/webauthn-passkeys-knowledge-patch/coverage.json"
     },
     {
       "id": "workos-knowledge-patch",

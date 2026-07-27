@@ -1,0 +1,3 @@
+interface:
+  display_name: "cloud-init"
+  short_description: "cloud-init"

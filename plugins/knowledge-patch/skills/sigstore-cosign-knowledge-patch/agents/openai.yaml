@@ -1,0 +1,3 @@
+interface:
+  display_name: "Sigstore Cosign"
+  short_description: "Sigstore Cosign"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "WebAuthn / Passkeys"
+  short_description: "WebAuthn / Passkeys"
