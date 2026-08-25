@@ -1,0 +1,42 @@
+{
+  "patch": "temporal-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-29T16:17:33Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "workflows-and-activities": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "workers-sdks-and-api": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "workflow-code-versioning": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "worker-versioning": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "temporal-cli": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "temporal-cloud": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

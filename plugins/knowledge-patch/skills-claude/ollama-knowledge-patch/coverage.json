@@ -1,0 +1,57 @@
+{
+  "patch": "ollama-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T18:09:54Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "launch-and-model-library": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rest-api-and-faq": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "modelfile-import-and-quantization": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "api-compatibility": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.30-0.32": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cloud-agents-and-web-search": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "image-generation-and-mlx": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "model-scheduling": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.32.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

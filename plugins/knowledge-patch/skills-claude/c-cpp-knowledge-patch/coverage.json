@@ -1,0 +1,59 @@
+{
+  "patch": "c-cpp-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T00:22:34Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "clang-20.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "gcc-15.1-porting": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "gcc-15.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "clang-21.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "clang-22.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "gcc-16.1-porting": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "gcc-16.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "standards-status": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "16.2": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": [
+    "16.2"
+  ]
+}

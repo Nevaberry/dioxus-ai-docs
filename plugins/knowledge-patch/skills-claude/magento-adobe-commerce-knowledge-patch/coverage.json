@@ -1,0 +1,22 @@
+{
+  "patch": "magento-adobe-commerce-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-24T23:58:13Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "2.4.8-adobe-commerce": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.4.8-magento-open-source": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

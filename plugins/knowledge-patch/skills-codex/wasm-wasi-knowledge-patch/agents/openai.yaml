@@ -1,0 +1,3 @@
+interface:
+  display_name: "WebAssembly / WASI"
+  short_description: "WebAssembly / WASI"

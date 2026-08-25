@@ -1,0 +1,129 @@
+{
+  "patch": "terraform-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T08:58:09Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "terraform-1.7.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.8.0-guide": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "terraform-1.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.9.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.9.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.10.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.9.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.11.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.11.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.12.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.13.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.14.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.11.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.15.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opentofu-1.12.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-stacks-and-hcp": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "provider-plugin-framework": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "terraform-1.15.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": [
+    "terraform-1.8.0-guide"
+  ]
+}

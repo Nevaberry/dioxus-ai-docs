@@ -1,0 +1,17 @@
+{
+  "patch": "google-pay-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T01:02:45Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "web-merchant-integration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

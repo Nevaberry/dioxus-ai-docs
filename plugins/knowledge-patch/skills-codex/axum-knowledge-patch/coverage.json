@@ -1,0 +1,35 @@
+{
+  "patch": "axum-knowledge-patch",
+  "merged_at": "2026-07-12T19:46:12Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "0.8-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "axum-core": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "axum-extra": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "axum-macros": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

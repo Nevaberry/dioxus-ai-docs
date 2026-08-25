@@ -1,0 +1,112 @@
+{
+  "patch": "home-assistant-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T08:43:44Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.8": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025.12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

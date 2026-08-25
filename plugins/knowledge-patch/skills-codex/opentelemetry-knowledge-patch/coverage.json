@@ -1,0 +1,32 @@
+{
+  "patch": "opentelemetry-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T19:07:03Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "specification": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "semantic-conventions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "collector-0.157.0": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-08-stable": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

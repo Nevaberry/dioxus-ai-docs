@@ -1,0 +1,37 @@
+{
+  "patch": "pgvector-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T18:59:35Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.8-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "current-reference": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "hosted-deployment": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.8.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,39 @@
+{
+  "patch": "serde-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-22T02:03:24Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.0.220-serde-core": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.0.220": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "serde-json-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "serde-json-value-apis": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.0.221": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": [
+    "1.0.220"
+  ]
+}

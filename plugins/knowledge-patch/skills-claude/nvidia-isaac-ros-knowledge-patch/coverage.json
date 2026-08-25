@@ -1,0 +1,42 @@
+{
+  "patch": "nvidia-isaac-ros-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T14:44:37Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.2-1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "current-runtime-and-packages": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

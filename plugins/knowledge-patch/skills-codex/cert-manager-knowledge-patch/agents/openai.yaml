@@ -1,0 +1,3 @@
+interface:
+  display_name: "cert-manager"
+  short_description: "cert-manager"

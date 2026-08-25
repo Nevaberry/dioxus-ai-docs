@@ -1,0 +1,47 @@
+{
+  "patch": "qwik-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T23:02:06Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "v1.8-1.13": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "v1.14-1.19": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "v2-alpha-beta-1-9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    },
+    "v2-beta-10-19": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    },
+    "v2-beta-20-29": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    },
+    "v2-beta-30-38": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    },
+    "migration-v1-v2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    }
+  },
+  "retire_candidates": []
+}

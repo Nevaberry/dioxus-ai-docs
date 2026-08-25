@@ -1,0 +1,67 @@
+{
+  "patch": "podman-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T20:54:05Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "5.2.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "6.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "6.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "system-migration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "5.8.6-6.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

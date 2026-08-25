@@ -1,0 +1,47 @@
+{
+  "patch": "authjs-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T20:11:12Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "better-auth-transition": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "authentication-and-providers": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "session-management": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "concepts-and-data-model": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "integration-guides": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "package-release-history": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.24.15": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

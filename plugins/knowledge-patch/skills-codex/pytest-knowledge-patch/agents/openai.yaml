@@ -1,0 +1,3 @@
+interface:
+  display_name: "pytest"
+  short_description: "pytest"

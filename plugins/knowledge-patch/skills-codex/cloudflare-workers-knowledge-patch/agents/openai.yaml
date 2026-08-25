@@ -1,0 +1,3 @@
+interface:
+  display_name: "Cloudflare Workers"
+  short_description: "Cloudflare Workers"

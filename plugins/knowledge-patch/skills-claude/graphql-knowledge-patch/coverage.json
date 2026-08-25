@@ -1,0 +1,32 @@
+{
+  "patch": "graphql-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T06:33:36Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "september-2025-language": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "september-2025-execution": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "september-2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "graphql-over-http-2026-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

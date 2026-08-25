@@ -1,0 +1,3 @@
+interface:
+  display_name: "Apache Cassandra"
+  short_description: "Apache Cassandra"

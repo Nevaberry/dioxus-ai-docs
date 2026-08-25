@@ -1,0 +1,57 @@
+{
+  "patch": "sentry-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T02:12:01Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "9.0.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "9.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.0.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.68.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "structured-logs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "streamed-spans": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "modern-server-frameworks": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.69.0-10.70.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

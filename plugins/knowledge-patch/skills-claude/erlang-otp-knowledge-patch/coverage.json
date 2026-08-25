@@ -1,0 +1,72 @@
+{
+  "patch": "erlang-otp-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T00:50:53Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "28.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "28.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "28.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "28.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "28.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "28.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "29.0.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

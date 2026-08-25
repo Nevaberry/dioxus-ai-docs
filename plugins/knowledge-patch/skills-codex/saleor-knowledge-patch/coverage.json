@@ -1,0 +1,32 @@
+{
+  "patch": "saleor-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-24T23:44:37Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "3.21.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.22.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.23.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upcoming-3.24": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

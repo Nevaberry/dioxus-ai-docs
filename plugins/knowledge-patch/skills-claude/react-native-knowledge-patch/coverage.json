@@ -1,0 +1,32 @@
+{
+  "patch": "react-native-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T22:52:15Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.77-0.81": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.82-0.85": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.86.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.86.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

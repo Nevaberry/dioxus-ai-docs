@@ -1,0 +1,47 @@
+{
+  "patch": "keycloak-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T12:01:46Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "identity-model": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "authentication-and-token-exchange": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "admin-and-account-rest-apis": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "quarkus-distribution": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "major-version-migrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26.7.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26.7.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

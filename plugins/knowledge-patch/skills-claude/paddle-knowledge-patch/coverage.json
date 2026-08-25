@@ -1,0 +1,22 @@
+{
+  "patch": "paddle-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T00:50:23Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "api-versioning": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "developer-changelog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

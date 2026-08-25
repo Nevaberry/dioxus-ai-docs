@@ -1,0 +1,17 @@
+{
+  "patch": "fedex-shipping-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-25T00:56:58Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "merchant-api-catalog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

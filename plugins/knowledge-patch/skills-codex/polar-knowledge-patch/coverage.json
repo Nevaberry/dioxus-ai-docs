@@ -1,0 +1,17 @@
+{
+  "patch": "polar-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-25T01:02:55Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "current-api-and-changelog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

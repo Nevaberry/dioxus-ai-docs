@@ -1,0 +1,95 @@
+{
+  "patch": "ntrip-rtklib-knowledge-patch",
+  "merged_at": "2026-07-12T23:41:22Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "ntrip-protocol-and-vrs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ntrip-casters": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "bnc-client": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rtcm-standards": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "rinex-3.04": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "data-conversion": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rtklib-architecture": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rtklib-support": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rtklib-manual-2.4.1": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rtklib-manual-2.4.2": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "demo5": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "post-processing": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "positioning-configuration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ambiguity-resolution": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "debugging": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "build-and-platforms": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "command-line-streaming": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

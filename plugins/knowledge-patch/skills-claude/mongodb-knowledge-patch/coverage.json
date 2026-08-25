@@ -1,0 +1,15 @@
+{
+  "patch": "mongodb-knowledge-patch",
+  "merged_at": "2026-07-26T21:21:29Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "8.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

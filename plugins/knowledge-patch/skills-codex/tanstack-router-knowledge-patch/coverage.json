@@ -1,0 +1,52 @@
+{
+  "patch": "tanstack-router-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T03:41:18Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "search-params": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "routing-and-rewrites": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "matching-and-reactivity": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "loading-and-ssr": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "code-splitting-and-navigation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "runtime-changelogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "build-tooling-changelogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.170.28": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "nftables"
+  short_description: "nftables"

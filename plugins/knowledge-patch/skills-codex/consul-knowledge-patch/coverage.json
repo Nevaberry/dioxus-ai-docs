@@ -1,0 +1,47 @@
+{
+  "patch": "consul-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T00:16:21Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.21-upgrade": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.21.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.22.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rolling-upgrade-procedures": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "automated-upgrades": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.0.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

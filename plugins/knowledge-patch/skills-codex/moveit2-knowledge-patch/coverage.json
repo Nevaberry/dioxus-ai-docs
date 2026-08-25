@@ -1,0 +1,52 @@
+{
+  "patch": "moveit2-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T12:58:27Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "motion-planning-foundations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ompl-and-pilz-plugins": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chomp-and-planning-adapters": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "moveit-task-constructor": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "moveit-servo": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ros-distribution-matrix": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "jazzy-release": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.15.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

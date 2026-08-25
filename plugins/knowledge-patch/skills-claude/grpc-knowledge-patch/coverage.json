@@ -1,0 +1,37 @@
+{
+  "patch": "grpc-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T06:59:54Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "core-1.83.0": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "go-1.82.1": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "java-1.83.0": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "go-1.83.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "java-1.83.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

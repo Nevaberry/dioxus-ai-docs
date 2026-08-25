@@ -1,0 +1,22 @@
+{
+  "patch": "wordpress-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T00:09:35Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "core-field-guides": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "core-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

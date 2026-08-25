@@ -1,0 +1,27 @@
+{
+  "patch": "drizzle-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T00:42:17Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.45.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "drizzle-kit": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "schema-validation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

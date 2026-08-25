@@ -1,0 +1,59 @@
+{
+  "patch": "cloudflare-durable-objects-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T23:23:27Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "class-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "storage-and-state": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "identity-and-placement": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "concurrency-and-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "websocket-hibernation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "testing": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-07-09-2026-07-31": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": [
+    "2026-07-09-2026-07-31"
+  ]
+}

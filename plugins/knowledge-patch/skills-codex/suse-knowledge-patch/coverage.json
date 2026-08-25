@@ -1,0 +1,57 @@
+{
+  "patch": "suse-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T04:59:02Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "leap-15.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "leap-16.0-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "leap-16.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sles-15-sp6-release-notes": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sles-15-sp7-release-notes": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sles-16-migration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sles-16-release-notes": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "opensuse-current-news": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "16.0-rev-2026-08-04": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,74 @@
+{
+  "patch": "cert-manager-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T23:05:55Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "upgrade-1.17": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.17": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-1.18": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.18": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-1.19": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.19": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-1.20": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "1.20": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-1.21": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.21": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "support-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.21.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": [
+    "upgrade-1.20"
+  ]
+}

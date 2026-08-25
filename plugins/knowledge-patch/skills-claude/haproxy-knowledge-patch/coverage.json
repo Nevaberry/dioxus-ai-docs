@@ -1,0 +1,47 @@
+{
+  "patch": "haproxy-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-22T14:08:39Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "3.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.2.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-compatibility": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "branch-maintenance": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.4.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

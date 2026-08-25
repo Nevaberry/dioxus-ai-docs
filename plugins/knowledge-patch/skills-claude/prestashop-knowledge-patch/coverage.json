@@ -1,0 +1,27 @@
+{
+  "patch": "prestashop-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T00:18:50Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "build-release-news": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "9.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "9.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,82 @@
+{
+  "patch": "angular-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T19:22:55Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "19-guides": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "19.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "20-guides": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "20.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "21-signal-forms": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "21-platform-guides": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "21.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "22.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "signals-and-control-flow": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "strategy-ai-and-news": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "release-policy-and-migrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "21.2.20": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "20.3.28": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "22.1.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

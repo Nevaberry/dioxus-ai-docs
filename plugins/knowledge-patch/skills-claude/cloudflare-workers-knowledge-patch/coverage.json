@@ -1,0 +1,42 @@
+{
+  "patch": "cloudflare-workers-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T00:46:36Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "nodejs-runtime": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rpc": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "static-assets-migration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-07-30-2026-08-14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

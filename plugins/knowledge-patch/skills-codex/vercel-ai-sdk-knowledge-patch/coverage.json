@@ -1,0 +1,54 @@
+{
+  "patch": "vercel-ai-sdk-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T07:59:35Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "4.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "4.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-03": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "2026-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "agent-building-and-control": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "text-generation-and-tools": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sdk-and-mcp-overview": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": [
+    "2026-03"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "patch": "rust-knowledge-patch",
+  "target": "claude",
+  "source": "claude",
+  "built_at": "2026-08-24T20:17:08Z",
+  "streams": {
+    "claude": "claude-opus-5"
+  },
+  "batches": {
+    "1.84.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "edition-2024": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.85.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.86.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.87.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.88.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.89.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.90.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.91.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.92.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.93.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.94.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.95.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.96.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "unversioned": {
+      "kind": "unversioned",
+      "claude": "fully-known",
+      "build": "omitted"
+    },
+    "1.97.0": {
+      "kind": "versioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "cargo-changelog": {
+      "kind": "unversioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "edition-2024-supplemental": {
+      "kind": "unversioned",
+      "claude": "gaps",
+      "build": "included"
+    },
+    "1.97.1": {
+      "kind": "versioned",
+      "claude": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": [
+    "1.97.1"
+  ]
+}

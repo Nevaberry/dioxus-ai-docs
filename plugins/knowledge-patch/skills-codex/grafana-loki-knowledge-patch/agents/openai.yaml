@@ -1,0 +1,3 @@
+interface:
+  display_name: "Grafana Loki"
+  short_description: "Grafana Loki"

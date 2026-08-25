@@ -1,0 +1,3 @@
+interface:
+  display_name: "HAProxy"
+  short_description: "HAProxy"

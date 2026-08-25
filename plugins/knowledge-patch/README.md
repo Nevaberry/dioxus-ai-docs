@@ -19,13 +19,17 @@ Use the Claude Code or Codex instructions in the repository `README.md`. Then in
 - `using-knowledge-patch` is the gateway skill. Load it before writing, reviewing, debugging, or administering a technology that may have a bundled patch.
 - `knowledge-patch-setup` supports setup, activation, and deactivation workflows.
 - `knowledge-patch-status` supports status checks.
-- Technology patch skills are listed in `catalog/patches.json` and the generated gateway index at `skills/using-knowledge-patch/references/patch-index.md`.
+- Technology patch skills are listed in `catalog/patches.json` and the
+  generated gateway indexes under both runtime-specific skill roots.
 
 ## Activation
 
 Activation is priority state, not installation. The preferred project state file is `.knowledge-patch/activation.json`; user-level state can live at `$XDG_STATE_HOME/knowledge-patch/activation.json`, and `$KNOWLEDGE_PATCH_STATE` can point to a specific state file.
 
-All bundled technology patches already live under `skills/`. Activation tells agents which patches the user intentionally wants prioritized. Deactivation removes matching patch names and reasons from that state; `none` clears all active patch names and activation reasons.
+All bundled technology patches already live under the runtime-specific native
+skill root. Activation tells agents which patches the user intentionally wants
+prioritized. Deactivation removes matching patch names and reasons from that
+state; `none` clears all active patch names and activation reasons.
 
 ## SessionStart Hook
 
@@ -41,7 +45,7 @@ In `catalog/detection.json`, a plain file glob means that the path's existence i
 
 The knowledge-patch plugin uses the form `COMPAT.DATE.PATCH`:
 
-- `COMPAT` indicates backwards compatibility.
+- `COMPAT` is `3` for the target-specific build format.
 - `DATE` is the UTC build date as `yyyymmdd`.
 - `PATCH` counts builds within that date, starting at `0`.
 
@@ -51,9 +55,18 @@ A new version is minted only when shipped content actually changes; `catalog/bui
 
 - `.claude-plugin/marketplace.json` exposes the Claude Code marketplace entry.
 - `.agents/plugins/marketplace.json` exposes the Codex marketplace entry.
-- `plugins/knowledge-patch/.claude-plugin/plugin.json` is the Claude Code plugin manifest and explicitly declares native skills and hooks.
-- `plugins/knowledge-patch/.codex-plugin/plugin.json` is the Codex plugin manifest and explicitly declares native skills and hooks, but no commands component.
-- `plugins/knowledge-patch/skills/` contains the gateway skill, helper skills, and technology patch skills.
+- `plugins/knowledge-patch/.claude-plugin/plugin.json` declares
+  `skills-claude/` and `commands-claude/`, with no hooks key.
+- `plugins/knowledge-patch/.codex-plugin/plugin.json` declares
+  `skills-codex/` and the shared hooks file, with no commands component.
+- `plugins/knowledge-patch/skills-claude/` contains Claude-target gateway,
+  helper, and technology skills.
+- `plugins/knowledge-patch/skills-codex/` contains Codex-target gateway,
+  helper, and technology skills plus `agents/openai.yaml`.
 - `plugins/knowledge-patch/catalog/` contains patch, alias, detection, and build catalogs.
-- `plugins/knowledge-patch/commands/` contains the three Claude Code legacy compatibility aliases.
+- `plugins/knowledge-patch/commands-claude/` contains the three Claude Code
+  compatibility aliases.
 - `plugins/knowledge-patch/hooks/` contains the optional SessionStart hook.
+
+There is deliberately no root `skills/`, root `commands/`, or root
+`SKILL.md`. Those discovery surfaces would silently collapse the target split.

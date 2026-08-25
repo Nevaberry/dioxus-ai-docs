@@ -1,0 +1,32 @@
+{
+  "patch": "dhl-shipping-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T00:19:45Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "ecommerce-americas": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "location-finder": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mydhl-express": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "parcel-germany-v2": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

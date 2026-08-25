@@ -1,0 +1,85 @@
+{
+  "patch": "geodesy-wgs84-knowledge-patch",
+  "merged_at": "2026-07-12T20:14:56Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "wgs84-and-datums": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "itrf-and-etrs-reference-frames": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "reference-system-fundamentals": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "helmert-transformations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ecef-enu-implementation": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "coordinate-conversions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ellipsoidal-geodesics": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "vincenty-methods": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "geodesy-libraries": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "utm-and-transverse-mercator": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "vertical-datums-and-geoids": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "proj-transform-pipelines": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "proj-release-history": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "pyproj-crs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "pyproj-transformers": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

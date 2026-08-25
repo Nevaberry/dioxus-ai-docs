@@ -1,0 +1,47 @@
+{
+  "patch": "devcontainers-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T04:35:20Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "cli-2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "lockfile-stable": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cli-2026": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "core-configuration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "feature-authoring": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "template-authoring": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cli-current-usage": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

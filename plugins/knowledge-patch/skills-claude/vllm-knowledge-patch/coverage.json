@@ -1,0 +1,72 @@
+{
+  "patch": "vllm-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-22T10:43:36Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "0.7-0.10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.11-0.14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.15-0.18": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.19-0.22": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.23-0.26": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "v1-architecture-and-batching": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "engine-and-openai-server": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "paged-attention": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "distributed-parallelism": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "quantization": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "speculative-decoding": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "0.27.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

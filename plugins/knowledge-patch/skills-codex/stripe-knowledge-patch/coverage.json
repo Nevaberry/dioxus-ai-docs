@@ -1,0 +1,62 @@
+{
+  "patch": "stripe-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-25T00:06:07Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "2024-09-30.acacia": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-03-31.basil": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-09-30.clover": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-07-29.dahlia": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "api-release-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "billing-and-payments-v2": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "event-destinations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "node-sdk-stable-2025-2026": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "python-sdk-stable-2025-2026": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "sdk-stable-through-2026-08-10": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

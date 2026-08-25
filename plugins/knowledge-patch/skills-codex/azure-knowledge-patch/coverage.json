@@ -1,0 +1,182 @@
+{
+  "patch": "azure-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T23:28:11Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "azurerm-4.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "azapi-2.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.68.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.69.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.70.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.71.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.72.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.73.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.74.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.75.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.76.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.77.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.78.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.79.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.80.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.81.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.82.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.83.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.84.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.85.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.86.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.87.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.88.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "identity-sdk-authentication": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "powershell-authentication": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "azapi-provider-2.x": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "arm-api-versions-and-registration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "bicep-language-and-cli": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "entra-authentication-and-graph": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "key-vault-api-and-access-control": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "network-defaults-and-sku-retirements": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "api-management-retirements": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "service-retirement-calendar": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.89.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

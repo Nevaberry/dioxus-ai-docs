@@ -1,0 +1,27 @@
+{
+  "patch": "square-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-25T01:18:36Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "connect-api-2025": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "connect-api-2026": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "web-payments-sdk-2025": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

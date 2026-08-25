@@ -1,0 +1,82 @@
+{
+  "patch": "trino-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-30T10:47:35Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "469": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "470": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "471": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "472": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "473-474": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "475": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "476": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "477": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "478": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "479": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "480": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "481": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "482": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "483": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

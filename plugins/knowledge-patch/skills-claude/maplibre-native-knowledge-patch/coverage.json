@@ -1,0 +1,97 @@
+{
+  "patch": "maplibre-native-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T14:10:34Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "android-11.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ios-6.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "node-6.1.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ios-6.15.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "android-12.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ios-6.20.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "android-13.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ios-6.25.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "core-architecture": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "render-pipeline": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rendering-platforms": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "native-style": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "android-sdk": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ios-sdk": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "desktop-bindings": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "native-js-interop": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "android-13.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

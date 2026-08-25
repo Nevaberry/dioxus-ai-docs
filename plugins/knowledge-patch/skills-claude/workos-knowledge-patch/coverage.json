@@ -1,0 +1,42 @@
+{
+  "patch": "workos-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-22T05:14:15Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "node-sdk-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "authkit-frameworks": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "api-and-sdk-contracts": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "product-changelog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "engineering-and-product-blog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

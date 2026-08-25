@@ -1,0 +1,25 @@
+{
+  "patch": "clickhouse-knowledge-patch",
+  "merged_at": "2026-07-26T23:16:23Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "25.1-25.12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26.3-26.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26.7": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "MQTT"
+  short_description: "MQTT"

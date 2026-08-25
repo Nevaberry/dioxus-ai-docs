@@ -1,0 +1,57 @@
+{
+  "patch": "cloudflare-d1-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-29T03:19:28Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-migrations-pattern": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "workers-binding-api": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "prepared-statements-and-sql": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "read-replication": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "local-development": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "backup-and-transfer": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "data-location": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "debugging": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

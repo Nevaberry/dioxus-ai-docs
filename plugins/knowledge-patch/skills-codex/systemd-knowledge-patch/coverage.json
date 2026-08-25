@@ -1,0 +1,42 @@
+{
+  "patch": "systemd-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T07:45:11Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "256": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "257": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "258": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "259": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "260": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "258.10-261.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

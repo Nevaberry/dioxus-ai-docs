@@ -1,0 +1,82 @@
+{
+  "patch": "threejs-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T22:48:51Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "r173": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r174": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r175": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r176": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r177": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r178": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r179": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r180": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r181": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r182": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r183": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r184": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "r185": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "migration-guide-r173-r185": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

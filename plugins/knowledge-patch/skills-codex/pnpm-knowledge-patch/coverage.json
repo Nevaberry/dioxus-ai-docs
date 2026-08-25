@@ -1,0 +1,117 @@
+{
+  "patch": "pnpm-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-22T13:35:43Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2025-01": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-02": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-03": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-04": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-05-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-07": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-09": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2025-12": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-01-02": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-03": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "migration-10-to-11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "11.0.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "11.1-11.3": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "10.34.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "11.4-11.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "11.6-11.9": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "11.10-11.17": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

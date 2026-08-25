@@ -1,0 +1,49 @@
+{
+  "patch": "ros2-navigation-nav2-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T23:48:53Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "overview-and-distro-migrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "behavior-trees": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "planners-and-controllers": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "behaviors-and-algorithm-selection": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "costmaps-and-localization": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "collision-monitor": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.5.0": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": [
+    "1.5.0"
+  ]
+}

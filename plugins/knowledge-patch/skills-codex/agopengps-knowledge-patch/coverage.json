@@ -1,0 +1,52 @@
+{
+  "patch": "agopengps-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-28T23:56:37Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "6.7.0-6.8.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "desktop-operations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cross-platform-transition": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ntrip": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "base-rtcm3": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "nmea": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "autosteer-hardware": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "machine-control": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

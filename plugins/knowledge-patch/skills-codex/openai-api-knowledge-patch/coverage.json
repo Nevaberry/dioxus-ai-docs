@@ -1,0 +1,52 @@
+{
+  "patch": "openai-api-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T17:37:04Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "responses-api": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "gpt-5.6": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "release-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "tool-and-structured-output": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "prompt-caching": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "service-tiers": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "realtime-api": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-08-04-2026-08-13": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

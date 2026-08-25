@@ -1,0 +1,132 @@
+{
+  "patch": "supabase-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-22T13:04:08Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "launch-week-14": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "supabase-js-2.101.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "auth-guides": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "auth-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "database": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "data-api": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "platform-administration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "getting-started-and-tools": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "edge-functions": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ai-and-vectors": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "realtime": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "realtime-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "storage": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "self-hosting": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "local-development-and-cli": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cli-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "branching-and-deployment": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "cron-and-queues": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "integrations-and-etl": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "security-and-compliance": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "javascript-client-reference": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "model-context-protocol": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "platform-updates": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.26.08": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

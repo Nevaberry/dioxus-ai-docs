@@ -1,0 +1,27 @@
+{
+  "patch": "shopware-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-25T00:16:04Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "6.7.13.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "developer-release-notes-index": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "upgrade-guide-6.7": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,27 @@
+{
+  "patch": "swiftui-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-29T22:15:36Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "swiftui-2025": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "swiftui-2026": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "framework-updates": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

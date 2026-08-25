@@ -1,0 +1,42 @@
+{
+  "patch": "service-workers-pwa-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-29T13:17:27Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "chrome-139-pwa-navigation": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "web-app-manifest-wd-2026-05": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "service-workers-crd-2026-06": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "static-routing-api": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "pwa-installation-detection": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "workbox-lifecycle-and-deployment": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fluent Bit"
+  short_description: "Fluent Bit"

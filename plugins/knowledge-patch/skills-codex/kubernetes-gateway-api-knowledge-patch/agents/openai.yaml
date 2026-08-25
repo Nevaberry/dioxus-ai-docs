@@ -1,0 +1,3 @@
+interface:
+  display_name: "Kubernetes Gateway API"
+  short_description: "Kubernetes Gateway API"

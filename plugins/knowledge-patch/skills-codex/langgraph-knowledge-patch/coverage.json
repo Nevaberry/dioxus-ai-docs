@@ -1,0 +1,52 @@
+{
+  "patch": "langgraph-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T12:28:05Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "langgraph-v1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "graph-api-overview": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "graph-api-usage": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "persistence-and-checkpointing": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "human-in-the-loop": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "subgraphs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "platform-and-deployment": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.2.11": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

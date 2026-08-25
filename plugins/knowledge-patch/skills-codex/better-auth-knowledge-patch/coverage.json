@@ -1,0 +1,82 @@
+{
+  "patch": "better-auth-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-20T22:05:25Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.5-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.5.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.6.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "core-authentication": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "concepts-and-data-model": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "framework-integrations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "infrastructure-adapters-reference": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "agent-auth-protocol": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "plugins-core": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "plugins-advanced": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "plugins-payments": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.7.1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

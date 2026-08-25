@@ -1,0 +1,91 @@
+{
+  "patch": "protobuf-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T21:20:22Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "30.0-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "30.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "31.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "edition-2024-announcement": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "fielddescriptor-label-deprecation": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "edition-2024-guide": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "32.0": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    },
+    "34.0-announcement": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "34.0-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "34.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "35.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "edition-2026-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "edition-2026": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "release-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "36.0-rc1": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    }
+  },
+  "retire_candidates": [
+    "fielddescriptor-label-deprecation",
+    "edition-2024-guide",
+    "32.0"
+  ]
+}

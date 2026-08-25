@@ -1,0 +1,50 @@
+{
+  "patch": "rtcm3-knowledge-patch",
+  "merged_at": "2026-07-12T22:28:12Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol"
+  },
+  "batches": {
+    "standards-and-evolution": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "framing-and-parsing": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "message-catalogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "msm-observations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "legacy-and-station-messages": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ssr-and-correction-services": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ntrip-and-broadcasters": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "receiver-vendor-support": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

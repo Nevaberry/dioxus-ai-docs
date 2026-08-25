@@ -1,0 +1,37 @@
+{
+  "patch": "lit-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T08:51:15Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "signals-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "3.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ssr-3.3-4.x": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "signals-package": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "compiler": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

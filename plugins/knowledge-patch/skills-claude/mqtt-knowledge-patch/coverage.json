@@ -1,0 +1,52 @@
+{
+  "patch": "mqtt-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T11:00:40Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "mqtt-sn-2.0-csd01-guidance": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-sn-2.0-csd01-foundations": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-sn-2.0-csd01": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-data-and-framing": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-publish-qos": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-subscriptions-auth": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-operational-semantics": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "mqtt-security-transports-conformance": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

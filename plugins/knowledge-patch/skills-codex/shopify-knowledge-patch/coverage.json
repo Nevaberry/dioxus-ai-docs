@@ -1,0 +1,22 @@
+{
+  "patch": "shopify-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-25T00:45:37Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "api-contract-2025-current": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "developer-api-changelog": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

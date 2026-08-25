@@ -1,0 +1,44 @@
+{
+  "patch": "java-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T06:30:20Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "24-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "24": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "25-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "25": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "26": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": [
+    "26"
+  ]
+}

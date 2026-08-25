@@ -1,0 +1,77 @@
+{
+  "patch": "nginx-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-21T14:43:34Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.27.2": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.28.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.29.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.30.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.31.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "freenginx-1.27": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "freenginx-1.29": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "core-and-upstreams": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "proxying": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "tls-configuration": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "security-advisories": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "nginx-plus-releases": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.31.4": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

@@ -1,0 +1,62 @@
+{
+  "patch": "jetpack-compose-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T13:16:11Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "1.8.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.9.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "material3-1.4.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.10.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.11.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "compiler-toolchain": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "bom-versioning": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.12.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "1.12.0-beta02": {
+      "kind": "versioned",
+      "codex": "fully-known",
+      "build": "retired"
+    },
+    "material3-1.5.0-alpha24": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "retired"
+    }
+  },
+  "retire_candidates": []
+}

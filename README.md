@@ -1,8 +1,12 @@
 # nevaberry-plugins
 
-Knowledge Patch is a fleet of SKILL.md files that fill the gap between an LLM's knowledge cutoff and today.
+Knowledge Patch is a fleet of SKILL.md files that fills current technology
+knowledge gaps without mixing target-model extraction streams.
 
-Nevaberry mines ~90 technologies (Kubernetes, Bun, Next.js, RHEL, Dioxus, Rust) and extracts what current models do not yet know, compressed into topic-organized skills. Every release is benchmarked against frontier models and the extraction process is refined on those results.
+Nevaberry mines technologies such as Kubernetes, Bun, Next.js, RHEL, Dioxus,
+and Rust, then compresses each target’s own extraction stream into
+topic-organized skills. Claude and Codex receive parallel trees with identical
+frontmatter and target-specific bodies.
 
 Why: Claude or Codex loaded with the knowledge-patch plugin uses the newest syntax and API on the first try, instead of confidently generating last year's deprecated API.
 

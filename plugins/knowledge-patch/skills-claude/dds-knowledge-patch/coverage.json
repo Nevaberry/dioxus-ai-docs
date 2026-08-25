@@ -1,0 +1,32 @@
+{
+  "patch": "dds-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-07-29T04:17:28Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "dds-1.4-core": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ddsi-rtps-2.5": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "dds-open-implementations": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "dds-ros2-rmw": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

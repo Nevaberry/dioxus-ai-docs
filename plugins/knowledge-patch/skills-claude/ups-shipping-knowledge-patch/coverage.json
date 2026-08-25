@@ -1,0 +1,22 @@
+{
+  "patch": "ups-shipping-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-24T23:58:13Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r3"
+  },
+  "batches": {
+    "developer-update-feed": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "official-api-documentation": {
+      "kind": "unversioned",
+      "codex": "fully-known",
+      "build": "omitted"
+    }
+  },
+  "retire_candidates": []
+}

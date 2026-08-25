@@ -1,0 +1,57 @@
+{
+  "patch": "anthropic-api-knowledge-patch",
+  "target": "claude",
+  "source": "codex",
+  "built_at": "2026-08-20T19:21:25Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "fine-grained-tool-streaming": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "claude-4.6-model-ids": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "claude-5-migration": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "release-lifecycle": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "structured-outputs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "streaming-and-betas": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "prompt-caching": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "rate-limits": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2026-08-01-2026-08-19": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

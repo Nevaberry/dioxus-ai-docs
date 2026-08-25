@@ -1,0 +1,102 @@
+{
+  "patch": "webgpu-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-07-29T16:39:24Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "chrome-133": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-134": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-135": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-136": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-137": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-138": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-139": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-140": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-141": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-142": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-143": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-144": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-145": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-146-guides": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-146": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-147-148": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-149-150-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "chrome-149-150": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}

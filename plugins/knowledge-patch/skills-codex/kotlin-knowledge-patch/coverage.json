@@ -1,0 +1,97 @@
+{
+  "patch": "kotlin-knowledge-patch",
+  "target": "codex",
+  "source": "codex",
+  "built_at": "2026-08-21T10:57:44Z",
+  "streams": {
+    "codex": "codex-gpt-5.6-sol-r2"
+  },
+  "batches": {
+    "2.1.20-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.1.20": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.2-language-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.2-tooling-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.2.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.3-language-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.3-tooling-guide": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.3.0": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "compose-multiplatform-1.7-1.8": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "compose-multiplatform-1.9": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "compose-multiplatform-1.10-1.11": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "language-roadmap": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "multiplatform-interop": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "ecosystem-changelogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "conference-updates": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "release-catalogs": {
+      "kind": "unversioned",
+      "codex": "gaps",
+      "build": "included"
+    },
+    "2.4.10": {
+      "kind": "versioned",
+      "codex": "gaps",
+      "build": "included"
+    }
+  },
+  "retire_candidates": []
+}
