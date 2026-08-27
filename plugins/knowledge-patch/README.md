@@ -46,7 +46,7 @@ In `catalog/detection.json`, a plain file glob means that the path's existence i
 
 The knowledge-patch plugin uses the form `COMPAT.DATE.PATCH`:
 
-- `COMPAT` is `3` for the target-specific build format.
+- `COMPAT` is `4` for the current published build format.
 - `DATE` is the UTC build date as `yyyymmdd`.
 - `PATCH` counts builds within that date, starting at `0`.
 
