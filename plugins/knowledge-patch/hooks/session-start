@@ -1,77 +1,26 @@
 #!/usr/bin/env bash
-# Optional SessionStart hook. It injects only gateway guidance and active patch names.
+# Optional SessionStart hook. Detection is ephemeral and always fails open.
 
 set -uo pipefail
 
-command -v python3 >/dev/null 2>&1 || exit 0
+fallback='{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"Use knowledge-patch:using-knowledge-patch. Read matching patch bodies. Active patches: none."} }'
 
-python3 - 2>/dev/null <<'PY' || exit 0
-import json
-import os
-from pathlib import Path
+if ! command -v python3 >/dev/null 2>&1; then
+  printf '%s\n' "$fallback"
+  exit 0
+fi
 
+hook_dir="$(CDPATH= cd -- "$(dirname -- "$0")" 2>/dev/null && pwd)" || {
+  printf '%s\n' "$fallback"
+  exit 0
+}
+project_root="${CLAUDE_PROJECT_DIR:-$PWD}"
+output="$(python3 "$hook_dir/detect.py" --root "$project_root" --hook 2>/dev/null)" || output=''
 
-def project_root():
-    configured = os.environ.get("CLAUDE_PROJECT_DIR", "").strip()
-    return Path(configured).expanduser() if configured else Path.cwd()
-
-
-def state_candidates():
-    seen = set()
-    raw = [
-        os.environ.get("KNOWLEDGE_PATCH_STATE", ""),
-        str(project_root() / ".knowledge-patch" / "activation.json"),
-    ]
-    xdg_state = os.environ.get("XDG_STATE_HOME")
-    if xdg_state:
-        raw.append(str(Path(xdg_state) / "knowledge-patch" / "activation.json"))
-    home = os.environ.get("HOME")
-    if home:
-        raw.append(str(Path(home) / ".local" / "state" / "knowledge-patch" / "activation.json"))
-
-    for item in raw:
-        if item and item not in seen:
-            seen.add(item)
-            yield Path(item)
-
-
-def main():
-    active = []
-    for path in state_candidates():
-        if not path.exists():
-            continue
-        try:
-            data = json.loads(path.read_text(encoding="utf-8"))
-            names = data.get("active_patches", []) if isinstance(data, dict) else []
-        except Exception:
-            continue
-        for name in names:
-            if isinstance(name, str) and name not in active:
-                active.append(name)
-
-    active_text = ", ".join(active) if active else "none"
-    context = (
-        "Use knowledge-patch:using-knowledge-patch. Read matching patch bodies. "
-        f"Active patches: {active_text}."
-    )
-
-    print(
-        json.dumps(
-            {
-                "hookSpecificOutput": {
-                    "hookEventName": "SessionStart",
-                    "additionalContext": context,
-                }
-            },
-            indent=2,
-        )
-    )
-
-
-try:
-    main()
-except Exception:
-    pass
-PY
+if [[ -n "$output" ]]; then
+  printf '%s\n' "$output"
+else
+  printf '%s\n' "$fallback"
+fi
 
 exit 0

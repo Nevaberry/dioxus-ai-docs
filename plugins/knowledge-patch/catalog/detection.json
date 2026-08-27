@@ -6325,8 +6325,7 @@
           "/etc/nftables.conf",
           "nftables.conf",
           "**/*.nft",
-          "**/*.conf::table inet",
-          "**/*.json::\"nftables\""
+          "**/*.conf::table inet"
         ]
       }
     },
@@ -8719,7 +8718,8 @@
           "docker-compose*.yml::redis:",
           "compose*.yaml::redis:",
           "package.json::\"redis\"",
-          "requirements*.txt::redis"
+          "requirements*.txt::redis",
+          ".env*::REDIS_URL"
         ]
       },
       "covered_from": "8.0"
@@ -10897,8 +10897,7 @@
         "files": [
           "turbo.json",
           "turbo.jsonc",
-          "package.json::\"turbo\"",
-          "package.json::\"packageManager\""
+          "package.json::\"turbo\""
         ]
       }
     },

@@ -1,0 +1,28 @@
+{
+  "dioxus-knowledge-patch": [
+    "rust-knowledge-patch",
+    "tokio-knowledge-patch",
+    "axum-knowledge-patch"
+  ],
+  "leptos-knowledge-patch": [
+    "rust-knowledge-patch",
+    "tokio-knowledge-patch",
+    "axum-knowledge-patch"
+  ],
+  "tauri-knowledge-patch": ["rust-knowledge-patch"],
+  "axum-knowledge-patch": [
+    "rust-knowledge-patch",
+    "tokio-knowledge-patch"
+  ],
+  "sqlx-knowledge-patch": ["rust-knowledge-patch"],
+  "serde-knowledge-patch": ["rust-knowledge-patch"],
+  "ratatui-knowledge-patch": ["rust-knowledge-patch"],
+  "aspnet-core-knowledge-patch": ["dotnet-csharp-knowledge-patch"],
+  "nmea0183-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "rtcm3-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "ntrip-rtklib-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "rtkbase-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "gpsd-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "agopengps-knowledge-patch": ["gnss-navigation-knowledge-patch"],
+  "geodesy-wgs84-knowledge-patch": ["gnss-navigation-knowledge-patch"]
+}
