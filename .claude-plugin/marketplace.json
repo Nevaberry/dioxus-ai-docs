@@ -8,7 +8,7 @@
     {
       "name": "knowledge-patch",
       "source": "./plugins/knowledge-patch",
-      "description": "Offline knowledge-patch monoplugin with native tech skills, catalogs, and priority activation state.",
+      "description": "Offline knowledge-patch monoplugin with three routing skills, bundled patch bodies, catalogs, and priority activation state.",
       "category": "development"
     }
   ]

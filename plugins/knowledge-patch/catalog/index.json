@@ -1,0 +1,1054 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-27T07:44:00Z",
+  "patches": [
+    {
+      "name": ".NET and C#",
+      "id": "dotnet-csharp-knowledge-patch"
+    },
+    {
+      "name": "ASP.NET Core",
+      "id": "aspnet-core-knowledge-patch"
+    },
+    {
+      "name": "AWS CDK",
+      "id": "aws-cdk-knowledge-patch"
+    },
+    {
+      "name": "AWS SDK",
+      "id": "aws-sdk-knowledge-patch"
+    },
+    {
+      "name": "Adyen",
+      "id": "adyen-knowledge-patch"
+    },
+    {
+      "name": "AgOpenGPS",
+      "id": "agopengps-knowledge-patch"
+    },
+    {
+      "name": "Alembic",
+      "id": "alembic-knowledge-patch"
+    },
+    {
+      "name": "Android SDK",
+      "id": "android-sdk-knowledge-patch"
+    },
+    {
+      "name": "Angular",
+      "id": "angular-knowledge-patch"
+    },
+    {
+      "name": "Ansible Core",
+      "id": "ansible-knowledge-patch"
+    },
+    {
+      "name": "Anthropic API",
+      "id": "anthropic-api-knowledge-patch"
+    },
+    {
+      "name": "Apache Airflow",
+      "id": "airflow-knowledge-patch"
+    },
+    {
+      "name": "Apache Cassandra",
+      "id": "cassandra-knowledge-patch"
+    },
+    {
+      "name": "Apache Flink",
+      "id": "apache-flink-knowledge-patch"
+    },
+    {
+      "name": "Apache Iceberg",
+      "id": "apache-iceberg-knowledge-patch"
+    },
+    {
+      "name": "Apache Kafka",
+      "id": "apache-kafka-knowledge-patch"
+    },
+    {
+      "name": "Apache Spark",
+      "id": "apache-spark-knowledge-patch"
+    },
+    {
+      "name": "Apollo GraphQL",
+      "id": "apollo-graphql-knowledge-patch"
+    },
+    {
+      "name": "Apple Pay",
+      "id": "apple-pay-knowledge-patch"
+    },
+    {
+      "name": "Arch Linux",
+      "id": "arch-knowledge-patch"
+    },
+    {
+      "name": "Argo CD",
+      "id": "argo-cd-knowledge-patch"
+    },
+    {
+      "name": "Astro",
+      "id": "astro-knowledge-patch"
+    },
+    {
+      "name": "Auth.js",
+      "id": "authjs-knowledge-patch"
+    },
+    {
+      "name": "Axum",
+      "id": "axum-knowledge-patch"
+    },
+    {
+      "name": "Better Auth",
+      "id": "better-auth-knowledge-patch"
+    },
+    {
+      "name": "BigCommerce",
+      "id": "bigcommerce-knowledge-patch"
+    },
+    {
+      "name": "Biome",
+      "id": "biome-knowledge-patch"
+    },
+    {
+      "name": "Bun",
+      "id": "bun-knowledge-patch"
+    },
+    {
+      "name": "C and C++",
+      "id": "c-cpp-knowledge-patch"
+    },
+    {
+      "name": "Caddy",
+      "id": "caddy-knowledge-patch"
+    },
+    {
+      "name": "Cargo",
+      "id": "cargo-knowledge-patch"
+    },
+    {
+      "name": "Celery",
+      "id": "celery-knowledge-patch"
+    },
+    {
+      "name": "CentOS Stream",
+      "id": "centos-stream-knowledge-patch"
+    },
+    {
+      "name": "Clerk",
+      "id": "clerk-knowledge-patch"
+    },
+    {
+      "name": "ClickHouse",
+      "id": "clickhouse-knowledge-patch"
+    },
+    {
+      "name": "Cloudflare D1",
+      "id": "cloudflare-d1-knowledge-patch"
+    },
+    {
+      "name": "Cloudflare Durable Objects",
+      "id": "cloudflare-durable-objects-knowledge-patch"
+    },
+    {
+      "name": "Cloudflare Workers",
+      "id": "cloudflare-workers-knowledge-patch"
+    },
+    {
+      "name": "Codex",
+      "id": "codex-knowledge-patch"
+    },
+    {
+      "name": "DHL Shipping",
+      "id": "dhl-shipping-knowledge-patch"
+    },
+    {
+      "name": "DNF5",
+      "id": "dnf5-security-updates-knowledge-patch"
+    },
+    {
+      "name": "Dagster",
+      "id": "dagster-knowledge-patch"
+    },
+    {
+      "name": "Data Distribution Service (DDS)",
+      "id": "dds-knowledge-patch"
+    },
+    {
+      "name": "Debian",
+      "id": "debian-knowledge-patch"
+    },
+    {
+      "name": "Deno",
+      "id": "deno-knowledge-patch"
+    },
+    {
+      "name": "Dev Containers",
+      "id": "devcontainers-knowledge-patch"
+    },
+    {
+      "name": "Dioxus",
+      "id": "dioxus-knowledge-patch"
+    },
+    {
+      "name": "Django",
+      "id": "django-knowledge-patch"
+    },
+    {
+      "name": "Docker",
+      "id": "docker-knowledge-patch"
+    },
+    {
+      "name": "Drizzle ORM",
+      "id": "drizzle-knowledge-patch"
+    },
+    {
+      "name": "DuckDB",
+      "id": "duckdb-knowledge-patch"
+    },
+    {
+      "name": "ESLint",
+      "id": "eslint-knowledge-patch"
+    },
+    {
+      "name": "ESP-IDF",
+      "id": "esp-idf-knowledge-patch"
+    },
+    {
+      "name": "EasyPost",
+      "id": "easypost-knowledge-patch"
+    },
+    {
+      "name": "Elasticsearch",
+      "id": "elasticsearch-knowledge-patch"
+    },
+    {
+      "name": "Electron",
+      "id": "electron-knowledge-patch"
+    },
+    {
+      "name": "Elixir",
+      "id": "elixir-knowledge-patch"
+    },
+    {
+      "name": "Envoy Proxy",
+      "id": "envoy-knowledge-patch"
+    },
+    {
+      "name": "Erlang/OTP",
+      "id": "erlang-otp-knowledge-patch"
+    },
+    {
+      "name": "Expo",
+      "id": "expo-knowledge-patch"
+    },
+    {
+      "name": "Express",
+      "id": "express-knowledge-patch"
+    },
+    {
+      "name": "External Secrets Operator",
+      "id": "external-secrets-knowledge-patch"
+    },
+    {
+      "name": "FastAPI",
+      "id": "fastapi-knowledge-patch"
+    },
+    {
+      "name": "FedEx Shipping",
+      "id": "fedex-shipping-knowledge-patch"
+    },
+    {
+      "name": "Fedora Linux",
+      "id": "fedora-knowledge-patch"
+    },
+    {
+      "name": "Fluent Bit",
+      "id": "fluent-bit-knowledge-patch"
+    },
+    {
+      "name": "Flutter",
+      "id": "flutter-knowledge-patch"
+    },
+    {
+      "name": "Flux CD",
+      "id": "flux-cd-knowledge-patch"
+    },
+    {
+      "name": "GDAL",
+      "id": "gdal-knowledge-patch"
+    },
+    {
+      "name": "GNSS",
+      "id": "gnss-navigation-knowledge-patch"
+    },
+    {
+      "name": "Gazebo Sim",
+      "id": "gazebo-sim-knowledge-patch"
+    },
+    {
+      "name": "GeoJSON / OGC JSON-FG",
+      "id": "geojson-ogc-knowledge-patch"
+    },
+    {
+      "name": "GeoPandas",
+      "id": "geopandas-knowledge-patch"
+    },
+    {
+      "name": "GitHub Actions",
+      "id": "github-actions-knowledge-patch"
+    },
+    {
+      "name": "GitLab CI/CD",
+      "id": "gitlab-ci-knowledge-patch"
+    },
+    {
+      "name": "Gleam",
+      "id": "gleam-knowledge-patch"
+    },
+    {
+      "name": "Go",
+      "id": "go-knowledge-patch"
+    },
+    {
+      "name": "Google Cloud Platform",
+      "id": "gcp-knowledge-patch"
+    },
+    {
+      "name": "Google Gemini API",
+      "id": "google-gemini-api-knowledge-patch"
+    },
+    {
+      "name": "Google Pay",
+      "id": "google-pay-knowledge-patch"
+    },
+    {
+      "name": "Gradle",
+      "id": "gradle-knowledge-patch"
+    },
+    {
+      "name": "Grafana",
+      "id": "grafana-knowledge-patch"
+    },
+    {
+      "name": "Grafana Loki",
+      "id": "grafana-loki-knowledge-patch"
+    },
+    {
+      "name": "Grafana k6",
+      "id": "k6-knowledge-patch"
+    },
+    {
+      "name": "GraphQL",
+      "id": "graphql-knowledge-patch"
+    },
+    {
+      "name": "H3",
+      "id": "h3-geospatial-knowledge-patch"
+    },
+    {
+      "name": "HAProxy",
+      "id": "haproxy-knowledge-patch"
+    },
+    {
+      "name": "HashiCorp Consul",
+      "id": "consul-knowledge-patch"
+    },
+    {
+      "name": "HashiCorp Nomad",
+      "id": "nomad-knowledge-patch"
+    },
+    {
+      "name": "HashiCorp Vault",
+      "id": "hashicorp-vault-knowledge-patch"
+    },
+    {
+      "name": "Helm",
+      "id": "helm-knowledge-patch"
+    },
+    {
+      "name": "Home Assistant",
+      "id": "home-assistant-knowledge-patch"
+    },
+    {
+      "name": "Hono",
+      "id": "hono-knowledge-patch"
+    },
+    {
+      "name": "Hugging Face Hub",
+      "id": "huggingface-hub-knowledge-patch"
+    },
+    {
+      "name": "Istio",
+      "id": "istio-knowledge-patch"
+    },
+    {
+      "name": "Jaeger",
+      "id": "jaeger-knowledge-patch"
+    },
+    {
+      "name": "Java",
+      "id": "java-knowledge-patch"
+    },
+    {
+      "name": "Jest",
+      "id": "jest-knowledge-patch"
+    },
+    {
+      "name": "Jetpack Compose",
+      "id": "jetpack-compose-knowledge-patch"
+    },
+    {
+      "name": "Keycloak",
+      "id": "keycloak-knowledge-patch"
+    },
+    {
+      "name": "Kotlin",
+      "id": "kotlin-knowledge-patch"
+    },
+    {
+      "name": "Kubernetes",
+      "id": "kubernetes-knowledge-patch"
+    },
+    {
+      "name": "Kubernetes Gateway API",
+      "id": "kubernetes-gateway-api-knowledge-patch"
+    },
+    {
+      "name": "Kustomize",
+      "id": "kustomize-knowledge-patch"
+    },
+    {
+      "name": "Kyverno",
+      "id": "kyverno-knowledge-patch"
+    },
+    {
+      "name": "LangChain",
+      "id": "langchain-knowledge-patch"
+    },
+    {
+      "name": "LangGraph",
+      "id": "langgraph-knowledge-patch"
+    },
+    {
+      "name": "Laravel",
+      "id": "laravel-knowledge-patch"
+    },
+    {
+      "name": "Leptos",
+      "id": "leptos-knowledge-patch"
+    },
+    {
+      "name": "Lit",
+      "id": "lit-knowledge-patch"
+    },
+    {
+      "name": "LiteLLM",
+      "id": "litellm-knowledge-patch"
+    },
+    {
+      "name": "LlamaIndex",
+      "id": "llamaindex-knowledge-patch"
+    },
+    {
+      "name": "MQTT",
+      "id": "mqtt-knowledge-patch"
+    },
+    {
+      "name": "Magento / Adobe Commerce",
+      "id": "magento-adobe-commerce-knowledge-patch"
+    },
+    {
+      "name": "MapLibre GL JS",
+      "id": "maplibre-gl-js-knowledge-patch"
+    },
+    {
+      "name": "MapLibre Native",
+      "id": "maplibre-native-knowledge-patch"
+    },
+    {
+      "name": "Matter (IoT)",
+      "id": "matter-iot-knowledge-patch"
+    },
+    {
+      "name": "Medusa",
+      "id": "medusa-knowledge-patch"
+    },
+    {
+      "name": "Mercur",
+      "id": "mercur-knowledge-patch"
+    },
+    {
+      "name": "Microsoft Azure",
+      "id": "azure-knowledge-patch"
+    },
+    {
+      "name": "Model Context Protocol (MCP)",
+      "id": "model-context-protocol-knowledge-patch"
+    },
+    {
+      "name": "Mollie",
+      "id": "mollie-knowledge-patch"
+    },
+    {
+      "name": "MongoDB",
+      "id": "mongodb-knowledge-patch"
+    },
+    {
+      "name": "MoveIt 2",
+      "id": "moveit2-knowledge-patch"
+    },
+    {
+      "name": "MySQL",
+      "id": "mysql-knowledge-patch"
+    },
+    {
+      "name": "NATS Server",
+      "id": "nats-knowledge-patch"
+    },
+    {
+      "name": "NGINX",
+      "id": "nginx-knowledge-patch"
+    },
+    {
+      "name": "NMEA 0183",
+      "id": "nmea0183-knowledge-patch"
+    },
+    {
+      "name": "NTRIP / RTKLIB",
+      "id": "ntrip-rtklib-knowledge-patch"
+    },
+    {
+      "name": "NVIDIA Isaac ROS",
+      "id": "nvidia-isaac-ros-knowledge-patch"
+    },
+    {
+      "name": "NVIDIA Isaac Sim",
+      "id": "nvidia-isaac-sim-knowledge-patch"
+    },
+    {
+      "name": "Nav2",
+      "id": "ros2-navigation-nav2-knowledge-patch"
+    },
+    {
+      "name": "Neo4j",
+      "id": "neo4j-knowledge-patch"
+    },
+    {
+      "name": "NestJS",
+      "id": "nestjs-knowledge-patch"
+    },
+    {
+      "name": "Next.js",
+      "id": "nextjs-knowledge-patch"
+    },
+    {
+      "name": "Nix",
+      "id": "nix-knowledge-patch"
+    },
+    {
+      "name": "Node.js",
+      "id": "nodejs-knowledge-patch"
+    },
+    {
+      "name": "Nuxt",
+      "id": "nuxt-knowledge-patch"
+    },
+    {
+      "name": "OAuth 2.0 / OIDC",
+      "id": "oauth2-oidc-knowledge-patch"
+    },
+    {
+      "name": "Ollama",
+      "id": "ollama-knowledge-patch"
+    },
+    {
+      "name": "Open Policy Agent (OPA)",
+      "id": "opa-knowledge-patch"
+    },
+    {
+      "name": "OpenAI API",
+      "id": "openai-api-knowledge-patch"
+    },
+    {
+      "name": "OpenAPI",
+      "id": "openapi-knowledge-patch"
+    },
+    {
+      "name": "OpenSSH",
+      "id": "openssh-knowledge-patch"
+    },
+    {
+      "name": "OpenSSL",
+      "id": "openssl-tls-knowledge-patch"
+    },
+    {
+      "name": "OpenSearch",
+      "id": "opensearch-knowledge-patch"
+    },
+    {
+      "name": "OpenTelemetry",
+      "id": "opentelemetry-knowledge-patch"
+    },
+    {
+      "name": "OpenTofu",
+      "id": "opentofu-knowledge-patch"
+    },
+    {
+      "name": "PHP",
+      "id": "php-knowledge-patch"
+    },
+    {
+      "name": "PROJ",
+      "id": "proj-knowledge-patch"
+    },
+    {
+      "name": "Paddle",
+      "id": "paddle-knowledge-patch"
+    },
+    {
+      "name": "PayPal",
+      "id": "paypal-knowledge-patch"
+    },
+    {
+      "name": "Phoenix",
+      "id": "phoenix-knowledge-patch"
+    },
+    {
+      "name": "Playwright",
+      "id": "playwright-knowledge-patch"
+    },
+    {
+      "name": "Podman",
+      "id": "podman-knowledge-patch"
+    },
+    {
+      "name": "Polar",
+      "id": "polar-knowledge-patch"
+    },
+    {
+      "name": "Polars",
+      "id": "polars-knowledge-patch"
+    },
+    {
+      "name": "PostGIS",
+      "id": "postgis-knowledge-patch"
+    },
+    {
+      "name": "PostgreSQL",
+      "id": "postgresql-knowledge-patch"
+    },
+    {
+      "name": "Posti / Matkahuolto",
+      "id": "posti-matkahuolto-knowledge-patch"
+    },
+    {
+      "name": "PrestaShop",
+      "id": "prestashop-knowledge-patch"
+    },
+    {
+      "name": "Prisma",
+      "id": "prisma-knowledge-patch"
+    },
+    {
+      "name": "Prometheus",
+      "id": "prometheus-knowledge-patch"
+    },
+    {
+      "name": "Protocol Buffers",
+      "id": "protobuf-knowledge-patch"
+    },
+    {
+      "name": "Pulumi",
+      "id": "pulumi-knowledge-patch"
+    },
+    {
+      "name": "PyTorch",
+      "id": "pytorch-knowledge-patch"
+    },
+    {
+      "name": "Python",
+      "id": "python-knowledge-patch"
+    },
+    {
+      "name": "QGIS",
+      "id": "qgis-knowledge-patch"
+    },
+    {
+      "name": "Qdrant",
+      "id": "qdrant-knowledge-patch"
+    },
+    {
+      "name": "Qwik",
+      "id": "qwik-knowledge-patch"
+    },
+    {
+      "name": "R / CRAN",
+      "id": "r-cran-knowledge-patch"
+    },
+    {
+      "name": "RHEL",
+      "id": "rhel-knowledge-patch"
+    },
+    {
+      "name": "ROS 2",
+      "id": "ros2-knowledge-patch"
+    },
+    {
+      "name": "RTCM 3",
+      "id": "rtcm3-knowledge-patch"
+    },
+    {
+      "name": "RTKBase",
+      "id": "rtkbase-knowledge-patch"
+    },
+    {
+      "name": "RabbitMQ",
+      "id": "rabbitmq-knowledge-patch"
+    },
+    {
+      "name": "Ratatui",
+      "id": "ratatui-knowledge-patch"
+    },
+    {
+      "name": "Ray",
+      "id": "ray-knowledge-patch"
+    },
+    {
+      "name": "React",
+      "id": "react-knowledge-patch"
+    },
+    {
+      "name": "React Native",
+      "id": "react-native-knowledge-patch"
+    },
+    {
+      "name": "React Router",
+      "id": "react-router-knowledge-patch"
+    },
+    {
+      "name": "Redis",
+      "id": "redis-knowledge-patch"
+    },
+    {
+      "name": "Ruby",
+      "id": "ruby-knowledge-patch"
+    },
+    {
+      "name": "Ruby on Rails",
+      "id": "rails-knowledge-patch"
+    },
+    {
+      "name": "Ruff",
+      "id": "ruff-knowledge-patch"
+    },
+    {
+      "name": "Rust",
+      "id": "rust-knowledge-patch"
+    },
+    {
+      "name": "SBOM / SPDX / CycloneDX",
+      "id": "sbom-spdx-cyclonedx-knowledge-patch"
+    },
+    {
+      "name": "SELinux",
+      "id": "selinux-knowledge-patch"
+    },
+    {
+      "name": "SLSA",
+      "id": "slsa-knowledge-patch"
+    },
+    {
+      "name": "SQLAlchemy",
+      "id": "sqlalchemy-knowledge-patch"
+    },
+    {
+      "name": "SQLite",
+      "id": "sqlite-knowledge-patch"
+    },
+    {
+      "name": "SQLx",
+      "id": "sqlx-knowledge-patch"
+    },
+    {
+      "name": "SUSE / openSUSE",
+      "id": "suse-knowledge-patch"
+    },
+    {
+      "name": "Saleor",
+      "id": "saleor-knowledge-patch"
+    },
+    {
+      "name": "Sentry JavaScript SDK",
+      "id": "sentry-knowledge-patch"
+    },
+    {
+      "name": "Serde",
+      "id": "serde-knowledge-patch"
+    },
+    {
+      "name": "Service Workers and Progressive Web Apps",
+      "id": "service-workers-pwa-knowledge-patch"
+    },
+    {
+      "name": "Shopify",
+      "id": "shopify-knowledge-patch"
+    },
+    {
+      "name": "Shopware",
+      "id": "shopware-knowledge-patch"
+    },
+    {
+      "name": "Sigstore Cosign",
+      "id": "sigstore-cosign-knowledge-patch"
+    },
+    {
+      "name": "SolidJS",
+      "id": "solidjs-knowledge-patch"
+    },
+    {
+      "name": "Spring Boot",
+      "id": "spring-boot-knowledge-patch"
+    },
+    {
+      "name": "Square",
+      "id": "square-knowledge-patch"
+    },
+    {
+      "name": "Storybook",
+      "id": "storybook-knowledge-patch"
+    },
+    {
+      "name": "Stripe",
+      "id": "stripe-knowledge-patch"
+    },
+    {
+      "name": "Supabase",
+      "id": "supabase-knowledge-patch"
+    },
+    {
+      "name": "Svelte",
+      "id": "svelte-knowledge-patch"
+    },
+    {
+      "name": "Swift",
+      "id": "swift-knowledge-patch"
+    },
+    {
+      "name": "SwiftUI",
+      "id": "swiftui-knowledge-patch"
+    },
+    {
+      "name": "Tailscale",
+      "id": "tailscale-knowledge-patch"
+    },
+    {
+      "name": "Tailwind CSS",
+      "id": "tailwind-knowledge-patch"
+    },
+    {
+      "name": "TanStack Query",
+      "id": "tanstack-query-knowledge-patch"
+    },
+    {
+      "name": "TanStack Router",
+      "id": "tanstack-router-knowledge-patch"
+    },
+    {
+      "name": "Tauri",
+      "id": "tauri-knowledge-patch"
+    },
+    {
+      "name": "Temporal",
+      "id": "temporal-knowledge-patch"
+    },
+    {
+      "name": "Terraform / OpenTofu",
+      "id": "terraform-knowledge-patch"
+    },
+    {
+      "name": "TimescaleDB",
+      "id": "timescaledb-knowledge-patch"
+    },
+    {
+      "name": "Tokio",
+      "id": "tokio-knowledge-patch"
+    },
+    {
+      "name": "Traefik",
+      "id": "traefik-knowledge-patch"
+    },
+    {
+      "name": "Transformers",
+      "id": "transformers-knowledge-patch"
+    },
+    {
+      "name": "Trino",
+      "id": "trino-knowledge-patch"
+    },
+    {
+      "name": "Trivy",
+      "id": "trivy-knowledge-patch"
+    },
+    {
+      "name": "Turborepo",
+      "id": "turborepo-knowledge-patch"
+    },
+    {
+      "name": "TypeScript",
+      "id": "typescript-knowledge-patch"
+    },
+    {
+      "name": "UPS Shipping",
+      "id": "ups-shipping-knowledge-patch"
+    },
+    {
+      "name": "Ubuntu",
+      "id": "ubuntu-knowledge-patch"
+    },
+    {
+      "name": "Unbound",
+      "id": "unbound-knowledge-patch"
+    },
+    {
+      "name": "Vendure",
+      "id": "vendure-knowledge-patch"
+    },
+    {
+      "name": "Vercel AI SDK",
+      "id": "vercel-ai-sdk-knowledge-patch"
+    },
+    {
+      "name": "Vite",
+      "id": "vite-knowledge-patch"
+    },
+    {
+      "name": "Vitest",
+      "id": "vitest-knowledge-patch"
+    },
+    {
+      "name": "Vue.js",
+      "id": "vuejs-knowledge-patch"
+    },
+    {
+      "name": "WGS 84",
+      "id": "geodesy-wgs84-knowledge-patch"
+    },
+    {
+      "name": "WebAssembly / WASI",
+      "id": "wasm-wasi-knowledge-patch"
+    },
+    {
+      "name": "WebAuthn / Passkeys",
+      "id": "webauthn-passkeys-knowledge-patch"
+    },
+    {
+      "name": "WebGPU / WGSL",
+      "id": "webgpu-knowledge-patch"
+    },
+    {
+      "name": "WireGuard",
+      "id": "wireguard-knowledge-patch"
+    },
+    {
+      "name": "WooCommerce",
+      "id": "woocommerce-knowledge-patch"
+    },
+    {
+      "name": "WordPress",
+      "id": "wordpress-knowledge-patch"
+    },
+    {
+      "name": "WorkOS",
+      "id": "workos-knowledge-patch"
+    },
+    {
+      "name": "Zephyr RTOS",
+      "id": "zephyr-knowledge-patch"
+    },
+    {
+      "name": "Zig",
+      "id": "zig-knowledge-patch"
+    },
+    {
+      "name": "Zitadel",
+      "id": "zitadel-knowledge-patch"
+    },
+    {
+      "name": "cert-manager",
+      "id": "cert-manager-knowledge-patch"
+    },
+    {
+      "name": "chrony",
+      "id": "chrony-knowledge-patch"
+    },
+    {
+      "name": "cloud-init",
+      "id": "cloud-init-knowledge-patch"
+    },
+    {
+      "name": "dbt Core",
+      "id": "dbt-knowledge-patch"
+    },
+    {
+      "name": "gRPC",
+      "id": "grpc-knowledge-patch"
+    },
+    {
+      "name": "gpsd",
+      "id": "gpsd-knowledge-patch"
+    },
+    {
+      "name": "htmx",
+      "id": "htmx-knowledge-patch"
+    },
+    {
+      "name": "iOS SDK",
+      "id": "ios-sdk-knowledge-patch"
+    },
+    {
+      "name": "lavaan / CFA",
+      "id": "lavaan-cfa-knowledge-patch"
+    },
+    {
+      "name": "nftables",
+      "id": "nftables-knowledge-patch"
+    },
+    {
+      "name": "pgvector",
+      "id": "pgvector-knowledge-patch"
+    },
+    {
+      "name": "pnpm",
+      "id": "pnpm-knowledge-patch"
+    },
+    {
+      "name": "pytest",
+      "id": "pytest-knowledge-patch"
+    },
+    {
+      "name": "shadcn/ui",
+      "id": "shadcn-ui-knowledge-patch"
+    },
+    {
+      "name": "systemd",
+      "id": "systemd-knowledge-patch"
+    },
+    {
+      "name": "tRPC",
+      "id": "trpc-knowledge-patch"
+    },
+    {
+      "name": "three.js",
+      "id": "threejs-knowledge-patch"
+    },
+    {
+      "name": "uv",
+      "id": "uv-knowledge-patch"
+    },
+    {
+      "name": "vLLM",
+      "id": "vllm-knowledge-patch"
+    }
+  ]
+}

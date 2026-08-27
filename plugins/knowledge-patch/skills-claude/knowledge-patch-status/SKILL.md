@@ -23,6 +23,6 @@ Use this skill when the user asks what knowledge patches are available, active, 
 5. For every patch, report its `generated_at` timestamp and age relative to now in an understandable unit such as days; flag missing, invalid, or notably old timestamps instead of hiding them.
 6. Report active patches first, then matching bundled patches, then any catalog, staleness, or artifact problems.
 
-If no activation state exists, say that all bundled patches remain available as native skills and activation is only a priority hint.
+If no activation state exists, say that all bundled patches remain available through the gateway and activation is only a priority hint.
 
 Do not fetch network resources and do not copy skills into another directory while checking status.

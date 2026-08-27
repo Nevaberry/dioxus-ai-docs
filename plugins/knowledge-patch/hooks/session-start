@@ -51,7 +51,7 @@ def main():
 
     active_text = ", ".join(active) if active else "none"
     context = (
-        "Use knowledge-patch:using-knowledge-patch. Load matching patch skills. "
+        "Use knowledge-patch:using-knowledge-patch. Read matching patch bodies. "
         f"Active patches: {active_text}."
     )
 

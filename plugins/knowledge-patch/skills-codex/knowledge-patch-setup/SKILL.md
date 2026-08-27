@@ -48,8 +48,8 @@ Preserve unrelated fields if a state file already exists. Manual activation reas
 ## Constraints
 
 - Everything works offline.
-- Bundled tech patches already live under the runtime-selected native skill
-  root (`skills-claude/` or `skills-codex/`).
+- Bundled tech patches already live under the runtime-selected non-discovered
+  patch root (`patches-claude/` or `patches-codex/`).
 - Activation changes priority and routing, not installation.
 - Deactivation removes priority state, not bundled skills.
 - Hooks are optional. Manual use through this skill and `using-knowledge-patch` is the reliable path.

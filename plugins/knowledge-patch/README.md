@@ -1,6 +1,6 @@
 # Knowledge Patch
 
-`knowledge-patch` is an offline plugin that ships knowledge patches for specific technology versions as native Claude Code and Codex skills. The bundled patches are available immediately after installation; no downloader is involved.
+`knowledge-patch` is an offline plugin that registers three Claude Code and Codex routing skills and ships technology patch bodies outside native skill discovery. The bundled patches are available immediately after installation; no downloader is involved.
 
 Knowledge patches are derived from the respective projects' official release notes and documentation. This project is not affiliated with or endorsed by those projects.
 
@@ -19,17 +19,18 @@ Use the Claude Code or Codex instructions in the repository `README.md`. Then in
 - `using-knowledge-patch` is the gateway skill. Load it before writing, reviewing, debugging, or administering a technology that may have a bundled patch.
 - `knowledge-patch-setup` supports setup, activation, and deactivation workflows.
 - `knowledge-patch-status` supports status checks.
-- Technology patch skills are listed in `catalog/patches.json` and the
-  generated gateway indexes under both runtime-specific skill roots.
+- Technology patch bodies are listed in `catalog/index.md`, resolved through
+  `catalog/index.json`, and described in detail by `catalog/patches.json`.
 
 ## Activation
 
 Activation is priority state, not installation. The preferred project state file is `.knowledge-patch/activation.json`; user-level state can live at `$XDG_STATE_HOME/knowledge-patch/activation.json`, and `$KNOWLEDGE_PATCH_STATE` can point to a specific state file.
 
-All bundled technology patches already live under the runtime-specific native
-skill root. Activation tells agents which patches the user intentionally wants
-prioritized. Deactivation removes matching patch names and reasons from that
-state; `none` clears all active patch names and activation reasons.
+All bundled technology patches already live under the runtime-specific
+non-discovered patch root. Activation tells agents which patches the user
+intentionally wants prioritized. Deactivation removes matching patch names and
+reasons from that state; `none` clears all active patch names and activation
+reasons.
 
 ## SessionStart Hook
 
@@ -59,10 +60,14 @@ A new version is minted only when shipped content actually changes; `catalog/bui
   `skills-claude/` and `commands-claude/`, with no hooks key.
 - `plugins/knowledge-patch/.codex-plugin/plugin.json` declares
   `skills-codex/` and the shared hooks file, with no commands component.
-- `plugins/knowledge-patch/skills-claude/` contains Claude-target gateway,
-  helper, and technology skills.
-- `plugins/knowledge-patch/skills-codex/` contains Codex-target gateway,
-  helper, and technology skills plus `agents/openai.yaml`.
+- `plugins/knowledge-patch/skills-claude/` contains only the three Claude-target
+  gateway and helper skills.
+- `plugins/knowledge-patch/skills-codex/` contains only the three Codex-target
+  gateway and helper skills plus `agents/openai.yaml`.
+- `plugins/knowledge-patch/patches-claude/` contains Claude-target technology
+  patch bodies outside native skill discovery.
+- `plugins/knowledge-patch/patches-codex/` contains Codex-target technology
+  patch bodies outside native skill discovery.
 - `plugins/knowledge-patch/catalog/` contains patch, alias, detection, and build catalogs.
 - `plugins/knowledge-patch/commands-claude/` contains the three Claude Code
   compatibility aliases.

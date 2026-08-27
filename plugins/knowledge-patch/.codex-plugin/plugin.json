@@ -1,7 +1,7 @@
 {
   "name": "knowledge-patch",
-  "version": "3.20260825.1",
-  "description": "Offline monoplugin that ships current technology knowledge patches as native skills with catalog-based activation.",
+  "version": "3.20260827.0",
+  "description": "Offline monoplugin that routes three native skills to bundled technology patches through compact generated catalogs.",
   "author": {
     "name": "Nevaberry",
     "url": "https://github.com/Nevaberry"
@@ -20,8 +20,8 @@
   "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "Knowledge Patch",
-    "shortDescription": "Current tech patches as native skills",
-    "longDescription": "A single offline plugin that bundles current technology knowledge patches as native skills, with generated catalogs and lightweight activation state for priority routing.",
+    "shortDescription": "Current tech patches via a compact catalog",
+    "longDescription": "A single offline plugin that bundles current technology knowledge patches outside native discovery, with three routing skills, generated catalogs, and lightweight activation state for priority routing.",
     "developerName": "Nevaberry",
     "category": "Coding",
     "capabilities": [
